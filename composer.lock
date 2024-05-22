@@ -4,8 +4,75 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cde55e26008a3371d5cfcf5058022037",
+    "content-hash": "a763abedb628ae27fd930e5061e25fbe",
     "packages": [
+        {
+            "name": "ahinkle/auto-resolvable-blade-components",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ahinkle/laravel-resolvable-components.git",
+                "reference": "14e0279d66b2a39176ab41ed95c5e874d605e9a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ahinkle/laravel-resolvable-components/zipball/14e0279d66b2a39176ab41ed95c5e874d605e9a6",
+                "reference": "14e0279d66b2a39176ab41ed95c5e874d605e9a6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^10.0|^11.0",
+                "illuminate/view": "^10.0|^11.0",
+                "php": "^8.1|^8.2"
+            },
+            "require-dev": {
+                "illuminate/container": "^10.0|^11.0",
+                "illuminate/contracts": "^10.0|^11.0",
+                "orchestra/testbench": "^8.0|^9.0",
+                "phpunit/phpunit": "^9.5|^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ahinkle\\AutoResolvableComponents\\AutoResolvableComponentsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ahinkle\\AutoResolvableComponents\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Hinkle",
+                    "email": "ahinkle10@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel package to automatically resolve your Blade Component views based on the component class names.",
+            "homepage": "https://github.com/ahinkle/laravel-resolvable-components",
+            "keywords": [
+                "ahinkle",
+                "auto",
+                "blade",
+                "component",
+                "components",
+                "laravel",
+                "resolvable",
+                "views"
+            ],
+            "support": {
+                "issues": "https://github.com/ahinkle/laravel-resolvable-components/issues",
+                "source": "https://github.com/ahinkle/laravel-resolvable-components/tree/3.0.1"
+            },
+            "time": "2024-03-12T17:07:04+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.12.1",
