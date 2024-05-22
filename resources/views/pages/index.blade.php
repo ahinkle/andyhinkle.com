@@ -7,7 +7,7 @@
 
     <div>
         <p class="text-gray-700 text-sm text-balance dark:text-gray-200">
-            Software Developer from Indiana with over 10 years of experience in Laravel, PHP, and JavaScript.
+            Software Developer from Indiana with over 10 years of experience specializing in Laravel, PHP, and JavaScript.
         </p>
 
         <p class="text-gray-700 text-sm text-balance mt-4 dark:text-gray-200">
@@ -41,6 +41,18 @@
                 </div>
                 <div class="mt-1 mb-4 text-sm font-normal text-gray-500 ml-0.5 dark:text-gray-400">
                     2016 - 2019
+                </div>
+            </li>
+            <li class="mb-10 ms-4">
+                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border dark:bg-gray-700 dark:border-gray-800"></div>
+                <div class="text-md font-medium text-gray-900 dark:text-gray-200">
+                    Attractions Manager
+                </div>
+                <div class="mt-2 text-sm font-normal text-gray-600 ml-0.5 dark:text-gray-400">
+                    Holiday World & Splashin' Safari
+                </div>
+                <div class="mt-1 mb-4 text-sm font-normal text-gray-500 ml-0.5 dark:text-gray-400">
+                    2014 - 2016
                 </div>
             </li>
         </ol>
