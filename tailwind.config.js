@@ -3,7 +3,7 @@ export default {
   content: [
     "./resources/**/*.blade.php",
   ],
-  darkMode: 'class',
+  darkMode: 'selector',
   theme: {
     extend: {},
   },
