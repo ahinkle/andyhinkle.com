@@ -11,7 +11,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     </head>
-    <body class="h-screen dark">
+    <body class="h-screen" 
+        x-data="{
+            darkMode: localStorage.getItem('darkMode')
+            || localStorage.setItem('darkMode', 'system')}"
+        x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))"
+        x-bind:class="{'dark': darkMode === 'dark' || (darkMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}"
+    >
         @env('local')
             <x-dev.dev-toolbar />
         @endenv
