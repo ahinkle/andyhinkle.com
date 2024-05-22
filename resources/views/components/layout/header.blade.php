@@ -1,4 +1,5 @@
 <div>
+    <x-layout.light-mode-toggle />
     <div class="flex flex-col items-center">
         <a href={{ url('/') }} aria-label="Back to homepage">
             <img alt="Andy Hinkle" loading="lazy" class="rounded-lg" src="{{ url('images/andy-hinkle-128w.jpeg') }}">

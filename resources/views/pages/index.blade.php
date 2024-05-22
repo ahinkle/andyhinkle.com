@@ -44,21 +44,4 @@
                 </div>
             </li>
         </ol>
-
-        <h2 class="text-gray-900 text-lg font-medium mt-10 dark:text-gray-200"> 
-            Skills
-        </h2>
-
-        <ul class="grid grid-cols-2 gap-4 mt-5">
-            <li class="text-sm font-normal text-gray-600">Laravel</li>
-            <li class="text-sm font-normal text-gray-600">PHP</li>
-            <li class="text-sm font-normal text-gray-600">JavaScript</li>
-            <li class="text-sm font-normal text-gray-600">React Native</li>
-            <li class="text-sm font-normal text-gray-600">Tailwind CSS</li>
-            <li class="text-sm font-normal text-gray-600">Livewire</li>
-            <li class="text-sm font-normal text-gray-600">Alpine.js</li>
-            <li class="text-sm font-normal text-gray-600">MySQL</li>
-            <li class="text-sm font-normal text-gray-600">PostgreSQL</li>
-            <li class="text-sm font-normal text-gray-600">Git</li>
-    </div>
 </x-app>
