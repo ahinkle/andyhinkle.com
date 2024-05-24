@@ -210,12 +210,14 @@
             </div>
         </div>
 
-        <h2 class="text-gray-900 text-lg font-medium mt-10 dark:text-gray-200">
+        <h2 class="sr-only">
             Contact
         </h2>
 
-        <div class="">
-            <p class="text-gray-700 dark:text-gray-300 mt-2 ml-2 text-sm">
+        <hr class="mt-12 w-1/2 mx-auto border-gray-300 dark:border-gray-700 ">
+
+        <div class="pt-10">
+            <p class="text-gray-700 dark:text-gray-300 mt-2 ml-2 text-sm text-center text-balance">
                 If you have any questions or inquiries, please feel free to contact me at <a href="mailto:chat@andyhinkle.com" class="text-dark-800 dark:text-gray-400 underline">chat@andyhinkle.com</a>. Alternatively, you can reach out to me on Twitter at <a href="https://twitter.com/andyhnk" class="text-dark-800 dark:text-gray-400 underline">@andyhnk</a>.
             </p>
         </div>
