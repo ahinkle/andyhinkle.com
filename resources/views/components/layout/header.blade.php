@@ -2,7 +2,7 @@
     <x-layout.light-mode-toggle />
     <div class="flex flex-col items-center">
         <a href={{ url('/') }} aria-label="Back to homepage">
-            <img alt="Andy Hinkle" class="rounded-lg" src="{{ url('images/andy-hinkle-128w.jpeg') }}">
+            <img alt="Andy Hinkle" class="rounded-lg" src="{{ url('images/andy-hinkle-128w.jpeg') }}" height="118" width="128">
         </a>
         <h1 class="font-medium text-gray-900 mt-2 text-xl dark:text-gray-100">
             Andy Hinkle
