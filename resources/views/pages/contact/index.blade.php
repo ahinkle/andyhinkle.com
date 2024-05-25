@@ -9,7 +9,7 @@
             Contact
         </h2>
 
-        <p class="text-gray-700 dark:text-gray-300 mt-2 ml-2">
+        <p class="text-gray-700 dark:text-gray-300 mt-2 ml-2 text-center text-balance pt-5">
             If you have any questions or inquiries, please feel free to contact me at <a href="mailto:chat@andyhinkle.com" class="text-blue-500 dark:text-blue-400">chat@andyhinkle.com</a>. Alternatively, you can reach out to me on Twitter at <a href="https://twitter.com/andyhnk" class="text-blue-500 dark:text-blue-400">@andyhnk</a>.
         </p>
 
