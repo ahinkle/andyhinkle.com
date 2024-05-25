@@ -18,7 +18,7 @@
         x-data="{
             darkMode: localStorage.getItem('darkMode')
             || localStorage.setItem('darkMode', 'system')}"
-        x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))"
+        x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))
         x-bind:class="{'dark': darkMode === 'dark' || (darkMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}"
     >
         @env('local')
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <footer class="text-gray-800 dark:text-gray-400 text-center pt-5 text-xs dark:bg-gray-00 pb-5">
+        <footer class="text-gray-800 dark:text-gray-400 text-center pt-5 text-xs dark:bg-gray-900 pb-5">
             <p>&copy; {{ date('Y') }} andyhinkle.com, All rights reserved.</p>
         </footer>
     </body>
