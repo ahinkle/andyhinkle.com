@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <footer class="text-gray-500 text-center pt-5 text-xs dark:bg-gray-900 pb-5">
+        <footer class="text-gray-400 text-center pt-5 text-xs dark:bg-gray-00 pb-5">
             <p>&copy; {{ date('Y') }} andyhinkle.com, All rights reserved.</p>
         </footer>
     </body>
