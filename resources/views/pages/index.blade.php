@@ -151,7 +151,7 @@
                 <p class="text-gray-700 dark:text-gray-300 text-sm pt-2">
                     Website for Springfield Armory, a firearms manufacturer in Geneseo, Illinois.
                     <span class="block pt-2 text-xs">
-                        Handles millions of visitors per month.
+                        Handles hundreds of thousands of visitors per month.
                     </span>
                 </p>
             </div>
