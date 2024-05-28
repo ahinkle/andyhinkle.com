@@ -14,13 +14,7 @@
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" type="text/css">
         </noscript>
     </head>
-    <body class="dark" 
-        x-data="{
-            darkMode: localStorage.getItem('darkMode')
-            || localStorage.setItem('darkMode', 'system')}"
-        x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))
-        x-bind:class="{'dark': darkMode === 'dark' || (darkMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}"
-    >
+    <body class="dark">
         @env('local')
             <x-dev.dev-toolbar />
         @endenv
