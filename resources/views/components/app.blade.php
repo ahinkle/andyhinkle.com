@@ -6,9 +6,6 @@
         </x-layout.seo-meta>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=open-sans:300,300i,500,700&display=swap" rel="stylesheet" />
     </head>
     <body class="dark">
         @env('local')
