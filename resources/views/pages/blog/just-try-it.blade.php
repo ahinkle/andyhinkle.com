@@ -30,7 +30,7 @@
         </p>
 
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap mt-4">
-            However, after seeing the positive feedback from other developers and everyone who was using it absolutely loved it, I decided to give it a try.
+            However, after seeing the positive feedback from other developers who absolutely loved it, I decided to give it a try.
         </p>
 
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap mt-4">
@@ -46,7 +46,7 @@
         </p>
 
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap mt-4">
-            I didn't push the issue, but I instead starting using it on greenfield projects. After seeing the positive result and contributing to the project, they started to see the value in it and eventually adopted it as well.
+            I didn't push the issue, but I started to use Tailwind CSS on greenfield projects. After seeing the positive result and contributing to the project, they started to see the value in it and eventually adopted it as well.
         </p>
 
         <h2 class="text-xl md:text-2xl text-white font-bold mt-8 text-left text-balance md:text-wrap">
@@ -79,7 +79,7 @@
         </p>
 
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap mt-4">
-            It felt like semantic sugar and didn't see the value in it. I didn't give it a chance and was quick to dismiss it.
+            It felt like semantic sugar, and I didn't see the value in it. I didn't give it a chance and was quick to dismiss it.
         </p>
 
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap mt-4">
