@@ -4,7 +4,7 @@
         <meta name="description" content="If something makes you feel uncomfortable, just try it.">
     </x-slot>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans">June 25, 2024</p>
+    <p class="text-white/75 text-center text-sm py-2 font-sans">June 26, 2024</p>
     <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">Just Try It</h1>
 
     <div class="max-w-3xl mx-auto mt-8">
