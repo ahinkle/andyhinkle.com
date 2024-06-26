@@ -42,7 +42,7 @@
         </p>
 
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap mt-4">
-            Initially, my team was reluctant to use it. They were comfortable with their existing tools (e.g. SASS) and didn't see the value in trying something new. I didn't push the issue but instead used Tailwind CSS on greenfield projects
+            Initially, my team was reluctant to use it. They were comfortable with their existing tools (e.g. SASS) and didn't see the value in trying something new. I didn't push the issue but instead used Tailwind CSS on greenfield projects.
         </p>
 
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap mt-4">
