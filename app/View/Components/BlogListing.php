@@ -28,6 +28,9 @@ class BlogListing extends Component
                     preg_match('/<title>(.*?)<\/title>/', $content, $matches);
                     $title = $matches[1] ?? '';
 
+                    preg_match('/<p\b[^>]*>(.*?)<\/p>/', $content, $matches);
+                    $date = $matches[1] ?? '';
+
                     preg_match('/<p\b[^>]*>([^<]*?[^<]{20,}.*?)<\/p>/', $content, $matches);
                     $description = $matches[1] ?? '';
                     $description = preg_replace('/\s+/', ' ', $description);
@@ -37,7 +40,7 @@ class BlogListing extends Component
                         'slug' => '/blog/'.$slug,
                         'title' => $title,
                         'description' => $description,
-                        'date' => filemtime($file),
+                        'date' => $date,
                     ];
                 })
                 ->sortByDesc('date');
