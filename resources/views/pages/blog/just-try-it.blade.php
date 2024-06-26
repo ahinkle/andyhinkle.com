@@ -46,7 +46,7 @@
         </p>
 
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap mt-4">
-            I didn't push the issue -- However, for new greenfield projects I started sprinkling in bits of Tailwind. After seeing the positive result and contributing to the project, they started to see the value in it and eventually adopted it as well.
+            I didn't push the issue -- However, for new greenfield projects I started sprinkling in bits of Tailwind. After seeing the positive result and contributing to the project, other team members started to see the value in it and adopted it as well.
         </p>
 
         <h2 class="text-xl md:text-2xl text-white font-bold mt-8 text-left text-balance md:text-wrap">
