@@ -1,7 +1,9 @@
 <div class="space-y-4 max-w-3xl mx-auto">
     @foreach ($posts as $post)
         <div class="border border-gray-500 rounded py-4 px-12">
-            <p class="text-white/75 text-center text-sm py-2 font-sans">June 25, 2024</p>
+            <p class="text-white/75 text-center text-sm py-2 font-sans">
+                {{ $post['date'] }}
+            </p>
             <h2 class="text-2xl font-semibold text-white text-center">
                 {{ $post['title'] }}
             </h2>
