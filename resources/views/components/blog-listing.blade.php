@@ -1,6 +1,6 @@
 <div class="space-y-4 max-w-3xl mx-auto">
     @foreach ($posts as $post)
-        <div class="border border-gray-500 rounded py-4 px-12">
+        <div class="border border-gray-500 rounded py-4 px-8">
             <p class="text-white/75 text-center text-sm py-2 font-sans">
                 {{ $post['date'] }}
             </p>
