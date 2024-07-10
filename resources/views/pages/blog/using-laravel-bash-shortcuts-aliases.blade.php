@@ -9,11 +9,7 @@
 
     <div class="max-w-3xl mx-auto mt-8">
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap">
-            Bash shortcuts and aliases are a great way to speed up your workflow. They allow you to create custom commands that can be used to perform common tasks quickly and easily. 
-        </p>
-
-        <p class="text-white/85 text-lg text-left text-balance md:text-wrap">
-            Here are some examples of how you can use bash shortcuts and aliases in Laravel to make your life easier.
+            Bash aliases are a great way to speed up your workflow. They allow you to create custom commands that can be used to perform common tasks quickly and easily. 
         </p>
 
         <h2 class="text-2xl font-bold text-white mt-8">Creating Aliases</h2>
@@ -86,7 +82,7 @@ alias tf="phpunit --filter"
         Here are a few of my favorites:
     </p>
 
-    <pre class="bg-gray-900 p-4 rounded-md text-white text-sm mt-2">alias a="herd php artisan"
+    <pre class="bg-gray-900 p-4 rounded-md text-white text-sm mt-2" style="white-space: pre-wrap;">alias a="herd php artisan"
     
 alias tinker="herd php artisan tinker"
 
