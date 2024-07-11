@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\View\Component;
@@ -49,11 +50,11 @@ class BlogListing extends Component
         return $matches[1] ?? '';
     }
 
-    protected function resolvePublishedDate(string $content): string
+    protected function resolvePublishedDate(string $content): Carbon
     {
         preg_match('/<p\b[^>]*>(.*?)<\/p>/', $content, $matches);
 
-        return $matches[1] ?? '';
+        return $matches[1] ? Carbon::parse($matches[1]) : now();
     }
 
     protected function resolveDescription(string $content): string

@@ -2,7 +2,7 @@
     @foreach ($posts as $post)
         <div class="border border-gray-500 rounded py-4 px-4 md:px-8">
             <p class="text-white/75 text-center text-sm py-2 font-sans">
-                {{ $post['date'] }}
+                {{ $post['date']->format('F j, Y') }}
             </p>
             <h2 class="text-2xl font-semibold text-white text-center">
                 {{ $post['title'] }}
