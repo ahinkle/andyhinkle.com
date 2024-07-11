@@ -51,7 +51,7 @@
             Here are my personal aliases that I use in my projects:
         </p>
 
-        <pre class="bg-gray-900 p-4 rounded-md text-white text-sm mt-2">alias pa="php artisan"
+        <pre class="bg-gray-900 p-4 rounded-md text-white text-sm mt-2" style="white-space: pre-wrap;">alias pa="php artisan"
 
 alias tp="php artisan test -p"
 
