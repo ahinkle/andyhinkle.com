@@ -189,21 +189,6 @@ alias sail-test 'sail artisan test</pre>
     You can find more of his aliases in his <a href="https://github.com/JustSteveKing/dotfiles-mac/blob/main/aliases.zsh" class="text-blue-500/75" target="_blank" rel="noopener">aliases.zsh</a> file within the <a href="https://github.com/JustSteveKing/dotfiles-mac" class="text-blue-500/75" target="_blank" rel="noopener">JustSteveKing/dotfiles-mac</a> repository.
 </p>
 
-<h3 class="text-xl font-bold text-white mt-8">Taylor Otwell</h3>
-
-<p class="text-white/85 text-lg text-left text-wrap mt-2">
-    <a href="https://twitter.com/taylorotwell" class="text-blue-500/75">Taylor Otwell</a> is the creator of Laravel. Although he doesn't have his alias file publically available, he has shared some of his aliases in the past in various conference talks.
-    Here are a few I'm aware of:
-</p>
-
-<pre class="bg-gray-900 p-4 rounded-md text-white text-sm mt-2" style="white-space: pre-wrap;">alias artisan="php artisan"
-
-alias nah="git reset --hard;git clean -df"
-
-alias mfs="php artisan migrate:fresh --seed"
-
-alias wip="git add . && git commit -m 'wip'"</pre>
-
 <h2 class="text-2xl font-bold text-white mt-8">Looking for more?</h2>
 
 <p class="text-white/85 text-lg text-left text-wrap mt-4">
