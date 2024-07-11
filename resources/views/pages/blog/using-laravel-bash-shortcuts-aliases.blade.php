@@ -1,6 +1,6 @@
 <x-app>
     <x-slot name="seo">
-        <title>Laravel Bash Shortcuts and Aliases</title>
+        <title>Useful bash aliases for Laravel projects</title>
         <meta name="description" content="Bash shortcuts and aliases are a great way to speed up your workflow. They allow you to create custom commands that can be used to perform common tasks quickly and easily." />
     </x-slot>
 
