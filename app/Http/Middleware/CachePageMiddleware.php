@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CachePageMiddleware
 {
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next): Response
     {
         $response = $next($request);
 
