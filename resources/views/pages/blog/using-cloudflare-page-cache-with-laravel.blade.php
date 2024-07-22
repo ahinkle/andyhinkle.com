@@ -2,6 +2,18 @@
     <x-slot name="seo">
         <title>Using Cloudflare Page Cache with Laravel</title>
         <meta name="description" content="How to use Cloudflare page cache with Laravel to cache pages to improve performance and reduce server load." />
+        <meta property="og:title" content="Using Cloudflare Page Cache with Laravel" />
+        <meta property="og:description" content="How to use Cloudflare page cache with Laravel to cache pages to improve performance and reduce server load." />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "Using Cloudflare Page Cache with Laravel",
+                "datePublished": "2024-07-21T09:00:00+08:00",
+                "dateModified": "2024-07-21T09:00:00+08:00",
+            }
+        </script>
+    </script>
     </x-slot>
 
     <p class="text-white/75 text-center text-sm py-2 font-sans">July 21, 2024</p>

@@ -15,4 +15,5 @@
 <meta name="geo.region" content="US-IN" />
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <meta name="robots" content="index, follow">
+<meta name="googlebot" content="index,follow">
 {{ $slot }}
