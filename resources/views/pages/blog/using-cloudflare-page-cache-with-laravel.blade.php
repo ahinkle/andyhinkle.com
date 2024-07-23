@@ -73,54 +73,48 @@
         <p class="text-white/85 text-lg text-left text-wrap mt-4">
             You can do this by adding the following middleware to your Laravel application:
         </p>
+        <pre>
+        <x-torchlight-code language='php'>
+            use Symfony\Component\HttpFoundation\Response;
 
-        <pre class="text-white/85 text-lg text-left text-wrap mt-4 bg-gray-900 p-4 rounded-md">
-php artisan make:middleware CachePageMiddleware</pre>
+            class CachePageMiddleware
+            {
+                public function handle($request, Closure $next): Response
+                {
+                    $response = $next($request);
 
-        <pre class="text-white/85 text-lg text-left text-wrap mt-4 bg-gray-900 p-4 rounded-md">
-&lt;php
+                    if ($this->shouldCacheResponse($request, $response)) {
+                        $response->headers->add([
+                            'Cache-Control' => 'max-age=1800, public',
+                        ]);
+                    }
 
-namespace App\Http\Middleware;
+                    return $response;
+                }
 
-use Closure;
-use Symfony\Component\HttpFoundation\Response;
+                public function shouldCacheResponse($request, Response $response): bool
+                {
+                    if (! app()->isProduction()) {
+                        return false;
+                    }
 
-class CachePageMiddleware
-{
-    public function handle($request, Closure $next): Response
-    {
-        $response = $next($request);
+                    if (auth()->check()) {
+                        return false;
+                    }
 
-        if ($this->shouldCacheResponse($request, $response)) {
-            $response->headers->add([
-                'Cache-Control' => 'max-age=1800, public',
-            ]);
-        }
+                    if (! $request->isMethod('GET')) {
+                        return false;
+                    }
 
-        return $response;
-    }
+                    if (! $response->isSuccessful()) {
+                        return false;
+                    }
 
-    public function shouldCacheResponse($request, Response $response): bool
-    {
-        if (! app()->isProduction()) {
-            return false;
-        }
-
-        if (auth()->check()) {
-            return false;
-        }
-
-        if (! $request->isMethod('GET')) {
-            return false;
-        }
-
-        if (! $response->isSuccessful()) {
-            return false;
-        }
-
-        return true;
-    }
-}</pre>
+                    return true;
+                }
+            }
+        </x-torchlight-code>
+        </pre>
     
         <p class="text-white text-lg text-left text-wrap mt-10">
             Let's break down what this middleware does:
