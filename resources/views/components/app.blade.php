@@ -21,6 +21,9 @@
 
         <footer class="text-gray-800 dark:text-gray-400 text-center pt-5 text-xs dark:bg-gray-900 pb-5">
             <p>&copy; {{ date('Y') }} andyhinkle.com, All rights reserved.</p>
+            @if (Str::contains(Request::url(), 'blog'))
+                <p class="pt-4 pb-2">Code highlighting provided by <a href="https://torchlight.dev/" target="_blank" rel="noopener" class="underline">Torchlight</a>.</p>
+            @endif
         </footer>
     </body>
 </html>

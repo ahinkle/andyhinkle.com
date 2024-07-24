@@ -8,6 +8,48 @@
     }
 }
 
+@layer components {
+  /*
+  Margin and rounding are personal preferences,
+  overflow-x-auto is recommended.
+  */
+  pre {
+    @apply my-4 rounded overflow-x-auto;
+  }
+
+  /*
+  Add some vertical padding and expand the width
+  to fill its container. The horizontal padding
+  comes at the line level so that background
+  colors extend edge to edge.
+  */
+  pre code.torchlight {
+    @apply block py-4 min-w-max;
+  }
+
+  /*
+  Horizontal line padding.
+  */
+  pre code.torchlight .line {
+    @apply px-4;
+  }
+}
+
+span.line-number {
+  margin-right: 1rem;
+}
+
+.torchlight.has-focus-lines .line:not(.line-focus) {
+  transition: filter 0.35s, opacity 0.35s;
+  filter: blur(.095rem);
+  opacity: .45;
+}
+
+.torchlight.has-focus-lines:hover .line:not(.line-focus) {
+  filter: blur(0px);
+  opacity: 1;
+}
+
 /* greek */
 @font-face {
     font-family: 'Open Sans';

@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Middleware\CachePageMiddleware;
 use Illuminate\Foundation\Application;
+use Torchlight\Middleware\RenderTorchlight;
+use App\Http\Middleware\CachePageMiddleware;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 
@@ -12,7 +13,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->append(CachePageMiddleware::class);
+        $middleware->append([
+            RenderTorchlight::class, 
+            CachePageMiddleware::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
