@@ -136,20 +136,23 @@
             Next, you need to register the middleware in your <code class="bg-gray-900 p-1 rounded-md text-white text-sm">bootstrap/app.php</code> file:
         </p>
 
-        <pre class="text-white/85 text-lg text-left text-wrap mt-4 bg-gray-900 p-4 rounded-md">
-return Application::configure(basePath: dirname(__DIR__))
-    ->withRouting(
-        web: __DIR__.'/../routes/web.php',
-        commands: __DIR__.'/../routes/console.php',
-        health: '/up',
-    )
-    ->withMiddleware(function (Middleware $middleware) {
-        // Add this line:
-        $middleware->append(CachePageMiddleware::class);
-    })
-    ->withExceptions(function (Exceptions $exceptions) {
-        //
-    })->create();
+        <pre>
+        <x-torchlight-code language='php'>
+        use App\Http\Middleware\CachePageMiddleware;
+
+        return Application::configure(basePath: dirname(__DIR__))
+            ->withRouting(
+                web: __DIR__.'/../routes/web.php',
+                commands: __DIR__.'/../routes/console.php',
+                health: '/up',
+            )
+            ->withMiddleware(function (Middleware $middleware) {
+                $middleware->append(CachePageMiddleware::class); // [tl! focus]
+            })
+            ->withExceptions(function (Exceptions $exceptions) {
+                //
+            })->create();
+        </x-torchlight-code>
         </pre>
 
         <p class="text-white/85 text-lg text-left text-wrap mt-4">
