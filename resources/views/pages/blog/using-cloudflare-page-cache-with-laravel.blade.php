@@ -79,7 +79,7 @@
 
             class CachePageMiddleware
             {
-                public function handle($request, Closure $next): Response
+                public function handle($request, \Closure $next): Response
                 {
                     $response = $next($request);
 
