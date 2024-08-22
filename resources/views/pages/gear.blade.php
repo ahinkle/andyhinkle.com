@@ -64,16 +64,21 @@
                         </div>
                     </li>
                     <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">TablePlus</h3>
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">TablePlus <a href="https://tableplus.com/" target="_blank" rel="noopener noreferrer" class="dark:text-blue-500 underline text-xs">(link)</a></h3>
                         <div class="relative z-10 mt-2 text-sm text-gray-600 dark:text-gray-400 w-full">MySQL, PostgreSQL, Redis</div>
                     </li>
                     <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Insomnia</h3>
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Insomnia <a href="https://insomnia.rest/" target="_blank" rel="noopener noreferrer" class="dark:text-blue-500 underline text-xs">(link)</a></h3>
                         <div class="relative z-10 mt-2 text-sm text-gray-600 dark:text-gray-400 w-full">API Testing, GraphQL</div>
                     </li>
                     <li class="group relative flex flex-col items-start">
                         <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Laravel Herd</h3>
                         <div class="relative z-10 mt-2 text-sm text-gray-600 dark:text-gray-400 w-full">Local Development</div>
+                    </li>
+                    <li class="group relative flex flex-col items-start">
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Spatie Ray <a href="https://spatie.be/products/ray" target="_blank" rel="noopener noreferrer" class="dark:text-blue-500 underline text-xs">(link)</a></h3>
+                        <div class="relative z-10 mt-2 text-sm text-gray-600 dark:text-gray-400 w-full">Local Debugging, Logging</div>
+                    </li>
                     <li class="group relative flex flex-col items-start">
                         <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">GitHub</h3>
                         <div class="relative z-10 mt-2 text-sm text-gray-600 dark:text-gray-400 w-full">Version Control, Code Review</div>
