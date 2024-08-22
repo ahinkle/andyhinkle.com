@@ -16,7 +16,7 @@
             </p>
 
             <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
-                I'm co-host of the <a href="https://laravelnews.com/podcast" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">The Midwest Artisan Podcast</a> where we talk about Laravel and all things web development.</p>
+                I'm co-host of the <a href="https://the-midwest-artisan.transistor.fm/" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">The Midwest Artisan Podcast</a> where we talk about Laravel and all things web development.</p>
             </p>
 
             <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
