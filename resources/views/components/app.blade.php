@@ -13,7 +13,7 @@
         @endenv
 
         <div class="bg-gray-100 h-full p-0 md:p-5 dark:bg-gray-900">
-            <div class="max-w-screen-lg bg-white mx-auto p-4 md:rounded-lg dark:bg-gray-800 relative min-h-[100rem]">
+            <div class="max-w-screen-lg bg-white mx-auto p-4 md:rounded-lg dark:bg-gray-800 relative pb-10">
                 <x-layout.header />
                 {{ $slot }}
             </div>
