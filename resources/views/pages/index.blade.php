@@ -20,7 +20,7 @@
             </p>
 
             <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
-                Feel free to connect with me on <a href="https://twitter.com/andyhinkle" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">Twitter</a> or 
+                Feel free to connect with me on <a href="https://twitter.com/andyhnk" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">Twitter</a> or 
                 <a href="https://www.linkedin.com/in/athinkle/" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
             </p>
         </div>
