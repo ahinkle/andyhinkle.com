@@ -25,7 +25,7 @@
         </p>
 
         <p class="text-white/85 text-lg text-left text-wrap mt-4">
-            Introducing <a href="https://the-midwest-artisan.transistor.fm/" class="italic hover:underline hover:text-blue-400" target="_blank" rel="noopener noreferrer">The Midwest Artisan</a> – a podcast where we explore the world of Laravel and web development, and share the knowledge we've gathered over the past decade.
+            Introducing <a href="https://the-midwest-artisan.transistor.fm/" class="italic underline text-blue-400" target="_blank" rel="noopener noreferrer">The Midwest Artisan</a> – a podcast where we explore the world of Laravel and web development, and share the knowledge we've gathered over the past decade.
         </p>
 
         <p class="text-white/85 text-lg text-left text-wrap mt-4">
