@@ -20,6 +20,10 @@
     <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">We started a podcast</h1>
 
     <div class="max-w-3xl mx-auto mt-8">
+        <div class="px-4 pb-10">
+            <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless="" src="https://share.transistor.fm/e/439210d0?color=1F2937&background=101827"></iframe> 
+        </div>
+
         <p class="text-white/85 text-lg text-left text-wrap">
             My good friend <a href="https://daltonmccleery.com" class="text-blue-400 hover:underline">Dalton McCleery</a> and I have had countless deep-dive conversations over Slack about Laravel, PHP, and all things web development. We've been toying with the idea of starting a podcast for a while now, and we finally made it happen! 
         </p>
@@ -35,9 +39,5 @@
         <p class="text-white/85 text-lg text-left text-wrap mt-4">
             In each episode, we’ll dive into topics like Laravel, PHP, web development, and more. You can expect practical tips, insights from our projects, and even some guest appearances from fellow developers. Our goal is to inspire and contribute to the Laravel community that has given us so much.
         </p>
-
-        <div class="px-4 pt-10">
-            <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless="" src="https://share.transistor.fm/e/439210d0?color=1F2937&background=101827"></iframe> 
-        </div>
     </div>
 </x-app>
