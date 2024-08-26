@@ -12,7 +12,7 @@
 
     <div class="max-w-3xl mx-auto mt-8">
         <div class="px-4 pb-10">
-            <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless="" src="https://share.transistor.fm/e/439210d0?color=1F2937&background=101827"></iframe> 
+            <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless="" src="https://share.transistor.fm/e/327c1f25?color=1F2937&background=101827"></iframe> 
         </div>
 
         <div class="px-4 prose prose-lg dark:prose-invert">
