@@ -12,7 +12,7 @@
             </p>
 
             <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
-                I'm currently a Senior App & Web Developer at <a href="https://grayloon.com" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">Gray Loon Marketing Group</a> where I work on a variety of projects ranging from custom web applications to mobile apps.
+                I'm a Senior App & Web Developer at <a href="https://grayloon.com" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">Gray Loon Marketing Group</a> where I work on a variety of projects ranging from custom web applications to mobile apps.
             </p>
 
             <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
