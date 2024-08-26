@@ -4,7 +4,6 @@
         <meta name="description" content="We dive into NullStar 2024, the ultimate basketball showdown between Team Laravel and the Terminal Boys. We share our admiration for Caleb Porzio (who’s definitely on Team Laravel!). Plus, we explore staying productive in development...">
         <meta property="og:title" content="Those aren't NBA players, just a bunch of nerdy developers | The Midwest Artisan Podcast" />
         <meta property="og:description" content="We dive into NullStar 2024, the ultimate basketball showdown between Team Laravel and the Terminal Boys. We share our admiration for Caleb Porzio (who’s definitely on Team Laravel!). Plus, we explore staying productive in development...">
-        <meta property="og:image" content="{{ asset('images/podcast/episode-1.jpg') }}" />
     </script>
     </x-slot>
 
