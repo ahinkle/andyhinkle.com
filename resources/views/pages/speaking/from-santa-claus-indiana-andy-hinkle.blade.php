@@ -1,9 +1,9 @@
 <x-app>
     <x-slot name="seo">
         <title>From Santa Claus, Indiana: Andy Hinkle | The MVP Dev</title>
-        <meta name="description" content="In this episode, Kevin Kirchner interviews Andy Hinkle, a developer and founding member of the MVP Dev Podcast.">
+        <meta name="description" content="In this episode, Kevin Kirchner interviews Andy Hinkle, a developer and founding member of the MVP Dev Podcast. Andy shares his journey from working at a theme park to becoming a web developer and his passion for minimal viable products (MVPs).">
         <meta property="og:title" content="From Santa Claus, Indiana: Andy Hinkle | The MVP Dev" />
-        <meta property="og:description" content="In this episode, Kevin Kirchner interviews Andy Hinkle, a developer and founding member of the MVP Dev Podcast.">
+        <meta property="og:description" content="In this episode, Kevin Kirchner interviews Andy Hinkle, a developer and founding member of the MVP Dev Podcast. Andy shares his journey from working at a theme park to becoming a web developer and his passion for minimal viable products (MVPs).">
     </x-slot>
 
     <p class="text-white/75 text-center text-sm py-2 font-sans">August 7th, 2024</p>
