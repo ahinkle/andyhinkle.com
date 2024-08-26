@@ -1,9 +1,9 @@
 <x-app>
     <x-slot name="seo">
         <title>The gap between the last Standard Plan and Enterprise | The Midwest Artisan Podcast</title>
-        <meta name="description" content="We dive into A/B testing and the challenges that come with the jump from the highest non-enterprise plan to full enterprise. We also discuss some Laravel shop talk, sharing the tools we've been using recently. ">
+        <meta name="description" content="We dive into A/B testing and the challenges that come with the jump from the highest non-enterprise plan to full enterprise. We also discuss some Laravel shop talk, sharing the tools we've been using recently. Plus, Andy introduces his new podcast idea, where he plans to interview Laravel community members and explore their unique development journeys.">
         <meta property="og:title" content="The gap between the last Standard Plan and Enterprise | The Midwest Artisan Podcast" />
-        <meta property="og:description" content="We dive into A/B testing and the challenges that come with the jump from the highest non-enterprise plan to full enterprise. We also discuss some Laravel shop talk, sharing the tools we've been using recently. ">
+        <meta property="og:description" content="We dive into A/B testing and the challenges that come with the jump from the highest non-enterprise plan to full enterprise. We also discuss some Laravel shop talk, sharing the tools we've been using recently. Plus, Andy introduces his new podcast idea, where he plans to interview Laravel community members and explore their unique development journeys.">
     </x-slot>
 
     <p class="text-white/75 text-center text-sm py-2 font-sans">August 19th, 2024</p>
