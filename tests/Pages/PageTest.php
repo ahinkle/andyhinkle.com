@@ -19,4 +19,10 @@ class PageTest extends TestCase
             ->assertOk()
             ->assertSee('Hardware');
     }
+
+    public function test_redirects_wp_admin_for_teh_memes(): void
+    {
+        $this->get('/wp-admin')
+            ->assertRedirect();
+    }
 }
