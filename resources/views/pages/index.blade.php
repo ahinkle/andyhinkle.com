@@ -16,16 +16,16 @@
             </p>
 
             <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
-                I'm a Senior App & Web Developer at <a href="https://grayloon.com" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">Gray Loon Marketing Group</a> where I work on a variety of projects ranging from custom web applications to mobile apps.
+                I'm a Senior App & Web Developer at <a href="https://grayloon.com" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Gray Loon Marketing Group</a> where I work on a variety of projects ranging from custom web applications to mobile apps.
             </p>
 
             <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
-                I'm co-host of the <a href="https://the-midwest-artisan.transistor.fm/" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">The Midwest Artisan Podcast</a> where we talk about Laravel and all things web development.</p>
+                I'm co-host of the <a href="https://the-midwest-artisan.transistor.fm/" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">The Midwest Artisan Podcast</a> where we talk about Laravel and all things web development.</p>
             </p>
 
             <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
-                Feel free to connect on <a href="https://twitter.com/andyhnk" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">Twitter</a> or 
-                <a href="https://www.linkedin.com/in/athinkle/" class="text-blue-500 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+                Feel free to connect on <a href="https://twitter.com/andyhnk" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Twitter</a> or 
+                <a href="https://www.linkedin.com/in/athinkle/" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
             </p>
         </div>
 
@@ -149,7 +149,7 @@
             Contact
         </h2>
 
-        <hr class="mt-12 w-1/2 mx-auto border-gray-300 dark:border-gray-700 ">
+        <hr class="mt-12 w-1/2 mx-auto border-gray-300 dark:border-gray-700">
 
         <div class="pt-10">
             <p class="text-gray-700 dark:text-gray-300 mt-2 ml-2 text-sm text-center text-balance">
