@@ -11,7 +11,7 @@
                 {{ $episode['description'] }}
             </p>
             <a href="{{ url($episode['slug']) }}" class="text-white/50 hover:text-white underline block text-center pt-4">
-                Listen now
+                Listen Now
             </a>
         </div>
     @endforeach
