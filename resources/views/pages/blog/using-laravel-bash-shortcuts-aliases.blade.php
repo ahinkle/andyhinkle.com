@@ -152,7 +152,7 @@ alias sail='[ -f sail ] && sail || vendor/bin/sail'</pre>
 
 <p class="text-white/85 text-lg text-left text-wrap mt-2">
     <a href="https://christoph-rumpel.com/" class="text-blue-500/75">Christoph Rumpel</a> is a developer and content creator who has some great aliases that he uses in his projects. 
-    I found the <code class="bg-gray-900 p-1 rounded-md text-white text-sm">clearlogs</code> alias to be particularly useful for deleting your log files. Here are a few of my favorites:
+    I found the <code class="bg-gray-900 p-1 rounded-md text-white text-sm">clearlogs</code> alias to be particularly useful for deleting your log files.
     Here are a few of my favorites:
 </p>
 
