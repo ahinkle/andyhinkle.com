@@ -53,13 +53,13 @@
                         <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Visual Studio Code</h3>
                         <div>
                             <div class="relative z-10 mt-2 text-sm text-gray-600 dark:text-gray-400 w-full">
-                                Font: <a href="https://www.monolisa.dev/" target="_blank" rel="noopener noreferrer" class="dark:text-gray-200 text-gray-800 underline">MonoLisa</a>
+                                Font: MonoLisa <a href="https://www.monolisa.dev/" target="_blank" rel="noopener noreferrer" class="dark:text-blue-500 underline text-xs">(link)</a>
                             </div>
                             <div class="relative z-10 mt-2 text-sm text-gray-600 dark:text-gray-400 w-full">
-                                Theme: <a href="https://marketplace.visualstudio.com/items?itemName=this-fifo.natty" target="_blank" rel="noopener noreferrer" class="dark:text-gray-200 text-gray-800 underline">Natty</a>
+                                Theme: Natty <a href="https://marketplace.visualstudio.com/items?itemName=this-fifo.natty" target="_blank" rel="noopener noreferrer" class="dark:text-blue-500 underline text-xs">(link)</a>
                             </div>
                             <div class="relative z-10 mt-2 text-sm text-gray-600 dark:text-gray-400 w-full">
-                                Settings: <a href="https://gist.github.com/ahinkle/d99742b14dab934300e7120887420bbd" target="_blank" rel="noopener noreferrer" class="dark:text-gray-200 text-gray-800 underline">settings.json</a>
+                                Settings: <a href="https://gist.github.com/ahinkle/d99742b14dab934300e7120887420bbd" target="_blank" rel="noopener noreferrer" class="dark:text-blue-500 underline text-xs">settings.json</a>
                             </div>
                         </div>
                     </li>
