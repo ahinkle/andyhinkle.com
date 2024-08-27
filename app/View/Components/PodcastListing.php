@@ -3,12 +3,12 @@
 namespace App\View\Components;
 
 use Closure;
-use Illuminate\Support\Str;
-use Illuminate\Support\Carbon;
-use Illuminate\View\Component;
-use Illuminate\Support\Collection;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
+use Illuminate\View\Component;
 
 class PodcastListing extends Component
 {
@@ -21,7 +21,7 @@ class PodcastListing extends Component
             'podcasts' => $this->resolvePodcasts(),
         ]);
     }
-    
+
     protected function resolvePodcasts(): Collection
     {
         return Cache::rememberForever('podcast-listing', function () {
