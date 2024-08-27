@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ url()->current() }}" />
-<meta property="og:site_name" content="Andy Hinkle, Software Developer" />
+<meta property="og:site_name" content="Andy Hinkle, Laravel Developer" />
 <meta name="twitter:site" content="@andyhnk" />
 <meta name="twitter:creator" content="@andyhnk" />
 <meta property="og:locale" content="en_US" />

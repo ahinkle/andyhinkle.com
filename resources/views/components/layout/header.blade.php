@@ -8,7 +8,7 @@
             Andy Hinkle
         </h1>
         <p class="text-gray-500 dark:text-gray-400">
-            Software Developer
+            Laravel Developer
         </p>
         <div class="flex flex-row justify-between items-center py-4 pl-1">
             <div class="flex flex-row gap-x-3">
