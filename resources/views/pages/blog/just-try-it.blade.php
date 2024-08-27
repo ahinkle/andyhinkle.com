@@ -60,7 +60,7 @@
             There will always be detractors who are quick to label new tools as "bad" or "wrong" because they don't fit their existing mental model.
 
         <p class="text-white/85 text-lg text-left text-balance md:text-wrap mt-4">
-            Ignore these voices and form your own opinions based on your experiences and the feedback from trusted peers in your developer community.
+            Ignore these voices and form your own opinions based on your experiences and the feedback from <span class="italic">trusted</span> peers in your developer community.
         </p>
 
         <h2 class="text-xl md:text-2xl text-white font-bold mt-8 text-left text-balance md:text-wrap">
