@@ -25,7 +25,7 @@
 
         <h2 class="text-2xl font-bold text-white text-center mt-12">Transcript</h2>
 
-        <div class="px-4 prose prose-lg dark:prose-invert">
+        <div class="px-4 prose prose-sm dark:prose-invert">
             <section class="episode-description episode-transcript" x-show="transcript">
                 <p>Andy Hinkle (<a href="https://share.transistor.fm/s/486a5c7c#t=0m0s" target="_blank" rel="noopener noreferrer" title="Jump to 00:00 in this episode">00:00</a>)
                 <br>Welcome to another episode of The Midwest Artisan. I'm your host, Andy Hinkle.</p>
