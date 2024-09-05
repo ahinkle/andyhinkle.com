@@ -36,7 +36,7 @@
         </p>
 
         <p class="text-white/85 text-lg text-left mt-4">
-           So there I was, boarding the train with a bag full of coins, and 15 stops to go. The first stop came, and 75% of the passengers got off. I soon realized that was the "smart" stop, where locals hopped off to save money on their journey into the city. As the train approached downtown Dallas, the car grew emptier and the surroundings more... interesting. By the time I reached my final stop, I was the last person on the train, greeted by a throng of homeless people at the station. Let’s just say, I quickly booked it to my hotel, and made sure to Uber back to the airport after that.
+           So there I was, boarding the train with a bag full of coins, and 15 stops to go. The first stop came, and 75% of the passengers got off. I soon realized that was the "smart" stop, where locals hopped off to save money on their journey into the city. As the train approached downtown Dallas, the car grew emptier and the surroundings more... interesting. By the time I reached my final stop, I was the last person on the train, greeted by a throng of homeless people at the station. Let’s just say, I quickly booked it to my hotel, and made sure to Uber around after that.
         </p>
 
         <img src="/images/blog/laracon/2024/on-the-dallas-train.jpg" alt="Me on the Dallas train" class="mt-8 rounded-lg px-4 py-2 mx-auto max-w-[400px]">
