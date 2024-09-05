@@ -93,7 +93,7 @@
             These events provide lots of context about what's happening in your application. By logging them, you can gain insights into your application's performance and behavior.
         </p>
 
-        <h2 class="text-2xl font-bold text-white mt-8">How to log Laravel Events</h2>
+        <h2 class="text-2xl font-bold text-white mt-8">How to globally log Laravel Events</h2>
 
         <p class="text-white/85 text-lg text-left mt-4">
             Laravel makes it easy to log events using the built-in event system. You can create listeners for events and log them to your preferred logging service.
@@ -120,7 +120,7 @@
                 public function boot(): void
                 {
                     Event::listen(Login::class, function (Login $event) {// [tl! focus]
-                        Log::info('User logged in', [ // [tl! focus]
+                        Log::info('Successful Authentication', [ // [tl! focus]
                             'user_id' => $event->user->id, // [tl! focus]
                             'email' => $event->user->email, // [tl! focus]
                         ]); // [tl! focus]
@@ -140,7 +140,7 @@
 
         <pre>
         <x-torchlight-code language='php'>
-            [2024-08-22 09:00:00] local.INFO: User logged in {"user_id":1,"email":"test@example.com"}
+            [2024-08-22 09:00:00] local.INFO: Successful Authentication {"user_id":1,"email":"test@example.com"}
         </x-torchlight-code>
         </pre>
 
@@ -214,31 +214,31 @@
 
         <pre>
         <x-torchlight-code language='php'>
-            namespace App\Http\Middleware;
+            namespace App\Http\Middleware; // [tl! focus]
 
             use Closure;
             use Illuminate\Http\Request;
             use Illuminate\Support\Facades\Log;
             use Symfony\Component\HttpFoundation\Response;
 
-            class CloudWatchContextMiddleware
+            class CloudWatchContextMiddleware // [tl! focus]
             {
                 /**
                 * Handle an incoming request.
                 *
                 * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
                 */
-                public function handle(Request $request, Closure $next): Response
-                {
-                    Log::shareContext([
-                        'email' => $request->user()?->email,
-                        'ip' => $request->ip(),
-                        'via' => $request->expectsJson() ? 'api' : 'web',
-                        'user_agent' => $request->userAgent(),
-                    ]);
+                public function handle(Request $request, Closure $next): Response // [tl! focus]
+                { // [tl! focus]
+                    Log::shareContext([ // [tl! focus] 
+                        'email' => $request->user()?->email, // [tl! focus]
+                        'ip' => $request->ip(), // [tl! focus] 
+                        'via' => $request->expectsJson() ? 'api' : 'web', // [tl! focus]
+                        'user_agent' => $request->userAgent(), // [tl! focus]
+                    ]); // [tl! focus]
 
-                    return $next($request);
-                }
+                    return $next($request); // [tl! focus]
+                } // [tl! focus]
             }
         </x-torchlight-code>
         </pre>
