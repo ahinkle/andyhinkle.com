@@ -33,7 +33,7 @@
         <h2 class="text-2xl font-bold text-white mt-8">Default logging isn't enough for your Applications</h2>
 
         <p class="text-white/85 text-lg text-left mt-4">
-            You get an email from the client, "We've received a report that a user cannot reset their password. The password reset email link isn't working. They click the link, but nothing happens.".
+            You get an email from the client, "We've received a report that a user cannot reset their password. The password reset email link isn't working. They click the link, but nothing happens."
         </p>
 
         <p class="text-white/85 text-lg text-left mt-4">
@@ -79,7 +79,7 @@
             Let's look at a few:
         </p>
 
-        <ul class="text-white/85 text-lg text-left mt-4">
+        <ul class="text-white/85 text-lg text-left mt-4 overflow-hidden">
             <li><code class="bg-gray-900 p-1 rounded-md text-white text-sm">Illuminate\Auth\Events\Login</code> - fired when a user logs in</li>
             <li><code class="bg-gray-900 p-1 rounded-md text-white text-sm">Illuminate\Auth\Events\Logout</code> - fired when a user logs out</li>
             <li><code class="bg-gray-900 p-1 rounded-md text-white text-sm">Illuminate\Auth\Events\PasswordReset</code> - fired when a user resets their password</li>
