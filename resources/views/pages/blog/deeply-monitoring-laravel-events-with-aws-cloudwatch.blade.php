@@ -206,6 +206,77 @@
         </x-torchlight-code>
         </pre>
 
+        <h2 class="text-2xl font-bold text-white mt-8">Adding Context to all Logs</h2>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            You can add the `sharedContext` to all log messages by creating a middleware that adds the context to the request:
+        </p>
+
+        <pre>
+        <x-torchlight-code language='php'>
+            namespace App\Http\Middleware;
+
+            use Closure;
+            use Illuminate\Http\Request;
+            use Illuminate\Support\Facades\Log;
+            use Symfony\Component\HttpFoundation\Response;
+
+            class CloudWatchContextMiddleware
+            {
+                /**
+                * Handle an incoming request.
+                *
+                * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+                */
+                public function handle(Request $request, Closure $next): Response
+                {
+                    Log::shareContext([
+                        'email' => $request->user()?->email,
+                        'ip' => $request->ip(),
+                        'via' => $request->expectsJson() ? 'api' : 'web',
+                        'user_agent' => $request->userAgent(),
+                    ]);
+
+                    return $next($request);
+                }
+            }
+        </x-torchlight-code>
+        </pre>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            In this example, we're adding the context to the request in the middleware. This context will be shared with all log messages within the request lifecycle.
+        </p>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            You can add this middleware to the <code class="bg-gray-900 p-1 rounded-md text-white text-sm">web</code> middleware group in your <code class="bg-gray-900 p-1 rounded-md text-white text-sm">bootstrap/app.php</code> file:
+        </p>
+
+        <pre>
+        <x-torchlight-code language='php'>
+            // use App\Http\Middleware\CloudWatchContextMiddleware;
+
+            return Application::configure(basePath: dirname(__DIR__))
+                ->withProviders()
+                ->withRouting(
+                    web: __DIR__.'/../routes/web.php',
+                    commands: __DIR__.'/../routes/console.php',
+                    health: '/status',
+                )
+                ->withMiddleware(function (Middleware $middleware) { // [tl! focus]
+                    $middleware->web([ // [tl! focus]
+                        CloudWatchContextMiddleware::class, // [tl! focus]
+                    ]); // [tl! focus]
+                })// [tl! focus]
+                ->withExceptions(function (Exceptions $exceptions) {
+                    Integration::handles($exceptions);
+                })->create();
+        </x-torchlight-code>
+        </pre>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            Ensure that you add it to the <code class="bg-gray-900 p-1 rounded-md text-white text-sm">web</code> middleware group to share authentication context with all web requests. Otherwise, at a base middleware level, it will miss user identifying context like email or user ID.
+        </p>
+
         <h2 class="text-2xl font-bold text-white mt-8">Logging to AWS CloudWatch</h2>
 
         <p class="text-white/85 text-lg text-left mt-4">
