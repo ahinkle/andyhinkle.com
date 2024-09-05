@@ -27,7 +27,7 @@
     <div class="max-w-3xl mx-auto mt-8">
 
         <p class="text-white/85 text-lg text-left">
-            Monitoring your Laravel application in production is crucial for maintaining performance, reliability, and security. When you're deploying with services like Laravel Vapor, paired with AWS services like CloudWatch, you have powerful tools at your disposal to gain deep insights into your application's events and behaviors.
+            When you're deploying with services like Laravel Vapor, paired with AWS services like CloudWatch, you have powerful tools at your disposal to gain deep insights into your application's events and behaviors.
         </p>
 
         <h2 class="text-2xl font-bold text-white mt-8">Default logging isn't enough for your Applications</h2>
