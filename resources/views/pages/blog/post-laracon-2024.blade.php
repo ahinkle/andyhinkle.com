@@ -28,7 +28,7 @@
         </p>
 
         <p class="text-white/85 text-lg text-left mt-4">
-            It all started when I landed at the Dallas-Fort Worth Airport and realized that Uber prices were through the roof—$70 just to get to my hotel! Being the frugal traveler that I am, I decided to take the train instead. After all, the train station was right there, and for just $3, I could save a good chunk of change.
+            It all started when I landed at the Dallas-Fort Worth Airport and realized that Uber prices were through the roof—$70 just to get to my hotel! Being the frugal traveler that I am, I decided to take the train instead. After all, the train station was right there -- I've taken public transportation many times in NY/Chicago.. and for just $3? I could save a good chunk of change.
         </p>
 
         <p class="text-white/85 text-lg text-left mt-4">
