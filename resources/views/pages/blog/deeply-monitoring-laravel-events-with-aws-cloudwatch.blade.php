@@ -9,8 +9,8 @@
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "headline": "Deeply Monitoring Laravel Events with AWS CloudWatch",
-                "datePublished": "2024-08-22T09:00:00+08:00",
-                "dateModified": "2024-08-22T09:00:00+08:00",
+                "datePublished": "2024-09-04T09:00:00+08:00",
+                "dateModified": "2024-09-04T09:00:00+08:00",
             }
         </script>
     </script>
@@ -20,7 +20,7 @@
         <img src="/images/blog/aws/aws-cloudwatch-monitoring-laravel-events.png" alt="Cloudflare Cache Rules" class="w-full mt-4 mx-auto">
     </a>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans pt-5">August 22, 2024</p>
+    <p class="text-white/75 text-center text-sm py-2 font-sans pt-5">September 4, 2024</p>
     <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">Deeply Monitoring Laravel Events with AWS CloudWatch</h1>
 
 
@@ -170,5 +170,104 @@
         <p class="text-white/85 text-lg text-left text-wrap mt-4">
             The real magic happens when you use the <code class="bg-gray-900 p-1 rounded-md text-white text-sm">Log::withContext</code> method. This method allows you to add context to all log messages within a given closure.
         </p>
+
+        <pre>
+        <x-torchlight-code language='php'>
+            Log::shareContext([
+                'email' => $request->user()?->email,
+                'ip' => $request->ip(),
+                'via' => $request->expectsJson() ? 'api' : 'web',
+                'user_agent' => $request->userAgent(),
+            ]);
+        </x-torchlight-code>
+        </pre>
+
+        <p class="text-white/85 text-lg text-left text-wrap mt-4">
+            In this example, we're sharing context with all log messages within the closure. This means that the <code class="bg-gray-900 p-1 rounded-md text-white text-sm">email</code>, <code class="bg-gray-900 p-1 rounded-md text-white text-sm">ip</code>, <code class="bg-gray-900 p-1 rounded-md text-white text-sm">via</code>, and <code class="bg-gray-900 p-1 rounded-md text-white text-sm">user_agent</code> fields will be added to all log messages within the closure.
+        </p>
+
+        <p class="text-white/85 text-lg text-left text-wrap mt-4">
+            Now we can remove the context in the middle of the code from the log message and let Laravel handle it for us. This allows us to have consistent context across all log messages.
+        </p>
+
+        <pre>
+        <x-torchlight-code language='php'>
+            Log::info('[AUTH] Successful Authentication'); 
+        </x-torchlight-code>
+        </pre>
+
+        <p class="text-white/85 text-lg text-left text-wrap mt-4">
+            The log message will now look like this:
+        </p>
+
+        <pre>
+        <x-torchlight-code language='php'>
+            [2024-08-22 09:00:00] local.INFO: [AUTH] Successful Authentication {"email":" foo@bar.com","ip":xxx.xx.xxx.xx","via":"web","user_agent":"Mozilla/5.0"}
+        </x-torchlight-code>
+        </pre>
+
+        <h2 class="text-2xl font-bold text-white mt-8">Logging to AWS CloudWatch</h2>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            Laravel Vapor makes it easy to log to AWS CloudWatch. Laravel Vapor uses CloudWatch by default to log your application's output. If you are outside of Vapor, you can use the <a href="https://github.com/pagevamp/laravel-cloudwatch-logs" class="text-blue-400 hover:underline">laravel-cloudwatch-logs</a> package to log to CloudWatch.
+        </p>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            To log to CloudWatch, you may need to set up the necessary permissions in your AWS account and configure the package with your AWS credentials.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-8">Using the AWS CloudWatch Log Insights</h2>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            Once you're logging to CloudWatch, you can use the CloudWatch Log Insights feature to query and analyze your logs. Log Insights allows you to run queries on your logs to gain insights into your application's behavior.
+        </p>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            For example, you can use Log Insights to query all successful authentication logs and see how many users are logging in each day. This can help you identify patterns and trends in your application's usage.
+        </p>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            In this example, we're querying the logs for successful authentications and grouping them by the method of authentication (web or API) and the time of day.
+        </p>
+
+        <pre>
+        <x-torchlight-code language='sql'>
+            fields @timestamp, @message
+            | filter @message like "[AUTH] Successful Authentication"
+            | fields coalesce(context.via, "unknown") as via
+            | parse via "web" as web_request
+            | parse via "api" as api_request
+            | stats count(*) as Total_Authentications, count(web_request) as Web_Authentications, count(api_request) as API_Authentications by bin(15m)
+        </x-torchlight-code>
+        </pre>
+
+        <h2 class="text-2xl font-bold text-white mt-8">Creating a Dashboard</h2>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            Once you have your queries set up, you can create a dashboard in CloudWatch to visualize your logs. Dashboards allow you to create custom visualizations of your log data, such as line charts, bar charts, and pie charts.
+        </p>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            From a saved query, you can use the "Add to dashboard" button to create a new widget on your dashboard. You can then customize the widget to display the data in the way you want. Just ensure the data is in the correct format for the given visualization.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-8">All Set!</h2>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            That's it! You're now deeply monitoring your Laravel events with AWS CloudWatch. By logging your events and analyzing them with CloudWatch, you can gain insights into your application's performance and behavior.
+        </p>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            Feel free to add more events to your logging system to gain even more insights into your application. The more events you log, the more context you'll have about what's happening in your application.
+        </p>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            AWS CloudWatch is affordable with a generous free tier, so you can get started with logging your events without breaking the bank. Give it a try and see how it can help you monitor your Laravel application.
+        </p>
+
+        <p class="text-white/85 text-lg text-left mt-4">
+            Happy logging!
+        </p>
+
     </div>
 </x-app>
