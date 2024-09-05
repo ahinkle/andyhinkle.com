@@ -202,7 +202,7 @@
 
         <pre>
         <x-torchlight-code language='php'>
-            [2024-08-22 09:00:00] local.INFO: [AUTH] Successful Authentication {"email":" foo@bar.com","ip":xxx.xx.xxx.xx","via":"web","user_agent":"Mozilla/5.0"}
+            [2024-08-22 09:00:00] local.INFO: [AUTH] Successful Authentication {"email":" foo@bar.com","ip":"xxx.xx.xxx.xx","via":"web","user_agent":"Mozilla/5.0"}
         </x-torchlight-code>
         </pre>
 
