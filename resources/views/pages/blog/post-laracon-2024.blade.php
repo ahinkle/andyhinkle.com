@@ -24,7 +24,7 @@
     <div class="max-w-3xl mx-auto mt-8">
 
         <p class="text-white/85 text-lg text-left">
-            Let me take you on a little journey, starting with my arrival in Dallas. This was my fourth Laracon--from taking the train in Chicago to navigating the subway in New York. But Dallas? Dallas had a different kind of excitement in store for me.
+            Let me take you on a little journey, starting with my arrival in Dallas. This was my fourth Laracon—from taking the train in Chicago to navigating the subway in New York. But Dallas? Dallas had a different kind of excitement in store for me.
         </p>
 
         <p class="text-white/85 text-lg text-left mt-4">
