@@ -45,7 +45,7 @@
 
         <p class="text-white/85 text-lg text-left mt-4">
             Despite the eventful journey, Laracon 2024 was more than worth it. The Laravel community is simply unparalleled. There’s a warmth, a 
-            friendliness that you just don’t find anywhere else. It wasn’t just my perspective—I saw developers from the JavaScript ecosystem, 
+            friendliness that you just don’t find anywhere else. It wasn’t just my perspective—I saw developers from other ecosystems, 
             like
             <a href="https://twitter.com/ThePrimeagen" class="text-blue-400 hover:text-blue-500">@ThePrimeagen</a>, completely blown away by how welcoming everyone was. 
             The Laravel community isn’t just a group of people; it’s a family that welcomes everyone with open arms.
