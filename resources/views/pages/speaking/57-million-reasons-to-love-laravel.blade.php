@@ -20,7 +20,7 @@
         </div>
 
         <div class="px-4 mt-8">
-            <iframe class="w-full h-96" src="https://www.youtube.com/embed/T8laS1O4ZvA?si=gi91zCRSAsPEbj2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe class="w-full h-96" src="https://www.youtube.com/embed/mFW3ACyDM1s?si=gi91zCRSAsPEbj2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <h2 class="text-2xl font-bold text-white text-center mt-12">Transcript</h2>
