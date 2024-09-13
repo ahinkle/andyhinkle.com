@@ -4,7 +4,6 @@
         <meta name="description" content="We dive into a wide array[] of topics, from Laravel's exciting $57 million funding to the buzz around FluxUIs pricing drama and the much-anticipated features coming in Inertia 2.0.">
         <meta property="og:title" content="57 Million Reasons to Love Laravel">
         <meta property="og:description" content="We dive into all things post-Laracon! Andy shares his wild adventure just getting to Dallas with a few unexpected twists and turns along the way. We break down the highlights from Laracon, including the exciting announcements about Laravel Cloud and the amazing talks that left us inspired and ready to code.">
-    </script>
     </x-slot>
 
     <p class="text-white/75 text-center text-sm py-2 font-sans">September 11th, 2024</p>
