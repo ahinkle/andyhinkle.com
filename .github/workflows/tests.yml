@@ -1,4 +1,4 @@
-name: PHP
+name: "Unit Tests"
 
 on:
     push:
@@ -7,7 +7,7 @@ on:
         branches: [main]
 
 jobs:
-    tests:
+    phpunit:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
