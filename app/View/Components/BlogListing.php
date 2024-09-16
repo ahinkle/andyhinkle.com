@@ -18,6 +18,14 @@ class BlogListing extends Component
         ]);
     }
 
+    /**
+     * @return Collection<int, array{
+     *     slug: string,
+     *     title: string,
+     *     description: string,
+     *     date: \DateTimeInterface
+     * }>
+     */
     protected function resolvePosts(): Collection
     {
         return Cache::rememberForever('post-listing', function () {

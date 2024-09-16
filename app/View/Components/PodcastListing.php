@@ -22,6 +22,14 @@ class PodcastListing extends Component
         ]);
     }
 
+    /**
+     * @return Collection<int, array{
+     *     slug: string,
+     *     title: string,
+     *     description: string,
+     *     date: \DateTimeInterface
+     * }>
+     */
     protected function resolvePodcasts(): Collection
     {
         return Cache::rememberForever('podcast-listing', function () {
