@@ -23,10 +23,6 @@
     <div class="max-w-3xl mx-auto mt-8">
         <img src="/images/blog/blank-paper.webp" alt="Cloudflare Cache Rules" class="w-full mt-4 mx-auto" />
 
-        <p class="text-white/85 text-lg text-left mt-8">
-            Starting something new is brutal.
-        </p>
-
         <p class="text-white/85 text-lg text-left mt-4">
             The idea of working in public, putting yourself and
             your work out there for the world to see, stirs up every insecurity you’ve ever had. It makes you question
