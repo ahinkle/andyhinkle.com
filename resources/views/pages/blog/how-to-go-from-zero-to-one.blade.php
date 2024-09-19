@@ -11,13 +11,13 @@
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "headline": "How do you go from zero to one?",
-                "datePublished": "2024-09-18T09:00:00+08:00",
-                "dateModified": "2024-09-18T09:00:00+08:00",
+                "datePublished": "2024-09-19T09:00:00+08:00",
+                "dateModified": "2024-09-19T09:00:00+08:00",
             }
         </script>
     </x-slot>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans pt-5">September 18, 2024</p>
+    <p class="text-white/75 text-center text-sm py-2 font-sans pt-5">September 19, 2024</p>
     <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">How do you go from zero to one?</h1>
 
     <div class="max-w-3xl mx-auto mt-8">
