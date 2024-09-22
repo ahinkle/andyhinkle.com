@@ -32,7 +32,7 @@
             class="w-[500px] h-[750px] object-cover mt-4 mx-auto" />
 
         <p class="text-white text-lg">
-            Before coming a developer, I started my career working in theme parks -- it was my first job and I moved my
+            Before coming a developer, I started my career working in theme parks — it was my first job and I moved my
             way up through the ranks.
         </p>
 
