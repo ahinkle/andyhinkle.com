@@ -9,8 +9,7 @@
         <p class="text-white text-lg">
             I'm <a href="https://twitter.com/andyhnk" class="text-blue-500/75" target="_blank"
                 rel="noopener noreferrer">Andy Hinkle</a>
-            and I'm a developer from Southern Indiana. My journey with Laravel started about ten years ago, shortly
-            after the release of Laravel 5.1.
+            and I'm a developer from Southern Indiana. 
         </p>
 
         <p class="text-white text-lg">
@@ -19,7 +18,8 @@
         </p>
 
         <p class="text-white text-lg">
-            I have attended the past 4 Laracon US conferences. I've met so many great people and I've learned so much
+            My journey with Laravel started about ten years ago, shortly
+            after the release of Laravel 5.1. I have attended the past 4 Laracon US conferences. I've met so many great people and I've learned so much
             from the talks and getting to know the community.
         </p>
 
