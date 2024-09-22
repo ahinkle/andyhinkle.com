@@ -10,7 +10,7 @@
             I'm <a href="https://twitter.com/andyhnk" class="text-blue-500/75" target="_blank"
                 rel="noopener noreferrer">Andy Hinkle</a>
             and I'm a developer from Southern Indiana. My journey with Laravel started about ten years ago, shortly
-            after the release of Laravel 5.
+            after the release of Laravel 5.1.
         </p>
 
         <p class="text-white text-lg">
