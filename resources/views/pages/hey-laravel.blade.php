@@ -33,7 +33,7 @@
             class="w-[500px] h-[750px] object-cover mt-4 mx-auto" />
 
         <p class="text-white text-lg">
-            Before coming a developer, I started my career working in theme parks — it was my first job and I moved my
+            Before becoming a developer, I started my career working in theme parks — it was my first job and I moved my
             way up through the ranks.
         </p>
 
@@ -74,7 +74,7 @@
         </p>
 
         <p class="text-white text-lg">
-            I love discovering new things and sharing knowledge with others. When I come across something that's
+            I love discovering new things and sharing knowledge with others. When I come across something
             undocumented, I see it as an opportunity to give back to the community and teach others. I've contributed
             around 50 accepted PRs to the Laravel documentation - here are a few examples:
         </p>
@@ -97,7 +97,7 @@
 
         <p class="text-white text-lg">
             Previously, we could only use validation rules with the qualifying database table. With this accepted PR, it
-            allowed the use of the model name instead of the table name. This was a great quality of life improvement
+            allowed the use of the model name instead of the table name. This was a great quality-of-life improvement
             for developers.
         </p>
 
