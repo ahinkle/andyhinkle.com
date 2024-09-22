@@ -44,7 +44,7 @@
         </p>
 
         <img src="/images/andy-hinkle-working-at-holiday-world-2016.JPG" alt="Andy Hinkle working at Holiday World"
-            class="w-[600px] h-[750px] object-cover mt-4 mx-auto" />
+            class="w-[400px] lg:w-[600px] lg:h-[750px] object-cover mt-4 mx-auto" />
 
         <p class="text-white text-lg">
             Here I am in the summer of 2014, training a supervisory team on how to safely evacuate a roller coaster in
