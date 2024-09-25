@@ -74,6 +74,40 @@
         </p>
 
         <p class="text-white text-lg">
+            I'm here to serve customers. I work directly with both product and non-product owners to support their
+            applications.
+            I have hands-on experience with every Laravel commercial product and enjoy solving technical challenges.
+            Here's how I've worked with each of them:
+        </p>
+
+        <ul class="text-white text-lg list-inside grid gap-y-4 px-2">
+            <li><a href="https://forge.laravel.com/" class="text-blue-500/75 block" target="_blank"
+                    rel="noopener noreferrer">Laravel Forge</a>Managing over 50 sites on Forge, I’ve regularly tackled
+                server-side issues like Nginx misconfigurations, SSL problems, and 502 errors.
+                I enjoy diving deep into the server environment to debug and resolve these issues.</li>
+            <li><a href="https://vapor.laravel.com/" class="text-blue-500/75 block" target="_blank"
+                    rel="noopener noreferrer">Laravel Vapor</a>I manage an app with millions of monthly requests on
+                Vapor, for which I am solely responsible. I'm an AWS Certified Practitioner and have experience with
+                services like Lambda, SQS, and RDS.
+                I’ve created custom CloudWatch dashboards for monitoring and performance tracking, closely resembling
+                how Laravel Pulse functions.</li>
+            <li><a href="https://envoyer.io/" class="text-blue-500/75 block" target="_blank"
+                    rel="noopener noreferrer">Laravel Envoyer</a>I manage numerous sites on Envoyer, troubleshooting
+                deployment failures, resolving file permission issues, and improving deployment scripts to streamline
+                the process.</li>
+            <li><a href="https://spark.laravel.com/" class="text-blue-500/75 block" target="_blank"
+                    rel="noopener noreferrer">Laravel Spark</a> I oversee multiple applications powered by Spark,
+                primarily using Stripe, but have experience with Paddle as well.
+                I’ve resolved complex issues with Stripe webhooks and ensured accurate invoicing for clients, always
+                keeping payment processes smooth and reliable.</li>
+            <li><a href="https://nova.laravel.com/" class="text-blue-500/75 block" target="_blank"
+                    rel="noopener noreferrer">Laravel Nova</a>I’ve been a proud Nova user since day one, witnessing its
+                launch in Chicago.
+                I’ve pushed Nova’s customization capabilities to it's limits, contributed to its documentation, and
+                built custom tools to extend its functionality for different projects.</li>
+        </ul>
+
+        <p class="text-white text-lg">
             I love discovering new things and sharing knowledge with others. When I come across something
             undocumented, I see it as an opportunity to give back to the community and teach others. I've contributed
             around 50 accepted PRs to the Laravel documentation - here are a few examples:
