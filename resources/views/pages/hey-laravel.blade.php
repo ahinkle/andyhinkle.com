@@ -159,11 +159,6 @@
         </p>
 
         <p class="text-white text-lg">
-            When I saw the job posting for the Technical Support Engineer position, It felt like the perfect fit for me.
-            I love helping people and solving problems.
-        </p>
-
-        <p class="text-white text-lg">
             When I saw the Technical Support Engineer position, it felt like the perfect opportunity to combine my love
             for Laravel, helping others, and solving problems. I'm excited about the chance to support both the
             community and the team.
