@@ -69,8 +69,7 @@
         <p class="text-white text-lg">
             Today, I work as a senior developer at an agency called <a href="https://grayloon.com/"
                 class="text-blue-500/75" target="_blank" rel="noopener noreferrer">Gray Loon Marketing Group</a>. I've
-            worked on a variety of projects from small business websites to large enterprise applications. I work
-            directly with clients and other developers to build custom solutions that meet their needs.
+            worked on a variety of projects from small business websites to large enterprise applications.
         </p>
 
         <p class="text-white text-lg">
