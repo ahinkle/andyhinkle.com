@@ -13,7 +13,7 @@
         <div class="px-2">
             <p class="text-gray-700 text-sm dark:text-gray-200">
                 Hey there! I'm Andy Hinkle, a software developer from Indiana with over 10 years of experience
-                specializing in Laravel, PHP, and JavaScript.
+                specializing in Laravel, PHP, and TypeScript.
             </p>
 
             <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
