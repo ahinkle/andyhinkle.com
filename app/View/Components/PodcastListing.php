@@ -73,8 +73,16 @@ class PodcastListing extends Component
 
     protected function resolveDescription(string $content): string
     {
-        preg_match('/<meta name="description" content="(.*?)"/', $content, $matches);
+        $pattern = '/<meta\s+name="description"\s+content="(.*?)"/s';
 
-        return $matches[1] ?? '';
+        if (preg_match($pattern, $content, $matches)) {
+            $description = $matches[1];
+
+            $description = preg_replace('/\s+/', ' ', $description);
+
+            return trim($description);
+        }
+
+        return '';
     }
 }
