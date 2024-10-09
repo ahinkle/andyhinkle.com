@@ -88,7 +88,7 @@
         </p>
 
         <p class="text-white/85 text-lg mt-4">
-            "I'm not sure about you, but I can't recall the last time I found that exception helpful. The API itself
+            I'm not sure about you, but I can't recall the last time I found that exception helpful. The API itself
             informs you when a token is missing. It's unnecessary noise.
         </p>
 
