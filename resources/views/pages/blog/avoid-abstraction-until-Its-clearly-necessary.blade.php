@@ -145,7 +145,8 @@
         </p>
 
         <p class="text-white/85 text-lg mt-4">
-            However, if you find yourself touching that API in multiple contexts, maybe handling retries, dynamic authentication
+            However, if you find yourself touching that API in multiple contexts, maybe handling retries, dynamic
+            authentication
             tokens, or conditional logic, then by all means, create an abstraction to centralize that logic. But be
             mindful not to over-engineer early on—stick to YAGNI until it becomes clear that more structure is
             necessary.
