@@ -30,7 +30,7 @@
 
     <div class="max-w-3xl mx-auto mt-8">
         <p class="text-white/85 text-lg text-left">
-            As developers, we're often drawn to best practices like code reuse, separation of concerns, and
+            We're often drawn to best practices like code reuse, separation of concerns, and
             maintainability. But there's
             a fine line between helpful abstraction and over-engineering. One common pitfall I see is the tendency to
             extract even
