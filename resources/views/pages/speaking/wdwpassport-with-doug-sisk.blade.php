@@ -1446,32 +1446,6 @@
                     <br>Mm-hmm.
                 </p>
 
-                <p>Andy Hinkle (<a
-                        href="https://the-midwest-artisan.transistor.fm/episodes/wdwpassport-w-doug-sisk/transcript#t=44m24s"
-                        data-turbo="false" title="Jump to 44:24 in this episode">44:24</a>)
-                    <br>So are people asking you for like an app these days or like a, I've been curious if apps are
-                    making a comeback so recently they, know, kind of the big push is to always been websites. I live in
-                    a small town called Santa Claus, we have a theme park here. It's called holiday world splash and so
-                    far it's a, okay, okay, fantastic. Okay, fantastic, yeah.
-                </p>
-
-                <p>Doug Sisk (<a
-                        href="https://the-midwest-artisan.transistor.fm/episodes/wdwpassport-w-doug-sisk/transcript#t=44m40s"
-                        data-turbo="false" title="Jump to 44:40 in this episode">44:40</a>)
-                    <br>yeah, I'm very aware of the quality world. I went there about 10 years ago.
-                </p>
-
-                <p>Andy Hinkle (<a
-                        href="https://the-midwest-artisan.transistor.fm/episodes/wdwpassport-w-doug-sisk/transcript#t=44m46s"
-                        data-turbo="false" title="Jump to 44:46 in this episode">44:46</a>)
-                    <br>And so the owners of Holiday World actually just live a couple of doors away from me and I
-                    worked there for several years full time. And that's what actually drove my passion for Disney theme
-                    parks, et cetera. But I've been trying to kind of poke them about getting an official app, something
-                    that we could build at our agency for wait times for just general park information. the information
-                    I get is across the industry is they're like, well, websites are just kind of the main driver. And
-                    so I was kind of surprised to see like when you mentioned apps.
-                </p>
-
                 <p>Doug Sisk (<a
                         href="https://the-midwest-artisan.transistor.fm/episodes/wdwpassport-w-doug-sisk/transcript#t=45m13s"
                         data-turbo="false" title="Jump to 45:13 in this episode">45:13</a>)
