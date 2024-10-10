@@ -2,18 +2,15 @@
 
 namespace App\View\Components;
 
+use App\View\Components\Concerns\InteractsWithBlogPosts;
 use Closure;
-use InteractsWithBlogPosts;
-use Illuminate\Support\Carbon;
-use Illuminate\View\Component;
-use Illuminate\Support\Collection;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Cache;
+use Illuminate\View\Component;
 
 class BlogListing extends Component
 {
     use InteractsWithBlogPosts;
-    
+
     public function render(): View|Closure|string
     {
         return view('components.blog-listing', [
