@@ -10,7 +10,7 @@
                 </div>
                 <div class="mt-3 flex-none">
                     <p class="flex items-center justify-between text-white text-xs">
-                        <span>{{ $post['date']->format('F j, Y') }}</span>
+                        <time datetime="{{ $post['date']->format('Y-m-d') }}">{{ $post['date']->format('F j, Y') }}</time>
                         <span>Continue Reading <span class="ml-1">&#8594;</span></span>
                     </p>
                 </div>

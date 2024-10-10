@@ -243,6 +243,14 @@
             <a href="/blog" class="text-blue-500/75 text-sm">More Posts<span class="ml-1">&#8594;</span></a>
         </div>
 
+        <h2 class="text-gray-200 text-xl font-medium mt-4">
+            Recent Talks / Podcasts
+        </h2>
+
+        <div class="flex justify-end -mt-2">
+            <a href="/speaking" class="text-blue-500/75 text-sm">More Talks / Podcasts<span class="ml-1">&#8594;</span></a>
+        </div>
+
         <h2 class="sr-only">
             Contact
         </h2>
