@@ -7,14 +7,17 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class BlogListing extends Component
+class RecentPostsListing extends Component
 {
     use InteractsWithBlogPosts;
 
+    /**
+     * Get the view / contents that represent the component.
+     */
     public function render(): View|Closure|string
     {
-        return view('components.blog-listing', [
-            'posts' => $this->resolvePosts(),
+        return view('components.recent-posts-listing', [
+            'posts' => $this->resolvePosts()->take(3),
         ]);
     }
 }
