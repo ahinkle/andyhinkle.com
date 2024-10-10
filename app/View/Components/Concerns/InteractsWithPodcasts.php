@@ -103,9 +103,9 @@ trait InteractsWithPodcasts
             $seconds = isset($time[3]) ? (int) $time[3] : 0;
 
             // Format the time components
-            $formattedHours = Str::padLeft($hours, 2, '0');
-            $formattedMinutes = Str::padLeft($minutes, 2, '0');
-            $formattedSeconds = Str::padLeft($seconds, 2, '0');
+            $formattedHours = Str::padLeft((string) $hours, 2, '0');
+            $formattedMinutes = Str::padLeft((string) $minutes, 2, '0');
+            $formattedSeconds = Str::padLeft((string) $seconds, 2, '0');
 
             return "{$formattedHours}:{$formattedMinutes}:{$formattedSeconds}";
         }
