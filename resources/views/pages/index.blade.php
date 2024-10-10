@@ -233,6 +233,12 @@
 
         </div>
 
+        <h2 class="text-gray-900 text-xl font-medium mt-10 dark:text-gray-200">
+            Recent Posts
+        </h2>
+
+        <x-recent-posts-listing />
+
         <h2 class="sr-only">
             Contact
         </h2>
