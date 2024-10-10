@@ -19,7 +19,7 @@
                             {{ $contribution['owner'] }}/{{ $contribution['repository'] }}:
                         </a>
                     </div>
-                    <time datetime="2023-01-23T15:56" class="flex justify-end py-0.5 text-xs leading-5 text-gray-400">
+                    <time datetime="{{ $contribution['merged_at']->format('Y-m-d') }}" class="flex justify-end py-0.5 text-xs leading-5 text-gray-400">
                         @if ($contribution['merged_at']->format('Y') !== now()->format('Y'))
                             {{ $contribution['merged_at']->format('M j, Y') }}
                         @else
@@ -44,11 +44,13 @@
                                 </a>
                             </h3>
 
-                            <div class="text-gray-200/75">
-                                <p class="text-sm">
-                                    {{ str()->limit($contribution['body'], 250) }}
-                                </p>
-                            </div>
+                            @if ($contribution['body'])
+                                <div class="text-gray-200/75">
+                                    <p class="text-sm">
+                                        {{ str()->limit($contribution['body'], 250) }}
+                                    </p>
+                                </div>
+                            @endif
 
                             <div>
                                 <div class="text-gray-400 text-xs">
