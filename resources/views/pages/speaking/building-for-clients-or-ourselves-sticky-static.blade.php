@@ -6,6 +6,28 @@
         <meta property="og:title" content="Building for Clients or Ourselves? Sticky & Static">
         <meta property="og:description"
             content="We follow up on last week’s local fakes discussion and explore what it would take for us to fully embrace Statamic. We also tackle the big question: Do clients even use a CMS after it’s built?">
+
+
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "PodcastEpisode",
+            "url": "https://the-midwest-artisan.transistor.fm/episodes/building-for-clients-or-ourselves-sticky-static",
+            "name": Building for Clients or Ourselves? Sticky & Static",
+            "datePublished": "2024-10-02",
+            "timeRequired": "PT1H8M37S",
+            episodeNumber: "7",
+            "description": "We follow up on last week’s local fakes discussion and explore what it would take for us to fully embrace Statamic. We also tackle the big question: Do clients even use a CMS after it’s built?",
+            "associatedMedia": {
+                "@type": "MediaObject",
+                "embedUrl": "https://www.youtube.com/watch?v=NuTKDvb9E_0"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "The Midwest Artisan",
+                "url": "https://the-midwest-artisan.transistor.fm"
+            }
+        </script>
     </x-slot>
 
     <p class="text-white/75 text-center text-sm py-2 font-sans">October 2, 2024</p>

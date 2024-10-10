@@ -6,6 +6,27 @@
         <meta property="og:title" content="Building for Clients or Ourselves? Sticky & Static">
         <meta property="og:description"
             content="This week, we’re excited to welcome Doug Sisk, the creator of WDW Passport, a Laravel-powered application designed to help users plan their Disney World trips.">
+
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "PodcastEpisode",
+            "url": "https://the-midwest-artisan.transistor.fm/episodes/wdwpassport-w-doug-sisk",
+            "name": "WDW Passport with Doug Sisk",
+            "datePublished": "2024-10-08",
+            "timeRequired": "PT1H3M9S",
+            episodeNumber: "8",
+            "description": "This week, we’re excited to welcome Doug Sisk, the creator of WDW Passport, a Laravel-powered application designed to help users plan their Disney World trips.",
+            "associatedMedia": {
+                "@type": "MediaObject",
+                "embedUrl": "https://www.youtube.com/watch?v=iebDaqowCSw"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "The Midwest Artisan",
+                "url": "https://the-midwest-artisan.transistor.fm"
+            }
+        </script>
     </x-slot>
 
     <p class="text-white/75 text-center text-sm py-2 font-sans">October 8, 2024</p>
