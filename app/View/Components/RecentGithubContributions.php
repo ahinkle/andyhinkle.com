@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\View\Component;
 
@@ -19,7 +20,34 @@ class RecentGithubContributions extends Component
         ]);
     }
 
-    protected function contributions()
+    public function contributions()
+    {
+        $contributions = $this->fetchGithubPublicPullRequests();
+
+        return $this->formatContributions($contributions);
+    }
+
+    protected function formatContributions($contributions)
+    {
+        $formatted = collect($contributions)->map(function ($contribution) {
+            return [
+                'title' => $contribution['title'],
+                'url' => $contribution['url'],
+                'merged_at' => Carbon::parse($contribution['mergedAt']),
+                'body' => $contribution['bodyText'],
+                'additions' => $contribution['additions'],
+                'deletions' => $contribution['deletions'],
+                'comments' => $contribution['comments']['totalCount'],
+                'repository' => $contribution['repository']['name'],
+                'owner' => $contribution['repository']['owner']['login'],
+                'avatar_url' => 'https://github.com/'.$contribution['repository']['owner']['login'].'.png',
+            ];
+        });
+
+        return $formatted;
+    }
+
+    protected function fetchGithubPublicPullRequests()
     {
         $query = <<<'GRAPHQL'
         query($username: String!) {
