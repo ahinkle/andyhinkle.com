@@ -6,6 +6,27 @@
         <meta property="og:title" content="Local API Mocking, Flux & Accessibility, PostgreSQL, Web Dev Battles">
         <meta property="og:description"
             content="We cover the launch of Caleb’s Flux UI component library, and dive into the benefits of mocking APIs locally for faster development. We also highlight Aaron Francis’ new Postgres course, and wrap things up with the web dev battle YouTube channel and how a foodie app we built, QuizKnows, played a role in landing our first jobs.">
+
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "PodcastEpisode",
+            "url": "https://the-midwest-artisan.transistor.fm/episodes/local-api-mocking-flux-accessibility-postgresql-web-dev-battles",
+            "name": Local API Mocking, Flux & Accessibility, PostgreSQL, Web Dev Battles",
+            "datePublished": "2024-10-02",
+            "timeRequired": "PT1H0M20S",
+            episodeNumber: "6",
+            "description": "We cover the launch of Caleb’s Flux UI component library, and dive into the benefits of mocking APIs locally for faster development. We also highlight Aaron Francis’ new Postgres course, and wrap things up with the web dev battle YouTube channel and how a foodie app we built, QuizKnows, played a role in landing our first jobs.",
+            "associatedMedia": {
+                "@type": "MediaObject",
+                "embedUrl": "https://www.youtube.com/watch?v=r1OrruulsyA"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "The Midwest Artisan",
+                "url": "https://the-midwest-artisan.transistor.fm"
+            }
+        </script>
     </x-slot>
 
     <p class="text-white/75 text-center text-sm py-2 font-sans">September 24th, 2024</p>

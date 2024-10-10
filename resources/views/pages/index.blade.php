@@ -221,7 +221,8 @@
                                     d="M121.8 38.3C115.1 41.8 80.4 56 73 59.9c-7.4 3.8-11.5 3.8-17.3 1S13 43.3 6.3 40.1s-6.8-5.4-.3-7.9c6.5-2.6 43.2-17 51-19.7 7.8-2.8 10.4-2.9 17-.5s41.1 16.1 47.6 18.5c6.7 2.4 6.9 4.4.2 7.8z" />
                                 <path fill="#fff"
                                     d="M80.4 26.1l-10.8 1.2-2.5 5.8-3.9-6.5-12.5-1.1 9.3-3.4-2.8-5.2 8.8 3.4 8.2-2.7L72 23zM66.5 54.5l-20.3-8.4 29.1-4.4z" />
-                                <ellipse fill="#fff" cx="38.4" cy="35.4" rx="15.5" ry="6" />
+                                <ellipse fill="#fff" cx="38.4" cy="35.4" rx="15.5"
+                                    ry="6" />
                                 <path d="M93.3 27.7l17.2 6.8-17.2 6.8z" />
                                 <path class="fill-white" d="M74.3 35.3l19-7.6v13.6l-1.9.8z" />
                             </svg>
@@ -247,8 +248,11 @@
             Recent Talks / Podcasts
         </h2>
 
+        <x-recent-podcast-listing />
+
         <div class="flex justify-end -mt-2">
-            <a href="/speaking" class="text-blue-500/75 text-sm">More Talks / Podcasts<span class="ml-1">&#8594;</span></a>
+            <a href="/speaking" class="text-blue-500/75 text-sm">More Talks / Podcasts<span
+                    class="ml-1">&#8594;</span></a>
         </div>
 
         <h2 class="sr-only">

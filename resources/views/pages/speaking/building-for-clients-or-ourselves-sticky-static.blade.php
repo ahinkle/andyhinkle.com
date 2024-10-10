@@ -7,7 +7,6 @@
         <meta property="og:description"
             content="We follow up on last week’s local fakes discussion and explore what it would take for us to fully embrace Statamic. We also tackle the big question: Do clients even use a CMS after it’s built?">
 
-
         <script type="application/ld+json">
             {
             "@context": "https://schema.org/",
