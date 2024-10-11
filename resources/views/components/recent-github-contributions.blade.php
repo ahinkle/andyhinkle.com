@@ -2,7 +2,9 @@
     @foreach ($contributions as $key => $contribution)
         <li class="relative flex gap-x-4">
             <div class="absolute -bottom-6 left-0 top-0 flex w-6 justify-center">
-                <div class="w-px bg-gray-500"></div>
+                @if ($key !== $contributions->count() - 1)
+                    <div class="w-px bg-gray-500"></div>
+                @endif
             </div>
             <img src="{{ $contribution['avatar_url'] }}" alt=""
                 class="relative mt-3 h-6 w-6 flex-none rounded-full bg-gray-50 hover:scale-105 transition-transform duration-150">
@@ -19,7 +21,7 @@
                             {{ $contribution['owner'] }}/{{ $contribution['repository'] }}:
                         </a>
                     </div>
-                    <time datetime="{{ $contribution['merged_at']->format('Y-m-d') }}" class="flex justify-end py-0.5 text-xs leading-5 text-gray-400">
+                    <time datetime="{{ $contribution['merged_at']->format('Y-m-d') }}" class="justify-end py-0.5 text-xs leading-5 text-gray-400 pl-1 hidden md:flex">
                         @if ($contribution['merged_at']->format('Y') !== now()->format('Y'))
                             {{ $contribution['merged_at']->format('M j, Y') }}
                         @else
@@ -27,7 +29,7 @@
                         @endif
                     </time>
                 </div>
-                <div class="flex-auto rounded-md p-6 ring-1 ring-inset ring-gray-500/50 mt-2">
+                <div class="flex-auto rounded-md p-4 lg:p-6 ring-1 ring-inset ring-gray-500/50 mt-2">
                     <div class="flex gap-x-3">
                         <div class="flex gap-x-2">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
@@ -46,7 +48,7 @@
 
                             @if ($contribution['body'])
                                 <div class="text-gray-200/75">
-                                    <p class="text-sm">
+                                    <p class="text-sm overflow-hidden">
                                         {{ str()->limit($contribution['body'], 250) }}
                                     </p>
                                 </div>

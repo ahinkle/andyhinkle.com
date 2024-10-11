@@ -29,6 +29,8 @@ class FetchGitHubContributions extends Command
     {
         $this->info('Fetching GitHub Contributions...');
 
+        Cache::forget('github_contributions');
+
         Cache::rememberForever('github_contributions', fn () => $this->fetchGitHubPublicPullRequests());
 
         $this->info('GitHub Contributions Fetched Successfully:');
@@ -49,7 +51,7 @@ class FetchGitHubContributions extends Command
 
     protected function fetchGitHubPublicPullRequests()
     {
-        $data = Http::withToken('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')
+        $data = Http::withToken(config('services.github.token'))
             ->post('https://api.github.com/graphql', [
                 'query' => $this->graphql(),
                 'variables' => [

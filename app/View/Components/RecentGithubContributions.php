@@ -5,6 +5,7 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\View\Component;
 
@@ -17,12 +18,13 @@ class RecentGithubContributions extends Component
     {
         return view('components.recent-github-contributions', [
             'contributions' => $this->contributions(),
+            'count' => $this->contributions()->count(),
         ]);
     }
 
     public function contributions()
     {
-        $contributions = $this->fetchGithubPublicPullRequests();
+        $contributions = Cache::get('github_contributions');
 
         return $this->formatContributions($contributions);
     }
