@@ -37,6 +37,7 @@ class FetchGitHubContributions extends Command
 
         $this->table(
             ['Repository', 'Title', 'Merged At', 'Additions', 'Deletions'],
+            /* @phpstan-ignore-next-line */
             collect(Cache::get('github_contributions'))->map(function ($contribution) {
                 return [
                     $contribution['repository']['owner']['login'].'/'.$contribution['repository']['name'],

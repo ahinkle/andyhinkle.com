@@ -28,7 +28,12 @@ class RecentGithubContributions extends Component
         return $this->formatContributions($contributions);
     }
 
-    protected function formatContributions($contributions): mixed
+    /**
+     * Format contributions.
+     *
+     * @param  array<mixed>  $contributions
+     */
+    protected function formatContributions(array $contributions): mixed
     {
         $formatted = collect($contributions)->map(function ($contribution) {
             return [
