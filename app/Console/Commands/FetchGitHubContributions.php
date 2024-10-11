@@ -25,7 +25,7 @@ class FetchGitHubContributions extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): int
     {
         $this->info('Fetching GitHub Contributions...');
 
@@ -45,11 +45,18 @@ class FetchGitHubContributions extends Command
                     $contribution['additions'],
                     $contribution['deletions'],
                 ];
-            })
+            }),
         );
+
+        return 0;
     }
 
-    protected function fetchGitHubPublicPullRequests()
+    /**
+     * Fetch GitHub public pull requests.
+     *
+     * @return array<mixed>
+     */
+    protected function fetchGitHubPublicPullRequests(): array
     {
         $data = Http::withToken(config('services.github.token'))
             ->post('https://api.github.com/graphql', [
