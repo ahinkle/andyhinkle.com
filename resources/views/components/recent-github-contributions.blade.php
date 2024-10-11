@@ -21,7 +21,8 @@
                             {{ $contribution['owner'] }}/{{ $contribution['repository'] }}:
                         </a>
                     </div>
-                    <time datetime="{{ $contribution['merged_at']->format('Y-m-d') }}" class="justify-end py-0.5 text-xs leading-5 text-gray-400 pl-1 hidden md:flex">
+                    <time datetime="{{ $contribution['merged_at']->format('Y-m-d') }}"
+                        class="justify-end py-0.5 text-xs leading-5 text-gray-400 pl-1 hidden md:flex">
                         @if ($contribution['merged_at']->format('Y') !== now()->format('Y'))
                             {{ $contribution['merged_at']->format('M j, Y') }}
                         @else
