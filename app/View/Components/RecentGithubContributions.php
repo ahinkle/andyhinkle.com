@@ -5,6 +5,7 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\View\Component;
 
@@ -21,7 +22,7 @@ class RecentGithubContributions extends Component
         ]);
     }
 
-    public function contributions(): mixed
+    public function contributions(): ?Collection
     {
         $contributions = Cache::get('github_contributions');
 
@@ -33,7 +34,7 @@ class RecentGithubContributions extends Component
      *
      * @param  array<mixed>  $contributions
      */
-    protected function formatContributions(array $contributions): mixed
+    protected function formatContributions(array $contributions): ?Collection
     {
         $formatted = collect($contributions)->map(function ($contribution) {
             return [
