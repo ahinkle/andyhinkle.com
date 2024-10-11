@@ -5,7 +5,7 @@
                 <div class="w-px bg-gray-500"></div>
             </div>
             <img src="{{ $contribution['avatar_url'] }}" alt=""
-                class="relative mt-3 h-6 w-6 flex-none rounded-full bg-gray-50">
+                class="relative mt-3 h-6 w-6 flex-none rounded-full bg-gray-50 hover:scale-105 transition-transform duration-150">
             <div class="pt-3 w-full">
                 <div class="flex justify-between">
                     <div class="text-white/75 text-sm">
@@ -58,11 +58,6 @@
                                     <span class="text-gray-200/75 text-xs">/</span>
                                     <span class="text-red-500">-{{ $contribution['deletions'] }}</span>
                                     <span class="text-gray-200/75">Lines Changed</span>
-                                    @if ($contribution['comments'] > 0)
-                                        <span class="mx-1">•</span>
-                                        <span>{{ $contribution['comments'] }}
-                                            {{ str('comment')->plural($contribution['comments']) }}</span>
-                                    @endif
                                 </div>
                             </div>
                         </div>

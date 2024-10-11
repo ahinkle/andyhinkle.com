@@ -37,7 +37,6 @@ class RecentGithubContributions extends Component
                 'body' => $contribution['bodyText'],
                 'additions' => $contribution['additions'],
                 'deletions' => $contribution['deletions'],
-                'comments' => $contribution['comments']['totalCount'],
                 'repository' => $contribution['repository']['name'],
                 'owner' => $contribution['repository']['owner']['login'],
                 'avatar_url' => 'https://github.com/'.$contribution['repository']['owner']['login'].'.png',
@@ -60,9 +59,6 @@ class RecentGithubContributions extends Component
                 bodyText
                 additions
                 deletions
-                comments {
-                  totalCount
-                }
                 repository {
                   name
                   isPrivate
