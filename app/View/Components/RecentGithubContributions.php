@@ -34,7 +34,7 @@ class RecentGithubContributions extends Component
      *
      * @param  array<mixed>  $contributions
      */
-    protected function formatContributions(array $contributions): ?Collection
+    protected function formatContributions(?array $contributions = null): ?Collection
     {
         $formatted = collect($contributions)->map(function ($contribution) {
             return [
