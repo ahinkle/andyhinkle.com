@@ -27,5 +27,6 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="TORCHLIGHT_TOKEN" value="foo"/>
+        <env name="GITHUB_TOKEN" value="fake" />
     </php>
 </phpunit>
