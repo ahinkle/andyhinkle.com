@@ -12,19 +12,59 @@ use Illuminate\View\Component;
 class RecentGithubContributions extends Component
 {
     /**
+     * The formatted contributions.
+     *
+     * @var Collection<int, array{
+     *     title: string,
+     *     url: string,
+     *     merged_at: Carbon,
+     *     body: string,
+     *     additions: int,
+     *     deletions: int,
+     *     repository: string,
+     *     owner: string,
+     *     avatar_url: string
+     * }>
+     */
+    public Collection $contributions;
+
+    /**
+     * Create a new component instance.
+     */
+    public function __construct()
+    {
+        $this->contributions = $this->getContributions();
+    }
+
+    /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string
     {
         return view('components.recent-github-contributions', [
-            'contributions' => $this->contributions(),
-            'count' => $this->contributions()->count(),
+            'contributions' => $this->contributions,
+            'count' => $this->contributions->count(),
         ]);
     }
 
-    public function contributions(): ?Collection
+    /**
+     * Get the formatted contributions.
+     *
+     * @return Collection<int, array{
+     *     title: string,
+     *     url: string,
+     *     merged_at: Carbon,
+     *     body: string,
+     *     additions: int,
+     *     deletions: int,
+     *     repository: string,
+     *     owner: string,
+     *     avatar_url: string
+     * }>
+     */
+    protected function getContributions(): Collection
     {
-        $contributions = Cache::get('github_contributions');
+        $contributions = Cache::get('github_contributions', []);
 
         return $this->formatContributions($contributions);
     }
@@ -33,23 +73,34 @@ class RecentGithubContributions extends Component
      * Format contributions.
      *
      * @param  array<mixed>  $contributions
+     * @return Collection<int, array{
+     *     title: string,
+     *     url: string,
+     *     merged_at: Carbon,
+     *     body: string,
+     *     additions: int,
+     *     deletions: int,
+     *     repository: string,
+     *     owner: string,
+     *     avatar_url: string
+     * }>
      */
-    protected function formatContributions(?array $contributions = null): ?Collection
+    protected function formatContributions(array $contributions): Collection
     {
-        $formatted = collect($contributions)->map(function ($contribution) {
+        return collect($contributions)->map(function ($contribution): array {
             return [
-                'title' => $contribution['title'],
-                'url' => $contribution['url'],
-                'merged_at' => Carbon::parse($contribution['mergedAt']),
-                'body' => $contribution['bodyText'],
-                'additions' => $contribution['additions'],
-                'deletions' => $contribution['deletions'],
-                'repository' => $contribution['repository']['name'],
-                'owner' => $contribution['repository']['owner']['login'],
-                'avatar_url' => 'https://github.com/'.$contribution['repository']['owner']['login'].'.png',
+                'title' => (string) ($contribution['title'] ?? ''),
+                'url' => (string) ($contribution['url'] ?? ''),
+                'merged_at' => isset($contribution['mergedAt']) ? Carbon::parse($contribution['mergedAt']) : Carbon::now(),
+                'body' => (string) ($contribution['bodyText'] ?? ''),
+                'additions' => (int) ($contribution['additions'] ?? 0),
+                'deletions' => (int) ($contribution['deletions'] ?? 0),
+                'repository' => (string) ($contribution['repository']['name'] ?? ''),
+                'owner' => (string) ($contribution['repository']['owner']['login'] ?? ''),
+                'avatar_url' => isset($contribution['repository']['owner']['login'])
+                    ? 'https://github.com/'.$contribution['repository']['owner']['login'].'.png'
+                    : '',
             ];
         });
-
-        return $formatted;
     }
 }
