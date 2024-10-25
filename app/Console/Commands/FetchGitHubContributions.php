@@ -29,12 +29,14 @@ class FetchGitHubContributions extends Command
     {
         $this->info('Fetching GitHub Contributions...');
 
-        Cache::put('github_contributions', $this->fetchGitHubPublicPullRequests(), now()->addDay());
+        $data = tap($this->fetchGitHubPublicPullRequests(),
+            fn ($data) => Cache::put('github_contributions', $data, now()->addDay())
+        );
 
         $this->table(
             ['Repository', 'Title', 'Merged At', 'Additions', 'Deletions'],
             /* @phpstan-ignore-next-line */
-            collect(Cache::get('github_contributions'))->map(function ($contribution) {
+            collect($data)->map(function ($contribution) {
                 return [
                     $contribution['repository']['owner']['login'].'/'.$contribution['repository']['name'],
                     $contribution['title'],
