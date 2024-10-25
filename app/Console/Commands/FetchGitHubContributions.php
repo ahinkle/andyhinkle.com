@@ -29,11 +29,7 @@ class FetchGitHubContributions extends Command
     {
         $this->info('Fetching GitHub Contributions...');
 
-        Cache::forget('github_contributions');
-
-        Cache::rememberForever('github_contributions', fn () => $this->fetchGitHubPublicPullRequests());
-
-        $this->info('GitHub Contributions Fetched Successfully:');
+        Cache::put('github_contributions', $this->fetchGitHubPublicPullRequests(), now()->addDay());
 
         $this->table(
             ['Repository', 'Title', 'Merged At', 'Additions', 'Deletions'],
@@ -60,23 +56,21 @@ class FetchGitHubContributions extends Command
     protected function fetchGitHubPublicPullRequests(): array
     {
         $data = Http::withToken(config('services.github.token'))
+            ->throw()
             ->post('https://api.github.com/graphql', [
-                'query' => $this->graphql(),
+                'query' => $this->graphqlPullRequestQuery(),
                 'variables' => [
                     'username' => 'ahinkle',
                 ],
             ]);
 
-        if ($data->failed()) {
-            throw new \Exception('Failed to fetch GitHub contributions');
-        }
-
-        $data = $data->json();
-
-        return $data['data']['user']['pullRequests']['nodes'];
+        return $data->json()['data']['user']['pullRequests']['nodes'];
     }
 
-    protected function graphql(): string
+    /**
+     * GraphQL query to fetch GitHub public pull requests.
+     */
+    protected function graphqlPullRequestQuery(): string
     {
         return <<<'GRAPHQL'
         query($username: String!) {
