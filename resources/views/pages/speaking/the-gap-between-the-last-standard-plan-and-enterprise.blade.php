@@ -9,17 +9,17 @@
             content="We dive into A/B testing and the challenges that come with the jump from the highest non-enterprise plan to full enterprise. We also discuss some Laravel shop talk, sharing the tools we've been using recently. Plus, Andy introduces his new podcast idea, where he plans to interview Laravel community members and explore their unique development journeys.">
     </x-slot>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans">August 19th, 2024</p>
-    <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">The gap between the last Standard Plan
+    <p class="py-2 text-center font-sans text-sm text-white/75">August 19th, 2024</p>
+    <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">The gap between the last Standard Plan
         and Enterprise</h1>
 
-    <div class="max-w-3xl mx-auto mt-8">
+    <div class="mx-auto mt-8 max-w-3xl">
         <div class="px-4 pb-10">
             <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless=""
                 src="https://share.transistor.fm/e/d3f404a8?color=1F2937&background=101827"></iframe>
         </div>
 
-        <div class="px-4 prose prose-lg dark:prose-invert">
+        <div class="prose prose-lg px-4 dark:prose-invert">
             <div>This week, we dive into A/B testing and the challenges that come with the jump from the highest
                 non-enterprise plan to full enterprise. We also discuss some Laravel shop talk, sharing the tools we've
                 been using recently. Plus, Andy introduces his new podcast idea, where he plans to interview Laravel

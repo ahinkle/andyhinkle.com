@@ -29,18 +29,18 @@
         </script>
     </x-slot>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans">October 8, 2024</p>
-    <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">
+    <p class="py-2 text-center font-sans text-sm text-white/75">October 8, 2024</p>
+    <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">
         WDW Passport with Doug Sisk
     </h1>
 
-    <div class="max-w-3xl mx-auto mt-8">
+    <div class="mx-auto mt-8 max-w-3xl">
         <div class="px-4 pb-10">
             <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless=""
                 src="https://share.transistor.fm/e/fcf27bc5?color=1F2937&background=101827"></iframe>
         </div>
 
-        <div class="px-4 prose prose-lg dark:prose-invert">
+        <div class="prose prose-lg px-4 dark:prose-invert">
             <div>This week, we’re excited to welcome Doug Sisk, the creator of WDW Passport, a Laravel-powered
                 application designed to help users plan their Disney World trips. Doug shares his journey from
                 developing the app to 'scratch his own itch' and turning it into a successful tool for Disney
@@ -49,16 +49,16 @@
             </div>
         </div>
 
-        <div class="px-4 mt-8">
-            <iframe class="w-full h-96" src="https://www.youtube.com/embed/iebDaqowCSw?si=NXchsI80UDk5CcsS"
+        <div class="mt-8 px-4">
+            <iframe class="h-96 w-full" src="https://www.youtube.com/embed/iebDaqowCSw?si=NXchsI80UDk5CcsS"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
-        <h2 class="text-2xl font-bold text-white text-center mt-12">Transcript</h2>
+        <h2 class="mt-12 text-center text-2xl font-bold text-white">Transcript</h2>
 
-        <div class="px-4 prose prose-sm dark:prose-invert">
+        <div class="prose prose-sm px-4 dark:prose-invert">
             <div class="site-content-text site-episode-show-notes">
 
                 <p>Andy Hinkle (<a

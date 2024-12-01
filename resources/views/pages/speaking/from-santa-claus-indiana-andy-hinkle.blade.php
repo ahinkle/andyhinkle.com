@@ -8,11 +8,11 @@
             content="In this episode, Kevin Kirchner interviews Andy Hinkle, a developer and founding member of the MVP Dev Podcast. Andy shares his journey from working at a theme park to becoming a web developer and his passion for minimal viable products (MVPs).">
     </x-slot>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans">August 7th, 2024</p>
-    <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">From Santa Claus, Indiana: Andy Hinkle
+    <p class="py-2 text-center font-sans text-sm text-white/75">August 7th, 2024</p>
+    <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">From Santa Claus, Indiana: Andy Hinkle
     </h1>
 
-    <div class="max-w-3xl mx-auto mt-8">
+    <div class="mx-auto mt-8 max-w-3xl">
         <div class="px-4 pb-10">
             <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/episode/2w3L9DmCeJdYNtXJUNBWY8/video?utm_source=generator"
@@ -21,7 +21,7 @@
                 loading="lazy"></iframe>
         </div>
 
-        <div class="px-4 prose prose-lg dark:prose-invert">
+        <div class="prose prose-lg px-4 dark:prose-invert">
             <div>In this episode, Kevin Kirchner interviews Andy Hinkle, a developer and founding member of the MVP Dev
                 Podcast.
                 <br /><br />Andy shares his journey from working at a theme park to becoming a web developer and his

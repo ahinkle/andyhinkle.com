@@ -9,17 +9,17 @@
         </script>
     </x-slot>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans">September 2nd, 2024</p>
-    <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">The real jackpot is the Laravel community
+    <p class="py-2 text-center font-sans text-sm text-white/75">September 2nd, 2024</p>
+    <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">The real jackpot is the Laravel community
     </h1>
 
-    <div class="max-w-3xl mx-auto mt-8">
+    <div class="mx-auto mt-8 max-w-3xl">
         <div class="px-4 pb-10">
             <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless=""
                 src="https://share.transistor.fm/e/486a5c7c?color=1F2937&background=101827"></iframe>
         </div>
 
-        <div class="px-4 prose prose-lg dark:prose-invert">
+        <div class="prose prose-lg px-4 dark:prose-invert">
             <div>This week, we're diving into all things post-Laracon! Andy shares his wild adventure just getting to
                 Dallas with a few unexpected twists and turns along the way. We break down the highlights from Laracon,
                 including the exciting announcements about Laravel Cloud and the amazing talks that left us inspired and
@@ -36,16 +36,16 @@
                     href=\"https://x.com/DaltonMcCleery\">@DaltonMcCleery</a></div>
         </div>
 
-        <div class="px-4 mt-8">
-            <iframe class="w-full h-96" src="https://www.youtube.com/embed/T8laS1O4ZvA?si=gi91zCRSAsPEbj2J"
+        <div class="mt-8 px-4">
+            <iframe class="h-96 w-full" src="https://www.youtube.com/embed/T8laS1O4ZvA?si=gi91zCRSAsPEbj2J"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
-        <h2 class="text-2xl font-bold text-white text-center mt-12">Transcript</h2>
+        <h2 class="mt-12 text-center text-2xl font-bold text-white">Transcript</h2>
 
-        <div class="px-4 prose prose-sm dark:prose-invert">
+        <div class="prose prose-sm px-4 dark:prose-invert">
             <section class="episode-description episode-transcript" x-show="transcript">
                 <p>Andy Hinkle (<a href="https://share.transistor.fm/s/486a5c7c#t=0m0s" target="_blank"
                         rel="noopener noreferrer" title="Jump to 00:00 in this episode">00:00</a>)

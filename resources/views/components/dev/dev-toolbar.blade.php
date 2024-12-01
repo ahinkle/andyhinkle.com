@@ -1,8 +1,8 @@
 <aside
-    class="fixed z-50 flex text-xs divide-x divide-white shadow-sm bottom-10 right-1 divide-solid motion-safe:transition-opacity hover:opacity-100"
+    class="fixed bottom-10 right-1 z-50 flex divide-x divide-solid divide-white text-xs shadow-sm hover:opacity-100 motion-safe:transition-opacity"
     x-data="{ toolbarVisible: true }" x-ref="toolbar" x-cloak x-show="toolbarVisible">
-    <span title="Current Tailwind Breakpoint" class="flex items-center p-2 space-x-1 text-yellow-800 bg-yellow-200">
-        <div class="w-4 h-4 fill-current">
+    <span title="Current Tailwind Breakpoint" class="flex items-center space-x-1 bg-yellow-200 p-2 text-yellow-800">
+        <div class="h-4 w-4 fill-current">
             <svg viewBox="0 0 496.8 496.8">
                 <path
                     d="M118 377.8l-64-64c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l64 64c3.2 3.2 6.4 4.8 11.2 4.8s8-1.6 11.2-4.8c6.4-6.4 6.4-16 0-22.4z" />
@@ -21,8 +21,8 @@
     </span>
 
     <button x-on:click="toolbarVisible = !toolbarVisible" title="Remove toolbar" aria-label="Remove toolbar"
-        class="flex items-center justify-center px-2 space-x-1 bg-gray-200 hover:bg-gray-300">
-        <div class="w-4 h-4 text-yellow-800 stroke-current">
+        class="flex items-center justify-center space-x-1 bg-gray-200 px-2 hover:bg-gray-300">
+        <div class="h-4 w-4 stroke-current text-yellow-800">
             <svg viewBox="0 0 140 140">
                 <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
                     <path
