@@ -11,34 +11,13 @@ use Illuminate\View\Component;
 
 class RecentGithubContributions extends Component
 {
-    /**
-     * The formatted contributions.
-     *
-     * @var Collection<int, array{
-     *     title: string,
-     *     url: string,
-     *     merged_at: Carbon,
-     *     body: string,
-     *     additions: int,
-     *     deletions: int,
-     *     repository: string,
-     *     owner: string,
-     *     avatar_url: string
-     * }>
-     */
     public Collection $contributions;
 
-    /**
-     * Create a new component instance.
-     */
     public function __construct()
     {
         $this->contributions = $this->getContributions();
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
     public function render(): View|Closure|string
     {
         return view('components.recent-github-contributions', [
@@ -47,21 +26,6 @@ class RecentGithubContributions extends Component
         ]);
     }
 
-    /**
-     * Get the formatted contributions.
-     *
-     * @return Collection<int, array{
-     *     title: string,
-     *     url: string,
-     *     merged_at: Carbon,
-     *     body: string,
-     *     additions: int,
-     *     deletions: int,
-     *     repository: string,
-     *     owner: string,
-     *     avatar_url: string
-     * }>
-     */
     protected function getContributions(): Collection
     {
         $contributions = Cache::get('github_contributions', []);
@@ -69,22 +33,6 @@ class RecentGithubContributions extends Component
         return $this->formatContributions($contributions);
     }
 
-    /**
-     * Format contributions.
-     *
-     * @param  array<mixed>  $contributions
-     * @return Collection<int, array{
-     *     title: string,
-     *     url: string,
-     *     merged_at: Carbon,
-     *     body: string,
-     *     additions: int,
-     *     deletions: int,
-     *     repository: string,
-     *     owner: string,
-     *     avatar_url: string
-     * }>
-     */
     protected function formatContributions(array $contributions): Collection
     {
         return collect($contributions)->map(function ($contribution): array {

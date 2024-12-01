@@ -8,14 +8,6 @@ use Illuminate\Support\Facades\Cache;
 
 trait InteractsWithBlogPosts
 {
-    /**
-     * @return Collection<int, array{
-     *     slug: string,
-     *     title: string,
-     *     description: string,
-     *     date: \DateTimeInterface
-     * }>
-     */
     public function resolvePosts(): Collection
     {
         return Cache::rememberForever('post-listing', function () {

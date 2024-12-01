@@ -8,23 +8,10 @@ use Illuminate\Support\Facades\Http;
 
 class FetchGitHubContributions extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
     protected $signature = 'fetch:github-contributions';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
     protected $description = 'Fetch recent GitHub contributions and stores them in cache';
 
-    /**
-     * Execute the console command.
-     */
     public function handle(): int
     {
         $this->info('Fetching GitHub Contributions...');
@@ -49,11 +36,6 @@ class FetchGitHubContributions extends Command
         return 0;
     }
 
-    /**
-     * Fetch GitHub public pull requests.
-     *
-     * @return array<mixed>
-     */
     protected function fetchGitHubPublicPullRequests(): array
     {
         $data = Http::withToken(config('services.github.token'))
@@ -68,9 +50,6 @@ class FetchGitHubContributions extends Command
         return $data->json()['data']['user']['pullRequests']['nodes'];
     }
 
-    /**
-     * GraphQL query to fetch GitHub public pull requests.
-     */
     protected function graphqlPullRequestQuery(): string
     {
         return <<<'GRAPHQL'
