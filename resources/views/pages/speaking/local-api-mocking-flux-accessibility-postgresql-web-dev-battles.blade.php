@@ -29,17 +29,17 @@
         </script>
     </x-slot>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans">September 24th, 2024</p>
-    <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">Local API Mocking, Flux & Accessibility,
+    <p class="py-2 text-center font-sans text-sm text-white/75">September 24th, 2024</p>
+    <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">Local API Mocking, Flux & Accessibility,
         PostgreSQL, Web Dev Battles</h1>
 
-    <div class="max-w-3xl mx-auto mt-8">
+    <div class="mx-auto mt-8 max-w-3xl">
         <div class="px-4 pb-10">
             <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless=""
                 src="https://share.transistor.fm/e/6e62e93f?color=1F2937&background=101827"></iframe>
         </div>
 
-        <div class="px-4 prose prose-lg dark:prose-invert">
+        <div class="prose prose-lg px-4 dark:prose-invert">
             <div>In this episode, we cover the launch of Caleb’s Flux UI component library, and dive into the benefits
                 of mocking APIs locally for faster development. We also highlight Aaron Francis’ new Postgres course,
                 and wrap things up with the web dev battle YouTube channel and how a foodie app we built, QuizKnows,
@@ -47,16 +47,16 @@
             </div>
         </div>
 
-        <div class="px-4 mt-8">
-            <iframe class="w-full h-96" src="https://www.youtube.com/embed/r1OrruulsyA?si=NXchsI80UDk5CcsS"
+        <div class="mt-8 px-4">
+            <iframe class="h-96 w-full" src="https://www.youtube.com/embed/r1OrruulsyA?si=NXchsI80UDk5CcsS"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
-        <h2 class="text-2xl font-bold text-white text-center mt-12">Transcript</h2>
+        <h2 class="mt-12 text-center text-2xl font-bold text-white">Transcript</h2>
 
-        <div class="px-4 prose prose-sm dark:prose-invert">
+        <div class="prose prose-sm px-4 dark:prose-invert">
             <div class="site-content-text site-episode-show-notes">
 
                 <p>Andy Hinkle (<a

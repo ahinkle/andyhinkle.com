@@ -20,16 +20,16 @@
 
     <a href="/images/blog/overengineered.jpg" target="_blank">
         <img src="/images/blog/overengineered.jpg" alt="Avoid Abstraction Until It's Clearly Necessary - Over-Engineered"
-            class="w-full mt-4 mx-auto max-w-3xl">
+            class="mx-auto mt-4 w-full max-w-3xl">
     </a>
 
-    <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans pt-4">Avoid Abstraction Until It's
+    <h1 class="pt-4 text-center font-sans text-3xl font-bold text-white md:text-5xl">Avoid Abstraction Until It's
         Clearly Necessary</h1>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans">October 9, 2024</p>
+    <p class="py-2 text-center font-sans text-sm text-white/75">October 9, 2024</p>
 
-    <div class="max-w-3xl mx-auto mt-8">
-        <p class="text-white/85 text-lg text-left">
+    <div class="mx-auto mt-8 max-w-3xl">
+        <p class="text-left text-lg text-white/85">
             We're often drawn to best practices like code reuse, separation of concerns, and
             maintainability. But there's
             a fine line between helpful abstraction and over-engineering. One common pitfall I see is the tendency to
@@ -38,7 +38,7 @@
             necessary.
         </p>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             For example, integrating a single third-party service API into your application. I've seen codebases where
             the instinct is to
             immediately create a service class for the API calls. The problem with this approach is that it introduces
@@ -48,11 +48,11 @@
             Instead of making things easier to manage, this over-extraction often leads to unnecessary complexity.
         </p>
 
-        <h2 class="text-2xl md:text-4xl font-bold text-white text-center font-sans my-8">
+        <h2 class="my-8 text-center font-sans text-2xl font-bold text-white md:text-4xl">
             Clarity Over Complexity
         </h2>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             When you extract too soon or without a compelling reason, you're essentially hiding simple, explicit code
             behind multiple layers. Instead of writing:
         </p>
@@ -63,7 +63,7 @@
         </x-torchlight-code>
         </pre>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             You might see something like this:
         </p>
 
@@ -73,26 +73,26 @@
         </x-torchlight-code>
         </pre>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             On the surface, this looks clean. But to understand what's really happening,
             you have to open up the
-            <code class="bg-gray-900 p-1 rounded-md text-white text-sm">ApiService</code>
+            <code class="rounded-md bg-gray-900 p-1 text-sm text-white">ApiService</code>
             class and trace through multiple layers just to see what parameters are being passed or how the request is
             structured.
         </p>
 
-        <p class="text-white/85 text-lg mt-4">
-            You dig into the <code class="bg-gray-900 p-1 rounded-md text-white text-sm">ApiService</code> class and
+        <p class="mt-4 text-lg text-white/85">
+            You dig into the <code class="rounded-md bg-gray-900 p-1 text-sm text-white">ApiService</code> class and
             find another abstraction layer that delegates the actual HTTP request.
             There is an exception handler if you don't have a token in your environment file.
         </p>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             I'm not sure about you, but I can't recall the last time I found that exception helpful. The API itself
             informs you when a token is missing. It's unnecessary noise.
         </p>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             This is where <strong>YAGNI</strong> <span class="italic">("You Aren’t Gonna Need It")</span> comes into
             play. The principle of YAGNI reminds us not to
             build for hypothetical future needs. If your interaction with this API is straightforward and limited to a
@@ -100,18 +100,18 @@
             Keep it simple until the need for complexity arises.
         </p>
 
-        <h2 class="text-2xl md:text-4xl font-bold text-white text-center font-sans my-8">
+        <h2 class="my-8 text-center font-sans text-2xl font-bold text-white md:text-4xl">
             Don't Fight The Framework
         </h2>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             Frameworks like Laravel already offer many tools and conventions to handle common tasks like API
             integration.
             Fighting the framework by adding unnecessary abstractions or custom layers often leads to more code, more
             complexity, and more room for error.
         </p>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             If your framework provides an easy, clear way to handle an API request, there's no need to reinvent the
             wheel by adding service classes or custom abstractions. Laravel, for example, offers Http client facades
             that handle API
@@ -124,18 +124,18 @@
         </x-torchlight-code>
         </pre>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             This is clear, readable, and easy to maintain. The more you align with the framework's built-in tools, the
             less code you have to write,
             and the less room there is for bugs or maintenance headaches. The goal should be to leverage the framework,
             not fight it.
         </p>
 
-        <h2 class="text-2xl md:text-4xl font-bold text-white text-center font-sans my-8">
+        <h2 class="my-8 text-center font-sans text-2xl font-bold text-white md:text-4xl">
             Not to be confused with "Never Abstract", but only when it's obviously necessary
         </h2>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             The key is balance. If you're only working with a service API in a few places, there's no need to create a
             separate service class.
             Instead, keep the logic where it belongs, in a clear and explicit manner. You can always refactor later if
@@ -144,7 +144,7 @@
             dig through layers of abstractions for no real benefit.
         </p>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             However, if you find yourself touching that API in multiple contexts, maybe handling retries, dynamic
             authentication
             tokens, or conditional logic, then by all means, create an abstraction to centralize that logic. But be
@@ -152,17 +152,17 @@
             necessary.
         </p>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             Before you abstract, ask yourself if the added complexity is truly necessary. Keep your code explicit and
             easy to follow, and don’t fight the framework’s built-in tools unless you have a good reason to.
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             Remember YAGNI: you aren’t gonna need it—until you actually do. By keeping things simple and leveraging what
             the framework offers, you’ll avoid the trap of over-engineering and keep your codebase more maintainable for
             the long term.
         </p>
 
-        <p class="text-white/85 text-lg mt-4">
+        <p class="mt-4 text-lg text-white/85">
             Cheers
         </p>
 </x-app>

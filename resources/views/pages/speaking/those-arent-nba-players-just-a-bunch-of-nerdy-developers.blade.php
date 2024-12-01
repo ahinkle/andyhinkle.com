@@ -10,17 +10,17 @@
         </script>
     </x-slot>
 
-    <p class="text-white/75 text-center text-sm py-2 font-sans">August 26th, 2024</p>
-    <h1 class="text-3xl md:text-5xl font-bold text-white text-center font-sans">Those aren't NBA players, just a bunch of
+    <p class="py-2 text-center font-sans text-sm text-white/75">August 26th, 2024</p>
+    <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">Those aren't NBA players, just a bunch of
         nerdy developers</h1>
 
-    <div class="max-w-3xl mx-auto mt-8">
+    <div class="mx-auto mt-8 max-w-3xl">
         <div class="px-4 pb-10">
             <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless=""
                 src="https://share.transistor.fm/e/327c1f25?color=1F2937&background=101827"></iframe>
         </div>
 
-        <div class="px-4 prose prose-lg dark:prose-invert">
+        <div class="prose prose-lg px-4 dark:prose-invert">
             <div>We dive into NullStar 2024, the ultimate basketball showdown between Team Laravel and the Terminal
                 Boys. We share our admiration for Caleb Porzio (who’s definitely on Team Laravel!). Plus, we explore
                 staying productive in development, Andy's ambitious idea to track all Laravel events, and Dalton's

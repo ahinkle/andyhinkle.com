@@ -7,28 +7,28 @@
 
     <div class="px-2">
         <div>
-            <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-200 pb-4">
+            <h1 class="pb-4 text-3xl font-bold text-gray-900 dark:text-gray-200">
                 <span class="block">Hello there! 👋</span>
                 <span class="block">I'm <span class="text-blue-500">Andy Hinkle</span></span>
             </h1>
-            <p class="text-gray-700 text-sm dark:text-gray-200">
+            <p class="text-sm text-gray-700 dark:text-gray-200">
                 A software developer from Indiana with over 10 years of experience
                 specializing in Laravel, PHP, and TypeScript.
             </p>
 
-            <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
+            <p class="mt-4 text-sm text-gray-700 dark:text-gray-200">
                 I'm a Senior App & Web Developer at <a href="https://grayloon.com" class="text-blue-400 hover:underline"
                     target="_blank" rel="noopener noreferrer">Gray Loon Marketing Group</a> where I work on a variety of
                 projects ranging from custom web applications to mobile apps.
             </p>
 
-            <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
+            <p class="mt-4 text-sm text-gray-700 dark:text-gray-200">
                 I'm co-host of the <a href="https://the-midwest-artisan.transistor.fm/"
                     class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">The Midwest Artisan
                     Podcast</a> where we talk about Laravel and all things web development.</p>
             </p>
 
-            <p class="text-gray-700 text-sm mt-4 dark:text-gray-200">
+            <p class="mt-4 text-sm text-gray-700 dark:text-gray-200">
                 Feel free to connect on <a href="https://twitter.com/andyhnk" class="text-blue-400 hover:underline"
                     target="_blank" rel="noopener noreferrer">Twitter</a> or
                 <a href="https://www.linkedin.com/in/athinkle/" class="text-blue-400 hover:underline" target="_blank"
@@ -39,9 +39,9 @@
                 <div class="my-2 flex flex-row">
                     <div class="flex flex-row flex-wrap items-center gap-2">
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg viewBox="0 0 50 52" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                class="mr-2 size-4 fill-gray-700 dark:fill-gray-400 group-hover:fill-red-500">
+                                class="mr-2 size-4 fill-gray-700 group-hover:fill-red-500 dark:fill-gray-400">
                                 <path
                                     d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216l17.62-10.144zM1.602 7.719v31.068L19.22 48.93v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-.002-21.481L4.965 9.654 1.602 7.72zm8.81-5.994L2.405 6.334l8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764l4.645-2.674V7.719l-3.363 1.936-4.646 2.675v20.096l3.364-1.937zM39.243 7.164l-8.006 4.609 8.006 4.609 8.005-4.61-8.005-4.608zm-.801 10.605l-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937v-9.124zM20.02 38.33l11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833 7.993 4.524z"
                                     fill-rule="evenodd" />
@@ -49,20 +49,20 @@
                             Laravel
                         </div>
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128"
-                                class="mr-2 size-4 fill-gray-700 dark:fill-gray-400 group-hover:fill-yellow-400">
+                                class="mr-2 size-4 fill-gray-700 group-hover:fill-yellow-400 dark:fill-gray-400">
                                 <path d="M1.408 1.408h125.184v125.185H1.408z"></path>
-                                <path class="fill-white dark:fill-gray-800 group-hover:fill-gray-700"
+                                <path class="fill-white group-hover:fill-gray-700 dark:fill-gray-800"
                                     d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.88-1.381-2.14-2.118-3.128-3.022-4.044-3.249-3.63-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.53 1.297 6.105-4.486 8.081-10.234 7.379-4.236-.881-6.592-3.034-9.139-6.95-4.688 2.714-4.688 2.714-9.508 5.486 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581M69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.46 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237">
                                 </path>
                             </svg>
                             JavaScript
                         </div>
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28"
-                                class="mr-2 size-5 fill-gray-700 dark:fill-gray-400 group-hover:fill-blue-500">
+                                class="mr-2 size-5 fill-gray-700 group-hover:fill-blue-500 dark:fill-gray-400">
                                 <path fill-rule="evenodd"
                                     d="M2.576 2.576v22.848h22.848V2.576zm17.361 11.098c.22 0 .468.012.656.032.762.083 1.356.412 1.861 1.031.252.31.338.444.32.502-.012.037-.185.16-.733.525-.54.358-.713.466-.754.466-.04 0-.126-.088-.249-.257-.236-.324-.478-.472-.851-.521-.402-.053-.762.073-.938.33-.151.219-.174.571-.054.827.139.297.39.461 1.353.883 1.111.487 1.674.82 2.084 1.235.441.445.665.96.734 1.687.034.355-.007.775-.109 1.117-.249.838-.92 1.451-1.905 1.74a3.7 3.7 0 0 1-.776.146c-.382.028-.93.012-1.26-.035-.833-.122-1.774-.607-2.243-1.157-.23-.27-.524-.714-.524-.792 0-.038.018-.06.093-.106.22-.14 1.478-.86 1.502-.86.015 0 .08.078.146.173.149.214.514.582.7.706.15.1.345.18.575.239.132.033.201.038.489.038.294 0 .354-.005.486-.04.347-.093.619-.287.734-.524.05-.102.051-.115.051-.363v-.257l-.061-.122c-.15-.297-.473-.501-1.493-.943-.468-.203-1.042-.49-1.266-.631-.511-.325-.865-.697-1.098-1.151-.231-.452-.266-.62-.266-1.3 0-.533-.002-.526.109-.866.1-.308.304-.652.53-.892.45-.48 1.11-.788 1.815-.849.09-.008.21-.012.342-.011m-6.068.105c1.358 0 2.137.005 2.15.013.023.014.026.133.026.887v.87l-1.355.005-1.355.005v3.848c0 2.116-.005 3.86-.01 3.876-.01.026-.114.028-.996.028h-.985l-.01-.04c-.007-.022-.012-1.766-.012-3.876V15.56l-1.355-.005-1.356-.005v-.86c0-.682.005-.864.023-.883.019-.019.71-.024 3.69-.027z"
                                     clip-rule="evenodd"></path>
@@ -70,9 +70,9 @@
                             TypeScript
                         </div>
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28"
-                                class="mr-2 size-4 fill-gray-700 dark:fill-gray-400 group-hover:fill-blue-500">
+                                class="mr-2 size-4 fill-gray-700 group-hover:fill-blue-500 dark:fill-gray-400">
                                 <g clip-path="url(#react_svg__a)">
                                     <path
                                         d="M16.445 13.936c0-1.917-2.075-3.121-3.727-2.163-1.65.959-1.65 3.367 0 4.325 1.652.959 3.727-.246 3.727-2.162m5.688-4.603c1.644-7.858-1.973-10.324-8.121-4.636C8.225-.728 4.104.98 5.858 9.3c-8.087 2.438-7.55 7.026.065 9.37-1.742 7.661 1.513 10.456 8.089 4.67 6.378 5.72 9.763 3.041 8.022-4.703 8.308-2.816 7.562-6.893.099-9.304m-1.118-.296a29.5 29.5 0 0 0-3.847-.625 21 21 0 0 0-2.367-2.893c4.93-4.729 7.834-3.251 6.214 3.518M8.29 15.448c.487 1.041 1.129 1.995 1.61 2.795a35 35 0 0 1-2.53-.362q.432-1.211.92-2.433m-.066-2.827a43 43 0 0 1-.954-2.466c.93-.193 1.841-.368 2.63-.428a41 41 0 0 0-1.676 2.894m.69 1.446c.804-1.61 1.655-3.138 2.598-4.504a38 38 0 0 1 4.965.033c.917 1.278 1.774 2.807 2.597 4.471-.616 1.273-1.49 2.74-2.499 4.307-1.683.128-3.409.11-5.162 0a48 48 0 0 1-2.499-4.307M19.7 15.448q.478 1.163.887 2.367-1.265.266-2.498.395a39 39 0 0 0 1.61-2.762m-1.611-5.72a33 33 0 0 1 2.597.46q-.42 1.244-.953 2.433a34 34 0 0 0-1.644-2.894M15.557 8.28a41 41 0 0 0-3.124 0q.696-.915 1.546-1.907a24 24 0 0 1 1.578 1.907M13.19 5.519a21 21 0 0 0-2.368 2.86c-1.282.117-2.576.331-3.88.625C5.398 2.132 8.26.79 13.19 5.519M6.22 17.585c-6.85-2.06-6.522-5.271-.066-7.167a34 34 0 0 0 1.413 3.584 37 37 0 0 0-1.348 3.583m.854 1.381c1.162.285 2.393.422 3.683.56.776 1.094 1.58 2.112 2.433 2.991-5.02 4.811-7.818 3.063-6.116-3.55m6.905 2.73a16.7 16.7 0 0 1-1.677-2.072c1.174.025 2.308.027 3.387 0a17.6 17.6 0 0 1-1.71 2.071m.822.821a28.4 28.4 0 0 0 2.433-3.025 25 25 0 0 0 3.682-.559c1.718 7.04-1.4 8.08-6.115 3.584m6.937-4.997a36 36 0 0 0-1.315-3.518 33 33 0 0 0 1.38-3.551c6.303 1.907 6.807 4.953-.065 7.069">
@@ -87,9 +87,9 @@
                             React
                         </div>
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33"
-                                class="mr-2 size-4 fill-gray-700 dark:fill-gray-400 group-hover:fill-blue-300">
+                                class="mr-2 size-4 fill-gray-700 group-hover:fill-blue-300 dark:fill-gray-400">
                                 <g clip-path="url(#prefix__clip0)">
                                     <path fill-rule="evenodd"
                                         d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
@@ -108,9 +108,9 @@
                 <div class="my-2 flex flex-row">
                     <div class="flex flex-row flex-wrap items-center gap-2">
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28"
-                                class="mr-2 size-4 fill-gray-700 dark:fill-gray-400 group-hover:fill-blue-500">
+                                class="mr-2 size-4 fill-gray-700 group-hover:fill-blue-500 dark:fill-gray-400">
                                 <g clip-path="url(#reactnative_svg__a)">
                                     <path
                                         d="M16.445 13.936c0-1.917-2.075-3.121-3.727-2.163-1.65.959-1.65 3.367 0 4.325 1.652.959 3.727-.246 3.727-2.162m5.688-4.603c1.644-7.858-1.973-10.324-8.121-4.636C8.225-.728 4.104.98 5.858 9.3c-8.087 2.438-7.55 7.026.065 9.37-1.742 7.661 1.513 10.456 8.089 4.67 6.378 5.72 9.763 3.041 8.022-4.703 8.308-2.816 7.562-6.893.099-9.304m-1.118-.296a29.5 29.5 0 0 0-3.847-.625 21 21 0 0 0-2.367-2.893c4.93-4.729 7.834-3.251 6.214 3.518M8.29 15.448c.487 1.041 1.129 1.995 1.61 2.795a35 35 0 0 1-2.53-.362q.432-1.211.92-2.433m-.066-2.827a43 43 0 0 1-.954-2.466c.93-.193 1.841-.368 2.63-.428a41 41 0 0 0-1.676 2.894m.69 1.446c.804-1.61 1.655-3.138 2.598-4.504a38 38 0 0 1 4.965.033c.917 1.278 1.774 2.807 2.597 4.471-.616 1.273-1.49 2.74-2.499 4.307-1.683.128-3.409.11-5.162 0a48 48 0 0 1-2.499-4.307M19.7 15.448q.478 1.163.887 2.367-1.265.266-2.498.395a39 39 0 0 0 1.61-2.762m-1.611-5.72a33 33 0 0 1 2.597.46q-.42 1.244-.953 2.433a34 34 0 0 0-1.644-2.894M15.557 8.28a41 41 0 0 0-3.124 0q.696-.915 1.546-1.907a24 24 0 0 1 1.578 1.907M13.19 5.519a21 21 0 0 0-2.368 2.86c-1.282.117-2.576.331-3.88.625C5.398 2.132 8.26.79 13.19 5.519M6.22 17.585c-6.85-2.06-6.522-5.271-.066-7.167a34 34 0 0 0 1.413 3.584 37 37 0 0 0-1.348 3.583m.854 1.381c1.162.285 2.393.422 3.683.56.776 1.094 1.58 2.112 2.433 2.991-5.02 4.811-7.818 3.063-6.116-3.55m6.905 2.73a16.7 16.7 0 0 1-1.677-2.072c1.174.025 2.308.027 3.387 0a17.6 17.6 0 0 1-1.71 2.071m.822.821a28.4 28.4 0 0 0 2.433-3.025 25 25 0 0 0 3.682-.559c1.718 7.04-1.4 8.08-6.115 3.584m6.937-4.997a36 36 0 0 0-1.315-3.518 33 33 0 0 0 1.38-3.551c6.303 1.907 6.807 4.953-.065 7.069">
@@ -125,8 +125,8 @@
                             React Native
                         </div>
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
-                            <svg class="mr-2 size-5 fill-gray-700 dark:fill-gray-400 group-hover:fill-yellow-400"
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            <svg class="mr-2 size-5 fill-gray-700 group-hover:fill-yellow-400 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" xml:space="preserve" y="0" x="0" id="Layer_1"
                                 version="1.1" viewBox="-45.10065 -44.95 390.8723 269.7">
                                 <g transform="translate(-1.668 -1.1)" id="g1865">
@@ -145,8 +145,8 @@
                             AWS
                         </div>
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
-                            <svg class="mr-2 size-4 fill-gray-700 dark:fill-gray-400 group-hover:fill-purple-300"
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            <svg class="mr-2 size-4 fill-gray-700 group-hover:fill-purple-300 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
                                 <path style="fill-rule:evenodd;fill:#fb70a9;fill-opacity:1"
                                     d="M108.566 83.547c-1.937 2.926-3.406 6.527-7.34 6.527-6.624 0-6.98-10.203-13.609-10.203-6.625 0-6.265 10.203-12.887 10.203-6.625 0-6.98-10.203-13.609-10.203-6.625 0-6.266 10.203-12.887 10.203-6.625 0-6.98-10.203-13.605-10.203-6.629 0-6.27 10.203-12.89 10.203-2.083 0-3.544-1.008-4.778-2.39-4.738-8.239-7.465-17.895-7.465-28.22 0-30.222 23.367-54.722 52.191-54.722 28.825 0 52.192 24.5 52.192 54.723 0 8.64-1.91 16.816-5.313 24.082Zm0 0" />
@@ -168,8 +168,8 @@
                             Livewire
                         </div>
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
-                            <svg class="mr-2 size-4 fill-gray-700 dark:fill-blue-200 group-hover:fill-blue-200"
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            <svg class="mr-2 size-4 fill-gray-700 group-hover:fill-blue-200 dark:fill-blue-200"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                                 <path
                                     d="M116.948 97.807c-6.863-.187-12.104.452-16.585 2.341-1.273.537-3.305.552-3.513 2.147.7.733.809 1.829 1.365 2.731 1.07 1.73 2.876 4.052 4.488 5.268 1.762 1.33 3.577 2.751 5.465 3.902 3.358 2.047 7.107 3.217 10.34 5.268 1.906 1.21 3.799 2.733 5.658 4.097.92.675 1.537 1.724 2.732 2.147v-.194c-.628-.8-.79-1.898-1.366-2.733l-2.537-2.537c-2.48-3.292-5.629-6.184-8.976-8.585-2.669-1.916-8.642-4.504-9.755-7.609l-.195-.195c1.892-.214 4.107-.898 5.854-1.367 2.934-.786 5.556-.583 8.585-1.365l4.097-1.171v-.78c-1.531-1.571-2.623-3.651-4.292-5.073-4.37-3.72-9.138-7.437-14.048-10.537-2.724-1.718-6.089-2.835-8.976-4.292-.971-.491-2.677-.746-3.318-1.562-1.517-1.932-2.342-4.382-3.511-6.633-2.449-4.717-4.854-9.868-7.024-14.831-1.48-3.384-2.447-6.72-4.293-9.756-8.86-14.567-18.396-23.358-33.169-32-3.144-1.838-6.929-2.563-10.929-3.513-2.145-.129-4.292-.26-6.438-.391-1.311-.546-2.673-2.149-3.902-2.927C17.811 4.565 5.257-2.16 1.633 6.682c-2.289 5.581 3.421 11.025 5.462 13.854 1.434 1.982 3.269 4.207 4.293 6.438.674 1.467.79 2.938 1.367 4.489 1.417 3.822 2.652 7.98 4.487 11.511.927 1.788 1.949 3.67 3.122 5.268.718.981 1.951 1.413 2.145 2.927-1.204 1.686-1.273 4.304-1.95 6.44-3.05 9.615-1.899 21.567 2.537 28.683 1.36 2.186 4.567 6.871 8.975 5.073 3.856-1.57 2.995-6.438 4.098-10.732.249-.973.096-1.689.585-2.341v.195l3.513 7.024c2.6 4.187 7.212 8.562 11.122 11.514 2.027 1.531 3.623 4.177 6.244 5.073v-.196h-.195c-.508-.791-1.303-1.119-1.951-1.755-1.527-1.497-3.225-3.358-4.487-5.073-3.556-4.827-6.698-10.11-9.561-15.609-1.368-2.627-2.557-5.523-3.709-8.196-.444-1.03-.438-2.589-1.364-3.122-1.263 1.958-3.122 3.542-4.098 5.854-1.561 3.696-1.762 8.204-2.341 12.878-.342.122-.19.038-.391.194-2.718-.655-3.672-3.452-4.683-5.853-2.554-6.07-3.029-15.842-.781-22.829.582-1.809 3.21-7.501 2.146-9.172-.508-1.666-2.184-2.63-3.121-3.903-1.161-1.574-2.319-3.646-3.124-5.464-2.09-4.731-3.066-10.044-5.267-14.828-1.053-2.287-2.832-4.602-4.293-6.634-1.617-2.253-3.429-3.912-4.683-6.635-.446-.968-1.051-2.518-.391-3.513.21-.671.508-.951 1.171-1.17 1.132-.873 4.284.29 5.462.779 3.129 1.3 5.741 2.538 8.392 4.294 1.271.844 2.559 2.475 4.097 2.927h1.756c2.747.631 5.824.195 8.391.975 4.536 1.378 8.601 3.523 12.292 5.854 11.246 7.102 20.442 17.21 26.732 29.269 1.012 1.942 1.45 3.794 2.341 5.854 1.798 4.153 4.063 8.426 5.852 12.488 1.786 4.052 3.526 8.141 6.05 11.513 1.327 1.772 6.451 2.723 8.781 3.708 1.632.689 4.307 1.409 5.854 2.34 2.953 1.782 5.815 3.903 8.586 5.855 1.383.975 5.64 3.116 5.852 4.879zM29.729 23.466c-1.431-.027-2.443.156-3.513.389v.195h.195c.683 1.402 1.888 2.306 2.731 3.513.65 1.367 1.301 2.732 1.952 4.097l.194-.193c1.209-.853 1.762-2.214 1.755-4.294-.484-.509-.555-1.147-.975-1.755-.556-.811-1.635-1.272-2.339-1.952z" />
@@ -181,8 +181,8 @@
                 <div class="my-2 flex flex-row">
                     <div class="flex flex-row flex-wrap items-center gap-2">
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
-                            <svg class="mr-2 size-5 fill-gray-700 dark:fill-gray-400 group-hover:fill-red-400"
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            <svg class="mr-2 size-5 fill-gray-700 group-hover:fill-red-400 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                                 <path
                                     d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z" />
@@ -190,8 +190,8 @@
                             Git
                         </div>
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
-                            <svg class="mr-2 size-4 fill-gray-700 dark:fill-gray-400 group-hover:fill-red-400"
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            <svg class="mr-2 size-4 fill-gray-700 group-hover:fill-red-400 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                                 <path
                                     d="M45.5 129c11.9 0 21.5-9.6 21.5-21.5V86H45.5C33.6 86 24 95.6 24 107.5S33.6 129 45.5 129zm0 0" />
@@ -204,8 +204,8 @@
                             Figma
                         </div>
                         <div
-                            class="inline-flex items-center rounded dark:border-gray-600 border-gray-500 border px-2 py-1 text-gray-800 dark:text-gray-200 text-sm group hover:border-gray-800 dark:hover:border-gray-400">
-                            <svg class="mr-2 size-4 fill-gray-700 dark:fill-gray-400 group-hover:fill-red-400"
+                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            <svg class="mr-2 size-4 fill-gray-700 group-hover:fill-red-400 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                                 <path
                                     d="M121.8 93.1c-6.7 3.5-41.4 17.7-48.8 21.6-7.4 3.9-11.5 3.8-17.3 1S13 98.1 6.3 94.9c-3.3-1.6-5-2.9-5-4.2V78s48-10.5 55.8-13.2c7.8-2.8 10.4-2.9 17-.5s46.1 9.5 52.6 11.9v12.5c0 1.3-1.5 2.7-4.9 4.4z" />
@@ -234,28 +234,28 @@
 
         </div>
 
-        <h2 class="text-gray-900 text-xl font-medium mt-10 dark:text-gray-200">
+        <h2 class="mt-10 text-xl font-medium text-gray-900 dark:text-gray-200">
             Recent Posts
         </h2>
 
         <x-recent-posts-listing />
 
-        <div class="flex justify-end -mt-2">
-            <a href="/blog" class="text-blue-500/75 text-sm">More Posts<span class="ml-1">&#8594;</span></a>
+        <div class="-mt-2 flex justify-end">
+            <a href="/blog" class="text-sm text-blue-500/75">More Posts<span class="ml-1">&#8594;</span></a>
         </div>
 
-        <h2 class="text-gray-200 text-xl font-medium mt-6">
+        <h2 class="mt-6 text-xl font-medium text-gray-200">
             Recent Talks / Podcasts
         </h2>
 
         <x-recent-podcast-listing />
 
-        <div class="flex justify-end -mt-2">
-            <a href="/speaking" class="text-blue-500/75 text-sm">More Talks / Podcasts<span
+        <div class="-mt-2 flex justify-end">
+            <a href="/speaking" class="text-sm text-blue-500/75">More Talks / Podcasts<span
                     class="ml-1">&#8594;</span></a>
         </div>
 
-        <h2 class="text-gray-200 text-xl font-medium mt-6">
+        <h2 class="mt-6 text-xl font-medium text-gray-200">
             Recent Contributions
         </h2>
 
@@ -265,15 +265,15 @@
             Contact
         </h2>
 
-        <hr class="mt-12 w-1/2 mx-auto border-gray-300 dark:border-gray-700">
+        <hr class="mx-auto mt-12 w-1/2 border-gray-300 dark:border-gray-700">
 
         <div class="pt-10">
-            <p class="text-gray-700 dark:text-gray-300 mt-2 ml-2 text-sm text-center text-balance">
+            <p class="ml-2 mt-2 text-balance text-center text-sm text-gray-700 dark:text-gray-300">
                 If you have any questions or inquiries, please feel free to contact me at <a
                     href="mailto:chat@andyhinkle.com"
-                    class="text-dark-800 dark:text-gray-400 underline">chat@andyhinkle.com</a>. Alternatively, you can
+                    class="text-dark-800 underline dark:text-gray-400">chat@andyhinkle.com</a>. Alternatively, you can
                 reach out to me on Twitter at <a href="https://twitter.com/andyhnk"
-                    class="text-dark-800 dark:text-gray-400 underline">@andyhnk</a>.
+                    class="text-dark-800 underline dark:text-gray-400">@andyhnk</a>.
             </p>
         </div>
 </x-app>
