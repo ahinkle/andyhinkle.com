@@ -29,8 +29,8 @@
             </p>
 
             <p class="mt-4 text-sm text-gray-700 dark:text-gray-200">
-                Feel free to connect on <a href="https://twitter.com/andyhnk" class="text-blue-400 hover:underline"
-                    target="_blank" rel="noopener noreferrer">Twitter</a> or
+                Feel free to connect on <a href="https://bsky.app/profile/andyhinkle.com"
+                    class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Bluesky</a> or
                 <a href="https://www.linkedin.com/in/athinkle/" class="text-blue-400 hover:underline" target="_blank"
                     rel="noopener noreferrer">LinkedIn</a>.
             </p>
