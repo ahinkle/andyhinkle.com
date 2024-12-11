@@ -46,6 +46,8 @@ class FetchGitHubContributionsCommand extends Command
             }),
         );
 
+        $this->info('GitHub contributions fetched successfully.');
+
         return 0;
     }
 
