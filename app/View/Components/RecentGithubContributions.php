@@ -65,7 +65,7 @@ class RecentGithubContributions extends Component
             return [
                 'title' => (string) ($contribution['title'] ?? ''),
                 'url' => (string) ($contribution['url'] ?? ''),
-                'merged_at' => isset($contribution['mergedAt']) ? Carbon::parse($contribution['mergedAt']) : Carbon::now(),
+                'merged_at' => isset($contribution['mergedAt']) ? Carbon::parse($contribution['mergedAt']) : now(),
                 'body' => (string) ($contribution['bodyText'] ?? ''),
                 'additions' => (int) ($contribution['additions'] ?? 0),
                 'deletions' => (int) ($contribution['deletions'] ?? 0),

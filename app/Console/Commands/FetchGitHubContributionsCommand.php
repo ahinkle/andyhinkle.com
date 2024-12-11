@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 
-class FetchGitHubContributions extends Command
+class FetchGitHubContributionsCommand extends Command
 {
     /**
      * The name and signature of the console command.
