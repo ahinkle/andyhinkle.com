@@ -23,22 +23,9 @@ class CachePageMiddleware
 
     public function shouldCacheResponse(Request $request, Response $response): bool
     {
-        if (! app()->isProduction()) {
-            return false;
-        }
-
-        if (auth()->check()) {
-            return false;
-        }
-
-        if (! $request->isMethod('GET')) {
-            return false;
-        }
-
-        if (! $response->isSuccessful()) {
-            return false;
-        }
-
-        return true;
+        return app()->isProduction() &&
+               ! auth()->check() &&
+               $request->isMethod('GET') &&
+               $response->isSuccessful();
     }
 }
