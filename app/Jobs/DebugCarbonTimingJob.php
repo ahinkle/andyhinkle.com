@@ -18,7 +18,7 @@ class DebugCarbonTimingJob implements ShouldQueue
         public ?Carbon $date = null,
     ) {
         Log::debug('Initial DebugCarbonTimingJob', [
-            'date' => $this->date->format('Y-m-d H:i:s'),
+            'date' => $this->date?->format('Y-m-d H:i:s'),
         ]);
 
         $this->date ??= today()->subDay();
