@@ -47,7 +47,7 @@
         </div>
 
         <div class="mt-8 px-4">
-            <iframe class="h-96 w-full" src="https://www.youtube.com/embed/XjS7WNih0_U?si=NXchsI80UDk5CcsS"
+            <iframe class="h-96 w-full" src="https://www.youtube.com/embed/C-yQIyRd3bs?si=NXchsI80UDk5CcsS"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
