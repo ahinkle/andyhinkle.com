@@ -30,7 +30,7 @@
     </x-slot>
 
     <p class="py-2 text-center font-sans text-sm text-white/75">December 16, 2024</p>
-    <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">NDo you write down methods in your
+    <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">Do you write down methods in your
         migrations?</h1>
 
     <div class="mx-auto mt-8 max-w-3xl">
