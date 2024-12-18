@@ -60,7 +60,7 @@
                 <p>Andy Hinkle (<a
                         href="https://the-midwest-artisan.transistor.fm/episodes/do-you-write-down-methods-in-your-migrations-queue-serialization-stubs-laravel-pr-ideas-migrations-vs-seeders/transcript#t=0m2s"
                         data-turbo="false" title="Jump to 00:02 in this episode">00:02</a>)
-                    <br>Hey everyone, welcome to another episode of The Midwest Artisan. I'm your host, Ane Hinkle.
+                    <br>Hey everyone, welcome to another episode of The Midwest Artisan. I'm your host, Andy Hinkle.
                 </p>
 
                 <p>Dalton McCleery (<a
