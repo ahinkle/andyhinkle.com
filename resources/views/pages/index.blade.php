@@ -28,13 +28,6 @@
                     Podcast</a> where we talk about Laravel and all things web development.</p>
             </p>
 
-            <p class="mt-4 text-sm text-gray-700 dark:text-gray-200">
-                Feel free to connect on <a href="https://bsky.app/profile/andyhinkle.com"
-                    class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Bluesky</a> or
-                <a href="https://www.linkedin.com/in/athinkle/" class="text-blue-400 hover:underline" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a>.
-            </p>
-
             <div class="mt-5">
                 <div class="my-2 flex flex-row">
                     <div class="flex flex-row flex-wrap items-center gap-2">
