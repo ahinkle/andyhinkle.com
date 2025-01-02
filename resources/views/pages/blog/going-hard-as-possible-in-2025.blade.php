@@ -14,7 +14,7 @@
             }
         </script>
     </x-slot>
-    
+
     <h1 class="pt-6 text-center font-sans text-3xl font-bold text-white md:text-5xl">Going Hard as Possible in 2025</h1>
 
     <p class="py-2 text-center font-sans text-sm text-white/75">January 2, 2025</p>
