@@ -28,11 +28,10 @@
             For the past few years,
             <a href="https://aaronfrancis.com/" rel="noopener noreferrer" target="_blank" class="underline">Aaron
                 Francis</a> has been a quiet force in my life—his approach to work and life feels electric.
-            Phrases like “You can just do things” and <a
-                href="https://aaronfrancis.com/2024/what-if-you-tried-hard-dac139a5" rel="noopener noreferrer"
-                target="_blank" class="underline">“What if you just tried really, really hard?”</a> aren’t just words
-            for him. They’re a challenge. A call to action. He even named his company <a
-                href="https://tryhardstudios.com/" rel="noopener noreferrer" target="_blank" class="underline">Try Hard
+            Phrases like <span class="italic">“You can just do things”</span> and <span class="italic">“What if you
+                just tried really, really hard?”</span> aren’t just words for him. They’re a challenge. A call to
+            action. He even named his company <a href="https://tryhardstudios.com/" rel="noopener noreferrer"
+                target="_blank" class="underline">Try Hard
                 Studios</a>, as if to
             underscore the point: effort isn’t just an idea; it’s a way of living.
         </p>
@@ -57,6 +56,17 @@
             someone said to me, “You’re going to miss picking up your kids’ LEGO blocks one day.” That hit me. Those
             little moments are the ones that slip through your fingers the fastest. It’s not just about doing
             the big things; it’s about being fully present in the small ones.
+        </p>
+
+        <p class="mt-4 text-lg text-white/85">
+            Aaron <a href="https://aaronfrancis.com/2024/what-if-you-tried-hard-dac139a5" rel="noopener noreferrer"
+                target="_blank" class="underline">
+                once wrote</a> about the stigma around trying hard. He pointed out how people avoid effort because of
+            the fear of looking like they care too much. Cool kids don’t try; they just float effortlessly from one
+            success to another. Except, that’s a myth. Watch any documentary about someone great—a Lionel Messi, a
+            Taylor Swift, a Kobe Bryant—and what stands out is how hard they worked. These aren’t stories of coasting;
+            they’re stories of grit, of putting in extra hours when no one was watching, of trying harder than anyone
+            else around them.
         </p>
 
         <p class="mt-4 text-lg text-white/85">
