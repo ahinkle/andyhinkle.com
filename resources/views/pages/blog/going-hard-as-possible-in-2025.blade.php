@@ -70,9 +70,12 @@
         </p>
 
         <p class="mt-4 text-lg text-white/85">
-            This year, I’m done with the hesitation. I’m saying yes—to ideas, to opportunities, to messes, to hugs.
-            Especially to hugs. I’m going to try hard, even when it’s uncomfortable, even when I’m not sure it’ll work.
-            Because maybe Aaron’s right: what if I just tried really, really hard?
+            This year, I’m done with the hesitation. I’m saying yes—to ideas, to opportunities, to messes, to diving
+            deeper into podcasts, to showing up more in the Laravel community, to hugging my kids longer, to writing
+            that blog post that’s been stuck in my head, and to taking on challenges that scare me. Especially to hugs.
+            I’m going to try hard at being present with my family, even when I’m exhausted. I’ll try hard to tackle
+            projects that feel daunting. Even when it’s uncomfortable or uncertain, I’m going all in. Because maybe
+            Aaron’s right: what if I just tried really, really hard?
         </p>
 
         <p class="mt-4 text-lg text-white/85">
