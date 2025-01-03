@@ -18,15 +18,34 @@ jobs:
                   php-version: 8.3
                   tools: composer:v2
                   coverage: xdebug
+
+            - name: Cache Vendor
+              id: cache-vendor
+              uses: actions/cache@v3
+              with:
+                path: vendor
+                key: ${{ runner.os }}-vendor-${{ hashFiles('**/composer.lock') }}
+            
             - name: Install Dependencies
               run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+
             - uses: actions/setup-node@v2
               with:
                   node-version: '18'
+
+            - name: Cache NPM dependencies
+              id: cache-npm
+              uses: actions/cache@v2
+              with:
+                path: node_modules
+                key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
+
             - name: NPM dependencies
               run: |
                   npm install
                   npm run build
+
             - name: Prepare Laravel Application
               run: |
                   cp .env.example .env
