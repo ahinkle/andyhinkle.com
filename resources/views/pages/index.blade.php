@@ -252,7 +252,7 @@
             Recent Contributions
         </h2>
 
-        <x-recent-github-contributions />
+        {{-- <x-recent-github-contributions /> --}}
 
         <h2 class="sr-only">
             Contact
