@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class CachePageMiddleware
@@ -23,8 +25,8 @@ class CachePageMiddleware
 
     public function shouldCacheResponse(Request $request, Response $response): bool
     {
-        return app()->isProduction() &&
-               ! auth()->check() &&
+        return App::isProduction() &&
+               ! Auth::check() &&
                $request->isMethod('GET') &&
                $response->isSuccessful();
     }
