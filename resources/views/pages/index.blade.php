@@ -17,13 +17,7 @@
             </p>
 
             <p class="mt-4 text-sm text-gray-700 dark:text-gray-200">
-                I'm a Senior App & Web Developer at <a href="https://grayloon.com" class="text-blue-400 hover:underline"
-                    target="_blank" rel="noopener noreferrer">Gray Loon Marketing Group</a> where I work on a variety of
-                projects ranging from custom web applications to mobile apps.
-            </p>
-
-            <p class="mt-4 text-sm text-gray-700 dark:text-gray-200">
-                I'm co-host of the <a href="https://the-midwest-artisan.transistor.fm/"
+                Co-host of the <a href="https://the-midwest-artisan.transistor.fm/"
                     class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">The Midwest Artisan
                     Podcast</a> where we talk about Laravel and all things web development.</p>
             </p>
