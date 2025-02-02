@@ -63,7 +63,7 @@
                 'description',
                 'completed' => fn ($message) => $message->completed_at = now(),
             ])
-            ->attachWhenPresent('speakers')
+            ->attachWhenPresent('contacts')
             ->save();
         </x-torchlight-code>
         </pre>
