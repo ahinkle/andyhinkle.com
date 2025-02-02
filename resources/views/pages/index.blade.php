@@ -242,11 +242,11 @@
                     class="ml-1">&#8594;</span></a>
         </div>
 
-        {{-- <h2 class="mt-6 text-xl font-medium text-gray-200">
+        <h2 class="mt-6 text-xl font-medium text-gray-200">
             Recent Contributions
-        </h2> --}}
+        </h2>
 
-        {{-- <x-recent-github-contributions /> --}}
+        <x-recent-github-contributions />
 
         <h2 class="sr-only">
             Contact
