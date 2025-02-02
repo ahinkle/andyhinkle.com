@@ -135,7 +135,6 @@
 
         <p class="mt-4 text-left text-lg text-white/85">
             Conditional traits are a great way to keep your code clean and readable. They allow you to easily add
-            conditions without cluttering your code with <code>if</code> statements. You can find the full code for
-            these traits on GitHub.
+            conditions without cluttering your code with <code>if</code> statements.
         </p>
 </x-app>
