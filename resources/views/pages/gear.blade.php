@@ -12,8 +12,8 @@
             <div class="md:col-span-3">
                 <ul role="list" class="space-y-10">
                     <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">16”
-                            MacBook Pro, M3 Max, 36GB RAM</h3>
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">14”
+                            MacBook M4 Pro, 48GB RAM</h3>
                         <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">Space Black,
                             1TB SSD</div>
                     </li>
