@@ -16,6 +16,9 @@
                             MacBook M4 Pro, 48GB RAM</h3>
                         <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">Space Black,
                             1TB SSD</div>
+                        <div class="relative z-10 mt-2 w-full text-xs text-gray-600 dark:text-gray-400">
+                            - Had the 16", but since I travel a lot, the 14" is a better fit for me.
+                        </div>
                     </li>
                     <li class="group relative flex flex-col items-start">
                         <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">49"
