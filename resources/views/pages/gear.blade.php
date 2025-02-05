@@ -38,7 +38,8 @@
                         <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">75% Layout,
                             Gateron Red Switches</div>
                         <div class="relative z-10 mt-2 w-full text-xs text-gray-600 dark:text-gray-400">
-                            - Although, these days, I mostly use my MacBook Pro's built-in keyboard. I know, I know.. Sorry.
+                            - Although, these days, I mostly use my MacBook Pro's built-in keyboard. I know, I know..
+                            Sorry.
                         </div>
                     </li>
                     <li class="group relative flex flex-col items-start">
