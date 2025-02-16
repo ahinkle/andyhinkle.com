@@ -12,13 +12,13 @@
                 <div class="w-full pt-3">
                     <div class="flex justify-between">
                         <div class="text-sm text-white/75">
-                            <a class="text-blue-500/75 hover:underline" href="https://github.com/ahinkle" target="_blank"
-                                noopener noreferrer>
+                            <a class="text-blue-500/75 hover:underline" href="https://github.com/ahinkle"
+                                target="_blank" noopener noreferrer>
                                 Andy Hinkle
                             </a>
                             <span>contributed to</span>
-                            <a class="text-blue-500/75 hover:underline" href="{{ $contribution['url'] }}" target="_blank"
-                                noopener noreferrer>
+                            <a class="text-blue-500/75 hover:underline" href="{{ $contribution['url'] }}"
+                                target="_blank" noopener noreferrer>
                                 {{ $contribution['owner'] }}/{{ $contribution['repository'] }}:
                             </a>
                         </div>
