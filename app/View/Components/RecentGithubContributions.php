@@ -76,7 +76,6 @@ class RecentGithubContributions extends Component
                         ? 'https://github.com/'.$contribution['repository']['owner']['login'].'.png'
                         : '',
                 ];
-            })
-            ->reject(fn ($contribution) => empty($contribution['title']));
+            });
     }
 }
