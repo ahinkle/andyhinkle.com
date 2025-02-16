@@ -1,6 +1,6 @@
 <ul role="list" class="space-y-6 px-2 py-6">
     @foreach ($contributions as $key => $contribution)
-        @if ($contribution->title !== '')
+        @if ($contribution['title'] !== '')
             <li class="relative flex gap-x-4">
                 <div class="absolute -bottom-6 left-0 top-0 flex w-6 justify-center">
                     @if ($key !== $contributions->count() - 1)
