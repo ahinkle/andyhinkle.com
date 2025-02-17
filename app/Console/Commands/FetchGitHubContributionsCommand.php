@@ -9,15 +9,11 @@ use Illuminate\Support\Facades\Http;
 class FetchGitHubContributionsCommand extends Command
 {
     /**
-     * The name and signature of the console command.
-     *
      * @var string
      */
     protected $signature = 'fetch:github-contributions';
 
     /**
-     * The console command description.
-     *
      * @var string
      */
     protected $description = 'Fetch recent GitHub contributions and stores them in cache';
@@ -33,27 +29,12 @@ class FetchGitHubContributionsCommand extends Command
             fn ($data) => Cache::put('github_contributions', $data, now()->addDay())
         );
 
-        $this->table(
-            ['Repository', 'Title', 'Merged At', 'Additions', 'Deletions'],
-            collect($data)->map(function ($contribution) {
-                return [
-                    $contribution['repository']['owner']['login'].'/'.$contribution['repository']['name'],
-                    $contribution['title'],
-                    $contribution['mergedAt'],
-                    $contribution['additions'],
-                    $contribution['deletions'],
-                ];
-            }),
-        );
-
         $this->info('GitHub contributions fetched successfully.');
 
         return 0;
     }
 
     /**
-     * Fetch GitHub public pull requests.
-     *
      * @return array<mixed>
      */
     protected function fetchGitHubPublicPullRequests(): array
@@ -70,9 +51,6 @@ class FetchGitHubContributionsCommand extends Command
         return $data->json()['data']['user']['pullRequests']['nodes'];
     }
 
-    /**
-     * GraphQL query to fetch GitHub public pull requests.
-     */
     protected function graphqlPullRequestQuery(): string
     {
         return <<<'GRAPHQL'
