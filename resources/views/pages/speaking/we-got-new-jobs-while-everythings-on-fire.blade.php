@@ -52,6 +52,7 @@
 
         <h2 class="mt-12 text-center text-2xl font-bold text-white">Transcript</h2>
 
+        <div class="prose prose-sm px-4 dark:prose-invert">
         <section class="episode-description episode-transcript" x-show="transcript">
             <p>Andy Hinkle (00:01.31)
     <br>Hey everybody, welcome to another episode of The Midwest Artisan. I'm your host Andy Hinkle.</p>
@@ -818,4 +819,5 @@
     <p>Andy Hinkle (01:02:56.992)
     <br>Sure. See you. Peace.</p>
           </section>
+          </div>
 </x-app>
