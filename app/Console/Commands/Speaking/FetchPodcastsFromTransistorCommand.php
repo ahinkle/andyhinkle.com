@@ -112,6 +112,6 @@ class FetchPodcastsFromTransistorCommand extends Command
     {
         $yaml = Yaml::dump($content, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
 
-        return "---\n".$yaml."---\n\n";
+        return "---\n".$yaml."---\n";
     }
 }
