@@ -113,7 +113,8 @@ class FetchPodcastsFromTransistorCommand extends Command
     {
         return Str::of($description)
             ->stripTags()
-            ->replaceMatches('/\s+/', ' ')
+            ->replaceMatches('/\s+/', ' ') // Normalize whitespace
+            ->replaceMatches('/\{\{.*?\}\}/', '') // Removes Transistor.fm template tags. eg. {{people}}
             ->trim()
             ->explode('. ')
             ->first();
