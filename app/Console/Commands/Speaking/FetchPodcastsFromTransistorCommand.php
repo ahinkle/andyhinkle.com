@@ -54,11 +54,11 @@ class FetchPodcastsFromTransistorCommand extends Command
             'transistor_id' => $podcast->id,
             'title' => $podcast->get('attributes.title'),
             'show_name' => 'The Midwest Artisan Podcast',
-            'embed_url' => $this->replaceWithEmbedUrl($podcast->get('attributes.share_url')),
+            'embed_url' => $this->embedUrl($podcast->get('attributes.share_url')),
             'published_at' => $podcast->get('attributes.published_at'),
             'duration' => $podcast->get('attributes.duration'),
             'summary' => $podcast->get('attributes.formatted_summary'),
-            'description' => $this->removeLineBreaks($podcast->get('attributes.description')),
+            'description' => $this->cleanText($podcast->get('attributes.description')),
         ];
 
         Storage::disk('content')->put($this->path($podcast), $this->toYaml($data));
@@ -69,22 +69,22 @@ class FetchPodcastsFromTransistorCommand extends Command
         return Speaking::where('transistor_id', $podcast->get('id'))->exists();
     }
 
-    private function path(Fluent $podcast): string
+    protected function path(Fluent $podcast): string
     {
         return "speaking/{$podcast->get('attributes.slug')}.md";
     }
 
-    private function replaceWithEmbedUrl(string $url): string
+    protected function embedUrl(string $url): string
     {
         return str_replace('/s/', '/e/', $url);
     }
 
-    private function removeLineBreaks(string $text): string
+    protected function cleanText(string $text): string
     {
         return preg_replace('/\r\n|\r|\n/', ' ', $text);
     }
 
-    private function toYaml(array $content): string
+    protected function toYaml(array $content): string
     {
         $yaml = Yaml::dump($content, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
 
