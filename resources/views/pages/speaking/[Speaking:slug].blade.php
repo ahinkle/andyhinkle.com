@@ -14,7 +14,7 @@
     <div class="mx-auto mt-8 max-w-3xl">
         <div class="px-4 pb-10">
             <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless=""
-                src="{{ $speaking->share_url }}?color=1F2937&background=101827"></iframe>
+                src="{{ $speaking->embed_url }}?color=1F2937&background=101827"></iframe>
         </div>
 
         <div class="prose prose-lg px-4 dark:prose-invert">

@@ -1,9 +1,8 @@
 ---
 transistor_id: 2336530
 title: We Got New Jobs (While Everything's on Fire)
-url: https://the-midwest-artisan.transistor.fm/episodes/we-got-new-jobs-while-everythings-on-fire
-show_title: The Midwest Artisan Podcast
-share_url: https://share.transistor.fm/e/4407ce26
+show_name: The Midwest Artisan Podcast
+embed_url: https://share.transistor.fm/e/4407ce26
 published_at: 2025-02-17T20:22:58.128Z
 duration: 3213
 summary: We (both) got new jobs. Our journey and the process of finding new jobs, the interview process, and how we're feeling about it all.
