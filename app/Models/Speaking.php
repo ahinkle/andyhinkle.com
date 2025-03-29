@@ -22,31 +22,30 @@ class Speaking extends Model
 
     public function getRows(): array
     {
-        return $this->files()
-            ->map(fn ($file) => $this->parse($file))
-            ->pipe(fn ($collection) => $this->transcript($collection))
+        return collect($this->files())
+            ->map(fn (string $file): array => $this->parse($file))
+            ->pipe(fn (Collection $collection): Collection => $this->transcript($collection))
             ->sortBy('published_at')
             ->values()
             ->toArray();
     }
 
-    protected function files(): Collection
+    protected function files(): Finder
     {
-        return Collection::make(
-            Finder::create()
-                ->files()
-                ->in(resource_path('content/speaking'))
-                ->name('*.md'),
-        );
+        return Finder::create()
+            ->files()
+            ->in(resource_path('content/speaking'))
+            ->name('*.md');
     }
 
     protected function parse(string $file): array
     {
         $document = YamlFrontMatter::parseFile($file);
 
-        return array_merge($document->matter(), [
-            'slug' => basename($file, '.md'),
-        ]);
+        return array_merge(
+            $document->matter(),
+            ['slug' => basename($file, '.md')],
+        );
     }
 
     protected function transcript(Collection $items): Collection
@@ -55,9 +54,7 @@ class Speaking extends Model
             $path = resource_path("content/speaking/transcripts/{$item['slug']}.txt");
             $transcript = File::exists($path) ? $path : null;
 
-            return array_merge($item, [
-                'transcript' => $transcript,
-            ]);
+            return array_merge($item, compact('transcript'));
         });
     }
 }
