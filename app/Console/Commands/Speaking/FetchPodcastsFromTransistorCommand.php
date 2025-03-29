@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Fluent;
 use Symfony\Component\Yaml\Yaml;
+use Illuminate\Support\Str;
 
 class FetchPodcastsFromTransistorCommand extends Command
 {
@@ -57,8 +58,8 @@ class FetchPodcastsFromTransistorCommand extends Command
             'embed_url' => $this->embedUrl($podcast->get('attributes.share_url')),
             'published_at' => $podcast->get('attributes.published_at'),
             'duration' => $podcast->get('attributes.duration'),
-            'summary' => $podcast->get('attributes.description'),
-            'description' => $this->cleanText($podcast->get('attributes.formatted_summary')),
+            'summary' => $this->summarizeDescription($podcast->get('attributes.description')),
+            'description' => strip_tags($podcast->get('attributes.formatted_summary')),
         ];
 
         Storage::disk('content')->put($this->path($podcast), $this->toYaml($data));
@@ -101,15 +102,20 @@ class FetchPodcastsFromTransistorCommand extends Command
         return str_replace('/s/', '/e/', $url);
     }
 
-    protected function cleanText(string $text): string
-    {
-        return preg_replace('/\r\n|\r|\n/', ' ', $text);
-    }
-
     protected function toYaml(array $content): string
     {
         $yaml = Yaml::dump($content, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
 
         return "---\n".$yaml."---\n";
+    }
+
+    protected function summarizeDescription(string $description): string
+    {
+        return Str::of($description)
+            ->stripTags()
+            ->replaceMatches('/\s+/', ' ')
+            ->trim()
+            ->explode('. ')
+            ->first();
     }
 }
