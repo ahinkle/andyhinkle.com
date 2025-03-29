@@ -66,6 +66,8 @@ class FetchPodcastsFromTransistorCommand extends Command
         if ($podcast->get('attributes.transcript_url')) {
             $this->downloadTranscript($podcast);
         }
+
+        dd('Podcast saved successfully!'); // Remove this line after testing
     }
 
     protected function podcastExists(Fluent $podcast): bool
