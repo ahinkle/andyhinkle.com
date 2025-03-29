@@ -28,7 +28,7 @@ class FetchPodcastsFromTransistorCommand extends Command
             ->tap(fn (Collection $podcasts) => $this->info("Fetched {$podcasts->count()} podcasts from Transistor.fm."))
             ->each(fn ($podcast) => $this->saveIfNotExists(fluent($podcast)));
 
-        $this->info('Podcasts fetched and saved successfully.');
+        $this->info('Completed fetching podcasts from Transistor.fm.');
     }
 
     protected function fetchPodcasts(): Collection
@@ -61,10 +61,7 @@ class FetchPodcastsFromTransistorCommand extends Command
             'description' => $this->removeLineBreaks($podcast->get('attributes.description')),
         ];
 
-        $yaml = Yaml::dump($data, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
-        $content = "---\n" . $yaml . "---\n\n";
-
-        Storage::disk('content')->put($this->path($podcast), $content);
+        Storage::disk('content')->put($this->path($podcast), $this->toYaml($data));
     }
 
     protected function podcastExists(Fluent $podcast): bool
@@ -85,5 +82,12 @@ class FetchPodcastsFromTransistorCommand extends Command
     private function removeLineBreaks(string $text): string
     {
         return preg_replace('/\r\n|\r|\n/', ' ', $text);
+    }
+
+    private function toYaml(array $content): string
+    {
+        $yaml = Yaml::dump($content, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
+
+        return "---\n" . $yaml . "---\n\n";
     }
 }
