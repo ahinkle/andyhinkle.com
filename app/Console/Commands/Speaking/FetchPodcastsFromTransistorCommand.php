@@ -57,8 +57,8 @@ class FetchPodcastsFromTransistorCommand extends Command
             'embed_url' => $this->embedUrl($podcast->get('attributes.share_url')),
             'published_at' => $podcast->get('attributes.published_at'),
             'duration' => $podcast->get('attributes.duration'),
-            'summary' => $podcast->get('attributes.formatted_summary'),
-            'description' => $this->cleanText($podcast->get('attributes.description')),
+            'summary' => $podcast->get('attributes.description'),
+            'description' => $this->cleanText($podcast->get('attributes.formatted_summary')),
         ];
 
         Storage::disk('content')->put($this->path($podcast), $this->toYaml($data));
