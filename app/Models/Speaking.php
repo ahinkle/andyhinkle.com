@@ -22,15 +22,15 @@ class Speaking extends Model
 
     public function getRows(): array
     {
-        return $this->getSpeakingFiles()
-            ->map(fn ($file) => $this->parseFrontMatter($file))
-            ->pipe(fn ($collection) => $this->appendTranscript($collection))
+        return $this->files()
+            ->map(fn ($file) => $this->parse($file))
+            ->pipe(fn ($collection) => $this->transcript($collection))
             ->sortBy('published_at')
             ->values()
             ->toArray();
     }
 
-    protected function getSpeakingFiles(): Collection
+    protected function files(): Collection
     {
         return Collection::make(
             Finder::create()
@@ -40,7 +40,7 @@ class Speaking extends Model
         );
     }
 
-    protected function parseFrontMatter(string $file): array
+    protected function parse(string $file): array
     {
         $document = YamlFrontMatter::parseFile($file);
 
@@ -49,7 +49,7 @@ class Speaking extends Model
         ]);
     }
 
-    protected function appendTranscript(Collection $items): Collection
+    protected function transcript(Collection $items): Collection
     {
         return $items->map(function ($item) {
             $path = resource_path("content/speaking/transcripts/{$item['slug']}.txt");
