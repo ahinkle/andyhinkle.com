@@ -62,6 +62,10 @@ class FetchPodcastsFromTransistorCommand extends Command
         ];
 
         Storage::disk('content')->put($this->path($podcast), $this->toYaml($data));
+
+        if ($podcast->get('attributes.transcript_url')) {
+            $this->downloadTranscript($podcast);
+        }
     }
 
     protected function podcastExists(Fluent $podcast): bool
@@ -69,9 +73,21 @@ class FetchPodcastsFromTransistorCommand extends Command
         return Speaking::where('transistor_id', $podcast->get('id'))->exists();
     }
 
+    protected function downloadTranscript(Fluent $podcast): void
+    {
+        $transcript = Http::throw()->get($podcast->get('attributes.transcript_url').'.txt')->body();
+
+        Storage::disk('content')->put($this->transcriptPath($podcast), $transcript);
+    }
+
     protected function path(Fluent $podcast): string
     {
         return "speaking/{$podcast->get('attributes.slug')}.md";
+    }
+
+    protected function transcriptPath(Fluent $podcast): string
+    {
+        return "speaking/transcripts/{$podcast->get('attributes.slug')}.txt";
     }
 
     protected function embedUrl(string $url): string
@@ -88,6 +104,6 @@ class FetchPodcastsFromTransistorCommand extends Command
     {
         $yaml = Yaml::dump($content, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
 
-        return "---\n" . $yaml . "---\n\n";
+        return "---\n".$yaml."---\n\n";
     }
 }
