@@ -52,7 +52,7 @@ class FetchPodcastsFromTransistorCommand extends Command
 
         $data = [
             'transistor_id' => $podcast->id,
-            'title' => $podcast->get('attributes.name'),
+            'title' => $podcast->get('attributes.title'),
             'show_name' => 'The Midwest Artisan Podcast',
             'embed_url' => $this->replaceWithEmbedUrl($podcast->get('attributes.share_url')),
             'published_at' => $podcast->get('attributes.published_at'),
