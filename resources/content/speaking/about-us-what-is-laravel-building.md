@@ -8,4 +8,3 @@ duration: 3678
 summary: 'A little about us, why we love Laravel, and what the heck is Laravel building?'
 description: '<div>A little about us, why we love Laravel, and what the heck is Laravel building?<br><br>{{people}}</div>'
 ---
-

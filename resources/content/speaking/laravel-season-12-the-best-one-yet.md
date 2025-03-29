@@ -8,4 +8,3 @@ duration: 3799
 summary: 'In this episode, we discuss activities during morning standups like playing bomberman, we both tried Laravel Cloud for our personal sites, and some API Patterns for when to return 404s.'
 description: '<div>In this episode, we discuss activities during morning standups like playing bomberman, we both tried Laravel Cloud for our personal sites, and some API Patterns for when to return 404s.</div>'
 ---
-

@@ -8,4 +8,3 @@ duration: 4176
 summary: 'Happy Holidays! This week, we discuss tackling some queue serialization issues, debating migrations versus seeders, and discussing some new ideas for Laravel Core PRs. We also discuss PHP 8.4’s latest features, why down methods might be risky, and how custom stubs could make development smoother.'
 description: '<div>Happy Holidays! This week, we discuss tackling some queue serialization issues, debating migrations versus seeders, and discussing some new ideas for Laravel Core PRs. We also discuss PHP 8.4’s latest features, why down methods might be risky, and how custom stubs could make development smoother.</div>'
 ---
-

@@ -8,4 +8,3 @@ duration: 3227
 summary: "Happy New Year! In this episode, we talk about our goals for the year, dive into the latest Laravel updates, and explore model-based migrations. We also chat about using Filament components outside the admin panel, the struggles of testing with Mockery, and why GitHub Wiki's never work out.\n00:00 - Intro\r\n04:25 - Laravel is poppin'\r\n10:56 - Model-Based Migrations\r\n17:38 - Challenges of Model-Based Migrations\r\n20:31 - Undocumented Laravel Nuggets\r\n23:37 - Using Filament on the Frontend\r\n24:52 - Integrating Filament on Frontend and Backend\r\n33:00 - Why is Mockery so hard?\r\n39:35 - GitHub Wikis never work out"
 description: "<div>Happy New Year! In this episode, we talk about our goals for the year, dive into the latest Laravel updates, and explore model-based migrations. We also chat about using Filament components outside the admin panel, the struggles of testing with Mockery, and why GitHub Wiki's never work out.</div>"
 ---
-
