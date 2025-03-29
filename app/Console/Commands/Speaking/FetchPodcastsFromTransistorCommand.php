@@ -62,7 +62,7 @@ class FetchPodcastsFromTransistorCommand extends Command
         ];
 
         $yaml = Yaml::dump($data, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
-        $content = '---\n\n'.$yaml.'---\n\n';
+        $content = "---\n" . $yaml . "---\n\n";
 
         Storage::disk('content')->put($this->path($podcast), $content);
     }
