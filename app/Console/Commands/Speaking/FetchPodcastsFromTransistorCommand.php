@@ -75,9 +75,15 @@ class FetchPodcastsFromTransistorCommand extends Command
 
     protected function downloadTranscript(Fluent $podcast): void
     {
-        $transcript = Http::throw()->get($podcast->get('attributes.transcript_url').'.txt')->body();
+        $transcript = Http::get($podcast->get('attributes.transcript_url').'.txt');
 
-        Storage::disk('content')->put($this->transcriptPath($podcast), $transcript);
+        if ($transcript->failed()) {
+            $this->error("Failed to download transcript for podcast: {$podcast->get('attributes.title')}");
+
+            return;
+        }
+
+        Storage::disk('content')->put($this->transcriptPath($podcast), $transcript->body());
     }
 
     protected function path(Fluent $podcast): string
