@@ -48,33 +48,33 @@ class FetchPodcastsFromTransistorCommand extends Command
 
     protected function savePodcast(Fluent $podcast): void
     {
-        $this->info("Found new podcast: {$podcast->attributes->name}");
+        $this->info("Found new podcast: {$podcast->get('attributes.title')}");
 
         $data = [
             'transistor_id' => $podcast->id,
-            'title' => $podcast->attributes->name,
-            'url' => $podcast->attributes->url,
-            'embed_url' => $this->replaceWithEmbedUrl($podcast->attributes->share_url),
-            'published_at' => $podcast->attributes->published_at,
-            'duration' => $podcast->attributes->duration,
-            'summary' => $podcast->attributes->formatted_summary,
-            'description' => $this->removeLineBreaks($podcast->attributes->description),
+            'title' => $podcast->get('attributes.name'),
+            'show_name' => 'The Midwest Artisan Podcast',
+            'embed_url' => $this->replaceWithEmbedUrl($podcast->get('attributes.share_url')),
+            'published_at' => $podcast->get('attributes.published_at'),
+            'duration' => $podcast->get('attributes.duration'),
+            'summary' => $podcast->get('attributes.formatted_summary'),
+            'description' => $this->removeLineBreaks($podcast->get('attributes.description')),
         ];
 
         $yaml = Yaml::dump($data, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
-        $content = '---\n'.$yaml."---\n\n";
+        $content = '---\n\n'.$yaml.'---\n\n';
 
         Storage::disk('content')->put($this->path($podcast), $content);
     }
 
     protected function podcastExists(Fluent $podcast): bool
     {
-        return Speaking::where('transistor_id', $podcast->id)->exists();
+        return Speaking::where('transistor_id', $podcast->get('id'))->exists();
     }
 
     private function path(Fluent $podcast): string
     {
-        return "speaking/{$podcast->attributes->slug}.md";
+        return "speaking/{$podcast->get('attributes.slug')}.md";
     }
 
     private function replaceWithEmbedUrl(string $url): string
