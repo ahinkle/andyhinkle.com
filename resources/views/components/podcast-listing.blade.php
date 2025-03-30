@@ -10,7 +10,8 @@
             <p class="pt-6 text-white/75">
                 {{ $episode->summary }}
             </p>
-            <a href="{{ url("speaking/{$episode->slug}") }}" class="block pt-4 text-center text-white/50 underline hover:text-white">
+            <a href="{{ url("speaking/{$episode->slug}") }}"
+                class="block pt-4 text-center text-white/50 underline hover:text-white">
                 Listen Now
             </a>
         </div>
