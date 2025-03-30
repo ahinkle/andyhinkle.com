@@ -1,5 +1,6 @@
 <div class="grid gap-12 gap-y-4 py-4 md:gap-y-8 lg:grid-cols-3 lg:gap-x-4 lg:gap-y-12">
     @foreach ($podcasts as $podcast)
+        @dump($podcast)
         <a class="group rounded-lg bg-gray-900 p-4" href="{{ url($podcast['slug']) }}">
             <div class="grid grid-cols-1 gap-4">
                 <div class="col-span-1">

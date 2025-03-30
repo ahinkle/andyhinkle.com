@@ -8,8 +8,8 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Fluent;
-use Symfony\Component\Yaml\Yaml;
 use Illuminate\Support\Str;
+use Symfony\Component\Yaml\Yaml;
 
 class FetchPodcastsFromTransistorCommand extends Command
 {
