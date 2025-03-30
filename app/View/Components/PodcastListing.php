@@ -12,7 +12,7 @@ class PodcastListing extends Component
     public function render(): View|Closure|string
     {
         return view('components.podcast-listing', [
-            'podcasts' => Speaking::all(),
+            'podcasts' => cache('podcast_listing', fn () => Speaking::all()),
         ]);
     }
 }

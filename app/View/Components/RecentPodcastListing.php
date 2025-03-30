@@ -12,7 +12,7 @@ class RecentPodcastListing extends Component
     public function render(): View|Closure|string
     {
         return view('components.recent-podcast-listing', [
-            'podcasts' => Speaking::orderBy('published_at', 'desc')->limit(3)->get(),
+            'podcasts' => cache('recent_podcasts', fn () => Speaking::take(3)->get()),
         ]);
     }
 }
