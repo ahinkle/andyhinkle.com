@@ -1,11 +1,10 @@
 <div class="grid gap-12 gap-y-4 py-4 md:gap-y-8 lg:grid-cols-3 lg:gap-x-4 lg:gap-y-12">
     @foreach ($podcasts as $podcast)
-        @dump($podcast)
-        <a class="group rounded-lg bg-gray-900 p-4" href="{{ url($podcast['slug']) }}">
+        <a class="group rounded-lg bg-gray-900 p-4" href="{{ url("/speaking/{$podcast->slug}") }}">
             <div class="grid grid-cols-1 gap-4">
                 <div class="col-span-1">
                     <div class="relative flex items-center justify-between">
-                        <img src="{{ $podcast['youtube_thumbnail'] }}" alt="{{ $podcast['title'] }}"
+                        <img src="{{ $podcast['youtube_thumbnail'] }}" alt="{{ $podcast->title }}"
                             class="h-full w-full rounded-lg object-cover">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                             class="absolute h-14 w-full fill-current text-white">
