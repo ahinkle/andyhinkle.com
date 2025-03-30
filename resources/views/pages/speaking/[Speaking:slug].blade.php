@@ -18,13 +18,13 @@
         </div>
 
         <div class="prose prose-lg px-4 dark:prose-invert">
-            {!! $speaking->description !!}
+            {!! nl2br(e($speaking->description)) !!}
         </div>
 
         <div class="mt-8 px-4">
             <iframe class="h-96 w-full" src="{{ $speaking->video_embed_url }}"
                 title="Video player for {{ $speaking->title }}" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscree n></iframe>
         </div>
 </x-app>
