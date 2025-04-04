@@ -8,7 +8,7 @@
         "php": "^8.2",
         "ahinkle/auto-resolvable-blade-components": "^3.0",
         "laravel/folio": "^1.1",
-        "laravel/framework": "^11.0",
+        "laravel/framework": "^12.7",
         "laravel/tinker": "^2.9",
         "torchlight/torchlight-laravel": "^0.6.0"
     },
