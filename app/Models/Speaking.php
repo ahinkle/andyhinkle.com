@@ -21,9 +21,13 @@ class Speaking extends Model
     {
         return [
             'published_at' => 'datetime',
+            'duration' => 'integer',
         ];
     }
 
+    /**
+     * @return array<int, array<string, mixed>>
+     */
     public function getRows(): array
     {
         return collect($this->files())
@@ -42,6 +46,9 @@ class Speaking extends Model
             ->name('*.md');
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     protected function parseFile(string $file): array
     {
         $document = YamlFrontMatter::parseFile($file);
@@ -52,9 +59,13 @@ class Speaking extends Model
         );
     }
 
+    /**
+     * @param Collection<int, array<string, mixed>> $items
+     * @return Collection<int, non-empty-array<string, mixed>>
+     */
     protected function transcriptPath(Collection $items): Collection
     {
-        return $items->map(function ($item) {
+        return $items->map(function (array $item): array {
             $path = resource_path("content/speaking/transcripts/{$item['slug']}.txt");
             $transcript = File::exists($path) ? $path : null;
 
@@ -62,28 +73,33 @@ class Speaking extends Model
         });
     }
 
+    /**
+     * @return Attribute<string|null, never>
+     */
     protected function videoThumbnail(): Attribute
     {
-        return Attribute::get(function () {
-            $id = $this->youtubeId();
-
-            return $id ? "https://img.youtube.com/vi/{$id}/maxresdefault.jpg" : null;
-        });
+        return new Attribute(
+            get: fn (): ?string => $this->youtubeId() ? "https://img.youtube.com/vi/{$this->youtubeId()}/maxresdefault.jpg" : null
+        );
     }
 
+    /**
+     * @return Attribute<string|null, never>
+     */
     protected function videoEmbedUrl(): Attribute
     {
-        return Attribute::get(function () {
-            $id = $this->youtubeId();
-
-            return $id ? "https://www.youtube.com/embed/{$id}" : null;
-        });
+        return new Attribute(
+            get: fn (): ?string => $this->youtubeId() ? "https://www.youtube.com/embed/{$this->youtubeId()}" : null
+        );
     }
 
+    /**
+     * @return Attribute<string, never>
+     */
     protected function durationMmss(): Attribute
     {
         return Attribute::make(
-            get: fn () => $this->formatDuration($this->duration),
+            get: fn (): string => $this->formatDuration($this->getAttribute('duration') ?? 0),
         );
     }
 
@@ -98,11 +114,13 @@ class Speaking extends Model
 
     private function youtubeId(): ?string
     {
-        if (! $this->video_url) {
+        $url = $this->getAttribute('video_url');
+        
+        if (!$url) {
             return null;
         }
 
-        if (preg_match('/(?:youtu\.be\/|v=)([a-zA-Z0-9_-]{11})/', $this->video_url, $matches)) {
+        if (preg_match('/(?:youtu\.be\/|v=)([a-zA-Z0-9_-]{11})/', $url, $matches)) {
             return $matches[1];
         }
 
