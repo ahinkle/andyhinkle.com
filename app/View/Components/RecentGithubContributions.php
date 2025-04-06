@@ -62,20 +62,18 @@ class RecentGithubContributions extends Component
     protected function formatContributions(array $contributions): Collection
     {
         return collect($contributions)
-            ->map(function ($contribution): array {
-                return [
-                    'title' => (string) ($contribution['title'] ?? ''),
-                    'url' => (string) ($contribution['url'] ?? ''),
-                    'merged_at' => isset($contribution['mergedAt']) ? Carbon::parse($contribution['mergedAt']) : now(),
-                    'body' => (string) ($contribution['bodyText'] ?? ''),
-                    'additions' => (int) ($contribution['additions'] ?? 0),
-                    'deletions' => (int) ($contribution['deletions'] ?? 0),
-                    'repository' => (string) ($contribution['repository']['name'] ?? ''),
-                    'owner' => (string) ($contribution['repository']['owner']['login'] ?? ''),
-                    'avatar_url' => isset($contribution['repository']['owner']['login'])
-                        ? 'https://github.com/'.$contribution['repository']['owner']['login'].'.png'
-                        : '',
-                ];
-            });
+            ->map(fn($contribution): array => [
+                'title' => (string) ($contribution['title'] ?? ''),
+                'url' => (string) ($contribution['url'] ?? ''),
+                'merged_at' => isset($contribution['mergedAt']) ? Carbon::parse($contribution['mergedAt']) : now(),
+                'body' => (string) ($contribution['bodyText'] ?? ''),
+                'additions' => (int) ($contribution['additions'] ?? 0),
+                'deletions' => (int) ($contribution['deletions'] ?? 0),
+                'repository' => (string) ($contribution['repository']['name'] ?? ''),
+                'owner' => (string) ($contribution['repository']['owner']['login'] ?? ''),
+                'avatar_url' => isset($contribution['repository']['owner']['login'])
+                    ? 'https://github.com/'.$contribution['repository']['owner']['login'].'.png'
+                    : '',
+            ]);
     }
 }

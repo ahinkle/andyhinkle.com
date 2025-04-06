@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Cache;
 
-it('formats contributions correctly', function () {
+it('formats contributions correctly', function (): void {
     $mockContributions = [
         [
             'title' => 'Test PR',

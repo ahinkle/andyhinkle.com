@@ -120,7 +120,7 @@ class Speaking extends Model
             return null;
         }
 
-        if (preg_match('/(?:youtu\.be\/|v=)([a-zA-Z0-9_-]{11})/', $url, $matches)) {
+        if (preg_match('/(?:youtu\.be\/|v=)([a-zA-Z0-9_-]{11})/', (string) $url, $matches)) {
             return $matches[1];
         }
 

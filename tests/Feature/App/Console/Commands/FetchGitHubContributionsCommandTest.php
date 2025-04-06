@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Http;
 
 use function Pest\Laravel\artisan;
 
-it('fetches and caches GitHub contributions', function () {
+it('fetches and caches GitHub contributions', function (): void {
     fake_successful_github_response();
 
     artisan('fetch:github-contributions')
