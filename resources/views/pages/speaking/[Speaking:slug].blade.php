@@ -30,7 +30,7 @@
 
         <div class="mt-12 px-4">
             <h2 class="mb-6 font-sans text-2xl font-bold text-white">Transcript</h2>
-            <div class="rounded bg-gray-800 p-6">
+            <div class="rounded-sm bg-gray-800 p-6">
                 @if (file_exists($speaking->transcript))
                     <div class="prose prose-sm max-w-none text-gray-300">
                         {!! nl2br(e(file_get_contents($speaking->transcript))) !!}

@@ -20,7 +20,7 @@
                         <div class="h-16 flex-none overflow-hidden">
                             <p class="line-clamp-2 text-lg font-semibold text-white">{{ $episode->title }}</p>
                         </div>
-                        <div class="mt-3 flex-grow">
+                        <div class="mt-3 grow">
                             <p class="line-clamp-3 text-sm text-gray-300">{{ str($episode->summary)->words(20) }}
                             </p>
                         </div>
