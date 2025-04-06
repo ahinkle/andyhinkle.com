@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Concerns;
 
+use DateTimeInterface;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
@@ -9,29 +10,22 @@ use Illuminate\Support\Facades\Cache;
 trait InteractsWithBlogPosts
 {
     /**
-     * @return Collection<int, array{
-     *     slug: string,
-     *     title: string,
-     *     description: string,
-     *     date: \DateTimeInterface
-     * }>
+     * @return Collection<int, array{slug: string, title: string, description: string, date: DateTimeInterface}>
      */
     public function resolvePosts(): Collection
     {
-        return Cache::rememberForever('post-listing', function () {
-            return collect(glob(resource_path('views/pages/blog/*.blade.php')))
-                ->map(function ($file) {
-                    $content = file_get_contents($file);
+        return Cache::rememberForever('post-listing', fn () => collect(glob(resource_path('views/pages/blog/*.blade.php')))
+            ->map(function ($file) {
+                $content = file_get_contents($file);
 
-                    return [
-                        'slug' => $this->resolveSlug($file),
-                        'title' => $this->resolveTitle($content),
-                        'description' => $this->resolveDescription($content),
-                        'date' => $this->resolvePublishedDate($content),
-                    ];
-                })
-                ->sortByDesc('date');
-        });
+                return [
+                    'slug' => $this->resolveSlug($file),
+                    'title' => $this->resolveTitle($content),
+                    'description' => $this->resolveDescription($content),
+                    'date' => $this->resolvePublishedDate($content),
+                ];
+            })
+            ->sortByDesc('date'));
     }
 
     protected function resolveSlug(string $file): string

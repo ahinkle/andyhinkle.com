@@ -65,11 +65,11 @@ class FetchPodcastsFromTransistorCommand extends Command
             'title' => $podcast->get('attributes.title'),
             'show_name' => 'The Midwest Artisan Podcast',
             'embed_url' => $this->embedUrl($podcast->get('attributes.share_url')),
-            'video_url' => $podcast->get('attributes.video_url') ? $podcast->get('attributes.video_url') : null,
+            'video_url' => $podcast->get('attributes.video_url') ?: null,
             'published_at' => $podcast->get('attributes.published_at'),
             'duration' => $podcast->get('attributes.duration'),
             'summary' => $this->summarizeDescription($podcast->get('attributes.description')),
-            'description' => strip_tags($podcast->get('attributes.formatted_summary')),
+            'description' => strip_tags((string) $podcast->get('attributes.formatted_summary')),
         ];
 
         Storage::disk('content')->put($this->path($podcast), $this->toYaml($data));
