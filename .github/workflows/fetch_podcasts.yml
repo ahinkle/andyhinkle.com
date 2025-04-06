@@ -1,0 +1,76 @@
+name: Fetch Podcasts from Transistor.fm
+
+on:
+  schedule:
+    # Run at 9:00 AM CST (15:00 UTC)
+    - cron: '0 15 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  fetch-podcasts:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
+          tools: composer:v2
+          coverage: xdebug
+
+      - name: Cache Vendor
+        id: cache-vendor
+        uses: actions/cache@v3
+        with:
+            path: vendor
+            key: ${{ runner.os }}-vendor-${{ hashFiles('**/composer.lock') }}
+      
+      - name: Copy .env
+        run: cp .env.example .env
+      
+      - name: Set up environment
+        run: |
+          echo "TRANSISTOR_API_KEY=${{ secrets.TRANSISTOR_API_KEY }}" >> .env
+          touch database/database.sqlite
+          php artisan key:generate
+      
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+      
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      
+      - name: Run migration
+        run: php artisan migrate --force
+      
+      - name: Fetch podcasts
+        run: php artisan transistor:fetch-podcasts
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git add .
+          git status
+          git diff --staged --quiet && echo "changes=false" >> $GITHUB_OUTPUT || echo "changes=true" >> $GITHUB_OUTPUT
+      
+      - name: Create Pull Request
+        if: steps.git-check.outputs.changes == 'true'
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Automated: New podcast episode(s) from Transistor.fm"
+          title: "New podcast episode(s) from Transistor.fm"
+          body: |
+            This PR contains new podcast episodes fetched from Transistor.fm
+            
+            *Automated PR created by GitHub Actions*
+          branch: automated/podcasts-update
+          base: main 
