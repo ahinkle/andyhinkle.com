@@ -17,7 +17,7 @@
                 src="{{ $speaking->embed_url }}?color=1F2937&background=101827"></iframe>
         </div>
 
-        <div class="prose prose-lg px-4 dark:prose-invert">
+        <div class="prose prose-lg dark:prose-invert px-4">
             {!! nl2br(e($speaking->description)) !!}
         </div>
 

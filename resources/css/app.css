@@ -13,41 +13,41 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
 }
 
 @utility torchlight {
-  /*
+    /*
   Add some vertical padding and expand the width
   to fill its container. The horizontal padding
   comes at the line level so that background
   colors extend edge to edge.
   */
-  pre &code {
-    @apply block py-4 min-w-max;
-  }
+    pre &code {
+        @apply block py-4 min-w-max;
+    }
 
-  /*
+    /*
   Horizontal line padding.
   */
-  pre &code .line {
-    @apply px-4;
-  }
+    pre &code .line {
+        @apply px-4;
+    }
 }
 
 @utility line {
-  /*
+    /*
   Horizontal line padding.
   */
-  pre code.torchlight & {
-    @apply px-4;
-  }
+    pre code.torchlight & {
+        @apply px-4;
+    }
 }
 
 @layer base {
