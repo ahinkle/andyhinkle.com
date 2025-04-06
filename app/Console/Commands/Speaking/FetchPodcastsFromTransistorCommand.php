@@ -32,6 +32,9 @@ class FetchPodcastsFromTransistorCommand extends Command
         $this->info('Completed fetching podcasts from Transistor.fm.');
     }
 
+    /**
+     * @return Collection<int, array<string, mixed>>
+     */
     protected function fetchPodcasts(): Collection
     {
         return Http::withHeader('x-api-key', config('services.transistor.api_key'))
@@ -40,6 +43,9 @@ class FetchPodcastsFromTransistorCommand extends Command
             ->collect('data');
     }
 
+    /**
+     * @param Fluent<string, mixed> $podcast
+     */
     protected function saveIfNotExists(Fluent $podcast): void
     {
         if (! $this->podcastExists($podcast)) {
@@ -47,12 +53,15 @@ class FetchPodcastsFromTransistorCommand extends Command
         }
     }
 
+    /**
+     * @param Fluent<string, mixed> $podcast
+     */
     protected function savePodcast(Fluent $podcast): void
     {
         $this->info("Found new podcast: {$podcast->get('attributes.title')}");
 
         $data = [
-            'transistor_id' => $podcast->id,
+            'transistor_id' => $podcast->get('id'),
             'title' => $podcast->get('attributes.title'),
             'show_name' => 'The Midwest Artisan Podcast',
             'embed_url' => $this->embedUrl($podcast->get('attributes.share_url')),
@@ -70,11 +79,17 @@ class FetchPodcastsFromTransistorCommand extends Command
         }
     }
 
+    /**
+     * @param Fluent<string, mixed> $podcast
+     */
     protected function podcastExists(Fluent $podcast): bool
     {
         return Speaking::where('transistor_id', $podcast->get('id'))->exists();
     }
 
+    /**
+     * @param Fluent<string, mixed> $podcast
+     */
     protected function downloadTranscript(Fluent $podcast): void
     {
         $transcript = Http::get($podcast->get('attributes.transcript_url').'.txt');
@@ -88,11 +103,17 @@ class FetchPodcastsFromTransistorCommand extends Command
         Storage::disk('content')->put($this->transcriptPath($podcast), $transcript->body());
     }
 
+    /**
+     * @param Fluent<string, mixed> $podcast
+     */
     protected function path(Fluent $podcast): string
     {
         return "speaking/{$podcast->get('attributes.slug')}.md";
     }
 
+    /**
+     * @param Fluent<string, mixed> $podcast
+     */
     protected function transcriptPath(Fluent $podcast): string
     {
         return "speaking/transcripts/{$podcast->get('attributes.slug')}.txt";
@@ -103,6 +124,9 @@ class FetchPodcastsFromTransistorCommand extends Command
         return str_replace('/s/', '/e/', $url);
     }
 
+    /**
+     * @param array<string, mixed> $content
+     */
     protected function toYaml(array $content): string
     {
         $yaml = Yaml::dump($content, 4, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
