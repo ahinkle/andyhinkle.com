@@ -1,6 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
+}
+
+@utility torchlight {
+    /*
+  Add some vertical padding and expand the width
+  to fill its container. The horizontal padding
+  comes at the line level so that background
+  colors extend edge to edge.
+  */
+    pre &code {
+        @apply block py-4 min-w-max;
+    }
+
+    /*
+  Horizontal line padding.
+  */
+    pre &code .line {
+        @apply px-4;
+    }
+}
+
+@utility line {
+    /*
+  Horizontal line padding.
+  */
+    pre code.torchlight & {
+        @apply px-4;
+    }
+}
 
 @layer base {
     html {
@@ -14,24 +62,7 @@
   overflow-x-auto is recommended.
   */
     pre {
-        @apply my-4 rounded overflow-x-auto;
-    }
-
-    /*
-  Add some vertical padding and expand the width
-  to fill its container. The horizontal padding
-  comes at the line level so that background
-  colors extend edge to edge.
-  */
-    pre code.torchlight {
-        @apply block py-4 min-w-max;
-    }
-
-    /*
-  Horizontal line padding.
-  */
-    pre code.torchlight .line {
-        @apply px-4;
+        @apply my-4 rounded-sm overflow-x-auto;
     }
 }
 

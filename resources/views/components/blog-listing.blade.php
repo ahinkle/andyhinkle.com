@@ -1,6 +1,6 @@
 <div class="mx-auto max-w-3xl space-y-4">
     @foreach ($posts as $post)
-        <div class="rounded border border-gray-500 px-4 py-4 md:px-8">
+        <div class="rounded-sm border border-gray-500 px-4 py-4 md:px-8">
             <p class="py-2 text-center font-sans text-sm text-white/75">
                 {{ $post['date']->format('F j, Y') }}
             </p>

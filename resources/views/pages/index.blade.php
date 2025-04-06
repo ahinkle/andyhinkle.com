@@ -26,7 +26,7 @@
                 <div class="my-2 flex flex-row">
                     <div class="flex flex-row flex-wrap items-center gap-2">
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg viewBox="0 0 50 52" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 class="mr-2 size-4 fill-gray-700 group-hover:fill-red-500 dark:fill-gray-400">
                                 <path
@@ -36,7 +36,7 @@
                             Laravel
                         </div>
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128"
                                 class="mr-2 size-4 fill-gray-700 group-hover:fill-yellow-400 dark:fill-gray-400">
                                 <path d="M1.408 1.408h125.184v125.185H1.408z"></path>
@@ -47,7 +47,7 @@
                             JavaScript
                         </div>
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28"
                                 class="mr-2 size-5 fill-gray-700 group-hover:fill-blue-500 dark:fill-gray-400">
                                 <path fill-rule="evenodd"
@@ -57,7 +57,7 @@
                             TypeScript
                         </div>
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28"
                                 class="mr-2 size-4 fill-gray-700 group-hover:fill-blue-500 dark:fill-gray-400">
                                 <g clip-path="url(#react_svg__a)">
@@ -74,7 +74,7 @@
                             React
                         </div>
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33"
                                 class="mr-2 size-4 fill-gray-700 group-hover:fill-blue-300 dark:fill-gray-400">
                                 <g clip-path="url(#prefix__clip0)">
@@ -95,7 +95,7 @@
                 <div class="my-2 flex flex-row">
                     <div class="flex flex-row flex-wrap items-center gap-2">
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28"
                                 class="mr-2 size-4 fill-gray-700 group-hover:fill-blue-500 dark:fill-gray-400">
                                 <g clip-path="url(#reactnative_svg__a)">
@@ -112,7 +112,7 @@
                             React Native
                         </div>
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg class="mr-2 size-5 fill-gray-700 group-hover:fill-yellow-400 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" xml:space="preserve" y="0" x="0" id="Layer_1"
                                 version="1.1" viewBox="-45.10065 -44.95 390.8723 269.7">
@@ -132,7 +132,7 @@
                             AWS
                         </div>
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg class="mr-2 size-4 fill-gray-700 group-hover:fill-purple-300 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
                                 <path style="fill-rule:evenodd;fill:#fb70a9;fill-opacity:1"
@@ -155,7 +155,7 @@
                             Livewire
                         </div>
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg class="mr-2 size-4 fill-gray-700 group-hover:fill-blue-200 dark:fill-blue-200"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                                 <path
@@ -168,7 +168,7 @@
                 <div class="my-2 flex flex-row">
                     <div class="flex flex-row flex-wrap items-center gap-2">
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg class="mr-2 size-5 fill-gray-700 group-hover:fill-red-400 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                                 <path
@@ -177,7 +177,7 @@
                             Git
                         </div>
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg class="mr-2 size-4 fill-gray-700 group-hover:fill-red-400 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                                 <path
@@ -191,7 +191,7 @@
                             Figma
                         </div>
                         <div
-                            class="group inline-flex items-center rounded border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
+                            class="group inline-flex items-center rounded-sm border border-gray-500 px-2 py-1 text-sm text-gray-800 hover:border-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-400">
                             <svg class="mr-2 size-4 fill-gray-700 group-hover:fill-red-400 dark:fill-gray-400"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                                 <path

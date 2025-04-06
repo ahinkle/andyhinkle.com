@@ -1,5 +1,5 @@
 <aside
-    class="fixed bottom-10 right-1 z-50 flex divide-x divide-solid divide-white text-xs shadow-sm hover:opacity-100 motion-safe:transition-opacity"
+    class="shadow-xs fixed bottom-10 right-1 z-50 flex divide-x divide-solid divide-white text-xs hover:opacity-100 motion-safe:transition-opacity"
     x-data="{ toolbarVisible: true }" x-ref="toolbar" x-cloak x-show="toolbarVisible">
     <span title="Current Tailwind Breakpoint" class="flex items-center space-x-1 bg-yellow-200 p-2 text-yellow-800">
         <div class="h-4 w-4 fill-current">
