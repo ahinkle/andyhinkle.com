@@ -13,10 +13,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -65,7 +62,7 @@ jobs:
         if: steps.git-check.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           commit-message: "Automated: New podcast episode(s) from Transistor.fm"
           title: "New podcast episode(s) from Transistor.fm"
           body: |
