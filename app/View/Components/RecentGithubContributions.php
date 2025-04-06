@@ -62,7 +62,7 @@ class RecentGithubContributions extends Component
     protected function formatContributions(array $contributions): Collection
     {
         return collect($contributions)
-            ->map(fn($contribution): array => [
+            ->map(fn ($contribution): array => [
                 'title' => (string) ($contribution['title'] ?? ''),
                 'url' => (string) ($contribution['url'] ?? ''),
                 'merged_at' => isset($contribution['mergedAt']) ? Carbon::parse($contribution['mergedAt']) : now(),

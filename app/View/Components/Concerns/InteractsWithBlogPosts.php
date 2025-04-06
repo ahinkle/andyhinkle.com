@@ -14,7 +14,7 @@ trait InteractsWithBlogPosts
      */
     public function resolvePosts(): Collection
     {
-        return Cache::rememberForever('post-listing', fn() => collect(glob(resource_path('views/pages/blog/*.blade.php')))
+        return Cache::rememberForever('post-listing', fn () => collect(glob(resource_path('views/pages/blog/*.blade.php')))
             ->map(function ($file) {
                 $content = file_get_contents($file);
 
