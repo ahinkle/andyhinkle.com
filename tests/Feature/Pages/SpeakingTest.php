@@ -1,6 +1,7 @@
 <?php
 
 use function Pest\Laravel\get;
+use App\Models\Speaking;
 
 it('loads speaking page', function () {
     get('/speaking')
@@ -8,8 +9,11 @@ it('loads speaking page', function () {
         ->assertSee('About Us');
 });
 
-it('loads all podcast pages', function () {
-    collect(glob(resource_path('views/pages/speaking/*.blade.php')))
-        ->map(fn ($file) => str_replace('.blade.php', '', pathinfo($file, PATHINFO_BASENAME)))
-        ->each(fn ($slug) => get('/speaking/'.$slug)->assertOk());
+it('loads speaking pages', function () {
+    $speakings = Speaking::all();
+    
+    foreach ($speakings as $speaking) {
+        $this->get("/speaking/{$speaking->slug}")
+            ->assertOk();
+    }
 });
