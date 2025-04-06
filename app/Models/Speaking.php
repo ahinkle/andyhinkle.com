@@ -60,7 +60,7 @@ class Speaking extends Model
     }
 
     /**
-     * @param Collection<int, array<string, mixed>> $items
+     * @param  Collection<int, array<string, mixed>>  $items
      * @return Collection<int, non-empty-array<string, mixed>>
      */
     protected function transcriptPath(Collection $items): Collection
@@ -115,8 +115,8 @@ class Speaking extends Model
     private function youtubeId(): ?string
     {
         $url = $this->getAttribute('video_url');
-        
-        if (!$url) {
+
+        if (! $url) {
             return null;
         }
 

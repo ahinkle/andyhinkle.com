@@ -1,7 +1,8 @@
 <?php
 
-use function Pest\Laravel\get;
 use App\Models\Speaking;
+
+use function Pest\Laravel\get;
 
 it('loads speaking page', function () {
     get('/speaking')
@@ -11,7 +12,7 @@ it('loads speaking page', function () {
 
 it('loads speaking pages', function () {
     $speakings = Speaking::all();
-    
+
     foreach ($speakings as $speaking) {
         $this->get("/speaking/{$speaking->slug}")
             ->assertOk();

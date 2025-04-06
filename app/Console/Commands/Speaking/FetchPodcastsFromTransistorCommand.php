@@ -44,7 +44,7 @@ class FetchPodcastsFromTransistorCommand extends Command
     }
 
     /**
-     * @param Fluent<string, mixed> $podcast
+     * @param  Fluent<string, mixed>  $podcast
      */
     protected function saveIfNotExists(Fluent $podcast): void
     {
@@ -54,7 +54,7 @@ class FetchPodcastsFromTransistorCommand extends Command
     }
 
     /**
-     * @param Fluent<string, mixed> $podcast
+     * @param  Fluent<string, mixed>  $podcast
      */
     protected function savePodcast(Fluent $podcast): void
     {
@@ -80,7 +80,7 @@ class FetchPodcastsFromTransistorCommand extends Command
     }
 
     /**
-     * @param Fluent<string, mixed> $podcast
+     * @param  Fluent<string, mixed>  $podcast
      */
     protected function podcastExists(Fluent $podcast): bool
     {
@@ -88,7 +88,7 @@ class FetchPodcastsFromTransistorCommand extends Command
     }
 
     /**
-     * @param Fluent<string, mixed> $podcast
+     * @param  Fluent<string, mixed>  $podcast
      */
     protected function downloadTranscript(Fluent $podcast): void
     {
@@ -104,7 +104,7 @@ class FetchPodcastsFromTransistorCommand extends Command
     }
 
     /**
-     * @param Fluent<string, mixed> $podcast
+     * @param  Fluent<string, mixed>  $podcast
      */
     protected function path(Fluent $podcast): string
     {
@@ -112,7 +112,7 @@ class FetchPodcastsFromTransistorCommand extends Command
     }
 
     /**
-     * @param Fluent<string, mixed> $podcast
+     * @param  Fluent<string, mixed>  $podcast
      */
     protected function transcriptPath(Fluent $podcast): string
     {
@@ -125,7 +125,7 @@ class FetchPodcastsFromTransistorCommand extends Command
     }
 
     /**
-     * @param array<string, mixed> $content
+     * @param  array<string, mixed>  $content
      */
     protected function toYaml(array $content): string
     {
