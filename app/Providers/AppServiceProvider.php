@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Event::listen(RequestHandled::class, function (RequestHandled $event) {
+        Event::listen(RequestHandled::class, function (RequestHandled $event): void {
             Log::info('[HTTP] Request Handled', [
                 'method' => $event->request->method(),
                 'uri' => $event->request->path(),
