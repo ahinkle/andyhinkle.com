@@ -14,9 +14,6 @@ jobs:
 
         steps:
             - uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
-                  token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
