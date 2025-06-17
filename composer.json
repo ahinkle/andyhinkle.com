@@ -10,6 +10,7 @@
         "calebporzio/sushi": "^2.5",
         "laravel/folio": "^1.1",
         "laravel/framework": "^12.7",
+        "laravel/nightwatch": "^1.7",
         "laravel/tinker": "^2.9",
         "spatie/yaml-front-matter": "^2.1",
         "torchlight/torchlight-laravel": "^0.6.0"
