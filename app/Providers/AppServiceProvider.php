@@ -3,9 +3,11 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Http\Events\RequestHandled;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nightwatch\Facades\Nightwatch;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,5 +32,11 @@ class AppServiceProvider extends ServiceProvider
                 'user_agent' => $event->request->userAgent(),
             ]);
         });
+
+        Nightwatch::user(fn ($user) => [
+            'ip' => request()->ip(),
+            'user_agent' => request()->userAgent(),
+            'name' => Auth::user()?->email ?? 'guest',
+        ]);
     }
 }
