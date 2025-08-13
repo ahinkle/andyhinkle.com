@@ -1,13 +1,12 @@
-<div class="mx-auto max-w-5xl">
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         @foreach ($podcasts as $episode)
             <article class="group overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02]">
                 @if ($episode->video_thumbnail)
-                    <div class="aspect-video overflow-hidden">
+                    <a href="{{ url("speaking/{$episode->slug}") }}" class="block aspect-video overflow-hidden">
                         <img src="{{ $episode->video_thumbnail }}" 
                              alt="{{ $episode->title }}" 
                              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
-                    </div>
+                    </a>
                 @endif
                 
                 <div class="p-6 space-y-4">
@@ -49,5 +48,4 @@
                 </div>
             </article>
         @endforeach
-    </div>
 </div>
