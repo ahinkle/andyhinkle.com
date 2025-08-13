@@ -13,7 +13,7 @@
                 Conversations about Laravel, web development, and building better software.
             </p>
         </div>
-        
+
         <x-podcast-listing />
     </div>
 </x-app>
