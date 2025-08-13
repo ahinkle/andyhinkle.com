@@ -100,25 +100,10 @@
                             PostgreSQL, Redis</div>
                     </li>
                     <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Insomnia
-                            <a href="https://insomnia.rest/" target="_blank" rel="noopener noreferrer"
-                                class="text-xs underline dark:text-blue-500">(link)</a>
-                        </h3>
-                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">API Testing,
-                            GraphQL</div>
-                    </li>
-                    <li class="group relative flex flex-col items-start">
                         <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Laravel
                             Herd</h3>
                         <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">Local
                             Development</div>
-                    </li>
-                    <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Spatie
-                            Ray <a href="https://spatie.be/products/ray" target="_blank" rel="noopener noreferrer"
-                                class="text-xs underline dark:text-blue-500">(link)</a></h3>
-                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">Local
-                            Debugging, Logging</div>
                     </li>
                     <li class="group relative flex flex-col items-start">
                         <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">GitHub
@@ -133,20 +118,18 @@
 
     <section class="md:dark:border-gray-250/40 mb-10 mt-20 md:border-l md:border-gray-500 md:pl-6">
         <div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4">
-            <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-100">Design</h2>
+            <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-100">AI</h2>
             <div class="md:col-span-3">
                 <ul role="list" class="space-y-10">
                     <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Figma
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Claude Code
                         </h3>
-                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">UI/UX
-                            Design, Prototyping</div>
+                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">Development, Planning, Debugging</div>
                     </li>
                     <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Adobe
-                            Creative Cloud</h3>
-                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">Photoshop,
-                            Illustrator, XD</div>
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">ChatGPT
+                        </h3>
+                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">Writing</div>
                     </li>
                 </ul>
             </div>
