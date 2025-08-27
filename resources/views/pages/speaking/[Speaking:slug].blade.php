@@ -12,13 +12,15 @@
     </h1>
 
     <div class="mx-auto mt-8 max-w-3xl">
-        <div class="px-4 pb-10">
-            <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless=""
-                src="{{ $speaking->embed_url }}?color=1F2937&background=101827"></iframe>
-        </div>
+        @if ($speaking->embed_url)
+            <div class="px-4 pb-10">
+                <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless=""
+                    src="{{ $speaking->embed_url }}?color=1F2937&background=101827"></iframe>
+            </div>
+        @endif
 
         <div class="prose prose-lg dark:prose-invert px-4">
-            {!! nl2br(e($speaking->description)) !!}
+            {!! $speaking->description !!}
         </div>
 
         <div class="mt-8 px-4">
@@ -36,7 +38,7 @@
                         {!! nl2br(e(file_get_contents($speaking->transcript))) !!}
                     </div>
                 @else
-                    <p class="text-gray-400">No transcript available for this episode.</p>
+                    <p class="text-gray-400">No transcript available for this {{ $speaking->type === 'speaking' ? 'talk' : 'episode' }}.</p>
                 @endif
             </div>
         </div>
