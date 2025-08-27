@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2679191'
 title: 'The Importance of Refactoring'
 show_name: 'The Midwest Artisan Podcast'

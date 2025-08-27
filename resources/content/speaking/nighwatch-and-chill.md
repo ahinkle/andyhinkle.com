@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2201696'
 title: 'Nightwatch and Chill'
 show_name: 'The Midwest Artisan Podcast'

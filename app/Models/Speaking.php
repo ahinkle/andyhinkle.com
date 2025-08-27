@@ -26,6 +26,34 @@ class Speaking extends Model
     }
 
     /**
+     * Get all podcast content.
+     */
+    public static function podcasts()
+    {
+        return static::where('type', 'podcast');
+    }
+
+    /**
+     * Get all speaking content.
+     */
+    public static function speaking()
+    {
+        return static::where('type', 'speaking');
+    }
+
+    /**
+     * Get all content by type.
+     */
+    public static function byType(?string $type = null)
+    {
+        if (! $type || $type === 'all') {
+            return static::query();
+        }
+
+        return static::where('type', $type);
+    }
+
+    /**
      * @return array<int, array<string, mixed>>
      */
     public function getRows(): array
@@ -53,9 +81,25 @@ class Speaking extends Model
     {
         $document = YamlFrontMatter::parseFile($file);
 
+        // Default values for all possible fields
+        $defaults = [
+            'type' => 'podcast', // Default to podcast for backward compatibility
+            'transistor_id' => null,
+            'title' => '',
+            'show_name' => null,
+            'embed_url' => null,
+            'video_url' => null,
+            'published_at' => null,
+            'duration' => null,
+            'summary' => '',
+            'description' => '',
+            'slug' => basename($file, '.md'),
+        ];
+
         return array_merge(
+            $defaults,
             $document->matter(),
-            ['slug' => basename($file, '.md')],
+            ['slug' => basename($file, '.md')], // Always override slug
         );
     }
 
@@ -100,6 +144,30 @@ class Speaking extends Model
     {
         return Attribute::make(
             get: fn (): string => $this->formatDuration($this->getAttribute('duration') ?? 0),
+        );
+    }
+
+    /**
+     * @return Attribute<string, never>
+     */
+    protected function typeLabel(): Attribute
+    {
+        return Attribute::make(
+            get: fn (): string => match ($this->getAttribute('type')) {
+                'podcast' => 'Podcast',
+                'speaking' => 'Speaking',
+                default => 'Speaking',
+            }
+        );
+    }
+
+    /**
+     * @return Attribute<string|null, never>
+     */
+    protected function contextName(): Attribute
+    {
+        return Attribute::make(
+            get: fn (): ?string => $this->getAttribute('show_name') ?? $this->getAttribute('event_name')
         );
     }
 

@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2080084'
 title: '57 Million Reasons to Love Laravel'
 show_name: 'The Midwest Artisan Podcast'
