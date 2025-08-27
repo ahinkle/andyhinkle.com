@@ -21,7 +21,7 @@
     <!-- All Content -->
     <div x-show="activeTab === 'all'" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            @foreach ($allContent as $item)
+            @foreach ($all as $item)
                 @include('components.speaking-listing-card', ['item' => $item])
             @endforeach
         </div>
