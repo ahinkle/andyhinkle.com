@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2103619'
 title: 'Local API Mocking, Flux & Accessibility, PostgreSQL, Web Dev Battles'
 show_name: 'The Midwest Artisan Podcast'

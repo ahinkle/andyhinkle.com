@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2234586'
 title: 'Do you write down methods in your migrations? Queue Serialization, Stubs, Laravel PR Ideas, Migrations vs. Seeders'
 show_name: 'The Midwest Artisan Podcast'

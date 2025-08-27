@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2155759'
 title: 'Validate Everything'
 show_name: 'The Midwest Artisan Podcast'

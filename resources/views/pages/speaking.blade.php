@@ -14,6 +14,6 @@
             </p>
         </div>
 
-        <x-podcast-listing />
+        <x-speaking-listing />
     </div>
 </x-app>
