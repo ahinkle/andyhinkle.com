@@ -38,7 +38,8 @@
                         {!! nl2br(e(file_get_contents($speaking->transcript))) !!}
                     </div>
                 @else
-                    <p class="text-gray-400">No transcript available for this {{ $speaking->type === 'speaking' ? 'talk' : 'episode' }}.</p>
+                    <p class="text-gray-400">No transcript available for this
+                        {{ $speaking->type === 'speaking' ? 'talk' : 'episode' }}.</p>
                 @endif
             </div>
         </div>

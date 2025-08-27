@@ -1,4 +1,5 @@
-<article class="group overflow-hidden rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:bg-white/10">
+<article
+    class="group overflow-hidden rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:bg-white/10">
     @if ($item->video_thumbnail)
         <a href="{{ url("speaking/{$item->slug}") }}" class="block aspect-video overflow-hidden">
             <img src="{{ $item->video_thumbnail }}" alt="{{ $item->title }}"
@@ -39,18 +40,18 @@
         <div class="flex items-center justify-between">
             <a href="{{ url("speaking/{$item->slug}") }}"
                 class="inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300">
-                @if($item->type === 'podcast')
+                @if ($item->type === 'podcast')
                     Listen Now
                 @else
                     Watch Now
                 @endif
-                <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
             </a>
-            
-            @if($item->type)
+
+            @if ($item->type)
                 <span class="rounded-full bg-white/5 px-2 py-1 text-xs font-medium text-white/60">
                     {{ $item->type_label }}
                 </span>
