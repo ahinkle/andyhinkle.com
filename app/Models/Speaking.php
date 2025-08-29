@@ -4,6 +4,8 @@ namespace App\Models;
 
 use App\Models\Scopes\LatestPublishedOrderScope;
 use Illuminate\Database\Eloquent\Attributes\ScopedBy;
+use Illuminate\Database\Eloquent\Attributes\Scope;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
@@ -25,37 +27,30 @@ class Speaking extends Model
         ];
     }
 
-    /**
-     * Get all podcast content.
-     */
-    public static function podcasts()
+    /** @param Builder<static> $query */
+    #[Scope]
+    protected function podcasts(Builder $query): void
     {
-        return static::where('type', 'podcast');
+        $query->where('type', 'podcast');
     }
 
-    /**
-     * Get all speaking content.
-     */
-    public static function speaking()
+    /** @param Builder<static> $query */
+    #[Scope]
+    protected function speaking(Builder $query): void
     {
-        return static::where('type', 'speaking');
+        $query->where('type', 'speaking');
     }
 
-    /**
-     * Get all content by type.
-     */
-    public static function byType(?string $type = null)
+    /** @param Builder<static> $query */
+    #[Scope]
+    protected function byType(Builder $query, ?string $type = null): void
     {
-        if (! $type || $type === 'all') {
-            return static::query();
+        if ($type && $type !== 'all') {
+            $query->where('type', $type);
         }
-
-        return static::where('type', $type);
     }
 
-    /**
-     * @return array<int, array<string, mixed>>
-     */
+    /** @return array<int, array<string, mixed>> */
     public function getRows(): array
     {
         return collect($this->files())
@@ -74,9 +69,7 @@ class Speaking extends Model
             ->name('*.md');
     }
 
-    /**
-     * @return array<string, mixed>
-     */
+    /**  @return array<string, mixed> */
     protected function parseFile(string $file): array
     {
         $document = YamlFrontMatter::parseFile($file);
@@ -117,9 +110,7 @@ class Speaking extends Model
         });
     }
 
-    /**
-     * @return Attribute<string|null, never>
-     */
+    /** @return Attribute<string|null, never> */
     protected function videoThumbnail(): Attribute
     {
         return new Attribute(
@@ -127,9 +118,7 @@ class Speaking extends Model
         );
     }
 
-    /**
-     * @return Attribute<string|null, never>
-     */
+    /** @return Attribute<string|null, never> */
     protected function videoEmbedUrl(): Attribute
     {
         return new Attribute(
@@ -137,9 +126,7 @@ class Speaking extends Model
         );
     }
 
-    /**
-     * @return Attribute<string, never>
-     */
+    /** @return Attribute<string|null, never> */
     protected function durationMmss(): Attribute
     {
         return Attribute::make(
@@ -147,9 +134,7 @@ class Speaking extends Model
         );
     }
 
-    /**
-     * @return Attribute<string, never>
-     */
+    /** @return Attribute<string|null, never> */
     protected function typeLabel(): Attribute
     {
         return Attribute::make(
@@ -161,9 +146,7 @@ class Speaking extends Model
         );
     }
 
-    /**
-     * @return Attribute<string|null, never>
-     */
+   /** @return Attribute<string|null, never> */
     protected function contextName(): Attribute
     {
         return Attribute::make(
