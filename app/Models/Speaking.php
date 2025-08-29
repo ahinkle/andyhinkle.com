@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use App\Models\Scopes\LatestPublishedOrderScope;
-use Illuminate\Database\Eloquent\Attributes\ScopedBy;
 use Illuminate\Database\Eloquent\Attributes\Scope;
+use Illuminate\Database\Eloquent\Attributes\ScopedBy;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
@@ -146,7 +146,7 @@ class Speaking extends Model
         );
     }
 
-   /** @return Attribute<string|null, never> */
+    /** @return Attribute<string|null, never> */
     protected function contextName(): Attribute
     {
         return Attribute::make(
