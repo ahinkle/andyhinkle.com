@@ -3,7 +3,6 @@ transistor_id: '2055818'
 title: "Those aren't NBA players, just a bunch of nerdy developers"
 show_name: 'The Midwest Artisan Podcast'
 embed_url: 'https://share.transistor.fm/e/327c1f25'
-video_url: null
 published_at: '2024-08-26T11:00:00.000Z'
 duration: 3904
 summary: 'We dive into NullStar 2024, the ultimate basketball showdown between Team Laravel and the Terminal Boys'

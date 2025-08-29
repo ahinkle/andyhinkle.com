@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use App\Models\Scopes\LatestPublishedOrderScope;
+use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Attributes\ScopedBy;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
@@ -25,9 +27,30 @@ class Speaking extends Model
         ];
     }
 
-    /**
-     * @return array<int, array<string, mixed>>
-     */
+    /** @param Builder<static> $query */
+    #[Scope]
+    protected function podcasts(Builder $query): void
+    {
+        $query->where('type', 'podcast');
+    }
+
+    /** @param Builder<static> $query */
+    #[Scope]
+    protected function speaking(Builder $query): void
+    {
+        $query->where('type', 'speaking');
+    }
+
+    /** @param Builder<static> $query */
+    #[Scope]
+    protected function byType(Builder $query, ?string $type = null): void
+    {
+        if ($type && $type !== 'all') {
+            $query->where('type', $type);
+        }
+    }
+
+    /** @return array<int, array<string, mixed>> */
     public function getRows(): array
     {
         return collect($this->files())
@@ -46,16 +69,30 @@ class Speaking extends Model
             ->name('*.md');
     }
 
-    /**
-     * @return array<string, mixed>
-     */
+    /**  @return array<string, mixed> */
     protected function parseFile(string $file): array
     {
         $document = YamlFrontMatter::parseFile($file);
 
+        // Default values for all possible fields
+        $defaults = [
+            'type' => 'podcast', // Default to podcast for backward compatibility
+            'transistor_id' => null,
+            'title' => '',
+            'show_name' => null,
+            'embed_url' => null,
+            'video_url' => null,
+            'published_at' => null,
+            'duration' => null,
+            'summary' => '',
+            'description' => '',
+            'slug' => basename($file, '.md'),
+        ];
+
         return array_merge(
+            $defaults,
             $document->matter(),
-            ['slug' => basename($file, '.md')],
+            ['slug' => basename($file, '.md')], // Always override slug
         );
     }
 
@@ -73,9 +110,7 @@ class Speaking extends Model
         });
     }
 
-    /**
-     * @return Attribute<string|null, never>
-     */
+    /** @return Attribute<string|null, never> */
     protected function videoThumbnail(): Attribute
     {
         return new Attribute(
@@ -83,9 +118,7 @@ class Speaking extends Model
         );
     }
 
-    /**
-     * @return Attribute<string|null, never>
-     */
+    /** @return Attribute<string|null, never> */
     protected function videoEmbedUrl(): Attribute
     {
         return new Attribute(
@@ -93,13 +126,31 @@ class Speaking extends Model
         );
     }
 
-    /**
-     * @return Attribute<string, never>
-     */
+    /** @return Attribute<string|null, never> */
     protected function durationMmss(): Attribute
     {
         return Attribute::make(
             get: fn (): string => $this->formatDuration($this->getAttribute('duration') ?? 0),
+        );
+    }
+
+    /** @return Attribute<string|null, never> */
+    protected function typeLabel(): Attribute
+    {
+        return Attribute::make(
+            get: fn (): string => match ($this->getAttribute('type')) {
+                'podcast' => 'Podcast',
+                'speaking' => 'Speaking',
+                default => 'Speaking',
+            }
+        );
+    }
+
+    /** @return Attribute<string|null, never> */
+    protected function contextName(): Attribute
+    {
+        return Attribute::make(
+            get: fn (): ?string => $this->getAttribute('show_name') ?? $this->getAttribute('event_name')
         );
     }
 

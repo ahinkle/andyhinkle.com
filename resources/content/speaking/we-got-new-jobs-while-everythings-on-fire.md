@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2336530'
 title: "We Got New Jobs (While Everything's on Fire)"
 show_name: 'The Midwest Artisan Podcast'

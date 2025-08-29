@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2398882'
 title: 'Laravel: Season 12 - The best one yet'
 show_name: 'The Midwest Artisan Podcast'

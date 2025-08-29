@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2541704'
 title: '10 Requests a Minute'
 show_name: 'The Midwest Artisan Podcast'

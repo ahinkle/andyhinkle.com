@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2114541'
 title: 'Building for Clients or Ourselves? Sticky & Static'
 show_name: 'The Midwest Artisan Podcast'

@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2121559'
 title: 'WDW Passport w/ Doug Sisk'
 show_name: 'The Midwest Artisan Podcast'

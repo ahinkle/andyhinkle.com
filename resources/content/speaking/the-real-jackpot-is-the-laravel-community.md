@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2066272'
 title: 'The real jackpot is the Laravel community'
 show_name: 'The Midwest Artisan Podcast'

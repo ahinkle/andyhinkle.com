@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2451397'
 title: Semi-organized
 show_name: 'The Midwest Artisan Podcast'

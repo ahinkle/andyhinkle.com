@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2292854'
 title: 'Using Filament on the frontend, mockery, and documentation patterns'
 show_name: 'The Midwest Artisan Podcast'

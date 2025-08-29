@@ -35,15 +35,17 @@
                                     <time
                                         datetime="{{ $episode->published_at->format('Y-m-d') }}">{{ $episode->published_at->format('M j, Y') }}</time>
                                 </span>
-                                <span class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="mr-1 h-3 w-3 fill-current text-gray-300" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13a1 1 0 0 1 2 0v5a1 1 0 0 1-2 0V5z" />
-                                    </svg>
-                                    {{ $episode->duration_mmss }}
-                                </span>
+                                @if ($episode->duration && $episode->type === 'podcast')
+                                    <span class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="mr-1 h-3 w-3 fill-current text-gray-300" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13a1 1 0 0 1 2 0v5a1 1 0 0 1-2 0V5z" />
+                                        </svg>
+                                        {{ $episode->duration_mmss }}
+                                    </span>
+                                @endif
                             </p>
                         </div>
                     </div>

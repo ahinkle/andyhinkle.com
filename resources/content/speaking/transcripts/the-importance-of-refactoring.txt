@@ -1,0 +1,1015 @@
+Andy Hinkle (00:02.542)
+Hey everyone, welcome to another episode of the Midwest Artisan. I'm your host, Andy Hinkle.
+
+Dalton McCleery (00:08.555)
+And I'm your co-host, Don McCleary.
+
+Andy Hinkle (00:11.736)
+Dalton, how's it going,
+
+Dalton McCleery (00:13.527)
+Going good. Long time no see. How you been?
+
+Andy Hinkle (00:15.374)
+Yeah, went to, yeah, got back from Laracon. Laracon was excellent. Did you get a chance to tune in, watch the talks? I know you didn't make it this year, right? So, yeah.
+
+Dalton McCleery (00:19.511)
+That's right.
+
+Dalton McCleery (00:24.479)
+I watched a couple. Yeah, I didn't. I couldn't fly, personal thing, but I did watch a couple talks on the YouTube live stream. I did catch a couple. I did have some meetings, so didn't watch all of it. But the couple that I did see, really good. Like...
+
+Andy Hinkle (00:48.12)
+The keynote.
+
+Dalton McCleery (00:50.755)
+Pest 4. I did watch Pest 4 when it first started and I remember when we went to the Nashville Laracon and I think he announced Pest something or other and we were like, yeah, but it's still not as good as PHP unit. You remember that? We were sitting there like, yeah, it's not as good as PHP unit. Pest 4 looks awesome. Like I talked to my boss and maybe it was version 2. It wasn't as widely as adopted as it is now, but.
+
+Andy Hinkle (01:08.416)
+Mm-hmm. I think it was version two.
+
+Dalton McCleery (01:19.157)
+I was talking to my boss about PES4 as I kind of want to switch to PES4 now because it looks really good comparatively.
+
+Andy Hinkle (01:28.254)
+I've been organizing something very special, which I'd like to talk about in the show later. But part of it, there's examples from pest about how to, which I didn't realize some things you could do, but just like those architecture tests, how to keep your code clean and enforce rules. So that was something he was like, it was like when version three or something, but yeah, it's, I like pest a lot too, but yeah, that was really good. Talk to the browser testing in pest.
+
+Dalton McCleery (01:44.279)
+Mm-hmm.
+
+Andy Hinkle (01:56.136)
+that we, we, we currently struggle with that. Yeah. We, yeah, pretty extensively. we would like to even use it more just because front end testing is so hard. yeah, you can only do so much in PHP in it. Like there's been times where I've been on applications where everything looks good. It's like just a simple like node update or something and the CSS breaks in.
+
+Dalton McCleery (01:56.547)
+That specifically, yes, blew my mind. I was like, okay, RIP Dusk. Oh, you guys use Dusk?
+
+Andy Hinkle (02:25.374)
+But it compiles correctly and then no nothing wrong in and and PHP unit. But then if you happen to just go visit the front end CSS is broken. And so the only way that you can know about it is you know just actively just poking around the website. And so yeah with we use browser testing. Well that was just one of the one reason I prefer browser testing just to application you go in click something expects to do this.
+
+Dalton McCleery (02:54.285)
+Mm-hmm.
+
+Andy Hinkle (02:54.638)
+You have some stuff that's just so very embedded and things like you go here, click here, but the connection is broken somehow and there, it's kind of hard to trick you to test sometimes. But so yeah, we use browser testing a lot. It's just so slow and very finicky. Um, but just recently we, it just randomly crashes. I don't know why, but just randomly stopped crashing slow. So we're very excited about this. Yeah. I mean, you had an application. took like 45 minutes to run the test suite. Remember that?
+
+Dalton McCleery (03:14.923)
+It's very slow. Yeah. Kudos.
+
+Dalton McCleery (03:22.285)
+Yeah, yeah, yeah.
+
+Andy Hinkle (03:24.558)
+It was like, we actually did mostly dusk testing. It was useful, but man, was just like, well, time to go on lunch. So I think that's one of the things new to us that it's like, know, time to go on lunch for, know, for if you're using dusk.
+
+Dalton McCleery (03:40.035)
+Especially if you're setting it up in a CI environment. god. Blow my brains out trying to get some sort of headless chrome to be able to run and tear down itself after the fact. Yeah. No. No bueno. I'm excited for PES 4.
+
+Andy Hinkle (03:51.574)
+Yeah. It's so satisfying to watch browser tests, to run it, to take off the headless flag and just watch your thing click around. It's kind of satisfying to just see how fast it flies.
+
+Dalton McCleery (03:56.555)
+Yes.
+
+Dalton McCleery (04:00.5)
+Yes, get like a selenium grid of just like a bunch of windows and it's just moving around your application. I did always like that. Yeah, I liked that a lot.
+
+Andy Hinkle (04:07.757)
+Yeah. Denver was good. Um, it wasn't downtown. It was just like right outside of downtown. So what's the, which made it kind of nice because usually people that you saw were people there for the conference, like at the hotel, typically, you know, people that were just kind of hanging around. Um, and then even on the way to the venue, I would, some guy would, you know, I'd be walking on the way there. Then some guy would, you know, he would be, I,
+
+He'd be a few feet ahead of me, but he had a backpack on. was like, I bet he's going to Laracon right? So just get, you know, just meet somebody, you know, just catch a conversation with people on the way there. Just everyone around was there for, for Laracon. So it was really cool. Downtown, was easy to find a hang. And so like, like if you're at the hotel, it was easy. Like you go down lobby, there's always people there. When I got there, like Yaz Ninja parade on Twitter, he was just hanging out in the lobby and he did all, he does all the photography.
+
+Dalton McCleery (04:51.606)
+Did you?
+
+Andy Hinkle (05:04.439)
+photography for all the Laircons. He was hanging out down there and you just never know who might show up. So yeah, it was really good place to just for a conference. So, have you been to Denver? I know you didn't Tim, but you've been to Denver fairly recently, right?
+
+Dalton McCleery (05:23.778)
+Yeah, last year, I think I went to dinner for a vacation with my wife.
+
+Andy Hinkle (05:31.79)
+Yeah, that's right. I remember you told me that. My favorite tweet of the conference was like somebody was asking on Twitter like why is the Denver airport in Kansas? I don't know if he felt like that. I don't know if he flew but it's a it feels like it's so far outside the city. It's like a 30 minute drive. It's like so far away but overall Denver was great. If and you know this
+
+Dalton McCleery (05:45.855)
+Is it?
+
+Andy Hinkle (05:59.118)
+you know, because you've been to like Laracon in Nashville, if you want to know if you're introverted, extroverted, go to Laracon I was just absolutely drained. I would just like, end of day two, I was just like, I just need to just relax. And I just went to my, went to my hotel and just, just sat there in silence for like 45 minutes. So it was just because it was just like constant conversations, just like meeting people. You see these people online. I remember my first Laracon.
+
+Dalton McCleery (06:08.406)
+Yeah.
+
+Dalton McCleery (06:18.429)
+Hahaha
+
+Andy Hinkle (06:28.333)
+It was just like you know people you see online, but it was so awkward to go up and talk to them like hey I kind of know about you, but like you never met me before But it's just kind of awkward to talk to them right and so But then but then it's now it's just like what I've learned is these people are some of the most People have the things that people have the most common things with myself And so there's no other people on earth that I love Laravel just as much as I do
+
+and that love programming and have similar interests that and so and it's easy to just talk to people there. So it's a good time. talked to several people I saw there. talked, I met Doug. I got to see Doug again. He was on our show, Doug Sisk. So he's doing really well. He's building, he's still working on a massive live wire project where he's working through some of the trenches in that, but.
+
+Dalton McCleery (07:10.974)
+Nice. Shout out Doug.
+
+Andy Hinkle (07:22.315)
+What he was describing is one of the biggest live art projects I've seen or heard about. He's doing some really cool things there.
+
+Dalton McCleery (07:28.222)
+no spoilers or spoilers?
+
+Andy Hinkle (07:32.141)
+It's all like internal. It's like it's for a client of his but yeah, he was he's been working on for a long time Yeah, but got to see Dino so Dan Dino, yeah at the end I didn't even know he was there until like That what you shared on Twitter. So at the end of day one, I was talking to somebody and right next to me is we're all like corralling, know around the sage area just talking to one another and I was talking to somebody and I
+
+Dalton McCleery (07:34.686)
+Okay, no spoilers then.
+
+Dalton McCleery (07:41.91)
+Yes, shout out, do you know?
+
+Andy Hinkle (08:01.932)
+corner of eye I hear Aaron Francis and he yells, happy birthday Dalton! And I was just like, and I remember it was his birthday just a few days before, right? And I was like, hmm? Yeah, yeah, and yeah I was like, and then somebody, I was like, Dalton? And then I thought that guy that was recording video looked really familiar. It was Dino, and so.
+
+Dalton McCleery (08:12.898)
+Yeah, yeah, that Monday.
+
+Dalton McCleery (08:28.066)
+Yep.
+
+Andy Hinkle (08:28.268)
+I was like, that's the guy that Dalton used to, or that you do some contracting with or freelancing with, Billy Bright, you worked with him. So really nice guy, but it was just like, I just hear Aaron Francis like yell out in the corner. It's like, what's he talking about this Dalton? was like, is Dalton here? So yeah, it was cool, man.
+
+Dalton McCleery (08:34.486)
+Yeah, yeah, yeah.
+
+Dalton McCleery (08:45.826)
+Yeah, it was really, it was really sweet. Do you know again, shout out, do you know, uh, I worked with him quite a lot during COVID and then I still work with him today. Um, working on some stuff, but I had told, he lives in Denver. So he's like, I'm going. It's like, if you want to, if you want to go, you stay at my house. It was like, I, I would take you up on that, but I just, I can't fly. I was like, if, if you go, which he said he was going, I was like, if you go. Make sure that you like shake hands with Aaron Francis. I was like Aaron Francis is,
+
+Andy Hinkle (08:58.987)
+Mm-hmm.
+
+That's nice of them.
+
+Andy Hinkle (09:27.436)
+Yeah, yeah, so nice of them to do that. Yeah, love that. Yeah man, was a really good time. It was a true classic Laracon too. yeah, well, it all started in Nashville is where I started feeling a little fuzzy. Do you remember that bar we went to, me and you? And we went to the bar and there's probably like 200 Laravel people there. Yeah, yeah.
+
+Dalton McCleery (09:39.074)
+Classy.
+
+Dalton McCleery (09:52.746)
+Yeah. And we got the liquid deaths and we sat out on the patio. That bar? Yeah.
+
+Andy Hinkle (09:57.109)
+Right. Yes. And, at Excel was footing the bill for that. once I, cause they, once I heard of like, once somebody said, like I heard that I was talking to somebody and they mentioned it, but once I heard that, I was like, that was the first time I've heard of them. And that night I remember Googling, like, who is this? Like, is it like a sponsor or, or, know, like some company using Laravel and I go on like, it's a VC company. was like, what's a VC company?
+
+poking around, like doing here and funding some of this stuff. So that was the first time, that was in Nashville. I was like, what's going on here? so I thought that was a little strange. And like they're footing this bar, know, a couple hundred hours since, yeah.
+
+Dalton McCleery (10:38.677)
+Yeah, sus, I think is what the kids say nowadays, right? I don't know.
+
+Andy Hinkle (10:42.764)
+Yeah, right. Then in Dallas fast forward a year, going into that Laracon, they mentioned that this is the biggest announcement in Laravel's history. And during that time, they've been like kind of hinting at cloud for a while, like, okay, cloud's a big deal, but is it this big of a deal? That's what we all thought it was like, okay, it's, you know, maybe the, the Laravel cloud, like the feature or the platform, right. Which is incredible, like in a great feat in itself.
+
+Dalton McCleery (10:54.229)
+Mm-hmm.
+
+Dalton McCleery (11:09.589)
+Right. Yeah.
+
+Andy Hinkle (11:12.3)
+But then that's when they dropped, fast forward a year, with that being in Dallas, they announced the 57 million, I think it was, for the official announcement with the partnership with Excel. So I remember thinking, man, what's this mean for our community? That was such a weird laracon Dallas. That was such a weird laracon. It just felt very product.
+
+vision like or just product minded and then on top of that they dropped this announcement with the funding or like, man, where's this community going? Is it going to be a small community? And then coming into this year, I was kind of getting worried because I saw like their sponsor meetups, like you had to be in a specific tier to do like partnerships and coffee to meet with the laravel of all team and have discussions with them. And I was like, man, back in the day, like in Chicago, back like 2018, you could just go up to Taylor.
+
+Dalton McCleery (11:58.57)
+Yeah, yeah, I saw that.
+
+Andy Hinkle (12:06.39)
+go up to Caleb or Caleb was working on Titan at the time, but you just go out to people that were known and that were doing talks and just have conversations. But I was like, this like everyone is in a different tier now where we have to be a sponsor? Yeah, it felt, it didn't truly feel like, I was kind of wondering if this small community was going away. You could walk up to people like these people and have a real conversation.
+
+Dalton McCleery (12:22.529)
+celebrities.
+
+Andy Hinkle (12:36.439)
+But the answer is no, it's still the same Laracon and I remember from that I've grown to love it was easy to find people They had this big outdoor patio area. You could just go outside and mingle with people That's where I found Dino and Doug and all them but so that was just outside the car You could just walk outside and get some fresh air talk to people this Denver So whether it was it was hot booze, you know, it was pleasant Yeah, yeah, yeah, yeah so
+
+It was the Laracon I always remember. It still feels like the small community even though they have like 80 employees now. I felt like I made a list of people I want to talk to because it's so easy to leave. Every year I go to Laracon, ooh, I wish I would have talked to so and so. And so just made a list on my phone and started checking. I would make sure I at least had a conversation, talked to them.
+
+Dalton McCleery (13:13.494)
+They're big.
+
+Andy Hinkle (13:31.624)
+and by the end it was like I've talked to everyone. There was only like just a few that did not end up coming or that various reasons, but it was such a great conference. I felt like it was super easy to find people, have great conversation, and yeah, I'm excited about the one next year. You should go, you should go. will personally, I know you don't like to fly, so I'm almost to, as long as it's not like in California or something, I will personally, like me and you can drive a car, but
+
+Dalton McCleery (13:54.187)
+Yeah, I don't like flying.
+
+Andy Hinkle (14:01.827)
+I think, who was it? Boss Chris. Chris Morrell? Yeah, well everyone online knows him as Boss Chris, but Chris Morrell thinks, he wants it to be in Philly, so he kind of, in his talk he threw in a little Philly like thing, so I could be down for Philly. But I'll personally drive you to Philly if you want to go, because I know you don't like flying, so that way you can go as well, because I'd love for you to experience it again.
+
+Dalton McCleery (14:06.465)
+Boss Chris.
+
+Dalton McCleery (14:16.299)
+Philly would be good. I would do Philly. Yeah, I...
+
+Dalton McCleery (14:26.177)
+Yeah, I appreciate that. I don't mind flying. I just don't like flying alone. Like if I could fly with my wife, that's fine. But like flying myself, no, that's like my number one fear. But yes, I want to go for sure. If it's somewhere close, like on the Midwest, hell yeah, I'll fucking drive. I'll drive 16 hours. I don't care.
+
+Andy Hinkle (14:33.323)
+I'll make sure we're on the same flight. Okay, yeah.
+
+Andy Hinkle (14:39.859)
+Yeah, I get it. Yeah.
+
+Yeah, I don't wanna get-
+
+Andy Hinkle (14:56.499)
+When the, a quick aside on that, we are looking at doing a Midwest Conference. It's very, very early. in, so the company that worked for Wilbur, Jake Bennett, is looking to do a Midwest Conference. Yeah, some type of Midwest Conference in normal Illinois, so Bloomington, Illinois. And so that, yeah, we're talking up maybe like in late January, so.
+
+Dalton McCleery (15:10.753)
+Mm-hmm. Bust it.
+
+Dalton McCleery (15:19.743)
+Yeah, up north.
+
+Andy Hinkle (15:25.547)
+Something to think about, me you could ride together and do some of that. Yeah. And so, uh, there'll be, it's very early. So something to think about if you're listening, if you're a listener in the Midwest, feel free to reach out. If you'd be interested in something like this, cause we're trying to figure out how many people are interested in joining. There's all like a Jake mentioned. There's just, there's lots of people, like Laravel people from the Midwest and just having a little like, they always did, they always did the meetup for Laracon online and just having everyone kind of congregate. Um,
+
+Dalton McCleery (15:28.437)
+do that.
+
+Dalton McCleery (15:49.099)
+That's it.
+
+Andy Hinkle (15:54.4)
+like, and to watch Laracon online together. And now it's like, well, now that Laracon online isn't as much of a thing anymore, maybe we can just meet in person and just do a little conference. There's one in New York going on right now too. It's like PHP NYC, I think that Joe Tanenbaum runs. So there's a bunch of like little ones popping up. And so would love just to be a part of that.
+
+Dalton McCleery (16:09.15)
+I've heard of that. Yeah, yeah, yeah, I've heard of that.
+
+Dalton McCleery (16:19.84)
+Yeah, that sounds good. I'm down for that. I want to go back to Laracon. It was fun when we went to Nashville. I remember when we got out of that second day in Nashville, we were like, I just want to go back to the hotel and just program for like 16 hours straight. Like I was so pumped for it. So I definitely want to go again. I'm curious if you had that same feeling after this one. You said you went back to the hotel room and set in silence. Were you like,
+
+Andy Hinkle (16:43.857)
+Absolutely. Yeah.
+
+Dalton McCleery (16:46.982)
+You fired up. Is there an idea that got you fired up?
+
+Andy Hinkle (16:51.249)
+It feels like I'm very, yeah, it feels like I'm just way more motivated and like I have a ton of energy now to do things. I feel like, I don't know what it is, but there's just something about the high that you come off of Laracon that just fires you up just at work and then even in your personal life just to be present with your kids because you take the time away to go to Laracon and then you come back, you know? So, but yeah, they.
+
+Speaking of like talks and then what you were asking, man, this makes me really nervous to bring it up. I was asked by the Vehikl team, so Margaret and Dan, to do a talk at Laravel Worldwide. So I'm very excited about that, but also extremely nervous it'll be my first like talk that's not introductory level. And so I'm pretty excited about it.
+
+Dalton McCleery (17:23.168)
+Mm-hmm.
+
+Andy Hinkle (17:49.164)
+So with the talk, yeah, how it went down is, yeah, awesome. Thanks, man. I appreciate it. Yeah, I was talking to Margaret and just asking her like some opinions, like, Hey, you know, I've been thinking, I've had some ideas about doing a talk sometime. And she like lit up like, Oh, we would love to have more, more talks, especially, you know, she said, I see you in the comments a lot. She would love to have us have me do a talk.
+
+Dalton McCleery (17:51.924)
+Sorry, the sparks were for you. I'm excited for you.
+
+Andy Hinkle (18:17.683)
+And then I was talking to Dan about one of my ideas and he gave some great feedback and then I got a message from her later saying, hey, would you like to do a talk? So, and then also the big motivators of this, I gotta give them full credit is Jake Bennett, my wonderful boss. He always keeps pushing me to like, hey, you should really do a talk. And I always say like, here one day, you know? And so he just kind of gave me that extra nudge to finally wanna do this. And then Aaron Francis, his first talk was,
+
+Dalton McCleery (18:26.848)
+Hmm.
+
+Dalton McCleery (18:33.759)
+streak.
+
+Andy Hinkle (18:45.547)
+of the entire conference was you can just do things. that was just kind of motivating. was like, and the other part of is this community has given me so much and I just looking to give back in any way I can. So, and that it's just like what this talk will be, it's titled.
+
+Dalton McCleery (19:03.094)
+we're gonna get spoilers. hang on. We're gonna know. I haven't, I don't know yet. I just know that you were gonna do this. You didn't tell me what it was gonna be about. Okay, hang on. Let's loosen up here.
+
+Andy Hinkle (19:05.034)
+Yeah.
+
+Andy Hinkle (19:09.811)
+Yeah. Okay. Yeah. Yeah. Okay. You got prepare for this. Hold on.
+
+Hold on, I have lost my place. My microphone fell and zoomed all the way down the pitch.
+
+Dalton McCleery (19:21.128)
+Now, I know you're gonna cut this part out, it's building anticipation. Just leave it in. Leave this whole part in. Make them work for it.
+
+Andy Hinkle (19:33.067)
+I'll just start at the top.
+
+So yeah, they asked me to do a, they're asking if I was interested in doing a talk and I've been thinking about something that would be, I've been thinking about something that would be me and then and then Dalton, knowing me, might agree with this and I'm borderline obsessive with like clean code of like just how it looks, how it's formatted to even how comments are, I don't like comments, but how they're worded to just conditionals and how they're handled.
+
+Dalton McCleery (19:52.532)
+Yup.
+
+Dalton McCleery (19:57.629)
+Yeah, you are.
+
+Dalton McCleery (20:03.723)
+You
+
+Andy Hinkle (20:07.466)
+I think it drives you crazy sometimes like in code reviews here because you just want to get something live. I'm like, this we can improve this. anyway, so with that, the talk is titled keeping Laravel elegant when business gets messy. So the, the core of it is like how to keep Laravel clean. You know, it already, it already is clean. That's the easy part. Laravel is, it's already created in a very clean, expressive clean way, but
+
+Dalton McCleery (20:08.158)
+Mm-hmm.
+
+Dalton McCleery (20:22.207)
+Ooh, spicy.
+
+Andy Hinkle (20:37.598)
+Then when you get into a business environment, high pressure, high stakes, where you're like eight tickets deep and client wants it live yesterday, me and you have been there, we know, right? So these are things I've learned over the past many years from various folks that I apply daily. it's to keep them, tips on keeping them clean when deadlines are tight, requirements are changing. So I'm gonna be refactoring some complex code.
+
+Dalton McCleery (20:46.628)
+Mm-hmm. Mm-hmm.
+
+Andy Hinkle (21:06.386)
+me and sharing some maintainable stuff screenshots. We'll give it easy. We'll see. We'll see how it goes. But right now I got a lot. I got a lot of slides. got 40 minutes to do it. So I got a lot of slides to cover. So, but I'm to be covering some refactoring patterns, maintaining patterns, like don't do, don't write comments. Like don't do to do's like that kind of stuff.
+
+Dalton McCleery (21:06.751)
+A live demo?
+
+Okay, okay, I was gonna say that's ambitious for a live demo. Oof. Okay, okay.
+
+Dalton McCleery (21:21.382)
+good, decent time, okay.
+
+Andy Hinkle (21:34.951)
+just structuring applications to stay clean and when things do get busy. So I'm gonna start out with like, first of all, what's your thoughts on this talk? Do you feel like it would resonate with you? So far when I share with people, they feel like they could resonate with a lot of people. It's so easy to ship things fast, but then it can be messy, right?
+
+Dalton McCleery (22:03.463)
+Yeah, I think it's a great counterpoint to that. just, you know, always be shipping, but you also have to worry about the maintainability. Like if I could just write any old thing and it might work, I might write three or four tests and it's great and I'll ship it out and then I'll take a vacation. And it's like, Hey Andy, by the way, we need this other filter or this other feature for this thing that don't work done. Can you do it? And you go in there you're like, what, the hell were you, what were you doing? Like I get that you only had a day to do this ticket and there's comments everywhere explaining code and you've got.
+
+Variables that are named just you know data Right and you're like what what the hell is this and it takes you just as long to think about what's going on as it would to just write it and I actually think that's why we work so well together when we work together is because I always I was like a utility developer I would I would do just that and then you would always come in behind me and make it look pretty and maintainable So it is perfect is it's like literally You to a T
+
+Andy Hinkle (22:57.95)
+Yeah.
+
+Andy Hinkle (23:03.722)
+What I'd like to do is show how it gets messy. so my idea is showing a controller, just a simple controller, and then how a department can come in with request after request after request. And you can, while you're still believing in things like credit by design, which is a talk that Adam Wathen did, which is in your controllers, you only have index show, update, or put methods. You don't have like,
+
+Dalton McCleery (23:31.219)
+Yeah.
+
+Andy Hinkle (23:33.578)
+Updates users or a method like that, know, so just by clean keeping it clean so you can still keep it like you can have everything under like a creation method but then it just continues to drag and drag and drag and to like, know, you have You have a module in there that creates a record but also needs to tie into a third party But also needs to create a PDF but also needs to notify over someone email it's just like but it's all in your controller and so but it started as like
+
+It started as a simple request of like somebody called in and once a invoicing, like an invoicing endpoint. and then it grows into something so massive, like the request after request and, and you want to move quickly. it's like, we already have this controller here. Let me just add to it. And just about. Right. And it's just about questioning. Yeah. Yeah. You're good. Yeah. It's just about questioning every part in the process. Like, should we move this somewhere? Should we clean it up at this point?
+
+Dalton McCleery (24:19.583)
+We just add this in here, throw it in there. Yeah, sorry.
+
+Andy Hinkle (24:33.298)
+And so in that NASA point is like, it's okay to write messy code. Like you explained it. So like you, know, when you mean you pair together, it's okay to write messy code as long as it's cleaned up before it shipped out the door, you know, cause sometimes it takes just as long to clean it up, but we just need that time. Why it's so vital is my other point of like refactoring codes. lot of developers get it wrong in the sense of like, they look at it as like, Hey, we want to clean this up. It's the good thing to do.
+
+Dalton McCleery (24:47.027)
+Mm-hmm.
+
+Andy Hinkle (25:03.412)
+We're programmers, we want to use best practices, maybe it might improve performance. But the leadership in business typically doesn't really care for that. They go on the side of like, maybe not now. They don't see the ROI on that. Like, just refactor the code, it's not giving them anything. But if people are constantly tripping over the same code,
+
+over and over again, it can come off the ROI side of like how you can present to your business. Like, Hey, we want to refactor this. This will allow us to ship faster on this particular section of the code on this particular module. That's this will allow us to ship faster. And, and that'll be the return on investment because, because if you're constantly like taking time to refactor something, or constantly taking the time to pull your hair out, trying to work through something and it's taking weeks to deploy.
+
+there's this gap between like senior devs. tend to like abstract too early. and then dev junior devs not really knowing what clean code is yet. So I'm hoping to kind of like merger right in the middle, kind of bring this boring middle ground. So, but it's that, but it's expressive readable and native Laravel and staying to Laravel. Don't go down like the, I don't want to get into patterns like DDD, like domain pattern.
+
+Dalton McCleery (26:13.362)
+Hmm?
+
+Andy Hinkle (26:23.619)
+or anything like that or modular development. I'm not gonna quite touch on that, but it's gonna be just like kind of sticking to the Laravel way using validation, form request policies, jobs, stuff like that. right. So conventions matter. There's always this thing, sorry I can keep going on because I'm just so passionate, but there's this thing of like maybe next time, they always say this. Yeah, right.
+
+Dalton McCleery (26:37.8)
+Yeah, man, yeah. Yeah, yeah, yeah, yeah, yeah.
+
+That's when you know it's a good talk, man. Like, you could already do the talk right now just to me for 40 minutes. Yeah, yeah, yeah, hey. Hey, hey. I like it.
+
+Andy Hinkle (26:52.201)
+I'm just giving the talk right now. I'm exposing all I'm showing them, but mostly I'm just getting your opinion, right? But there's always been this thing of like there's always next time but it's never like why now why why just don't do it now and think yourself later, so
+
+Dalton McCleery (27:06.184)
+Just do it from the beginning. Ironically, as you were telling me that, I opened the project that I've been working on just to see. I think because of you, I don't write comments anymore. If my code doesn't say what it's supposed to do, why do I have to write a comment that says, this goes through here and filters out bad email addresses? If my function names are expressive enough.
+
+That should be it to anybody who comes in here and says, this is what this does. Right?
+
+Andy Hinkle (27:37.736)
+Yeah, yeah, love that, yeah. That's something we actually do at our company at Wilbur, we don't even have DocBlocks. We have Typehints, but we rarely ever co-write comments, ever. just on, it must be something really obscure, know, something kind of, yeah. So we don't really write comments, ever. And yeah, it's like, just little things like that. And then also, to-dos.
+
+Dalton McCleery (27:56.574)
+complicated.
+
+Andy Hinkle (28:07.557)
+not writing any to-dos in the application. that's something that people still do this, they'll just write to-do and it never gets done. I can't remember a time I've ever completed a to-do. It's always a to-don't, or don't do.
+
+Dalton McCleery (28:25.342)
+To do or to don't if that's not the title of this damn episode now that's funny because I I've been I think I've gone the full full circle on that because I used to be a huge fan of Doc blocks I don't know if you remember that I used to put Doc blocks above everything and I would just have PHP storm But you know back before the AI days I would just have PHP storm just auto generate the Doc blocks for me I was like these are probably important for anybody who wants to look at it, but I never looked at him because I wrote the code I didn't know what it
+
+Andy Hinkle (28:27.987)
+To do, yeah.
+
+Andy Hinkle (28:32.091)
+One thing I gotta...
+
+Andy Hinkle (28:39.945)
+Mm-hmm. Mm-hmm.
+
+Dalton McCleery (28:54.6)
+what it meant. But now I think the only Doc blocks I have is from like that, that Laravel IDE helper package or whatever that like puts the, that one big Doc block above your models that will tell it like what properties and what functions are available. So your IDE, IDE doesn't scream at you for like some magic variable that's not actually there, but it is. I think that's the only Doc blocks I have in, my code base right now. I mean, don't hold me to that, but I'm, it's, it's much cleaner than what it, what I used to do, which is
+
+Andy Hinkle (29:19.325)
+Yeah.
+
+Dalton McCleery (29:24.21)
+DocBlock everything.
+
+Andy Hinkle (29:26.281)
+The only time I reach for DocBlocks is, know when, maybe PHP Storm may not do this, but you know when you have off the helper, off user, like off open user, it always throws a red line under it, and so especially when you have magic methods on the user model. And so sometimes you have to explicitly define above it, you'll like, you'll write a comment above it where it's like a DocBlock of, hey, this is the user model. And I'm like, don't write, it's like, it'll give you that weird.
+
+Dalton McCleery (29:35.016)
+Yes. yeah, I use that all the time.
+
+Dalton McCleery (29:44.264)
+Yep.
+
+Dalton McCleery (29:49.277)
+Yeah.
+
+Dalton McCleery (29:52.614)
+Yeah, var user.
+
+Andy Hinkle (29:56.029)
+it'll underscore or it'll put that red underline on it. But yeah, man, I'm pretty excited about this. very nervous like with going into this, it'll be just my first, just like, you first talk, it's always just a little nervous, but I mean, it is online, so it's a bit, sometimes you can kind of get a feel of the crowd of how they're enjoying it, you know, if you're in person, so that's kind of only downside of being online and just talking to a computer screen, just like I'm doing with you right now, so.
+
+Dalton McCleery (29:58.761)
+Yeah, yep.
+
+Dalton McCleery (30:15.208)
+Sure.
+
+Dalton McCleery (30:24.382)
+You
+
+Andy Hinkle (30:24.424)
+But in talks of people people are like at least Dan and Marga are really excited about this And then some people live talk to privately they've given me a great feedback Because I'm trying to not talk too far on the senior side, and I'm not trying to talk to you far on the junior side So I'm coming in the middle Because there's like I mentioned earlier Adam Wathen has that great talk ready by design in New York City and Laracon New York one and fantastic
+
+Dalton McCleery (30:41.576)
+Yeah.
+
+Andy Hinkle (30:54.376)
+talk if you haven't heard that one before, but just like how you have those, like I mentioned, index, all those methods in your controller about refactoring patterns with that. But since then that I can't remember, I mean, you'll see tips on Twitter like, do this, do that. I just haven't seen a, like a, just a clean code layer of all specific talk. so these are, I'm going to give some code samples of like things I've done to clean things up, like a rate to collections in certain places.
+
+Using the top method which is very underrated parts and then on the busy side talking about where things get messy is The fluent interface the fluent class. I don't know if you've messed with this too much But if you're dealing with like, know, I'm insurance and I'm in with insurance so we have these Massive API responses and you can use the fluent class to kind of clean those up and it's there's no documentation on it's kind of like a laravel of all internals thing So I figure I'm gonna bring on
+
+Dalton McCleery (31:26.971)
+always.
+
+Dalton McCleery (31:36.146)
+I...
+
+Andy Hinkle (31:50.951)
+I have like what I want to say, I just need to like stitch it together and figure out, okay, what's gonna, where I'm gonna slide things in. I have like four slides, you know? So I'm very nervous, I just like, I need to get this, I need, I have like four slides, I need to, and so it makes me nervous. I at least wanna get through, get the slides down, but yeah man, it's been good.
+
+Dalton McCleery (32:11.953)
+Yeah, When, when can you say when this would be like if we're recording this middle of August.
+
+Andy Hinkle (32:17.618)
+That's a good point. I should probably tell people when this is gonna happen. It's gonna be on...
+
+Dalton McCleery (32:21.937)
+Gotta show up.
+
+Andy Hinkle (32:25.808)
+It's going to be on Tuesday, August 26th, and it's the Laravel worldwide meetup. So you can go to meetup.laravel.com. It'll be on the Laravel YouTube channel, I believe the official Laravel YouTube channel. So you can tune in there to watch the live stream. So I think it's at noon Eastern time, which should be 11 central for people in, in the Midwest. Well, it just kind of depends right where you're on in Midwest, but.
+
+Dalton McCleery (32:45.309)
+noon eastern.
+
+Dalton McCleery (32:52.177)
+kinda midway 12th eastern august 26th tuesday i will be there i will be there i'll turn my camera on if nobody else turns their camera on just so you can at least have me okay okay good i don't particularly like for people to see my cat stuff but like if it was one of those i'd turn my camera on for you but i'll be there for you
+
+Andy Hinkle (33:00.572)
+Yeah. Yeah, you got it, man.
+
+Thanks man. think it's on YouTube.
+
+Awesome. push it.
+
+haha
+
+Andy Hinkle (33:20.934)
+Yeah, awesome. Thanks man, appreciate it. Cool, filament four came out, switching up now, done with me. Filament four came out. I talked to...
+
+Dalton McCleery (33:21.863)
+for sure.
+
+always.
+
+Dalton McCleery (33:28.701)
+All right, Andy shut up for the rest of the podcast. I'm kidding. Don't do that
+
+Andy Hinkle (33:38.726)
+Did you see a filament 4 dropped?
+
+Dalton McCleery (33:41.406)
+Dude, I am so excited for Filament 4. I don't think I can accurately describe it with my facial features. I'm not an actor, but I'm hyped for it. It looks really good. The people that I work with are also equally as excited for it. The problem with Filament 4 is it's so good that they changed quite a few things and half of my app is broken.
+
+Andy Hinkle (33:48.838)
+haha
+
+Dalton McCleery (34:08.443)
+just because I customize like Filament so flexible, you can just, you could basically do anything. Like I even created my own custom filter layout instead of using, you know, the dropdown or the modal or the above content. I like, I did a sidebar filter, so I had to customize all of that. And so when Filament 4 came out and I ran their upgrade script, which shout out Rector, they had a Rector script, which did quite, quite a good job of upgrading my current app to Filament 4.
+
+like changing all the methods and variable names. But all the customizations I did just, they did not work. And of course none of that's documented because I was doing it in the beta. So I spent probably a couple of days just trying to figure out how to get my old code to work with the new filament release. And that's been, I mean, fun is a relative word when you're debugging problems of like layout shifts and junk like that. It's not fun, but like.
+
+Andy Hinkle (34:36.392)
+nice.
+
+Dalton McCleery (35:04.943)
+It looks good and it's satisfying when it gets done. and I've noticed, I haven't noticed a big speed improvement, like some of the data tables that I have render like thousands of records. And I noticed that it is just like, a bit quicker to render things overall. like, I'm, I'm excited for it. Like it's, it's stable now as of recording this, the, I think it got released to this week, like the, the, the stable release. I'm super hyped for it.
+
+Andy Hinkle (35:17.992)
+Mm-hmm.
+
+Andy Hinkle (35:30.15)
+Yeah, version 4. it's talking. Mm-hmm. Yeah.
+
+Dalton McCleery (35:34.671)
+It looks so good. And like I don't, I don't know how I ever lived without filament. Like I used to think that Nova was the end all be all. It ain't. It ain't.
+
+Andy Hinkle (35:46.162)
+Do you still, do you use it for an admin panel in front end or just a admin panel?
+
+Dalton McCleery (35:52.638)
+it's kind of tricky because the, app itself is the filament panel. Like people log in and they just, and they just use, you know, It's so nice, dude. The thing, it took me like five months to build this thing or rebuild this thing. It was already existing application written in, in view with a Larva backend for an API. And then they wanted it to be read, redid in filament. And I think it took me five months to do that.
+
+Andy Hinkle (35:58.579)
+we've got an app like that too. Isn't that nice? Yeah.
+
+Dalton McCleery (36:21.981)
+If it wasn't in filament, I would still be working on it, you know, nine months in. Like filament's just so good. It's so easy to move things into and to just like have like complex layouts. Like I designed a whole layout, like in a day, like a custom layout in a day. And it looks great. And people are happy. I assume people are happy about it. don't actually know if they want it, but.
+
+Andy Hinkle (36:39.537)
+Hmm. Nice. Yeah. I love that.
+
+Dalton McCleery (36:49.565)
+I'm super, super happy with Filament 4 so far. I haven't talked to any of my coworkers about it, but I know that one of them, ironically his name is Andrew too. I just, I seem to always work with Andrews. It's a blessing and a curse. They are good guys. He's a good dude, but I know that he started upgrading his app to Filament 4. So I'm going to have to ask him what his thoughts are on the upgrade process. Cause it's, it's, it's 50 50 for me so far. Like the Rector script that they had, flawless.
+
+Andy Hinkle (37:01.201)
+Nice, Andrews are good guys, yeah.
+
+Andy Hinkle (37:18.695)
+Mm-hmm.
+
+Dalton McCleery (37:19.047)
+was great and that was in the beta that was like several weeks ago but just some of like underlying customizable things have not been fun to mess with what about
+
+Andy Hinkle (37:29.543)
+Have you used their new editor? It's called Rich Text.
+
+Dalton McCleery (37:40.805)
+I, so yes and no, that the merge loop stuff that I have that works with filament, I've been working on trying to get it upgraded to filament four and I want to spin off and do a smaller package of what I already have specifically around that editor because it's fire. The little things that I've used it for is awesome. Being able to insert variables, game changer. Like I want that to be its own little package.
+
+Andy Hinkle (38:08.55)
+Yeah, they...
+
+That's, that'll be really nice that, you know, the agency we used to work at, used to build repeatable blocks and to have that variable inside there that that would be amazing to see that. yeah. It'd be really good.
+
+Dalton McCleery (38:18.17)
+Yeah. Mm. Primo. Yeah, I wish I had that for then. Because it's really good. Like, I haven't gotten around to it in a while, but I've been upgrading the merge loop stuff for that specific reason. Because I saw that, I was like, that's perfect for this thing that I built. Like, I just, want to get that into this, like now. Because I would use that. Specifically for like blog posts and stuff.
+
+Andy Hinkle (38:42.331)
+Yeah, it's really becoming real stable now of like filament, everyone's talking about filament. And it's really neat when version four came out, Taylor retweeted it. So I'm like, I guess I wonder if, the level team's talking a lot about filament as well. But it's really cool to see. Well, I mean.
+
+Dalton McCleery (38:49.478)
+Mm-hmm.
+
+Dalton McCleery (39:01.596)
+Buy it. Buy it.
+
+Andy Hinkle (39:05.561)
+Yeah, they have, they have a lot of supporters over there. They have some big companies using filament. mean, we have, we have an app that just uses like, like similar to you, it's using filament on the front end and the administrative side. It's like, it's, there's no other custom UI. Like it's purely filament. So, yeah, we use it extensively. The thing that, I was bumping into in version three is if you have options, like in a select box or a radio,
+
+If it gives you the option to disable them reactively. if you have like click a button and it does like, for example, if you have country, you select country, Canada or country, United States, and then you have a second box of like state or province, and it switches the results accordingly. you, you, there's no way to actually hide the options. Like if you want to hide United States, like States options, you can disable them, but not hide them.
+
+Dalton McCleery (39:39.324)
+Mm-hmm.
+
+Andy Hinkle (40:02.873)
+And so what you, the kind of the hack right now to do, you have to build two inputs, one for Canada, one for United States and just like show them accordingly. Then you have to like bring them together on the backend. So the PR I sent in on version three was an option to, to hide them. So on the disable option, there's a, on the select, you know, you do like to select input and this is disable.
+
+Um, disable option when, it gives you a callback of the option of every specific option. So I did the same thing, but like hide option when was the method name and, um, but then Dan closed and said, send us the version four. And I was like, well, shoot. So I was like, guess we're getting real close on version four. And then like two weeks later, yeah, they, they, and they had dropped it here. So that's awesome. I have to, I have to send that in again. So that way we can, uh, have those options where you can actually filter the results instead of doing that little.
+
+Dalton McCleery (40:34.938)
+Yeah.
+
+Andy Hinkle (40:59.889)
+workaround of filtering the conditions there.
+
+Dalton McCleery (41:03.354)
+Yeah, did you, I assume, well, not assume, I saw the picture of the filament team at Laracon. Did you happen to bump into any of them, like Dan? Did you meet Dan? Nice.
+
+Andy Hinkle (41:11.431)
+Yeah. Yeah. I got to talk to, yeah, I got to talk to Dan. Um, I always, I always tell him every, each time I see him that he needs to submit a talk and he tells me he does. He's, met several talks, you know, but I know he's speaking at either it's either Denmark or the UK one, but he's doing a filament talk there. So that'll be really good. But, uh, yeah, he's, he's, he's really young. He's 20 years old, I think. Yeah. Uh, so he is doing some, he's doing some really great.
+
+Dalton McCleery (41:21.498)
+Yeah. Yeah.
+
+Dalton McCleery (41:30.268)
+Is he? Yeah, he is.
+
+Dan you're making me feel old, Oof.
+
+Andy Hinkle (41:41.247)
+great things over with a filament. He works for Canyon GBS. and they, they have a huge modular app. And I don't know if I talked about this show before, but that, that's that maybe, I don't know if that app is really cool for a co-diving and just understanding like some really, really technical business logic of, in a modular environment. Yeah. And it's all public. Yeah. But it's all licensed right? But it's all like, you could just go in. It's just a cool way of like,
+
+Dalton McCleery (41:46.192)
+Yeah.
+
+Dalton McCleery (42:01.897)
+It's public. It's public, right? Yeah. Yeah, yeah.
+
+Andy Hinkle (42:09.414)
+reading some really clean code. So we might maybe have to take some ideas from that for the talk. But, but yeah, it's yeah. So I brought that up and yeah, Dan's really cool, really cool guy.
+
+Dalton McCleery (42:13.34)
+Nice callback.
+
+Dalton McCleery (42:22.029)
+yeah, yeah. Ask if you see him or talk to him or whatever. Ask him if he's free for this January Midwestern conference thing.
+
+Andy Hinkle (42:31.014)
+Oh yeah, that'd be cool. With the flyman, I think he's like a Europe guy. I don't know. I don't know. I think so. Yeah.
+
+Dalton McCleery (42:35.814)
+Is he really in Europe? Dan, where are you? If you're near the Midwest, what are you doing in January?
+
+That would be a cool talk.
+
+Andy Hinkle (42:47.238)
+Yeah, he's in Wales, you know, in the UK. yeah. I think he's speaking at the UK, Larrival Live UK.
+
+Dalton McCleery (42:49.582)
+Okay, nevermind. Sorry Dan, too expensive.
+
+Dalton McCleery (42:59.312)
+Well, anyway, shout out Dan, Filament 4, and the team. I know, not just Dan, Dan and the team. Filament 4 is awesome, so far. I don't have any big gripes with it, other than I need more filter layout options than the four default ones. Please and thanks.
+
+Andy Hinkle (43:15.258)
+Mm-hmm. Yeah.
+
+Dalton McCleery (43:20.476)
+Have you looked at upgrading to your stuff to film it for you?
+
+Andy Hinkle (43:27.258)
+We have it on our, like, it's not, like, it's not, it hasn't been an official issue yet, but it's just been kind of like, kind of in, you know, in mind in different places. Like we, we have certain apps going live, you know, soon we want to make sure that everything's up to date. So like, yeah, we should probably update to development four. That's probably gonna take a little bit of time. So not yet though. We're looking at doing some of those.
+
+Dalton McCleery (43:30.054)
+Back along.
+
+Dalton McCleery (43:48.09)
+Yeah, well, do set aside some time. Like I said, that rector script is pretty good. It catches a lot of things, not, like if you customize anything, it doesn't really catch that. The beta one that I used anyway.
+
+Andy Hinkle (43:51.45)
+Yeah. Rector. Yeah.
+
+Andy Hinkle (44:05.03)
+Level boost, are you using that?
+
+Dalton McCleery (44:09.025)
+I am using that. installed that the day it came out into, into PHP storm, which that's a whole nother topic with, with our ID talks. Are you still, are you still on cursor or are you, you swap?
+
+Andy Hinkle (44:15.142)
+Same here, yeah.
+
+Andy Hinkle (44:22.03)
+No, well, okay. I am like, I'm in between editors right now. I am a little bit of VS code. I would say I'm split between VS code and, wait for it, Neo of
+
+Dalton McCleery (44:38.197)
+Andy no. Andy no. No.
+
+Andy Hinkle (44:38.886)
+I love NeoViv. You know what started? You know what got me on NeoViv? Alex6. Yo.
+
+Dalton McCleery (44:45.563)
+Primogen. his talk.
+
+Andy Hinkle (44:50.51)
+Yeah, Alex six did a talk on T-Mux. I heard great things about T-Mux, never used it. Jake's talked great things about T-Mux, but I got on that train of just using T-Mux and do you use T-Mux much at all?
+
+Dalton McCleery (45:08.155)
+I don't even really know what that is other than that talk.
+
+Andy Hinkle (45:09.264)
+Tmux is, okay, you should watch it. Yeah, I would go ahead watch this talk and it's really good. Tmux is, could just run, like one of  projects, I run Tmux, I pop up my code editor, run Tmux and I already have like PHP or yeah, already have NPM run dev running. Yeah, I don't have to do anything with that. I already have a Claude window open when I wanna use it. I don't have to like go in that terminal and hit cloud. I have this thing.
+
+set up in my, it's in like part of Neo of M, part of the just command line in general, lazy git. So I have like a window open for that. So it allows you to like switch between tabs really quickly. So you can, you can have multiple tabs open, but you can also have a tab open, not just a direct line, it's SSH into your server, which can be scary at times, but sometimes really useful if you want to have, if you want to flip between your server and your, and your like code editor. And so.
+
+The cool thing I like is when I'm SSH'd in, can look into things into the server, like it's my own code editor. I don't have to like switch things up. To an extent, I can go to TMUX, I can poke around my server just the way I was poking around things locally, using TMUX. And so it's really a great tool to use. And then that goes hand in hand with NeoVim, because then you could set up Neo, like you just type in a command.
+
+and you're already in your editor. already have, I just pop open an editor, type in my project name and it shows my editor, then my gets, my gets window for that. And then I have a window open for Claude. So it's all set up. can flip between things. It's really fast. I can zoom through, through things. So no fun to open, but I'm on, using that. I've been between that and there's some, so I will say,
+
+When I'm doing pull when I'm doing PR reviews, VS code is really good. It's kind of hard to beat because you can see a diff between it. You can write. You can write comments in the editor.
+
+Dalton McCleery (47:13.786)
+I can beat it.
+
+Sorry.
+
+Andy Hinkle (47:21.454)
+You can, I don't, can you do that? Php storm like on a PR you can do like, Hey, Andy, fix this. Like in your, in Php storm on a PR.
+
+Dalton McCleery (47:28.859)
+I don't check out the PRs in PHPStorm. So no, no, I can't.
+
+Andy Hinkle (47:30.786)
+Okay, see, here we go. Here we go. Yeah, exactly. That's the problem. But yeah, you can, it's really good at like reviewing code. So, but anyway, we're getting off, I'm getting off tangent on code editor. So I apologize, but yeah, I'm split. Answer your question. I am split between VS code and Neo of And because I love my love for, for TMUX, the combination of TMUX and Neo of So I'm doing editing in Neo of doing,
+
+Dalton McCleery (47:41.807)
+Sorry, yeah, I asked you about your IDs.
+
+Andy Hinkle (48:00.038)
+PRs and review of stuff like that and VS code. So love you both of those, but so you're still on PHP storm, right?
+
+Dalton McCleery (48:06.522)
+I am on PHP storm, but I do have boost installed. I've installed it. I've got my F my what's it called? MCP stuff set up for that. Um, one of my coworkers even mentioned, uh, uh, what was it called? I think Josh mentioned, uh, context. There's a, there's a website context, something context seven, I think is what it's called. Um, and they've got like things for, uh, like I've got a filament one that he recommended.
+
+Andy Hinkle (48:20.293)
+heard P MC.
+
+Dalton McCleery (48:33.466)
+And was just, it was like a, you know, for your MCP. So just fulfillment. I've got boost and then I've got that filament one set up. and it's been pretty good so far. Like, I've been using Juni a whole lot more. I've been, I've been trying to use co-pilot to fix my stuff. Like instead of bashing my head against trying to figure out a bug for, you know, 10 minutes, if I don't figure it out the first time, then I'll just ask co-pilot, co-pilot can't figure it ask Juni. And it's been really great.
+
+Andy Hinkle (48:36.741)
+Hot tip.
+
+Dalton McCleery (49:02.776)
+So far. So far. Knock on wood. I have not, but I know that my coworkers and boss have been quite heavily looking at it to be used.
+
+Andy Hinkle (49:03.993)
+Have you, have you used cloud code?
+
+Andy Hinkle (49:17.829)
+You should poke your boss, get you a $20 subscription, just give it a shot. So I had Cursor for a while and then I switched to VSCode, or sorry, I switched to Cloud Code. And that was a big change for me of how I did my programming style of either debugging something or walking through and planning something. It started...
+
+Back when it started just like copy paste into the web browser of like, here's my code. Like, what do think of this? Then it shifted over to cursor, where you would, you would like take apart and have a chat with, you know, back and forth of like how to, you know, how to proceed with your request or whatever. and then now with Claude Claude code, it's like, that's one thing like mentioning T-Mux and new event.
+
+It just goes hand in hand with that in the, could just open up a terminal type in Claude and then, um, whatever it directs you, you're in it. Just, uh, it just rolls with whatever requests you have. If you get a plenty of context. Um, if you get, it does get expensive. So I hit the rate limit pretty often now. Um, it's like, it's like, get, you get like so many tokens for five hours. And then once you use those, you just have to come back and, but, um, I'm only on the $20 plan.
+
+But I'm going to upgrade to the a hundred dollar plan here soon because our company Wilbur's is getting really invested into AI as well. So I think I'm going to bump up to that, which that will do is that will give me to access to the Opus model. think it is. And so right now I'm just on a sonnet model on Claude, which is pretty good. But the Opus model when, um, when I'm looking into something and it's not quite right and it's on a model, I'll go to the web browser and then I could copy paste what they gave me Claude code. Um, but I could go to the Claude web browser side.
+
+paste it in, switch the model to Opus cause you can use in the browser. can't use it in Claude code unless you have that hundred dollar plan. And then it'll, it'll shoot me back. Maybe something I was looking, uh, looking at, looking at a better way of doing, you know, or, or, you know, or recommendations on how to improve something. So, um, it's been really good at debugging things, uh, like that the MCP stuff has been incredible. It's just like, it finds things so quick. uses the herd MCP combination of that and like reading, um, the
+
+Andy Hinkle (51:35.749)
+cool thing is like it'll read your exceptions and either in your log or console errors in your browser. So you don't have to like no more copy paste and paste it in and tell it the MCP stuff. It's incredible. So that part of that is boost. Part of that is, is Claude code. So it really changed the way I code. It's like, Hey, I've taken our jobs, right? It's, it's like, it, it's, it's such a weird way of thinking of like, um,
+
+Dalton McCleery (51:46.828)
+Shit.
+
+Dalton McCleery (52:02.138)
+I don't know.
+
+Andy Hinkle (52:04.845)
+I've really, and just in the past few weeks, I've really changed my way of how I go into like a feature now. It's all, it's very like AI has a part of some, of some point. whether if that's writing this blade file, which I know exactly what I want, the intention of what I want to do. Why am I going to spend the time doing it when I can just put it in this prompt and then it can get like 85 % there and I could make small tweaks. Same thing for,
+
+just been just a business idea. I'm starting to turn into like a prompt engineer, honestly, of just doing some stuff. There's it's very important to keep the human in the loop. That's the biggest thing of when I'm doing that. Like every point, I'm always like aware of what's happening of like, I'm not just like, hey, Laravel build or hey, cloud code, build me an app, you know, it's like, I'm very cautious about what I want it to do and what I don't want it to do.
+
+Dalton McCleery (52:39.97)
+Andy Hinkle (53:00.265)
+cause I'm, very opinionated, know, just like talking around, very opinionated and know the way I like to, write things and just making sure it's clean and expressive. And I feel like it has a long way to go for some of those things, but I mean, it eliminates so much time, just trying to work through something, trying to debug something. If I'm new to a code base, I, I'll copy an exception and give it the context I have, maybe give it, a database record that's stowing the exception and it.
+
+does a really good job of like giving me potential areas that where the exception could be. And it's been right. It's been right more than wrong most of the time. So it's very consistent, really good, but it completely changed. Just so weird how I went from writing line by line to just recent weeks of, should I, I just debate, should I put this into cloud or what's going to be faster here? What's going to save me the most time? and also is it going to look good?
+
+Is it going to be battle tested? Yeah. Et cetera.
+
+Dalton McCleery (54:00.749)
+Hmm. Yeah, yeah, yeah, yeah. They took our jobs, but not if we take them first. If we take our own jobs first, they can't take it from us. No, there's quite a bigger push at the company that I work at to get into more, like to try to leverage AI more to just help us out. Like, we're not on like strict timelines and we don't have like, you know, it's not an agency, so we're not like.
+
+We got to get this out the door now in a really short amount of time to save money. XYZ like, like if, if you can ask AI Claude or, or, you know, in my case, Junie to help you just like stub out a feature first and then take what the pieces of Junie did and then just sort of massage them into whatever you need. Like that's encouraged to do. which is, is still hard for me to do. Admittedly, I don't, I don't know all of these AI models. I don't know the difference between.
+
+sonnet and whatever you said, Orpheus.
+
+Andy Hinkle (55:03.46)
+Yeah, open, yeah, opus, it changes faster. It changes faster than, uh, JavaScript libraries releasing, right? Like, you know, uh, every, I feel like every day there's a new model, um, or a new product that is related to AI that we should consider in our development flow. It's like, man, it can be very overwhelming. A lot of developers have, uh, are just sick of hearing AI, you know, it's just cause there's so much product around it and money involved with it.
+
+Dalton McCleery (55:04.705)
+Opus.
+
+Andy Hinkle (55:31.684)
+It feels like just everything's trying to sell to us. And so I can see that side of it. But the other side, can, there's a lot of good parts of it too. So.
+
+Dalton McCleery (55:42.426)
+It's weird, it's just weird. It's so 180 degrees from what it was like three years ago. You know what mean? Just like when Copilot came out and you're like, this is actually pretty good. I could write a comment and it would actually spit out some sort of collection larval thing with filters. I'm like, wow, this is the future, right? And nowadays you could just do that. You don't even have to write the comment. It'll just read the context of the file and go, this is what you're trying to do? Got it.
+
+Andy Hinkle (55:42.862)
+Yeah.
+
+Andy Hinkle (55:51.224)
+Mm-hmm, yeah.
+
+Andy Hinkle (56:07.287)
+I...
+
+Andy Hinkle (56:11.876)
+It brought me to a great memory of the first time I used Copilot. It blew my mind. That was the first time I...
+
+Dalton McCleery (56:18.679)
+remember you sent me screenshots and like look what it did I'm like I want that
+
+Andy Hinkle (56:23.758)
+That was when you just write slash slash, I think it was right, or you just write tab I think, you just go online and it would just slowly show and you just hit tab tab tab tab and you're like, man this looks pretty good. And it would just kind of the first, especially for tests and stuff like that, it pretty much wrote all of our tests exactly, we were blown away. And now it's like, not even too much, not even that.
+
+Dalton McCleery (56:36.633)
+Like it's close.
+
+Andy Hinkle (56:50.06)
+Not even that far ago or not even that long ago that that was and now it's like we're typing in full prompts of hey do this you see people on Twitter creating full games or full applications. So crazy crazy time we live in.
+
+Dalton McCleery (57:00.653)
+Yeah, bro, it's crazy.
+
+Andy Hinkle (57:06.232)
+I got one more for you if you're good with that. I'll make it quick.
+
+Dalton McCleery (57:06.413)
+just please just please don't just please don't fire us over AI that'll be my last comment on that yes let's
+
+Andy Hinkle (57:14.052)
+I think in our lifetimes jobs, I think I said this at one show or another, but I feel like our jobs will change in a lot of time. we'll be in the loop of what the code, but it'll be still writing to computers and us making sure it's correct in some ways. But we've really got to know our craft of Laravel. I think that'll be around. But it's just going to be different way of doing it.
+
+Dalton McCleery (57:36.589)
+Yeah, you're gonna, you're gonna.
+
+Andy Hinkle (57:42.072)
+changed so many times over the years. There's been so many threats, know, if you will, of like it going away, but it's just going to constantly be changing as it always is.
+
+Dalton McCleery (57:52.482)
+Yeah, I see, I see like, I see the future of like senior developers and Larvel. Well, not just Larvel, just senior developers in general. They're not going to be, they're not going to be a whole lot of junior developers. sorry. I feel like senior developers are going to have a lot of, agents, right? You're going to be a manager over like five agents, right? And this agents, you know, you're testing agent. This is your front end agent. This is your backend agent. And you're going to be managing those agents as you know, you, as the collective.
+
+Andy Hinkle (58:05.175)
+hard for Junior Sam.
+
+Dalton McCleery (58:23.773)
+Department right whatever application. Yeah. Oh, no, I don't want to be a project manager. Hang on. Wait, no No, no, don't want to be a project man. I just I just see something very similar to that like like agents Agents are gonna be crazy. You got agents fixing agents This could be a wild time check We don't really need the project man, they're gonna be like us they're gonna be
+
+Andy Hinkle (58:24.099)
+We're all a bunch of project managers.
+
+Andy Hinkle (58:30.435)
+What are you saying though?
+
+Andy Hinkle (58:41.635)
+They start talking to each other, agents are communicating with one another about what, you use tabs or spaces?
+
+Dalton McCleery (58:51.394)
+talking the manager and we're gonna be the managers, right? no.
+
+Andy Hinkle (58:54.947)
+hahaha.
+
+Have you seen Andy today? We haven't heard from him since this morning. Where is he?
+
+Dalton McCleery (59:03.223)
+Yeah, yeah that loser only clocks in at seven and clocks out at five. Meanwhile we're sitting here working 24 hours a day making less than this guy. no. Okay let's change topics. Let's change topics. Something else. Yeah, hit me with it.
+
+Andy Hinkle (59:09.763)
+What is going on? We don't even... Yeah.
+
+Andy Hinkle (59:17.079)
+I got one more for ya.
+
+Curious how you handle permissions on your side of things. So I'll run you through the show of what we're up to. We're currently converting roles to permissions. It's all driven through, I'll start up. We're currently switching from roles to permissions. We have this process of leasing permissions as well. And so, which means that if a manager goes on leave, they go on vacation, whatever, we can have somebody fill out a form.
+
+where the manager can file out a form on their behalf and they'll have their permissions for X amount. and then which in that switching from rules to permissions will allow us to, sometimes they want, we don't want these people that are leasing the permissions to get specific things such as like looking at coaching logs or, you know, very manager level things of like they shouldn't be looking at even when their managers away, something like that. So.
+
+We've been in this process and it's going actually really well. We're switching it just all to like enums and then we are able to set the like the permission for each person accordingly based on the roles they previously had. So anyway, so we've been through going through that. It's going great. The thing that I am battling now, I've been thinking a lot about is decoupling people based configuration from code.
+
+And what I mean by that is say you have a report goes out nightly and it sends to four managers. These four managers are all hard-coded. We have other managers like in our system, but like maybe we don't want them to get the report. So we only want these four managers to get this. Their emails are all hard-coded in the application. So we have about 20 or so applications.
+
+Andy Hinkle (01:01:15.555)
+configuration values that they will pull them in, get the recipients and send a report or maybe like if something happens like an error notification, something like that. When we want to update those, manager gets promoted. I mentioned earlier, manager goes on vacation. We need to have somebody look taking a look at this report. The manager gets married and their last name changes or whatever the case may be with that.
+
+Um, we have to do a code change and a deployment, even when it's like a simple recipient swap. So we have to do a deployment every single time when someone leaves or changes departments. So I'm looking to introduce like a, like a configuration service in one of our applications. And we just talked to that single application. Um, and so these would be more configuration values that are not like permission based.
+
+It's different from permissions, right? Because it's like, need to go to these configurations. Secondly, it'll trigger like an email or an alert if something happens, if the user gets soft deleted or if the configuration remains, whatever the case is. Yeah, it'll send us an email if the user is soft deleted or something like that. So which right now we are battling an issue where
+
+it'll be like orphaned configuration where, and we could have uncaught exceptions to like what, like I said before, somebody leaves company, et cetera. And so that way they'll have to remember like, where's all these configuration values at, or somebody gets promoted, moves, we have to switch them around. It can be a mess. So.
+
+with that, I was looking at like, you know, a model called application, like our application for each one, and then a configuration on underneath that. And then we have like a key value pair of like what the configuration is, like a report and then who it's assigned to. So something like that. and then eventually download even leasing for these, like for like getting a report at different times. So, and then I'll hit an API endpoint. It'll be like API slash configuration slash like whatever. No.
+
+Andy Hinkle (01:03:34.147)
+something like that, and then it will be able to pull in each application that is synced on this will be able to pull in their configuration for who gets this report. So I know it's a lot, but that's just like high level of what I've been thinking about. Or do I just say, let's just make these a permission, like only we just make this a one off permission and people get that permission like for each report, each manager. So.
+
+I've been thinking a lot about this. I don't know how you've handled permissions and like those hard coded report values if you've done much of that. But what do think, man?
+
+Dalton McCleery (01:04:12.736)
+No, spotty. Spotty.
+
+Andy Hinkle (01:04:13.698)
+It's fine, yeah.
+
+Dalton McCleery (01:04:21.91)
+Yeah, kind of what you're talking about is just like dynamic permissions, like dynamically.
+
+Dalton McCleery (01:04:33.656)
+It's interesting, but it is quite hard to wrap my head around. How often are they used? it worth? I get that it's a problem if you have to deploy every time you want to change it, but do you have to also deploy a code change to check for this new permission, or is that going to also be a dynamic configuration check? Do you still have to make a code change for whatever this new configuration change was?
+
+to account for.
+
+Andy Hinkle (01:05:04.386)
+Configuration yeah the configuration change it would be just like we're going from roles to permissions that would be a change But it would just be one time like we would say can view Manager report and we just give that that permission to the users or do we have a centralized location to where we can have our Different manager departments go in and click and choose who they want to receive a port the report versus us having to go into You know the database to configure it, so it's just a matter of like where does this live?
+
+Dalton McCleery (01:05:34.105)
+Yeah, yeah, well I am I am always a bit and you notice I'm a big fan of like single source of truth things So Wilbur has like multiple applications, right? Do they all use the same? Permission things or like if you build one silo of Configurations they all could use that same thing, right? It's not like a per app thing. Well, then then yeah, then I would be for something like that a single source of truth for permission
+
+Andy Hinkle (01:05:34.592)
+Right?
+
+Andy Hinkle (01:05:41.399)
+Mm-hmm.
+
+Andy Hinkle (01:05:48.108)
+Yes.
+
+Andy Hinkle (01:05:54.762)
+Yes, yeah.
+
+Dalton McCleery (01:06:02.104)
+or configuration, however you called it, then yeah, that makes sense to do. I just worry that if you also still have to make a code change to all of these other applications, if the single source of truth needs a change, right? It's kind of like a package deal. Like if you need to change the single source of truth, now you have to go and update all the other applications to handle the one change at the same time, because you can't release one and not the other.
+
+Andy Hinkle (01:06:04.962)
+Mm-hmm.
+
+Andy Hinkle (01:06:28.226)
+Yeah, it's tricky. Yeah, I'm almost leaning. The more I talk out loud about it, more I'm just leaning and doing permissions. yeah, it's like, I don't know if I should build a UI behind it or just have it through like a different platform or we manage our user permissions there. So I just don't know, because user permission, it's like, I think the nuts and bolts of it is like, okay, we have user permissions, like, can I do something, right?
+
+Dalton McCleery (01:06:30.038)
+So yeah, it is.
+
+Andy Hinkle (01:06:56.14)
+But then the other part of it is we have reporting and it's like, who gets this report? It's at the flip side of like, who has access to this or is it, who should I give this access to, if that makes sense? So it's like, do I put both permissions, access permissions in there? And then also like, who receives this notifications, those permissions too? So it's tricky, man.
+
+Dalton McCleery (01:07:19.138)
+Hmm. Yeah, now you're getting into the weeds of can this person receive the report? Do they have the permission to receive it? Does the person have permission to give that other person permission to view it? Does that person have permission to even send that report to that other person regardless of the permission? Yeah, that's a headache right there. So like what's...
+
+Andy Hinkle (01:07:41.505)
+Yeah.
+
+So, what the? The player I'll, yeah.
+
+Dalton McCleery (01:07:49.374)
+Is there something initially like the spotty permissions can't do that? That and that's why you're trying to change from it. Like, is there something specific that
+
+Andy Hinkle (01:07:59.181)
+I got a funny, well I got a fun fact. We actually don't use any packages for this. It's pure Lovevel. And so we use Laravel's CAN middleware, like CAN do this. And we have all the permissions. We just have permissions in a enum and it just does like CAN user, like it'll just read from a user attribute and it says, the CAN user do this and it checks their attributes to see if they have that applied.
+
+Dalton McCleery (01:08:05.431)
+Interesting.
+
+Dalton McCleery (01:08:10.953)
+Okay, yeah, you got some gates and stuff.
+
+Andy Hinkle (01:08:28.896)
+No packages, pure checks, so. We use gates. Yeah.
+
+Dalton McCleery (01:08:30.903)
+Okay, hey, I respect that, I respect that. Is there something in the spotty permissions package that could do that then?
+
+i don't think so i just i didn't know if you've looked if you look deep into
+
+Andy Hinkle (01:08:42.978)
+I don't think so. I'll have to take it just in community packages. I'm sure someone out there, more I think about them, the more I think it should just be a permission. Like can receive daily report. Just, you know, and then they just get that permission accordingly instead of it being hardcoded. It's tricky. Yeah.
+
+Dalton McCleery (01:09:04.213)
+It's very tricky. don't think that there's a good answer. I I like the idea of a single source of truth for things. Because then that's easy.
+
+Andy Hinkle (01:09:12.706)
+It would just be the flip side of like, user, like it'll be user arrow, like can they receive this report, right? But we're gonna do actually the inverse of that and say, hey, permission, give me all the users who has this, who can do this, right? Yeah, it's tricky. So cool. All right, maybe for next time. Yeah, be good.
+
+Dalton McCleery (01:09:27.233)
+can do this. Yeah.
+
+Hmm
+
+Dalton McCleery (01:09:36.375)
+Put that on the put that on the docket tell me tell me if you figured that out by the next time that we talk Or if boss Jake has pulled his hair out In the meantime
+
+Andy Hinkle (01:09:42.678)
+Yeah, next time.
+
+Andy Hinkle (01:09:50.178)
+All right, would you like to close this out?
+
+Dalton McCleery (01:09:54.508)
+Yeah, bye. I'm kidding. I'm kidding. kidding. I'm Okay, peace. No, thanks. If you've stuck around this long to listen to it, thank you. We appreciate you. You're like a special, special subset of people and we appreciate your time. If you checked out in the last 10 minutes, then you're not even listening to this and you should probably stick around later next time because it's pretty good. I don't know.
+
+Andy Hinkle (01:09:55.97)
+See ya!
+
+Dalton McCleery (01:10:20.011)
+But until next time, we'll talk again in in another month and we'll see if Andy's bald from pulling his hair out from this roles and permissions thing. So you should probably tune in to see if he's bald next time. I think, I think. All right. All right. Peace.
+
+Andy Hinkle (01:10:35.436)
+Get deep.
+
+Andy Hinkle (01:10:40.61)
+All right, see you guys.

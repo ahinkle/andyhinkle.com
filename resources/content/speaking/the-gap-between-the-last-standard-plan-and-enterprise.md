@@ -3,7 +3,6 @@ transistor_id: '2048886'
 title: 'The gap between the last Standard Plan and Enterprise'
 show_name: 'The Midwest Artisan Podcast'
 embed_url: 'https://share.transistor.fm/e/d3f404a8'
-video_url: null
 published_at: '2024-08-19T11:00:00.000Z'
 duration: 4009
 summary: 'This week, we dive into A/B testing and the challenges that come with the jump from the highest non-enterprise plan to full enterprise'
