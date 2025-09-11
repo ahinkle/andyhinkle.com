@@ -11,7 +11,7 @@
 
 <body class="dark">
     @env('local')
-    <x-dev.dev-toolbar />
+        <x-dev.dev-toolbar />
     @endenv
 
     <div class="h-full bg-gray-100 p-0 md:p-5 dark:bg-gray-900">
