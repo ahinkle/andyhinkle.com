@@ -8,13 +8,12 @@
             content="How over-engineering can kill your project and why you should avoid abstraction until it's clearly necessary." />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
+                "@@context": "https://schema.org",
+                "@@type": "BlogPosting",
                 "headline": "Avoid Abstraction Until It's Clearly Necessary",
                 "datePublished": "2024-10-09T09:00:00+08:00",
                 "dateModified": "2024-10-09T09:00:00+08:00",
             }
-        </script>
         </script>
     </x-slot>
 
@@ -154,7 +153,8 @@
 
         <p class="mt-4 text-lg text-white/85">
             Before you abstract, ask yourself if the added complexity is truly necessary. Keep your code explicit and
-            easy to follow, and don’t fight the framework’s built-in tools unless you have a good reason to.
+            easy to follow, and don't fight the framework's built-in tools unless you have a good reason to.
+        </p>
 
         <p class="mt-4 text-lg text-white/85">
             Remember YAGNI: you aren’t gonna need it—until you actually do. By keeping things simple and leveraging what
@@ -165,4 +165,5 @@
         <p class="mt-4 text-lg text-white/85">
             Cheers
         </p>
+    </div>
 </x-app>

@@ -8,13 +8,12 @@
             content="We started a Laravel podcast to share our experiences and insights with the community." />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
+                "@@context": "https://schema.org",
+                "@@type": "BlogPosting",
                 "headline": "We started a podcast",
                 "datePublished": "2024-08-16T09:00:00+08:00",
                 "dateModified": "2024-08-16T09:00:00+08:00",
             }
-        </script>
         </script>
     </x-slot>
 

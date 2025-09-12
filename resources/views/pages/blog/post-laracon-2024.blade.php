@@ -8,16 +8,14 @@
             content="What an amazing Laracon 2024! Here's a recap of the event, the talks, and the community." />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
+                "@@context": "https://schema.org",
+                "@@type": "BlogPosting",
                 "headline": "Laracon 2024, a Recap",
                 "datePublished": "2024-09-05T09:00:00+08:00",
                 "dateModified": "2024-09-05T09:00:00+08:00",
             }
         </script>
-        </script>
     </x-slot>
-    </a>
 
     <p class="py-2 pt-5 text-center font-sans text-sm text-white/75">September 5, 2024</p>
     <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">Laracon 2024, a Recap</h1>
@@ -98,4 +96,5 @@
             So, here’s to another fantastic Laracon. I can’t wait to do it all over again next year—minus the train ride
             with a bag full of coins, of course!
         </p>
+    </div>
 </x-app>

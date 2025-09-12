@@ -243,4 +243,5 @@ alias sail-test 'sail artisan test</pre>
                 rel="noopener">X/Twitter</a>.
         </p>
 
+    </div>
 </x-app>

@@ -8,13 +8,12 @@
             content="How to deeply monitor Laravel events with AWS CloudWatch (and Laravel Vapor) to gain insights into your application's performance and behavior." />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
+                "@@context": "https://schema.org",
+                "@@type": "BlogPosting",
                 "headline": "Deeply Monitoring Laravel Events with AWS CloudWatch",
                 "datePublished": "2024-09-04T09:00:00+08:00",
                 "dateModified": "2024-09-04T09:00:00+08:00",
             }
-        </script>
         </script>
     </x-slot>
 

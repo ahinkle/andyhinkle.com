@@ -8,8 +8,8 @@
             content="Ever write a query and had a bunch of if filled with conditions? Here's a better way using conditional traits." />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
+                "@@context": "https://schema.org",
+                "@@type": "BlogPosting",
                 "headline": "Using Conditional Traits for Clean Queries",
                 "datePublished": "2025-02-02T09:00:00+08:00",
                 "dateModified": "2025-02-02T09:00:00+08:00",
@@ -137,4 +137,5 @@
             Conditional traits are a great way to keep your code clean and readable. They allow you to easily add
             conditions without cluttering your code with <code>if</code> statements.
         </p>
+    </div>
 </x-app>

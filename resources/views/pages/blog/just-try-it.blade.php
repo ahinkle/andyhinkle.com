@@ -128,4 +128,5 @@
         <p class="mt-4 text-balance pb-4 text-left text-lg text-white/85 md:text-wrap">
             Cheers
         </p>
+    </div>
 </x-app>
