@@ -9,24 +9,18 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Fluent;
 use Illuminate\Support\Str;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Yaml\Yaml;
 
+#[AsCommand(
+    name: 'transistor:fetch-podcasts',
+    description: 'Fetch new podcasts from Transistor.fm and save them in storage.',
+)]
 class FetchPodcastsFromTransistorCommand extends Command
 {
-    /**
-     * @var string
-     */
-    protected $signature = 'transistor:fetch-podcasts';
-
-    /**
-     * @var string
-     */
-    protected $description = 'Fetch new podcasts from Transistor.fm and save them in storage.';
-
     public function handle(): void
     {
         $this->fetchPodcasts()
-            ->tap(fn (Collection $podcasts) => $this->info("Fetched {$podcasts->count()} podcasts from Transistor.fm."))
             ->each(fn ($podcast) => $this->saveIfNotExists(fluent($podcast)));
 
         $this->info('Completed fetching podcasts from Transistor.fm.');
@@ -37,10 +31,13 @@ class FetchPodcastsFromTransistorCommand extends Command
      */
     protected function fetchPodcasts(): Collection
     {
-        return Http::withHeader('x-api-key', config('services.transistor.api_key'))
-            ->throw()
-            ->get('https://api.transistor.fm/v1/episodes?pagination[per]=250&status=published')
-            ->collect('data');
+        return tap(
+            Http::withHeader('x-api-key', config('services.transistor.api_key'))
+                ->throw()
+                ->get('https://api.transistor.fm/v1/episodes?pagination[per]=250&status=published')
+                ->collect('data'),
+            fn (Collection $data) => $this->info("Fetched {$data->count()} podcasts from Transistor.fm API.")
+        );
     }
 
     /**
@@ -58,8 +55,6 @@ class FetchPodcastsFromTransistorCommand extends Command
      */
     protected function savePodcast(Fluent $podcast): void
     {
-        $this->info("Found new podcast: {$podcast->get('attributes.title')}");
-
         $data = [
             'transistor_id' => $podcast->get('id'),
             'title' => $podcast->get('attributes.title'),

@@ -1,31 +1,23 @@
 <?php
 
-namespace App\Console\Commands;
+namespace App\Console\Commands\GitHub;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use Symfony\Component\Console\Attribute\AsCommand;
 
+#[AsCommand(
+    name: 'fetch:github-contributions',
+    description: 'Fetch recent GitHub contributions and stores them in cache',
+)]
 class FetchGitHubContributionsCommand extends Command
 {
-    /**
-     * @var string
-     */
-    protected $signature = 'fetch:github-contributions';
-
-    /**
-     * @var string
-     */
-    protected $description = 'Fetch recent GitHub contributions and stores them in cache';
-
-    /**
-     * Execute the console command.
-     */
     public function handle(): int
     {
         $this->info('Fetching GitHub Contributions...');
 
-        $data = tap($this->fetchGitHubPublicPullRequests(),
+        tap($this->fetchGitHubPublicPullRequests(),
             fn ($data) => Cache::put('github_contributions', $data, now()->addDay())
         );
 

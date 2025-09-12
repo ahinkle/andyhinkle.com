@@ -67,7 +67,7 @@ npm run build
 
 ### GitHub Integration
 
-- `FetchGitHubContributionsCommand` fetches and stores GitHub activity
+- `GitHub/FetchGitHubContributionsCommand` fetches and stores GitHub activity
 - `RecentGithubContributions` component displays contribution data
 
 ### Speaking Content
