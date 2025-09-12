@@ -246,7 +246,7 @@
             Recent Contributions
         </h2>
 
-        <x-recent-github-contributions />
+        <x-recent-git-hub-contributions />
 
         <h2 class="sr-only">
             Contact

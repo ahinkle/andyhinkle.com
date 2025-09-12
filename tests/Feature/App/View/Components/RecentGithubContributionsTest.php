@@ -25,7 +25,7 @@ it('formats contributions correctly', function (): void {
         ->once()
         ->andReturn($mockContributions);
 
-    $this->blade('<x-recent-github-contributions />')
+    $this->blade('<x-recent-git-hub-contributions />')
         ->assertSee('Test PR')
         ->assertSee('This is a test PR')
         ->assertSee('test-repo')
