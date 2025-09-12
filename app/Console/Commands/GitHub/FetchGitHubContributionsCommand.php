@@ -17,13 +17,11 @@ class FetchGitHubContributionsCommand extends Command
     {
         $this->info('Fetching GitHub Contributions...');
 
-        tap($this->fetchGitHubPublicPullRequests(),
-            fn ($data) => Cache::put('github_contributions', $data, now()->addDay())
-        );
+        $this->fetchGitHubPublicPullRequests();
 
         $this->info('GitHub contributions fetched successfully.');
 
-        return 0;
+        return self::SUCCESS;
     }
 
     /**
@@ -40,7 +38,9 @@ class FetchGitHubContributionsCommand extends Command
                 ],
             ]);
 
-        return $data->json()['data']['user']['pullRequests']['nodes'];
+        return tap($data->collect('data.user.pullRequests.nodes')->toArray(),
+            fn ($pullRequests) => Cache::put('github_contributions', $pullRequests, now()->addDay())
+        );
     }
 
     protected function graphqlPullRequestQuery(): string
