@@ -48,7 +48,7 @@
         </p>
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
-            That talk pushed me and a friend to start our own podcast. Since starting it, we've somehow managed over 15
+            Since starting it, we've managed to produce over 15
             episodes
             and attracted more than 25 subscribers with over 1,000 downloads. While not many, the fact that even one
             person actually tunes in still blows my mind.
