@@ -95,8 +95,8 @@
         </p>
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
-            At Laracon Denver, Margaret from the <a
-                href="https://vehikl.com/" class="text-blue-500 hover:underline">Vehikl team</a> asked if I'd be
+            At Laracon Denver, Margaret from the <a href="https://vehikl.com/"
+                class="text-blue-500 hover:underline">Vehikl team</a> asked if I'd be
             interested in giving a talk at <a href="https://meetup.laravel.com/"
                 class="text-blue-500 hover:underline">Laravel Worldwide</a> and said I should seriously consider it. Dan
             (also from Vehikl) and I discussed some potential ideas, including this clean, elegant Laravel approach I
