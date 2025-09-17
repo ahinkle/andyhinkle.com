@@ -91,11 +91,11 @@
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
             What I'm ridiculously obsessive about is clean code and clean architecture. When code reads like a book,
-            when things are easy and maintainable — that stuff gets me excited in ways that probably aren't normal.
+            when things are easy and maintainable.
         </p>
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
-            At Laracon Denver, I was talking with several people about this obsession. Margaret from the <a
+            At Laracon Denver, Margaret from the <a
                 href="https://vehikl.com/" class="text-blue-500 hover:underline">Vehikl team</a> asked if I'd be
             interested in giving a talk at <a href="https://meetup.laravel.com/"
                 class="text-blue-500 hover:underline">Laravel Worldwide</a> and said I should seriously consider it. Dan
@@ -124,7 +124,7 @@
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
             I'm the kind of person who sets ridiculous goals and then can't say no to them, even when they terrify me.
-            So I said yes, and immediately, I felt that countdown clock start ticking in the corner of my vision—like
+            So I said yes, and immediately, I felt that countdown clock start ticking in the corner of my vision - like
             those 48-hour murder mystery shows.
         </p>
 
@@ -153,12 +153,12 @@
         </h2>
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
-            By the end of that rough day, Jacob Bennett and Dalton McCreery reached out offering to listen to practice
+            By the end of that rough day, Jacob Bennett and Dalton McCleery reached out offering to listen to practice
             runs. This was the best thing that happened during the entire process.
         </p>
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
-            I gave the talk twice—once to each of them - their feedback was so valuable. They helped me refine the rough
+            Their feedback was so invaluable. They helped me refine the rough
             edges and gave me confidence that the content was solid.
         </p>
 
