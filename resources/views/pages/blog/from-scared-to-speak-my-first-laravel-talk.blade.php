@@ -208,7 +208,8 @@
         </p>
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
-            Find something you're truly passionate about. For me, it was clean code and architecture. For you, it might be something entirely different - just listen to that inner voice.
+            Find something you're truly passionate about. For me, it was clean code and architecture. For you, it might
+            be something entirely different - just listen to that inner voice.
             The subject itself matters less than the enthusiasm you bring to it.
         </p>
 
