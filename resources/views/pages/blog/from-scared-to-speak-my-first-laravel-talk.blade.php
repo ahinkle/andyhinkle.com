@@ -208,14 +208,13 @@
         </p>
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
-            Find something you're genuinely passionate about. For me, it was clean code and architecture. For you, it
-            might be testing strategies, API design, or deployment workflows. The topic matters less than your
-            enthusiasm for it.
+            Find something you're truly passionate about. For me, it was clean code and architecture. For you, it might be something entirely different - just listen to that inner voice.
+            The subject itself matters less than the enthusiasm you bring to it.
         </p>
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
             Practice with real people if you can. Those feedback sessions with Jacob and Dalton were worth more than all
-            my solo practice combined.
+            my solo practice combined. Feel free to reach out to me if you want a practice audience, too.
         </p>
 
         <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
