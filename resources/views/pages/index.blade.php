@@ -247,20 +247,4 @@
         </h2>
 
         <x-recent-github-contributions />
-
-        <h2 class="sr-only">
-            Contact
-        </h2>
-
-        <hr class="mx-auto mt-12 w-1/2 border-gray-300 dark:border-gray-700">
-
-        <div class="pt-10">
-            <p class="ml-2 mt-2 text-balance text-center text-sm text-gray-700 dark:text-gray-300">
-                If you have any questions or inquiries, please feel free to contact me at <a
-                    href="mailto:chat@andyhinkle.com"
-                    class="text-dark-800 underline dark:text-gray-400">chat@andyhinkle.com</a>. Alternatively, you can
-                reach out to me on Twitter at <a href="https://twitter.com/andyhnk"
-                    class="text-dark-800 underline dark:text-gray-400">@andyhnk</a>.
-            </p>
-        </div>
 </x-app>
