@@ -47,22 +47,6 @@
             But it got me comfortable with putting my voice out there, with being a little more public about my work.
         </p>
 
-        <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
-            Since starting it, we've managed to produce over 15
-            episodes
-            and attracted more than 25 subscribers with over 1,000 downloads. While not many, the fact that even one
-            person actually tunes in still blows my mind.
-            It feels surreal that anyone would care about what we have to say.
-        </p>
-
-        <p class="mt-4 text-balance text-left text-lg text-white/85 md:text-wrap">
-            It gets even wilder when I receive messages from listeners referring to the show, or when the co-founder of
-            <a href="https://transistor.fm" class="text-blue-500 hover:underline">Transistor FM</a> publicly tweets
-            congratulations about my new job.
-            These moments remind me that putting yourself out there, even in small ways, creates connections you never
-            expected.
-        </p>
-
         <h2 class="mt-8 text-balance text-left text-xl font-bold text-white md:text-wrap md:text-2xl">
             The Imposter Syndrome Trap
         </h2>
