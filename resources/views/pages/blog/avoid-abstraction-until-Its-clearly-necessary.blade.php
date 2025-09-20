@@ -8,7 +8,7 @@
             content="How over-engineering can kill your project and why you should avoid abstraction until it's clearly necessary." />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
+                "@@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "headline": "Avoid Abstraction Until It's Clearly Necessary",
                 "datePublished": "2024-10-09T09:00:00+08:00",

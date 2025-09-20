@@ -8,7 +8,7 @@
             content="Ever write a query and had a bunch of if filled with conditions? Here's a better way using conditional traits." />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
+                "@@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "headline": "Using Conditional Traits for Clean Queries",
                 "datePublished": "2025-02-02T09:00:00+08:00",

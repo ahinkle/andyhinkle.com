@@ -8,7 +8,7 @@
             content="How to use Cloudflare page cache with Laravel to cache pages to improve performance and reduce server load." />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
+                "@@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "headline": "Using Cloudflare Page Cache with Laravel",
                 "datePublished": "2024-07-21T09:00:00+08:00",

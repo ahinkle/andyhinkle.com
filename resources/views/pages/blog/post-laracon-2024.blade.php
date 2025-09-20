@@ -8,7 +8,7 @@
             content="What an amazing Laracon 2024! Here's a recap of the event, the talks, and the community." />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
+                "@@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "headline": "Laracon 2024, a Recap",
                 "datePublished": "2024-09-05T09:00:00+08:00",
