@@ -1,0 +1,1000 @@
+Andy Hinkle (00:09)
+Hey everybody, welcome to another episode of The Midwest Artisan. I'm your host, Andy Hinkle.
+
+Dalton McCleery (00:15)
+And I'm your cohost Dalton McCleary.
+
+Andy Hinkle (00:17)
+Dom, how's it going?
+
+Dalton McCleery (00:19)
+I'm going great man, how are you?
+
+Andy Hinkle (00:21)
+Doing good man. I had it's been crazy past month as you know with Like yeah, so what do I did a talk at Laravel worldwide and we'll get into that I was a lot of fun and I went to California for a week for a week. So Yeah, it's been it's been really busy. So we got spin both like really deep on the professional side into into work and then spending, you know some good family time so
+
+Dalton McCleery (00:25)
+I can, ⁓ yeah.
+
+Yes.
+
+Andy Hinkle (00:49)
+Yeah, man, it's been a lot of fun.
+
+Dalton McCleery (00:51)
+Yeah, nice week off. Well, let me hear about that week off. First, let's get into the niceties before we get into the stressful event of your life.
+
+Andy Hinkle (00:55)
+Yeah, well yeah, I want to hear I want to hear about
+
+yeah, have you been gone anywhere this summer you enjoyed anything?
+
+Dalton McCleery (01:03)
+I did enjoy some of the nice Indiana weather that we had what a couple weeks ago It was like 65 or whatever got to like actually walk outside. I got a sunburn I got a new I got a new tattoo and I got sunburn on my new tattoo, which they say you're not supposed to do but nothing
+
+Andy Hinkle (01:14)
+Whoa.
+
+that's...
+
+Yeah, what'd you get for a tattoo?
+
+Dalton McCleery (01:22)
+I know what I'm saying.
+
+I got a tattoo of an orca. And he's got his skeleton out.
+
+Andy Hinkle (01:26)
+⁓ that's sick.
+
+So right for the listeners, it's right on his arm and it looks pretty sick. You'll just have to see it. Yeah, so tune in and see it. Yeah.
+
+Dalton McCleery (01:34)
+Yeah, it looks... It looks wild. You're have to go to the YouTube and
+
+look at it. So I got that for myself for my birthday. That's what I consider a fun time, is getting stabbed with needles for, you four hours. Looks cool though. Yeah, four hours. It's wild. What about you though? Did you get that nice California sun?
+
+Andy Hinkle (01:42)
+Nice. Yeah.
+
+Four hours? Oh, geez man. Yeah.
+
+I did, yeah. So we went to California. We've been to Disney World. This is in Florida, Disney World in Orlando many times. I would say probably 20 times at least. Never been to California, never been to Disneyland. So we decided this year, you know, let's go check out Disneyland. We've always heard a lot about it. Let's go see it.
+
+So went to Anaheim ⁓ and everyone there was so friendly. in Florida, so Disney Disney world is kind of like the, you know, the place you everyone goes to from all over the world of like, you know, that's where you go for Disney, right? Disney World. And so it's very people process like they just try to move you quickly as fast as possible. Disneyland. It's like so much more relaxed. It's it's so, it's so nice. People were like.
+
+Dalton McCleery (02:19)
+Peace.
+
+Mm-hmm. Mm-hmm.
+
+Andy Hinkle (02:41)
+People are so friendly, like the security people, like you're going through bag checks and stuff like that. They would have conversations with you. They interacted with our son. mean, they're just so nice versus Disney World. It's like, come on, keep moving, folks. So it was a great time. So we stayed in Anaheim, went downtown to meet and that was a lot of fun too. We were talking before the show, if I saw anything interesting, know, often.
+
+You know with California and in Huntington Beach it was really nice but we're at the playground on the beach and I look over and probably just off in the distance I see this guy sitting on a bench but the biggest bong I've ever seen and I thought that's called I don't know what this they like this this massive bong and over there just having a good old time he just all stretched for laid out back like man that is California right there so it was it was good.
+
+Dalton McCleery (03:23)
+Yeah, yeah, yeah. ⁓
+
+You
+
+Andy Hinkle (03:36)
+⁓ so yeah, we had a really good time. ⁓ but before that, ⁓ did a talk at Laravel worldwide. So Laravel worldwide meetup at meetup.laraville.com. If you want to, if you want to go back and watch that, but I did it. ⁓ I mentioned this last show with the talk title would be, the talk title was keeping Laravel elegant when business gets messy. And, ⁓ yeah, well.
+
+Dalton McCleery (03:44)
+Yes
+
+Great name, by the way. Great name.
+
+Andy Hinkle (04:03)
+It was a lot of fun. Um, we had a lot of great feedback. I think I did talk about it, but you know, my first Lercon, it was like five Lercons ago, which is back in what 2017, 2018 somewhere. Um, I, know, I, I, you know, I knew some people, I knew some people on Twitter, but in like real life, when you would see them, like you never.
+
+Dalton McCleery (04:16)
+old. Sorry.
+
+Andy Hinkle (04:25)
+interact with them you might interact on Twitter or something but it was so weird just to go up and say it like go up to them and say hi it was kind of like he sees up like what do I even say like I've never even talked to them one-on-one like well what do I do with my it's kind of like that what do I do with my hands kind of thing right so ⁓ just the classic introverted thing so but you know what blew me away is like the community it's there it's not weird like that you just go up to anyone at layer con and you guys
+
+Dalton McCleery (04:39)
+Yeah.
+
+Andy Hinkle (04:50)
+most likely share something similar. We're all writing Laravel code. So if you don't have anything, you have that. since then, know, Nashville happened. We went together to Larry Connashville. Aaron Francis gave that talk, publishing a work. And I it was just good timing. Me and you started the podcast from that. ⁓ since then, it's obviously honestly just a good way to catch up and just with each other because, you know, life gets a
+
+Dalton McCleery (05:02)
+Mm-hmm.
+
+That's right.
+
+Andy Hinkle (05:17)
+gets away from us. So, even, know, even since starting podcasts, I've always had imposter syndrome. ⁓ it's kind of a big thing with most devs. And every time I thought about speaking, I've been at Lericon. like I would see something that I might be passionate about or might, you know, like, ⁓ maybe one day I might give a talk on that. it's like, now someone else is smarter. Someone else should be up there. Not me. I believe that for years.
+
+You know, just like, don't, just don't do it. Why me? Someone else is better qualified for this. Someone else will give the, the tone of message better. Right. and then post-laricon, as I mentioned last show, I got that message. This was like the day before the last, the last show, I got the message saying, Hey, we'd love for you to talk. ⁓ but just the heads up, it's in two weeks. We understand if you can't get it there in time. And so it was like, I just have this ridiculous thing where I just push myself
+
+just do like doing things that scare me, you know, so within reason, right? But I was like, you know, do it. it's been a two week sprint of very stressful where I would have my day job and then I'll be dad in the evening from like, you know, I get through my day job to be dad. And then from like nine p.m.
+
+to 2 a.m. I was doing the talk every night for two weeks, slides, research, and you know, it's clean code to trying to condense that into something coherent. You know, it just every day I woke up with like a mental this mental clock like it just in the corner like I just and it just felt like just in the corner of my peripherals or something. I just had this mental clock. It was just ticking louder and louder. And so I'm like until the countdown. Yeah, yeah. So.
+
+Dalton McCleery (06:32)
+grow.
+
+Just some big countdown, yeah.
+
+Yikes.
+
+Andy Hinkle (06:57)
+It was, it was a wild two weeks, but, just preparing the talk. then I think the most stressful part was the day before I like, ⁓ I, you know, I had my parents, so this is the talk was on a Tuesday. I had my parents come into town. They're, they're about 10 hours away. So they came in to visit us and, ⁓ for the weekend. So I, I made it, I was very purposeful of like getting it to a point where I didn't have to do anything that weekend and I could spend that time with family. Right. So I got there.
+
+⁓ And then ⁓ Monday, was Monday morning, got up early. I was like ready to do practice the talk and I sit down and practice and I'm like three slides in and the animations are off the the slide there's the text some of the text is off the screens completely out of order the whole thing is scrambled and I Felt my stomach flip like I felt like I was actually going to like throw up. You know, it was it was stressful
+
+Dalton McCleery (07:46)
+no.
+
+Andy Hinkle (07:50)
+And I was like, I have to work my job today. I'm going to be up to all hours of the night and not going to be able to sleep. And I'm going to have to wake up and do the talk tomorrow. You know, so I was just piecing around, just like it was not great, you know. But I just took a deep breath in. End up, you know, just pushing through those final updates.
+
+And then having you join on. thank you so much for this, but you were so kind and said that you would love to listen for a practice run. And that changed everything, dude. That just like, that gave me just like more confidence in it. And then, ⁓ you and Jake Bennett and also, Landon from, ⁓ from Wilbur, Jake. Yeah. Landon from Wilbur also set on a different time and kind of listened to a talk and gave great feedback. that, that feedback, like if you're looks, if you guys are, anyone out there is speaking.
+
+Dalton McCleery (08:24)
+Yeah.
+
+cheek.
+
+Good. Good, good.
+
+Andy Hinkle (08:39)
+for a conference or something, just any technical doc, just practice, give it to somebody. Like that's on a technical level. That gives you, that feedback is so helpful. Just smooth those rough edges and just be able to identify the stuff like that. And because a part of it is like that imposter set syndrome kept setting him like, is this an obvious thing people know? Or is this useful? Or is it, will it go over people's head? Am I not delivering it right?
+
+yeah, it was good. That feedback was great. then, then it was showtime the next day. So ⁓ over two weeks, a hundred, 130 slides ⁓ made it through. It was wild, but I appreciate it, man. Thank you. ⁓ yeah. Yeah. That was awesome.
+
+Dalton McCleery (09:14)
+God.
+
+You did great though. Like you killed it. We were hyping you up real good in the chat. I don't know if you could see the chat,
+
+we were hyping you up real good.
+
+Andy Hinkle (09:29)
+I couldn't see the chat, then someone else reached out to me and then I went back to the video and it had that chat replay and that was so kind seeing the comment. Yeah. My favorite comment was somebody saying that this pairs really well with, ⁓ with John Drexler's talk, ⁓ at Lercon and, ⁓ saying cause he did a project management talk and I kind of gave the managing your code talk and kind of pairing those together. And that was the most like heartwarming.
+
+Dalton McCleery (09:36)
+good, good. Yeah, we were hyping you up.
+
+Yeah, yeah.
+
+Andy Hinkle (09:58)
+comment that I heard because ⁓ Because I really never thought of it like that and so that was a really nice comment to me gave Yeah
+
+Dalton McCleery (10:05)
+and you had
+
+a lot quite a lot of viewers. I don't know if I don't know if you had the stream pulled up while you were doing it. I assumed you didn't but there was there was several times I think you peeked at like like over 100 people were watching like like it ebbed and flowed obviously as you were going but like you were over 100 people at one point I was like damn Andy. All right, you're doing pretty good. You do great though.
+
+Andy Hinkle (10:09)
+I had no idea. Yeah.
+
+That that would stress me out seeing that but honestly, I'm just happy for one,
+
+know, so I'm just happy for anyone and the only reason I'm I was I'm like I was never expecting anything out of it. It was just a talk that I wish me from five years ago or a junior me would have heard, you know, of like of questioning everything, you know, so. And ⁓ last thing I wanted to is if you're listening to this or maybe Dalton, you do, man, ⁓ if you.
+
+Dalton McCleery (10:51)
+I'm listening.
+
+Andy Hinkle (10:52)
+Yeah, if you want to give a talk, if you have something that just like out there that you think like, I'm really passionate about this. And so what I realized is that you don't have to be an all knowing or subject about it, you know, about you don't have to be a expert. You just have to be passionate about it and just show what and deliver what you learned. ⁓ and the community will meet you halfway there ⁓ if you're willing to be passionate, willing to share it.
+
+So yeah, suggest to anyone, you know, wanting to submit a talk that you do. It's a little nerve wracking, but you should. So if you think of something that you're like, you know, I can, I'm pretty passionate about it. And, or I, feel, feel opinionated a certain way, or you see a pattern in the lower of the ecosystem that you think is the wrong way, you know, make us a controversial pick. So yeah. Um, so you should do it, man. And anyone out there, you should also do it.
+
+Dalton McCleery (11:38)
+You
+
+Great advice from a Laravel superstar like Andy Hinkle. Just kidding. You did great though.
+
+Andy Hinkle (11:50)
+Nope. Well then a few days later,
+
+yeah a few days later I got that the Laravel blog they came up with like Artisan of the Day and ⁓ they came up with that content on their own which is like amazing. They had me, I ⁓ submitted that information on ⁓ what's it called, it's like your story, I submitted that but there was so much in my story I didn't tell and that they went and
+
+Dalton McCleery (11:58)
+Yes.
+
+⁓ I was going to ask you if they interviewed you for that.
+
+Andy Hinkle (12:20)
+Like whoever wrote that blog post did a really great job. They went and started digging and found, they found our podcast. Um, they found, uh, kind of my, well, I think cause in the talk, I talk about like holiday world when I worked there, they brought that up. Um, and so they did an amazing job with that blog post. So, um, but yeah, we got a little shout out. Um, you, got a shout out the blog post too. And so that was very nice. So, artists in the day. Um, yeah, that was really neat. So I just want to say thank you.
+
+Dalton McCleery (12:25)
+Thanks.
+
+Yeah, kudos man. Here, this one's this
+
+this is for you.
+
+Andy Hinkle (12:50)
+I just want to say thanks to everyone for all the support and all the great feedback on it. ⁓ Every step of the way where I got that imposter syndrome, somebody was able to bring me home a little bit. Dan from Vehicle was also really helpful because that was also when I got on, I was talking about just some brief slides and it's like, this stuff that people should know? And he...
+
+Dalton McCleery (13:05)
+Huh?
+
+Andy Hinkle (13:17)
+I said, no, the people talk about this in the chat all the time. They're going to love this. And so I was very happy to hear that and gave me confidence going into the talk. So all right. Yeah, enough of me. But that was was a good time. Loved it. was a I don't know if I'll ever do a talk again. We'll see. That was that was so stressful. I have so much respect, more respect for people that do these talks.
+
+Dalton McCleery (13:35)
+⁓ You don't have to.
+
+Andy Hinkle (13:41)
+But since the talk, I've been a little bit more opinionated on some code. And I'm finding that if Laravel doesn't give us a convention of like to do something, if we're doing it the right way,
+
+Dalton McCleery (13:41)
+Interesting, interesting. Yes. What's here? ⁓
+
+Andy Hinkle (13:57)
+just be cautious of dumping things in custom action classes, like ⁓ having an app service class and just dropping things that you share in there. Maybe there's a reason that Laravel doesn't give things to us out of the box. I almost said in my talk too, if Laravel doesn't give you an artisan command to do something, and you're right clicking, creating custom classes, you maybe want to question that code, right?
+
+That was kind of controversial as I was like, cause I really believe it. ⁓ cause every time I bumped into that, it's there's been a little bit of friction. so where either I have somebody when they come in and review the code, they're like, what's this? Or they have a lot of initial confusion around it versus like things just in the level a way it's just like, it's obviously written in a level way of like, have a pipeline and it flows or something like that. So, ⁓
+
+Dalton McCleery (14:23)
+A little bit.
+
+Yeah.
+
+Andy Hinkle (14:50)
+So yeah, I'm starting to like think more in that way of like just kind of sticking with the Laravel way. So yeah, but it's good.
+
+Dalton McCleery (14:52)
+Hmm. Hmm, hmm, hmm.
+
+No, I mean, I
+
+get that. I think we do that a lot with tests, right? Like you don't want to test the framework. The framework's already tested. You don't want to be testing stuff for that. And I think it's the same way what you're saying with code is that why would you write stuff that Laravel has either already written or they have a convention for that is tested, right? Because you're not testing the Laravel application or the Laravel framework. It's already tested by everybody else. So why write the code when you don't have to?
+
+Andy Hinkle (15:04)
+yeah.
+
+Mm-hmm.
+
+and for me it's about just where code is. Sometimes it's shared, and I'm really curious how Laravel does this about ⁓ when you have a GitHub service and you are calling it in the same, like you're calling the same thing but in different parts of your application. You maybe had doing, you have an action in your controller, then you have another action in your queue, but it's calling the same thing, you know?
+
+⁓ It's like where does that live and a lot of it is like like I mentioned it might be an app under App slash like in a folder called actions or in a service class, you know inside there so Everyone does it differently and so I've been I've been curious about how people like to handle that Like the the shared the shared stuff, right? So how do you guys handle it? Do you have service classes or? rewrite it twice
+
+Dalton McCleery (16:15)
+Well, that's
+
+funny that you bring that up is I've been I don't want to segue to the next topic just yet, but I want to give you a little tease. I've been using Claude a lot more recently and Claude my Claude I I don't know if it's my Claude or whatever, but they love service classes and I hate them. I'm not a fan of service classes at all and my Claude just loves to stuff everything possible into a service class. I guess.
+
+Andy Hinkle (16:25)
+Okay, nice.
+
+So you're talking about an app
+
+slash services and then some random custom PHP file.
+
+Dalton McCleery (16:45)
+Yeah, just like a
+
+of junk in here. There'd be like a method. I was like, why does that need to be here? That could be an accessor on a model or that could be a trait that I could use across these two models. That's the only use cases for it. ⁓ So yeah, I typically don't reach for service classes in general. I'm a big trait guy. I like to use traits ⁓ for ship.
+
+Andy Hinkle (16:55)
+Mm-hmm.
+
+Okay, where do you store that trait?
+
+Dalton McCleery (17:12)
+Depends if it's model specific traits I'll put it in the model directory under a subfolder called like concerns or traits or something like that. I'll put it there ⁓ I Try not to have traits that cross out of those folders, you know what I mean? So I'll only have traits specific for models in the model directory I'll have traits specific for you filament in the filament directory usually under the subdirectory concerns So I I use traits
+
+Andy Hinkle (17:19)
+Mm-hmm. Yeah,
+
+Mm-hmm.
+
+Dalton McCleery (17:40)
+I'd probably reach for that 90 % of the time over a service class.
+
+Andy Hinkle (17:43)
+Mm-hmm.
+
+Yeah, and I do as well. but I think what I was trying to figure out is like how when they leave that directory when they're touched like what like a controller in a job, it's like, what do you like? Where does it go? You know, so I was trying to figure that one out. But yeah, right. Right. It just like you mentioned, it just depends. Right. It just it really depends on where you want to put it. So.
+
+Yeah, because sometimes it might be like a gateway for a third party connection or something, but not not in that case. It might be okay in services, you know, because it's technically a service, right?
+
+Dalton McCleery (18:16)
+Yeah, or yeah,
+
+at that point, yes. If it's like a third party thing and then I'll put it in like a service class or I'll put it in like, you know, app support and it would just be, you know, a class that lives under a directory there. Like, ⁓ I think I've got one for AWS or not AWS Slack. I've got like a Slack sub directory in my, in my services that, that I help. It just sort of like help build, ⁓ web hooks.
+
+Andy Hinkle (18:26)
+Mm.
+
+Mm-hmm.
+
+Dalton McCleery (18:42)
+And then I'll, I can reuse that in, a trait or a different class. That's probably the only time I'll reach for those. But I'm a, I'm a big trait boy. I love traits. Once I figured out that traits were a thing in PHP, I was like, this is the best thing ever. And I just never quit, never quit using.
+
+Andy Hinkle (18:48)
+Nice dude. Yeah, sim here.
+
+Yeah. Yeah. Use them. Yep.
+
+Yep. Same here. Yep. Um, you mentioned, uh, Claude code. You've been using it a lot more. Um, and so, which I, I think I nudged you as like, dude, you gotta try it because you mentioned, I think you, you're, you're using a Junie I think at the time or something. So you just, just like, just spend the $20, try it out. You're going to love it. And, uh, and then I got a message from you saying that you've been, uh, on the Claude train or on the Claude code train and enjoying it. So.
+
+Dalton McCleery (19:04)
+F.
+
+See ya.
+
+Andy Hinkle (19:24)
+I'm curious to hear about it.
+
+Dalton McCleery (19:25)
+Yeah, you had mentioned that I should try it. I was using Copilot for a long time and then I used PHP Storm. So PHP Storm announced Juni, was like a couple months ago. And so I was trying to use Juni to sort of plan architectural changes. So like I would use Juni to say, hey, I want to write some tests for this feature, whatever, go back and forth. And then it would start writing my tests. And then my boss, boss Jeff,
+
+was like, Hey, I think we're going to get Claude for the development team. ⁓ I want to, know, we had a meeting him and I, where he like, walk, walked me through some, some stuff, like how to set up Claude code, what he was using it for. And, and, ⁓ he was like, I like this a lot better than Junie. was like, yeah, that's kind of what Andy said. ⁓ so he, he bought Claude code for our development team. And since then I've been using it like every day just for.
+
+anything really like at first I was using it only to write tests like I would I would write all the logic I'm like hey can you write me some tests for this and it would you know spit out a bunch of tests I was like okay cool this is awesome yeah I don't I don't have to write tests ever ever again like I still read through all the tests and it usually likes to write exaggerated tests like it just tests everything I don't calm down right I only need like four or five test classes I don't need you to boil the ocean here
+
+Andy Hinkle (20:42)
+Yeah
+
+Dalton McCleery (20:51)
+⁓ But since then, we've started getting into a more development pattern across the team here where I work. ⁓ And I've been using Conductor. There's an app called Conductor that lets you set up workspaces in your repository. And what you can do is each one of these workspaces is a different Git work tree.
+
+So it's like a completely different branch or it's not considered a branch. I can't remember the exact terminology, but it's a get work tree and they call it workspaces in conductor. So every time you create a new workspace, it creates a new work tree and a new version of Claude code that you can run. So you can have many different workspaces all running at the same time with their own Claude code with its own context, you know, so you could be running it basically at the same time. It's, I think it's very similar to what you were telling me about. ⁓
+
+Andy Hinkle (21:37)
+Wow. Yeah.
+
+Dalton McCleery (21:45)
+You were using a TMUX, right? It's very, very similar to that. It's just like a really nice, gooey for like multiple instances of Claude code running in its own workspace. You know, it has its own file diff. ⁓ I really, really like that app. can't, I can't stress that enough. You could like, you make changes and have Claude do changes and it has like a get history. You could see what it's changed and what hasn't changed. You could click on a file.
+
+Andy Hinkle (21:48)
+Yeah. For multiples. Yeah. Kind of similar to that. Okay.
+
+Dalton McCleery (22:13)
+And it's a lot like ⁓ a GitHub pull request. You can go to a specific line in that file and leave a comment. And so you could essentially do a PR review in conductor. And at the end, it has all of your changes or whatever, and you just hit enter and it sends all of those comments to Claude and Claude's like, all right, cool. I'll fix these in that, in that specific file. It's literally just like a GitHub pull request essentially is what it is. So I'll have Claude running.
+
+Andy Hinkle (22:32)
+Wow.
+
+new. I'll have to check that out.
+
+Dalton McCleery (22:41)
+I'll come in, I'll essentially do a PR review of what Claude did for me. I'll make comments in the files like, change this. Hey, I don't think we need this. You know, this file is unnecessary, whatever. And it combines all my stuff into one big prompt and I can just hit enter and Claude will essentially perform my review for me. And it's a, Hey, done. What's next? And I'll, I'll just keep doing that until I get, until I'm satisfied with what it's written for me. And then, you know, at that point, they got a little button that says create PR. It creates a PR on GitHub for me.
+
+Andy Hinkle (23:04)
+That's really nice, dude. I'll have to check that out.
+
+Is that this conductor.build? Is that right?
+
+Dalton McCleery (23:11)
+I don't have to do Jack.
+
+Yes, that's it. Conducted up build. They've been cranking out some really good features recently. Like that comments when I was telling you that's, that's new. that's been a game changer for me for learning Claude and learning like AI development tools. Cause like I'm, I'm, I was a newbie for Claude, like whatever, what were we talking about? Like two months ago, two, two podcasts ago, we were talking about Claude and
+
+Andy Hinkle (23:19)
+Okay, yeah.
+
+Yeah, was like, you gotta try it.
+
+Dalton McCleery (23:43)
+And I didn't
+
+Andy Hinkle (23:44)
+Yeah.
+
+Dalton McCleery (23:44)
+even know what an MCP server was. And like today I just launched one like from from scratch.
+
+Andy Hinkle (23:51)
+really?
+
+Well, yeah.
+
+Dalton McCleery (23:53)
+Like what is this development world when stuff changes this fast in two months?
+
+Andy Hinkle (23:59)
+You're on the cuff
+
+of tech is level today launched a level MCP like for perhaps. So you're probably, you're probably kicking it. Yeah. Kicking yourself.
+
+Dalton McCleery (24:03)
+I know man. Dang it.
+
+Yeah, I've, well,
+
+this is what I'm going to do. This is going to be my work, my workflow. As soon as this podcast is over, I'm going to open a new workspace in conductor for my app that I already have the MCP server running. I'm going to tell it to research the Laravel docs and create a plan for migrating from the current implementation to that implementation. And it's going to do that.
+
+Andy Hinkle (24:28)
+There you go. That's
+
+nice. Do you use the planning mode? Okay. Okay. Really? Uh, usually I, I just give it so much context. I nearly write it a book and then it's like creates a to-do list and, then I do the walk away. Like, okay, I'm going to go, uh, either I'm going to go do something, you know, uh, you know, go on lunch or whatever while this is going.
+
+Dalton McCleery (24:31)
+Yes, I use that a lot. A lot.
+
+really?
+
+Andy Hinkle (24:50)
+or I'm going to ⁓ work on something else, right? Or, know, just do random, what code review or for somebody else or whatever, and just come back to it. But yeah, I kind of rarely use the planning mode. So kind of sell that for me of like why I should.
+
+Dalton McCleery (25:03)
+⁓
+
+okay. Okay, well, here's what I use planning mode for a lot. ⁓ Like I said, I use Conductor almost exclusively for Claude Cloud, so I don't use like the terminal for it. Very rarely I will use the terminal in PHP Storm, but in Conductor, like one of the things I use for planning mode, we have Nightwatch running on one of our apps, and there was an exception that was thrown.
+
+And it was like a ID column ambiguous for order at whatever it is. Right. And it spit out a little code chunk in conductor. spin up a new workspace. Well, somebody, somebody created that Jira ticket for me. It's like, Hey, this exception is being thrown, whatever. Created a new workspace with that Jira ticket number. I literally took a screenshot of the nightwatch exception, pasted it into conductor with my Claude code and said, Hey, I'm getting this error. Whatever.
+
+I hit planning mode in conductor. You can actually adjust the thinking level. Like there's a toggle to, to go to think ultra think whatever, toggle that thing all the way up to ultra think like, I'm getting this error. Can you devise a plan on, where this is, why it's happening and how to fix it. Right. That's, that's literally what I, what I typed and I put it in planning mode. hit enter and then I did like other work, right? Like it's, it's churning in the background. It came back and it's like, here's, here's what I think it is.
+
+Andy Hinkle (26:03)
+Ultra think. Yeah. Yeah.
+
+Dalton McCleery (26:25)
+Here's where I think it is and here's why I think it's happening. And then I will literally just have like a conversation with Claude of, okay, I agree that it is definitely here. It's pretty obvious that it's here. It's the exception. ⁓ You know, I don't want to modify this query too much, but I definitely want to fix this error without jacket stuff, right? So let's run the tests first and then, you know, let's do whatever your first recommended thing is and then let's run the tests again, right?
+
+Create a plan to do that. And I'm still in planning mode while I'm talking to it to do that. It's like, okay, I'm gonna run the test first. Here's what I'm gonna change. And then I'm gonna run tests again. Said, okay, cool. Then I'll exit planning mode and then I'll just say, proceed or do that. And then it will just do that. That's what I use planning mode a lot for. I wanna know what it's gonna do first. I don't want it to be like, hey, can you fix this bug and hit enter. And it's just gonna do whatever it wants.
+
+Andy Hinkle (27:13)
+Yeah, that's really neat. Usually, because...
+
+Yeah.
+
+That's what I do.
+
+Yeah, well.
+
+Dalton McCleery (27:23)
+I
+
+wanna know what it's gonna do.
+
+Andy Hinkle (27:25)
+I just look in my, my, my get diff on my VS code. just look in a get diff and I see all the stuff and I, and it's kind of like I do my own review. I'm like, yeah, this is not right. This is wrong. Right. But it does front end and back end. So I, I would like to use planning mode to like what you're saying here, like start with the backend, tell me what you would like to do. And I can give it changes and then it does that. ⁓ and so we can, like you mentioned, I have a conversation back and forth. That would be helpful instead of.
+
+this back, like, OK, you got this incorrect. You did that incorrect. so, yeah.
+
+Dalton McCleery (27:55)
+Yeah, yeah, yeah.
+
+I like to avoid
+
+that as much as possible. don't, I don't want to, I want to limit the amount of time that I have to review the actual code it's written. I want to review it way before it writes the code. I want to know that, Hey, I'm going to change this one file instead of when I hit enter and I look at my diff and there's like four files. I'm like, what are you, why, why are you editing that vile? Don't do that. I don't want to have to, I don't want to have that time of, revert the change for this file and don't touch this other file. Do that again. Like I just don't want to do that. I'd rather get all that junk out of the way.
+
+Andy Hinkle (28:04)
+Yeah.
+
+Mm-hmm. Yeah.
+
+Dalton McCleery (28:27)
+up front. So that's, I use planning mode a lot.
+
+Andy Hinkle (28:28)
+When you're, yeah.
+
+When you're typing, do you, or when you're interacting, do you just type it out? Just type like, okay. ⁓ so I use super whisper to free up and it's better than Apple dictation data. mentioned that. Okay.
+
+Dalton McCleery (28:36)
+Yeah. Yeah.
+
+Okay, I've heard of Super Whisper.
+
+One of my other coworkers uses it. I have it installed. I talk weird and it just doesn't pick up everything I want.
+
+Andy Hinkle (28:47)
+Okay.
+
+it
+
+Well,
+
+it has an auto correct feature on it too. So when you say Wilbur, our company is spelled W I L B E R and the natural spelling is the U R on the end. So it'll, it'll say you are, but you can have it convert to ER. And so you can get it to correct. Another one we've been working on is a, one of our internal like ⁓ projects, it's called debt net. Like you have money debt, you know, debt net. But when I say it, it always thinks I say dot net, you know, so
+
+⁓ and so that that's just one other one at it, correct? But yeah, it has a auto correct feature on there, which is kind of nice. ⁓ the first time you use it is kind of weird. It takes some time to get used to. have it assigned to my like FM. like corner keyboard. And so I just hit that and talk immediately what I'm saying. It has this feature. I don't have this enabled, but it can also like record meetings and stuff. And so that might be useful for like just taking notes and stuff. ⁓
+
+Dalton McCleery (29:35)
+Yeah. Okay.
+
+Andy Hinkle (29:47)
+but that requires like a subscription plan. It's all free, but if you want to do that, I think that part requires a subscription, but I use that all the time. Just like talking to it allows me to think out of out loud and thoroughly. And then it also saves time and I'll have to sit here and type all this out. But because yeah, yeah, yeah. Yeah, pretty much. Yeah. Well, yeah. Let me ask you what plan are you on now? You still on? Are you like, are you on the base plane? Where are you out with that?
+
+Dalton McCleery (30:02)
+You just sitting in your office talking to Claude all day.
+
+They've got the team pro plan. We're on the pro plan.
+
+Andy Hinkle (30:17)
+yeah. Okay. So you're on the team plan. So it's like
+
+a hundred dollars a person, right? Some like that. Okay. Cause we, we're on the basic team plan and we're still trying to figure it out, but we, we don't have cloud code enabled on basic team plan. So I use my personal plan for that. it's, it's, I'm on the $20 plan. So I learned into limits all the time. ⁓ but it's, but it's for some reason recently it's been very forgiving. It's like, it's, it'll let me go pretty much all day.
+
+Dalton McCleery (30:23)
+Yes. Yeah.
+
+Andy Hinkle (30:46)
+but I'm not hammering it all. I only make, ⁓ I don't know. I only talk to it probably about 10, 20 times a day, you know? So I interact with chats back and forth. And so, ⁓ I think I'd like to be more because I am aware of the things too. Like, yeah. So I'm like, do I want to do this to Claude or do I want to, ⁓ just do it myself? Right. And save the, and save my usage. Right. So I am aware of that too. And so, but.
+
+Dalton McCleery (30:55)
+Yeah.
+
+Do I just want to write? Yeah.
+
+Andy Hinkle (31:15)
+Yeah, I'm on the $20 plan. I need to, yeah, yeah.
+
+Dalton McCleery (31:15)
+I'm not. I'm not aware.
+
+Andy Hinkle (31:19)
+So do you use the, well, because I can only use the Sonnet model, the 3.7, right? Are you on Opus, the 4.0, is it 4.0, 4.1? How, yeah. Okay.
+
+Dalton McCleery (31:25)
+Mm-hmm.
+
+4.1. Here's the funny part is I
+
+don't know exactly how all the billing works for the team plan and whatnot, so I do have Opus ⁓ and the conductor app that I use has a feature where if I'm in plan mode, it uses Opus, but if I turn off plan mode and I want code, it only does Sonnet. ⁓ And I don't know if the Opus limit is shared between everybody or if it's just me, but I routinely hit the Opus limit.
+
+Andy Hinkle (31:57)
+⁓ okay.
+
+Dalton McCleery (31:58)
+Because I, like I said, almost everything I do starts with a plan. And so I'm talking back and forth and that uses Opus. And so I routinely like right now it says that my Opus will reset on the 22nd.
+
+Andy Hinkle (32:03)
+that. Yeah.
+
+Oh, see the
+
+22nd, like you were timed out for the week. Oh wow. Okay. I didn't realize it. Oh, okay. So you can only use on it. That's, that's wild because that's what started all of our. So our original plan was like anyone who wants a cloud code. Yeah, you can get it right. And they want the company wants to support it. So Jake went out, boss Jake went out and got like everyone on just the base plan.
+
+Dalton McCleery (32:15)
+Yeah, yeah, on Opus. So I can only use Sonnet now.
+
+Andy Hinkle (32:38)
+which we found out does like the base plan on Teams does not have cloud code. You have to upgrade everyone to the pro plan, which you have to have a five person minimum and it's $100 a license. So we're like, well, does it make sense? mean, we're fine to do it, but it's like, well, use this and we have people that don't use cloud code. And so it's like, we're just trying to benefit the people who actually use it.
+
+Dalton McCleery (32:47)
+Mm-hmm.
+
+Yup.
+
+Andy Hinkle (33:06)
+And so this came out of place for me just asking, look, I hit this limit often, you know, we, we, maybe it's just like, I don't mind ⁓ doing it, but I want the team, I want the company to manage my account, right? I don't want me, I don't want the company to manage my personal account. That's kind of weird because then we have to deal with reimbursements or who's going to pay for what, You know, it doesn't make sense. So we got the team plan and they're like, this is great. We'll upgrade. And then I got looking at like the team plan, the
+
+The $100 personal plan and the team plan, you get like two times the usage on the personal plan versus being on the team plan for the same amount. Does that make sense? Like they have $100 personal plan, $100 team plan, but you get way more usage out of the personal plan. And then the $200 difference, the $200 plan, that one compared to the max team plan you can do, which is $100, is insane. It's like four times the difference, right? So it's like...
+
+Do we just deal with the personal bit? Like we all have personal accounts and the company just does it that way? Because the billing on Claude is so confusing right now. so, ⁓ yeah, it's weird. But we'll figure it out. We'll get there.
+
+Dalton McCleery (34:13)
+100%.
+
+Andy Hinkle (34:19)
+But yeah, I'm also huge fan of cloud code. I'd love to get over on Opus. Now you kind of have me thinking about if when I make that upgrade, I might do my planning in Opus, but then my coding and sonnet, that's kind of an interesting idea that that sounds like the good thing for planning mode. So, ⁓ yeah, that's really neat. ⁓ yeah.
+
+Dalton McCleery (34:36)
+Yeah, definitely. Definitely
+
+give conductor a shot because I've learned a lot of things about how to do how I think I should do AI development using conductor, the conductor dot build. Like, like, like I said.
+
+Andy Hinkle (34:41)
+Okay.
+
+There's your
+
+technical talk, by the way.
+
+Dalton McCleery (34:53)
+Use conductor.
+
+Andy Hinkle (34:55)
+though it's just like ⁓ how to efficiently ⁓ use AI with Laravel. There you go.
+
+Dalton McCleery (35:01)
+Yeah.
+
+Okay. Okay. Yeah. Cause it's, it's, it's, kind of feels like the wild west sometimes. You know what I mean? Like, am I doing this right? I don't know. It works for me. It works. It works for the, the, team that I'm in right now. Right. Like, I don't know. I don't know if that works for your team, but it's crazy.
+
+Andy Hinkle (35:04)
+yeah.
+
+Yeah,
+
+I'm definitely I find so much value in it and saving a lot of time with it. And ⁓ there is a term like vibe coding and ⁓ and it's easy to get there if you're not keeping the human in the loop. And that's what it's important. I like I'm constantly watching the like the feed, like what it's doing or what it's like. Well, hold up. Don't be doing that, you know. So yeah. And so, you know, when you have really good opinions, it's just like it'll roll with.
+
+Dalton McCleery (35:41)
+Yep. Yep. You gotta. You gotta.
+
+Andy Hinkle (35:51)
+just making it work or making something really ugly or just going a different way we didn't expect. So just keeping that human in a loop is really good, but yeah.
+
+Dalton McCleery (36:02)
+Yeah,
+
+just don't trust it 100 % because it does make a lot of mistakes. I found quite a lot of like, what are you doing? Why are you doing that? Like type hallucination mistakes. And if I could tell you a quick little story ⁓ about this, you remember Dino, right? Our buddy Dino. He uses Claude code. He's got a legacy app that's, now don't hate on him, right? It's not him.
+
+Andy Hinkle (36:13)
+Mm-hmm.
+
+Love, Dino.
+
+Dalton McCleery (36:30)
+He's got a legacy app. I think it's Larvel 8.
+
+Andy Hinkle (36:35)
+⁓ that's unacceptable. No, no, no. Yeah.
+
+Dalton McCleery (36:37)
+Yeah, it was like, I was like, you know, come on, man. He's like, hey,
+
+he's like, I'm freelancing for him. It's you know, it's not in my hands or time. Anyway, he's like, I'm going to use Claude code to plan out.
+
+this migration from Laravel 8 to 12. He's like, there are some breaking things that I don't think Shift is going to catch. He's like, I do want to leverage Shift as much as possible. He's like, I want to use Claude to essentially upgrade the code base to be ready for Shift and then have Shift sort of run him through 8 to 12.
+
+And so he was planning this big thing in Claude code and Claude code was like, yeah, I could do this. I could do that for you. It's going to be super easy. You know, he'd had this whole big planning document and he got to the point where he was like, I'm, I'm, I'm ready to run the plan. Let's, let's do this. And Claude code was like, wait on a minute. I can't do any of this.
+
+And he was like, you, literally just told me that you, had these functions available for you. And Claude's like, well, I lied. He like, he showed me screenshots of, of the conversation he had with Claude and Claude was like, I made a mistake. I told you stuff that I can't do. And so like he had to re it took him like a week to play in this document. He's like, it's completely jacked now because Claude just.
+
+Andy Hinkle (37:34)
+I lied.
+
+Dalton McCleery (37:48)
+thought that it could do things for itself. like, there's a couple other weird things. Like it didn't know that it was, it didn't know it was in a web interface versus Claude code, like in the command line. So it would be running things and be like, all right, cool. I created, you know, this instruction document in the documents folder. And Dino's like, what? Where? Where's this document? it's in the docs folder. He's like, can I get it?
+
+Andy Hinkle (37:49)
+live.
+
+Where's the document? Yeah. ⁓
+
+Dalton McCleery (38:17)
+it's like yeah sure it's in the docs folder and he's like what are you talking about right so like just forewarning this this this cloud stuff's great but sometimes it could just it could really shoot you in the foot really shoot you in the foot so you do have to be you have to be careful and you do have to read what it is doing because if you do like some like like i get it like cloud code you say ⁓ do this and you might
+
+Andy Hinkle (38:30)
+Yeah, I love that story.
+
+Mm-hmm.
+
+Dalton McCleery (38:41)
+Go make a cup of tea or use the bathroom, do some laundry or whatever and then come back. Like that's fine. As long as you read what it's doing and you like actually read what it's supposed to be doing. Great. But just like, don't take its word for it. Cause it was going to, it completely screwed up Dino. Like he was, he was very frustrated when I talked to him last about it. He's like, I had the perfect, he even got like budget approval, right? For this freelance company to do this plan and pay for his Claude code. And he's like, Claude just completely jacked me up on this.
+
+Andy Hinkle (39:02)
+Is he okay? Yeah.
+
+Dalton McCleery (39:11)
+I was like, yikes, yikes. So just be careful. Yeah. It's like, well, actually, hang on a minute. I can't do any of this. What?
+
+Andy Hinkle (39:11)
+Jeez. That's a lot of planning though. Yeah, it's a ton of planning. And then just be like, go, and it's like, yeah.
+
+It's all
+
+theoretical. Yeah, it does hallucinate with layer of all sometimes like it tries to do things that don't even exist, you know, or or try to do things that were deprecated and version five, you know, or something. But have you been reading on Reddit? I don't know how much you are. And the the Claude code separate it just which people on Reddit, they are.
+
+Dalton McCleery (39:30)
+Yeah, I like that.
+
+Yeah, don't do that.
+
+Andy Hinkle (39:46)
+90 % of them are going to complain versus somebody like, Hey guys should try this. This is great. Whatever. You know, it's just classic credit, but there's been a lot of people complaining about how poor Claude code has been lately. ⁓ there's the past two weeks. Yeah. I haven't personally experienced it on just a handful of times, but then one of my coworkers, Wilbur power, he's, he's mentioned, he's had a couple of run-ins with it being just random, like hallucinations, like really bad and kind of what you're describing. ⁓ usually I just,
+
+Dalton McCleery (39:51)
+Yeah, yeah.
+
+Lately? Huh.
+
+⁓ yeah. ⁓
+
+Andy Hinkle (40:15)
+When it gets to start to get there, I'm like, well, hold on. Well, let's just rethink this, you know? So yeah.
+
+Dalton McCleery (40:18)
+Yeah, calm down.
+
+I've only had one instance where it just, did whatever it wanted to do. And I was like, what are you doing? I had to clear the whole context. I like, just let's start over. In ⁓ Conductor, I just archived to that whole workspace. was like, you're just doing stuff now. Well, I don't know what you're doing and why you're doing it. That's not even what I asked you to do. Don't do that.
+
+Andy Hinkle (40:31)
+Mm-hmm.
+
+Dalton McCleery (40:43)
+But my boss, boss Jeff posted an article today that Anthropic has a postmortem of some recent issues that they ran into from August through September. So that actually might line up with some issues that people were having.
+
+Andy Hinkle (40:54)
+Hmm, that's probably it. Mm-hmm. That'd be it. Yeah, I would have been reading.
+
+Yeah, yeah. Yeah, they'll figure it out. But I'll see like people like I unsubscribed in the post a screenshot. I'm like, yeah, like, okay, that you won't be missed. I'm sure it's fine. You don't have to. It's you don't have to announce your departure here. So, yeah. Yeah, yeah, it worked.
+
+Dalton McCleery (41:11)
+All right, I mean, it's... Yeah, I mean, it's...
+
+I mean it's AI. It can't be perfect
+
+100 % of the time. Impossible.
+
+Andy Hinkle (41:24)
+Yeah, we're in like,
+
+yeah, we're, we're in a weird space in our development careers of like, this is all fresh to new to us. People have to be a more forgiving than what they are, you know? So, ⁓ did you see the whole NPM thing, the NPM hack or the, ⁓ and that wild, ⁓ it me think of it.
+
+Dalton McCleery (41:35)
+Mm-hmm.
+
+Yeah, the big poison. ⁓
+
+Andy Hinkle (41:45)
+So NPM, had this wild vulnerability on several packages where on you would do like NPM update, and then they would run a post install script and inside there would run Claude code. And inside that script, the Claude code prompt would be like search for Bitcoin wallets and various like password stuff and report back to this address, like, you know, make this, ⁓ you know, come back to here. And then it would find your GitHub, your GitHub credentials and then.
+
+Dalton McCleery (42:02)
+⁓
+
+Andy Hinkle (42:13)
+⁓ The most recent one just wild them ⁓ the vulnerability that it would find your github credentials and see if you have any published npm packages to It's like a worm and they go do it over there go update this script this this The script and go do update your npm packages and and so several packages got updated ⁓ Yeah, it was a wild vulnerability ⁓ but end up just
+
+Dalton McCleery (42:23)
+⁓ yeah, yeah, yeah. ⁓
+
+Andy Hinkle (42:39)
+Producing one of first one just a few cents like in the bit of the sorry the Bitcoin wallet that was reporting to to drop it into So it wasn't very effective, but just a while like that that we're already seeing supply chain attacks with AI, you know, and so Yeah, well it's tough. Yeah
+
+Dalton McCleery (42:58)
+Yeah,
+
+so don't install, the moral of the story is don't install Claude code. Hand type everything with a typewriter and debug your own. Yeah, ever. Write your own composer files, actually.
+
+Andy Hinkle (43:04)
+Don't run, never run in PM update or composer update ever. Yeah.
+
+Don't use the package manager.
+
+Dalton McCleery (43:16)
+Yeah, I saw that and it was, I didn't see all the details, but I saw that it was essentially just poisoning. You know, it was daisy chaining packages. It was, I can't remember what the number was. It was like thousands of packages got updated or something like that. It was like, don't, don't run anything on NPM. Like the next several days is what I saw. And I was like, got it. Not gonna, not gonna. Crazy.
+
+Andy Hinkle (43:42)
+want to switch gears here and talk about something I've been dealing with, unless you had anything on cloud or AI. Do you have anything else?
+
+Dalton McCleery (43:53)
+I think that was all I have. assume at the next time we convene in a month we're going to have completely different stuff for Cloud Code because that's just how fast it changes.
+
+Andy Hinkle (43:59)
+Yeah, it changes.
+
+Codex, ChatGPT Codex 5 just came out and everyone's on that train now. I've been reading on Twitter, do I spend 20 bucks and try this out? yeah, the ChatGPT Pro thing. So I don't know. Yeah, it changes month, month, I'm, I have faith in Claude, so I'm just going to keep riding that train for now. Yeah.
+
+Dalton McCleery (44:18)
+So yeah, we'll see.
+
+Yeah, so
+
+no, let's let's let's change gears away from AI. Let's let's get some like actual Laravel-y stuff. What you got?
+
+Andy Hinkle (44:31)
+Yeah, yeah, switching
+
+gears. with at work we've been upgrading all of our apps to level 12 and we've been trying to figure out the best way to assign our policy. So I'll just throw this example for you. User controller. You have a user controller and then you have a user policy and inside the policy has different rules on like.
+
+Which users you can see ⁓ which ones you can create which ones you can update and then destroy there the whole policy thing, right? Before the we would use ⁓ in the constructor in the constructor the user controller would be like this ⁓ Authorizes resource and you would pass it the policy and then it just kind of feeds through each one of those methods you have in your control like a resource controller, right? Or inside each method we would have something like this authorized can
+
+Dalton McCleery (45:19)
+Yeah.
+
+Andy Hinkle (45:24)
+or if, sorry, this, authorize, update, and then pass it like the user model or something, and to determining if the user can update or not. So, layerval 12, ⁓ they, I don't know if deprecated would be the right term, but you can't do that anymore. Like, you leave it at, when you upgrade, it'll say, you'll get the undefined method of authorize on null or something like that, right? If, when you ⁓ upgrade. So,
+
+Dalton McCleery (45:50)
+Hmm.
+
+Andy Hinkle (45:53)
+The options are in your base controller you can use a trait. So if your controller extends the base controller inside the class ⁓ that trait you do authorizes requests basically. Or just put it in your user controller, you use the trait authorized requests and then it works. It's like the level. But it's not in the documentation anywhere. It's like something you'd use in the version five days. I think it may have been documented then, but it's not documented at all.
+
+Dalton McCleery (46:07)
+Yeah. Yeah.
+
+Yeah.
+
+Andy Hinkle (46:22)
+And if you look in the documentation, it's all using the gate pattern, which is like, gate colon colon, authorize, you know, and using that way. Right, that's all the documentation says. So now, now it's frustrating, because in our controllers are just, they're doing more, like they're more code. We're introducing on, on a Laravel update, we have to introduce more code just for authorization requests.
+
+Dalton McCleery (46:27)
+Mm-hmm. Yeah, or allow or something like that.
+
+Mm-hmm.
+
+Andy Hinkle (46:49)
+The reason why is in our constructor we just did before we did this authorized resource and pass it the policy. Now we have to in each individual method we have to in-geoligilate, like great, gate authorized, like gate authorized this, gate authorized that on every single method. And the docs say that to do that, they say the alternatives are to do it in routes, like you could do a middleware routes, you know could do it that way. You could it that way or use form requests. Now if you do a form request class,
+
+Dalton McCleery (47:11)
+Mm-hmm. Yeah.
+
+Oof.
+
+Andy Hinkle (47:18)
+that's really clean, right? But if you don't have, like if you have an index, you might not even have like values you wanna validate, right? So it just like, you're just getting all users, like you might create a search later or whatever, right? But it's saying to basically to write a form request for everything. That's the cleanest way to write it. But then you're gonna have all these classes that aren't really doing anything except for authorizing that they can do it. So.
+
+That being said, I don't know if you've run into this or how you would like your thoughts on hearing this, but we've been trying to figure out the best way to approach it. ⁓ I just personally, I really try to eliminate anything that is relating to the framework in my code. ⁓ would be, you have to tell it somewhere. This user is only authorized to view this at this point.
+
+Dalton McCleery (48:13)
+Yeah.
+
+Andy Hinkle (48:14)
+Filament solves this by, they just do automatically. Filament just says, ⁓ you have a user resource? we're just gonna, ⁓ I see you have a policy here, we're just gonna apply it. Now, if you don't wanna apply it, let us know, but we're just gonna apply anyway. And I wish Laravel did that. It's kinda hard for Laravel to know what's an index where Filament is more predictable because you're listing a table, right? but ⁓ I...
+
+Dalton McCleery (48:17)
+Yeah, film is great.
+
+Yeah. Yes.
+
+Andy Hinkle (48:40)
+I don't know this illusion here. ⁓ It's like, we have to just be more explicit in those gate policies. But yeah, I'm not talking too much, but I'm curious what you think.
+
+Dalton McCleery (48:51)
+Yeah, here's the thing is I use filament a lot. Like almost exclusively filament. And so I love the way that filament does it with all of their like, they have all the, yeah, like you're saying all the hot automatic things. So I just create policies and it just, it just works, right? It's awesome. ⁓ But when I do have to write them, I think I've only had to write like two or three recently. ⁓ I always go for metalware.
+
+Andy Hinkle (49:07)
+just works.
+
+Dalton McCleery (49:20)
+I'll put all the routes behind middleware and I'll just have the middleware do it. I think that that's cleaner than trying to write it in every single action of a custom page in Filament or whatever. Like this user is authorized to do this action. This user is authorized to do that action. I'll just put it in the middleware. I think I've got two middlewares on a current app that I have that does exactly that.
+
+Andy Hinkle (49:25)
+Do you write the middleware? Do you write? Yeah.
+
+Just a custom middleware class. And then do you call that in the route? Okay.
+
+Dalton McCleery (49:49)
+Yeah. And then I, yeah, I wrapped the route
+
+in, ⁓ in, you know, route colon colon middleware and whatever that middleware classes, and then I'll group all the routes in that middleware class. That's what I do.
+
+Andy Hinkle (49:56)
+Middleware, yeah.
+
+I'm weird about
+
+middlewares. It's like sometimes I want it in the controller, sometimes I want it in the route, you know? So, yeah.
+
+Dalton McCleery (50:08)
+Yeah,
+
+if it's something that's like super specific, I'd probably put it in where it is, right? But if it's just like, can user view this resource? I think that's perfect for a middleware, right? Because then at that point, the request gets stopped before it even hits whatever that controller route is or whatever. So, know, that's tricky.
+
+Andy Hinkle (50:30)
+Yeah, the,
+
+kind of go back and forth because the test should tell this, authorization story, right? Like it, to me, it, as long as it's somewhere either in the routes or the controller, and then as long as the test is like catching that, like, ⁓ returns four what four two or four one, guess. I don't know. Or four three. Yeah. For, yeah, it was like going down the list. We'll make it there. I'll just start going down 400s. Yeah. Yeah. But you know, like,
+
+Dalton McCleery (50:49)
+404 or 303 you right damn you almost got me. 40X one of those.
+
+Andy Hinkle (50:59)
+If we have a test in there that it returns like, I'm authenticated, but I don't have this permission. I hit this route. I should expect this, right? If you have that test, like the rest, as long as it's, you know, I don't feel like that logic should live in the controller. so, ⁓ well, if it does, it's just, you're reading this business logic and it's like, well, the user update.
+
+Dalton McCleery (51:16)
+I
+
+Andy Hinkle (51:22)
+⁓ You're trying to understand what the user actually is updating, know, have this boiler play of like what the permission is needed to even get there. I don't know. Yeah, it gets weird. It needs a little somewhere.
+
+Dalton McCleery (51:30)
+Yeah, see, and it gets, it gets,
+
+it gets too weird. Cause like, here's, here's a good question for you. How do you use your gates? Do you have, is, is the gate that you're using the happy path or is it the bad path? Like it's your gate saying, does, can this person do this? No return or can this person do this? And then you have all of that logic nested in that, that if statement. And then the default is no, like how do you, how, how do you write it?
+
+Andy Hinkle (51:53)
+⁓ no, yeah. Yeah.
+
+Yeah, yeah, the how we usually do it is yeah, it's just like hey do they have this if they don't just early return 403, you know, yeah.
+
+Dalton McCleery (52:06)
+an early return.
+
+See, to me, and when I'm reading that I'm like, okay well then why is that here? That's why I always go for like the middleware, because like I want to follow the happy path as much as possible and if you have like nested checks or whatever it starts getting wacky. It starts, it's a little smell for me.
+
+Andy Hinkle (52:14)
+Yeah, if it's in the routes or...
+
+Yeah.
+
+And when I, when I see in a form request, I'm like, Oh yeah, makes sense. You know, like a form request validating, like, yo authorized, need to be this person to create this thing. Right. Um, that makes sense. But then when it's like in the controller, it's like, okay, yeah, I guess that makes sense. But I kind of question, like it could be on the route to some people. There's just not a definitive way of like where to put it. And layer belt is just like, Hey,
+
+Laravel says you can put it in your outs or you can put it your controller. You decide, but the controller is like in each method, you know, it's just, so I don't know. It's a messy story. feel like Laravel will have a good solution one day. So.
+
+Dalton McCleery (52:49)
+put it wherever you want.
+
+It seems like that would be a great package.
+
+Andy Hinkle (53:03)
+How would you solve it in the package?
+
+Dalton McCleery (53:04)
+I have no idea. Let me
+
+hang on let me go to Cloud Code. I'm gonna open a new workspace. I'm gonna turn on UltraThink. ⁓ Give me like five minutes. Give me like five minutes. I'll tell you exactly how to do it.
+
+Andy Hinkle (53:09)
+⁓ Yeah, yeah. You have all the credits.
+
+Yeah, I'm
+
+just, and I know like if you talk to any layer of all person, they're just be like, um, cause I think Jake even put this out on Twitter. It's like every, the, the solution here is to have a form class for everything. And that's just so much extra boilerplate. That's like for index have it. Yeah. Um, and there's an artisan command or like, can, you can generate one with everything that you do, but it's this, it's like, I don't know, man. Sometimes you just don't need that extra form class. Just, just for authentication, right?
+
+Maybe you do, then it's explicit and that's the place you put it. And then your controllers are clean. I get it because it is a form request. It's a request. need authorization in the request. you could do it that way. So the code's clean, but you have all these extra classes that your validation, your rules are just an empty array. mean, yeah, it's all right, I guess. But I don't know, man.
+
+Dalton McCleery (54:01)
+Yeah,
+
+Andy Hinkle (54:15)
+Yeah, we'll come back. We'll circle.
+
+Dalton McCleery (54:16)
+The perils of
+
+trying to write like clean code. The perils.
+
+Andy Hinkle (54:20)
+Yeah, I know this is stuff that
+
+the stuff I think about way too much about more than actual problems. I that I should be thinking about like, oh yeah, back to the business problem. Yeah. So, but it is good conversation, right? Cause somebody else is going to come in and try to understand the business problem. They see this and I'm what the heck is this? You know? So, yeah, that's fun. You have anything else you want to hit on? Anything else touch?
+
+Dalton McCleery (54:32)
+yeah, Yeah.
+
+Crazy, crazy.
+
+That was that was all I got my guy you got you got any other topics you want to hit?
+
+Andy Hinkle (54:52)
+Yeah, it's been a, it's been good.
+
+I have PHP Stan, but we'll say that for next show. We'll say, well, I'm curious. Like, yeah, Nuno came out with that Nuno came out with that package, like where it's, ⁓ in PHP Stan. has a start. has a, a, do call it? Starter pack a, it's like a starter kit. Yeah. Yes. Yeah. Yeah. But it's, ⁓
+
+Dalton McCleery (54:58)
+Mmm.
+
+A little teaser.
+
+Stos starter kit starter kit
+
+Andy Hinkle (55:18)
+PHPStan set on max and he was able to publish that. All the types hints are out there. I fight it a lot with ⁓ I get something going and then PHPStan fails. Anyway, I'll talk about it next show and see what static analysis, ⁓ how you handle that over at your place.
+
+Dalton McCleery (55:22)
+my god.
+
+GRR!
+
+to unlock it.
+
+Yeah, yeah, yeah.
+
+Just a little nugget to get you coming back.
+
+Andy Hinkle (55:46)
+Yeah. ⁓
+
+yeah. By the way, yeah. I, anyone who's listening, thank you so much. I get messages like on LinkedIn, like, I listened to the podcast on, on, ⁓ on like tickets. we talked one about project management a while back. Somebody randomly hit me up and it was like listening to a show like how I have, you know, do you remember our migration that we did from just get hub to, ⁓ click up and then our, yeah, we talked about that.
+
+Dalton McCleery (55:53)
+Yes.
+
+Aww.
+
+Click up.
+
+Andy Hinkle (56:14)
+So somebody wrote me on LinkedIn and said ⁓ that they had some great opinions and wanted it. They are developing a product, wanted my feedback, but they're like, that's kind of really cool. But anyone out there listening to show, thank you so much. ⁓ It's always wild when people reach out like that. So feel free to reach out if you have opinions, or wrong. ⁓ We love to hear them.
+
+Dalton McCleery (56:33)
+Yeah, yeah.
+
+Yeah, right or wrong.
+
+Andy Hinkle (56:43)
+No, joking, but seriously, ⁓ feel free to reach out if, ⁓ if you, ⁓ have any feedback for us and, yeah, don't have anything and close this out.
+
+Dalton McCleery (56:55)
+Uh, yeah, that's, that's, that's pretty much it for today's episode. I mean, thanks. Thanks for joining us. Thanks. Thanks for listening. You should probably, uh, you should probably subscribe to our podcast because that feels kind of icky to say, but you probably should. If you, if you've, if you've listened this far, you might as well. Right.
+
+We'll see you next time. Peace.
+
+Andy Hinkle (57:14)
+Catch you guys, see ya.

@@ -61,6 +61,7 @@ class FetchPodcastsFromTransistorCommand extends Command
         $this->info("Found new podcast: {$podcast->get('attributes.title')}");
 
         $data = [
+            'type' => 'podcast',
             'transistor_id' => $podcast->get('id'),
             'title' => $podcast->get('attributes.title'),
             'show_name' => 'The Midwest Artisan Podcast',
