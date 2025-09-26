@@ -1,4 +1,5 @@
 ---
+type: 'podcast'
 transistor_id: '2731650'
 title: 'Claude Lied, Authorization Died, We Survived'
 show_name: 'The Midwest Artisan Podcast'
