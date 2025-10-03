@@ -114,7 +114,7 @@ class Speaking extends Model
     protected function videoThumbnail(): Attribute
     {
         return new Attribute(
-            get: fn (): ?string => $this->youtubeId() ? "https://img.youtube.com/vi/{$this->youtubeId()}/maxresdefault.jpg" : null
+            get: fn (): ?string => $this->youtubeId() ? "https://img.youtube.com/vi/{$this->youtubeId()}/mqdefault.jpg" : null
         );
     }
 
