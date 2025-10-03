@@ -2,8 +2,8 @@
     {{-- <x-layout.light-mode-toggle /> --}}
     <div class="flex flex-col items-center">
         <a href={{ url('/') }} aria-label="Back to homepage">
-            <img alt="Andy Hinkle" class="rounded-lg" src="{{ url('images/andy-hinkle-128w.jpeg') }}"
-                srcset="{{ url('images/andy-hinkle-128w.jpeg') }} 1x, {{ url('images/andy-hinkle-256w.jpeg') }} 2x">
+            <img alt="Andy Hinkle" class="rounded-lg" src="{{ url('images/andy-hinkle-128w.webp') }}"
+                srcset="{{ url('images/andy-hinkle-128w.webp') }} 1x, {{ url('images/andy-hinkle-256w.webp') }} 2x">
         </a>
         <h1 class="mt-2 text-xl font-medium text-gray-900 dark:text-gray-100">
             Andy Hinkle
