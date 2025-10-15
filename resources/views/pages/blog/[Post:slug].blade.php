@@ -30,7 +30,7 @@ $htmlContent = $converter->convert($post->content);
     <h1 class="text-center font-sans text-3xl font-bold text-white md:text-5xl">{{ $post->title }}</h1>
 
     <div class="mx-auto mt-8 max-w-3xl">
-        <div class="prose prose-lg dark:prose-invert mx-auto px-4 text-white/85">
+        <div class="prose prose-lg dark:prose-invert mx-auto px-4 text-white/85 [&_pre]:p-0 [&_pre]:my-4 [&_pre]:rounded-sm [&_pre]:overflow-x-auto [&_pre]:bg-gray-800">
             {!! $htmlContent !!}
         </div>
     </div>
