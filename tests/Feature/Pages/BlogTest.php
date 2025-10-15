@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Post;
+
 use function Pest\Laravel\get;
 
 it('loads landing page', function (): void {
@@ -9,7 +11,5 @@ it('loads landing page', function (): void {
 });
 
 it('successfully loads each blog post', function (): void {
-    collect(glob(resource_path('views/pages/blog/*.blade.php')))
-        ->map(fn ($file) => str_replace('.blade.php', '', pathinfo($file, PATHINFO_BASENAME)))
-        ->each(fn ($slug) => $this->get('/blog/'.$slug)->assertOk());
+    Post::all()->each(fn (Post $post) => $this->get('/blog/'.$post->slug)->assertOk());
 });
