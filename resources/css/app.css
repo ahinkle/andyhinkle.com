@@ -22,47 +22,9 @@
     }
 }
 
-@utility torchlight {
-    /*
-  Add some vertical padding and expand the width
-  to fill its container. The horizontal padding
-  comes at the line level so that background
-  colors extend edge to edge.
-  */
-    pre &code {
-        @apply block py-4 min-w-max;
-    }
-
-    /*
-  Horizontal line padding.
-  */
-    pre &code .line {
-        @apply px-4;
-    }
-}
-
-@utility line {
-    /*
-  Horizontal line padding.
-  */
-    pre code.torchlight & {
-        @apply px-4;
-    }
-}
-
 @layer base {
     html {
         font-family: 'Open Sans', sans-serif;
-    }
-}
-
-@layer components {
-    /*
-  Margin and rounding are personal preferences,
-  overflow-x-auto is recommended.
-  */
-    pre {
-        @apply my-4 rounded-sm overflow-x-auto;
     }
 }
 
