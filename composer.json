@@ -3,7 +3,7 @@
     "type": "project",
     "description": "The personal website of Andy Hinkle.",
     "require": {
-        "php": "^8.2",
+        "php": "^8.4",
         "ahinkle/auto-resolvable-blade-components": "^3.0",
         "calebporzio/sushi": "^2.5",
         "laravel/folio": "^1.1",

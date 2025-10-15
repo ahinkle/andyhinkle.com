@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3901e344202df3999c46c12210e7553",
+    "content-hash": "8ec0e1645a6f81ab561c2b5b91621733",
     "packages": [
         {
             "name": "ahinkle/auto-resolvable-blade-components",
@@ -10080,7 +10080,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.2"
+        "php": "^8.4"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
