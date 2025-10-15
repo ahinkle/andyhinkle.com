@@ -1,28 +1,35 @@
 <div class="mx-auto max-w-4xl space-y-6">
     @foreach ($posts as $post)
-        <article class="group rounded-lg border border-gray-700 bg-gray-900/20 p-8 transition-all hover:border-gray-500 hover:bg-gray-900/40">
+        <article class="group relative rounded-xl border border-white/[0.05] bg-white/[0.02] p-8 backdrop-blur-sm transition-all duration-300 hover:border-white/10 hover:bg-white/[0.04]">
             <!-- Date -->
-            <time class="mb-3 block text-sm text-gray-400">
-                {{ $post->formatted_date }}
-            </time>
+            <div class="mb-4 flex items-center gap-2 text-slate-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true">
+                    <path d="M8 2v4"></path>
+                    <path d="M16 2v4"></path>
+                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                    <path d="M3 10h18"></path>
+                </svg>
+                <time class="text-sm">{{ $post->formatted_date }}</time>
+            </div>
 
             <!-- Title -->
-            <h2 class="mb-3 text-2xl font-bold text-white">
-                <a href="{{ url('/blog/' . $post->slug) }}" class="hover:text-gray-300">
+            <h2 class="mb-4 text-slate-100 transition-colors duration-300 group-hover:text-white">
+                <a href="{{ url('/blog/' . $post->slug) }}">
                     {{ $post->title }}
                 </a>
             </h2>
 
             <!-- Description -->
-            <p class="mb-4 leading-relaxed text-gray-400">
+            <p class="mb-6 leading-relaxed text-slate-400">
                 {{ $post->description }}
             </p>
 
             <!-- Read More Link -->
-            <a href="{{ url('/blog/' . $post->slug) }}" class="inline-flex items-center gap-2 text-sm font-medium text-gray-500 transition-all hover:gap-3 hover:text-white">
-                <span>Read more</span>
-                <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <a href="{{ url('/blog/' . $post->slug) }}" class="inline-flex items-center gap-2 text-slate-500 transition-colors duration-200 hover:text-slate-300">
+                <span>Read article</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
                 </svg>
             </a>
         </article>
