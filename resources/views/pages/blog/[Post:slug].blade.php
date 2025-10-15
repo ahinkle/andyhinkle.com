@@ -1,14 +1,22 @@
 @php
 use function Laravel\Folio\name;
-use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Environment\Environment;
+use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
+use League\CommonMark\MarkdownConverter;
+use Torchlight\Commonmark\V2\TorchlightExtension;
 
 name('blog.show');
 
-$converter = new CommonMarkConverter([
+// Configure the environment with Torchlight
+$environment = new Environment([
     'html_input' => 'allow',
     'allow_unsafe_links' => false,
 ]);
 
+$environment->addExtension(new CommonMarkCoreExtension());
+$environment->addExtension(new TorchlightExtension());
+
+$converter = new MarkdownConverter($environment);
 $htmlContent = $converter->convert($post->content);
 @endphp
 

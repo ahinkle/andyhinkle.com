@@ -7,6 +7,7 @@
     </x-layout.seo-meta>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @torchlight
 </head>
 
 <body class="dark">
