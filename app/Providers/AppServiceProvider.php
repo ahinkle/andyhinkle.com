@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Override;
 use Illuminate\Foundation\Http\Events\RequestHandled;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
@@ -12,6 +13,7 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Register any application services.
      */
+    #[Override]
     public function register(): void
     {
         //

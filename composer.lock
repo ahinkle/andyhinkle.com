@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ec0e1645a6f81ab561c2b5b91621733",
+    "content-hash": "d92c4d761c2e93fa71f6b7ece3a4b3c9",
     "packages": [
         {
             "name": "ahinkle/auto-resolvable-blade-components",
@@ -6227,6 +6227,61 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.3.0"
             },
             "time": "2024-12-21T16:25:41+00:00"
+        },
+        {
+            "name": "torchlight/torchlight-commonmark",
+            "version": "v0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/torchlight-api/torchlight-commonmark-php.git",
+                "reference": "b81987249583ebd73732649542d26d9aeedbbbdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-commonmark-php/zipball/b81987249583ebd73732649542d26d9aeedbbbdb",
+                "reference": "b81987249583ebd73732649542d26d9aeedbbbdb",
+                "shasum": ""
+            },
+            "require": {
+                "league/commonmark": "^1.5|^2.0",
+                "php": "^7.2|^8.0",
+                "torchlight/torchlight-laravel": "^0.6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^5.0|^6.0",
+                "phpunit/phpunit": "^8.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Torchlight\\Commonmark\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aaron@hammerstone.dev"
+                }
+            ],
+            "description": "A Commonmark extension for Torchlight, the syntax highlighting API.",
+            "homepage": "https://torchlight.dev",
+            "keywords": [
+                "Code highlighting",
+                "commonmark",
+                "laravel",
+                "markdown",
+                "syntax highlighting"
+            ],
+            "support": {
+                "issues": "https://github.com/torchlight-api/torchlight-commonmark-php/issues",
+                "source": "https://github.com/torchlight-api/torchlight-commonmark-php/tree/v0.6.0"
+            },
+            "time": "2025-06-28T15:51:57+00:00"
         },
         {
             "name": "torchlight/torchlight-laravel",

@@ -11,6 +11,7 @@
         "laravel/nightwatch": "^1.7",
         "laravel/tinker": "^2.9",
         "spatie/yaml-front-matter": "^2.1",
+        "torchlight/torchlight-commonmark": "^0.6.0",
         "torchlight/torchlight-laravel": "^0.6.0"
     },
     "require-dev": {
