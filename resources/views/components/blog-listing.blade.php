@@ -10,7 +10,8 @@
             <p class="pt-6 text-white/75">
                 {{ $post->description }}
             </p>
-            <a href="{{ url('/blog/' . $post->slug) }}" class="block pt-4 text-center text-white/50 underline hover:text-white">
+            <a href="{{ url('/blog/' . $post->slug) }}"
+                class="block pt-4 text-center text-white/50 underline hover:text-white">
                 Read more
             </a>
         </div>
