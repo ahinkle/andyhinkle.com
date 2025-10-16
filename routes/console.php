@@ -1,5 +1,6 @@
 <?php
 
+use App\Console\Commands\GitHub\FetchGitHubContributionsCommand;
 use Illuminate\Support\Facades\Schedule;
 
-Schedule::command('fetch:github-contributions')->daily();
+Schedule::command(FetchGitHubContributionsCommand::class)->daily();

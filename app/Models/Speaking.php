@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\File;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Sushi\Sushi;
 use Symfony\Component\Finder\Finder;
+use Symfony\Component\Finder\SplFileInfo;
 
 #[ScopedBy(LatestPublishedOrderScope::class)]
 class Speaking extends Model
@@ -53,9 +54,15 @@ class Speaking extends Model
     /** @return array<int, array<string, mixed>> */
     public function getRows(): array
     {
-        return collect($this->files())
-            ->map(fn (string $file): array => $this->parseFile($file))
-            ->pipe(fn (Collection $collection): Collection => $this->transcriptPath($collection))
+        /** @var Collection<int, array<string, mixed>> $collection */
+        $collection = collect(iterator_to_array($this->files()))
+            ->map(fn (SplFileInfo $file): array => $this->parseFile($file))
+            ->values();
+
+        $collectionWithTranscripts = $this->transcriptPath($collection);
+
+        /** @var array<int, array<string, mixed>> */
+        return $collectionWithTranscripts
             ->sortBy('published_at')
             ->values()
             ->toArray();
@@ -70,9 +77,9 @@ class Speaking extends Model
     }
 
     /**  @return array<string, mixed> */
-    protected function parseFile(string $file): array
+    protected function parseFile(SplFileInfo $file): array
     {
-        $document = YamlFrontMatter::parseFile($file);
+        $document = YamlFrontMatter::parseFile($file->getPathname());
 
         // Default values for all possible fields
         $defaults = [
@@ -89,40 +96,57 @@ class Speaking extends Model
             'slug' => basename($file, '.md'),
         ];
 
+        $matter = $document->matter();
+
+        /** @var array<string, mixed> */
         return array_merge(
             $defaults,
-            $document->matter(),
-            ['slug' => basename($file, '.md')], // Always override slug
+            is_array($matter) ? $matter : [],
+            ['slug' => $file->getBasename('.md')], // Always override slug
         );
     }
 
     /**
      * @param  Collection<int, array<string, mixed>>  $items
-     * @return Collection<int, non-empty-array<string, mixed>>
+     * @return Collection<int, array<string, mixed>>
      */
     protected function transcriptPath(Collection $items): Collection
     {
+        /** @var Collection<int, array<string, mixed>> */
         return $items->map(function (array $item): array {
-            $path = resource_path("content/speaking/transcripts/{$item['slug']}.txt");
+            $slug = $item['slug'] ?? '';
+            $slugString = is_string($slug) ? $slug : '';
+            $path = resource_path("content/speaking/transcripts/{$slugString}.txt");
             $transcript = File::exists($path) ? $path : null;
 
+            /** @var array<string, mixed> */
             return array_merge($item, compact('transcript'));
-        });
+        })->values();
     }
 
     /** @return Attribute<string|null, never> */
     protected function videoThumbnail(): Attribute
     {
+        /** @var Attribute<string|null, never> */
         return new Attribute(
-            get: fn (): ?string => $this->youtubeId() ? "https://img.youtube.com/vi/{$this->youtubeId()}/mqdefault.jpg" : null
+            get: function (): ?string {
+                $id = $this->youtubeId();
+
+                return $id ? "https://img.youtube.com/vi/{$id}/mqdefault.jpg" : null;
+            }
         );
     }
 
     /** @return Attribute<string|null, never> */
     protected function videoEmbedUrl(): Attribute
     {
+        /** @var Attribute<string|null, never> */
         return new Attribute(
-            get: fn (): ?string => $this->youtubeId() ? "https://www.youtube.com/embed/{$this->youtubeId()}" : null
+            get: function (): ?string {
+                $id = $this->youtubeId();
+
+                return $id ? "https://www.youtube.com/embed/{$id}" : null;
+            }
         );
     }
 
@@ -130,7 +154,12 @@ class Speaking extends Model
     protected function durationMmss(): Attribute
     {
         return Attribute::make(
-            get: fn (): string => $this->formatDuration($this->getAttribute('duration') ?? 0),
+            get: function (): string {
+                $duration = $this->getAttribute('duration');
+                $durationInt = is_int($duration) ? $duration : 0;
+
+                return $this->formatDuration($durationInt);
+            }
         );
     }
 
@@ -150,7 +179,12 @@ class Speaking extends Model
     protected function contextName(): Attribute
     {
         return Attribute::make(
-            get: fn (): ?string => $this->getAttribute('show_name') ?? $this->getAttribute('event_name')
+            get: function (): ?string {
+                $showName = $this->getAttribute('show_name');
+                $eventName = $this->getAttribute('event_name');
+
+                return is_string($showName) ? $showName : (is_string($eventName) ? $eventName : null);
+            }
         );
     }
 
@@ -167,11 +201,11 @@ class Speaking extends Model
     {
         $url = $this->getAttribute('video_url');
 
-        if (! $url) {
+        if (! $url || ! is_string($url)) {
             return null;
         }
 
-        if (preg_match('/(?:youtu\.be\/|v=)([a-zA-Z0-9_-]{11})/', (string) $url, $matches)) {
+        if (preg_match('/(?:youtu\.be\/|v=)([a-zA-Z0-9_-]{11})/', $url, $matches)) {
             return $matches[1];
         }
 

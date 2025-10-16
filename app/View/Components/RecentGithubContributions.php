@@ -40,6 +40,10 @@ class RecentGithubContributions extends Component
     {
         $contributions = Cache::get('github_contributions', []);
 
+        if (! is_array($contributions)) {
+            $contributions = [];
+        }
+
         return $this->formatContributions($contributions);
     }
 
@@ -62,18 +66,106 @@ class RecentGithubContributions extends Component
     protected function formatContributions(array $contributions): Collection
     {
         return collect($contributions)
-            ->map(fn ($contribution): array => [
-                'title' => (string) ($contribution['title'] ?? ''),
-                'url' => (string) ($contribution['url'] ?? ''),
-                'merged_at' => isset($contribution['mergedAt']) ? Carbon::parse($contribution['mergedAt']) : now(),
-                'body' => (string) ($contribution['bodyText'] ?? ''),
-                'additions' => (int) ($contribution['additions'] ?? 0),
-                'deletions' => (int) ($contribution['deletions'] ?? 0),
-                'repository' => (string) ($contribution['repository']['name'] ?? ''),
-                'owner' => (string) ($contribution['repository']['owner']['login'] ?? ''),
-                'avatar_url' => isset($contribution['repository']['owner']['login'])
-                    ? 'https://github.com/'.$contribution['repository']['owner']['login'].'.png'
-                    : '',
-            ]);
+            ->map(fn ($contribution): array => $this->formatContribution($contribution));
+    }
+
+    /**
+     * @return array{
+     *     title: string,
+     *     url: string,
+     *     merged_at: Carbon,
+     *     body: string,
+     *     additions: int,
+     *     deletions: int,
+     *     repository: string,
+     *     owner: string,
+     *     avatar_url: string
+     * }
+     */
+    private function formatContribution(mixed $contribution): array
+    {
+        if (! is_array($contribution)) {
+            return $this->emptyContribution();
+        }
+
+        $repository = $this->getArray($contribution, 'repository');
+        $owner = $this->getArray($repository, 'owner');
+        $ownerLogin = $this->getString($owner, 'login');
+
+        return [
+            'title' => $this->getString($contribution, 'title'),
+            'url' => $this->getString($contribution, 'url'),
+            'merged_at' => $this->parseDate($contribution['mergedAt'] ?? null),
+            'body' => $this->getString($contribution, 'bodyText'),
+            'additions' => $this->getInt($contribution, 'additions'),
+            'deletions' => $this->getInt($contribution, 'deletions'),
+            'repository' => $this->getString($repository, 'name'),
+            'owner' => $ownerLogin,
+            'avatar_url' => $ownerLogin !== '' ? "https://github.com/{$ownerLogin}.png" : '',
+        ];
+    }
+
+    /**
+     * @return array{
+     *     title: string,
+     *     url: string,
+     *     merged_at: Carbon,
+     *     body: string,
+     *     additions: int,
+     *     deletions: int,
+     *     repository: string,
+     *     owner: string,
+     *     avatar_url: string
+     * }
+     */
+    private function emptyContribution(): array
+    {
+        return [
+            'title' => '',
+            'url' => '',
+            'merged_at' => now(),
+            'body' => '',
+            'additions' => 0,
+            'deletions' => 0,
+            'repository' => '',
+            'owner' => '',
+            'avatar_url' => '',
+        ];
+    }
+
+    /**
+     * @param  array<mixed>  $array
+     * @return array<mixed>
+     */
+    private function getArray(array $array, string $key): array
+    {
+        $value = $array[$key] ?? [];
+
+        return is_array($value) ? $value : [];
+    }
+
+    /**
+     * @param  array<mixed>  $array
+     */
+    private function getString(array $array, string $key): string
+    {
+        $value = $array[$key] ?? '';
+
+        return is_string($value) ? $value : '';
+    }
+
+    /**
+     * @param  array<mixed>  $array
+     */
+    private function getInt(array $array, string $key): int
+    {
+        $value = $array[$key] ?? 0;
+
+        return is_int($value) ? $value : 0;
+    }
+
+    private function parseDate(mixed $date): Carbon
+    {
+        return is_string($date) ? Carbon::parse($date) : now();
     }
 }
