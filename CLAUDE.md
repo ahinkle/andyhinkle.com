@@ -10,9 +10,16 @@ This is Andy Hinkle's personal website (andyhinkle.com) built with Laravel 12 an
 
 - **Laravel Folio**: Uses file-based routing via `resources/views/pages/` directory. Pages are automatically routed based on file structure.
 - **Blade Components**: Custom components in `app/View/Components/` with auto-resolution via `ahinkle/auto-resolvable-blade-components`
-- **Content Management**: Speaking content stored as Markdown files in `resources/content/speaking/` with YAML front matter
-- **Database**: SQLite database for simple data storage
+- **File-Based Content**: Both blog posts and speaking content use Sushi models that read Markdown files with YAML front matter - no database required for content
+- **Database**: SQLite database for simple data storage (primarily for GitHub contributions cache)
 - **Styling**: TailwindCSS 4.x with Alpine.js for interactivity
+- **Caching**: 30-minute page cache in production via `CachePageMiddleware`, component-level caching for listings
+
+## Environment Variables
+
+Required for full functionality:
+- `GITHUB_TOKEN`: GitHub personal access token for fetching contributions
+- `TRANSISTOR_API_KEY`: Transistor.fm API key for podcast automation
 
 ## Key Commands
 
@@ -27,6 +34,16 @@ php artisan serve
 ```
 
 When developing locally, you should use Laravel Herd at andyhinkle.com.test (and not the `artisan serve` command directly)
+
+### Content Management
+
+```bash
+# Fetch GitHub contributions (stores in cache for 1 day)
+php artisan github:fetch-contributions
+
+# Fetch podcasts from Transistor.fm (auto-creates Markdown files + transcripts)
+php artisan speaking:fetch-podcasts-from-transistor
+```
 
 ### Testing
 
@@ -65,28 +82,39 @@ npm run build
 
 ## Special Features
 
+### Sushi Models (File-Based Data)
+
+Both `Post` and `Speaking` models use Calebporzio's Sushi package to read Markdown files as database records:
+
+- **Post Model**: Reads from `resources/content/blog/` with YAML front matter
+- **Speaking Model**: Reads from `resources/content/speaking/` with YAML front matter
+- Both use `LatestPublishedOrderScope` global scope (orders by `published_at DESC`)
+- Eloquent attributes provide computed properties: `formattedDate`, `durationMmss`, `videoEmbedUrl`
+- Route model binding works via slug: `/blog/[Post:slug]` and `/speaking/[Speaking:slug]`
+
 ### GitHub Integration
 
-- `FetchGitHubContributionsCommand` fetches and stores GitHub activity
-- `RecentGithubContributions` component displays contribution data
+- `FetchGitHubContributionsCommand`: Uses GraphQL to fetch top 10 merged PRs, caches for 1 day
+- `RecentGithubContributions` component displays cached contribution data on homepage
 
-### Speaking Content
+### Podcast Automation
 
-- Markdown files with YAML front matter in `resources/content/speaking/`
-- Podcast transcripts stored in `transcripts/` subdirectory
-- Content accessible via Folio routes like `/speaking/[Speaking:slug]`
+- `FetchPodcastsFromTransistorCommand`: Auto-fetches podcasts from Transistor.fm API
+- Creates Markdown files with YAML front matter in `resources/content/speaking/`
+- Downloads transcripts as `.txt` files to `resources/content/speaking/transcripts/`
+- Checks for duplicates via `transistor_id` before creating new files
 
 ### Auto-Resolvable Components
 
-Uses `ahinkle/auto-resolvable-blade-components` package for automatic component resolution without explicit registration.
+Uses `ahinkle/auto-resolvable-blade-components` package for automatic component resolution without explicit registration. Components in `app/View/Components/` render views from `resources/views/components/` using snake-case naming.
 
 ## File Structure Patterns
 
-### Page Components
+### Folio Pages (Display Templates)
 
 - Main pages: `resources/views/pages/`
-- Blog posts: `resources/views/pages/blog/`
-- Speaking pages: `resources/views/pages/speaking/`
+- Blog post display: `resources/views/pages/blog/[Post:slug].blade.php`
+- Speaking display: `resources/views/pages/speaking/[Speaking:slug].blade.php`
 
 ### Blade Components
 
@@ -94,9 +122,11 @@ Uses `ahinkle/auto-resolvable-blade-components` package for automatic component 
 - Feature components: `app/View/Components/`
 - Dev tools: `app/View/Components/Dev/`
 
-### Content
+### Content (Markdown Files)
 
-- Speaking content: `resources/content/speaking/`
+- Blog posts: `resources/content/blog/` (read by Post model)
+- Speaking content: `resources/content/speaking/` (read by Speaking model)
+- Podcast transcripts: `resources/content/speaking/transcripts/`
 - Static images: `public/images/`
 
 ## Testing Approach
@@ -110,15 +140,39 @@ Uses `ahinkle/auto-resolvable-blade-components` package for automatic component 
 
 ### Blog Posts
 
-Blog posts are Blade templates in `resources/views/pages/blog/` and are routed automatically by Folio.
+Blog posts are Markdown files with YAML front matter in `resources/content/blog/`:
+
+```yaml
+---
+title: "Post Title"
+description: "Post description"
+published_at: "2024-07-10"
+---
+[Markdown content here]
+```
+
+The `Post` model (Sushi-based) reads these files. Folio routes display posts via `/blog/[Post:slug]`.
 
 ### Speaking Content
 
-Speaking content uses:
+Speaking content are Markdown files with YAML front matter in `resources/content/speaking/`:
 
-- Markdown files with YAML front matter
-- Transcript files for searchability
-- `Speaking` model with `Sushi` for file-based data
+```yaml
+---
+type: 'podcast' | 'speaking'
+transistor_id: 'xxx'
+title: "Episode Title"
+show_name: "Show Name"
+embed_url: "https://share.transistor.fm/e/..."
+video_url: "https://www.youtube.com/watch?v=..."
+published_at: "2025-06-13T17:18:20.000Z"
+duration: 3381
+summary: "Brief summary"
+description: "Full description"
+---
+```
+
+The `Speaking` model (Sushi-based) reads these files. Folio routes display content via `/speaking/[Speaking:slug]`. Transcripts stored in `transcripts/` subdirectory.
 
 ===
 
