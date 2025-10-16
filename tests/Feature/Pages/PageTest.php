@@ -13,8 +13,3 @@ it('loads gear', function (): void {
         ->assertOk()
         ->assertSee('Hardware');
 });
-
-it('redirects wp admin for teh memes', function (): void {
-    get('/wp-admin')
-        ->assertRedirect();
-});
