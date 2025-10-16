@@ -1,3 +1,5 @@
+@props(['href' => '', 'active' => false])
+
 <a href="{{ $href }}">
     <button @class([
         'text-sm transition-colors px-4 py-1 rounded-md relative',

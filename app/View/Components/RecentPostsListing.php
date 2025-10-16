@@ -12,7 +12,7 @@ class RecentPostsListing extends Component
     public function render(): View|Closure|string
     {
         return view('components.recent-posts-listing', [
-            'posts' => Post::query()->latest('published_at')->take(3)->get(),
+            'posts' => cache('recent_posts', fn () => Post::query()->latest('published_at')->take(3)->get()),
         ]);
     }
 }
