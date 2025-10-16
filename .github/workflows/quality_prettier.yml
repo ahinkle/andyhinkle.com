@@ -35,5 +35,3 @@ jobs:
               run: npx prettier --write .
 
             - uses: stefanzweifel/git-auto-commit-action@v5
-              with:
-                  commit_message: Automated: Apply Prettier Fixes
