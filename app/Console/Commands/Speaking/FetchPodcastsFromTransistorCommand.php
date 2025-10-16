@@ -58,19 +58,20 @@ class FetchPodcastsFromTransistorCommand extends Command
      */
     protected function savePodcast(Fluent $podcast): void
     {
-        $this->info("Found new podcast: {$podcast->get('attributes.title')}");
+        $title = $this->getString($podcast, 'attributes.title');
+        $this->info("Found new podcast: {$title}");
 
         $data = [
             'type' => 'podcast',
             'transistor_id' => $podcast->get('id'),
-            'title' => $podcast->get('attributes.title'),
+            'title' => $title,
             'show_name' => 'The Midwest Artisan Podcast',
-            'embed_url' => $this->embedUrl($podcast->get('attributes.share_url')),
+            'embed_url' => $this->embedUrl($this->getString($podcast, 'attributes.share_url')),
             'video_url' => $podcast->get('attributes.video_url') ?: null,
             'published_at' => $podcast->get('attributes.published_at'),
             'duration' => $podcast->get('attributes.duration'),
-            'summary' => $this->summarizeDescription($podcast->get('attributes.description')),
-            'description' => strip_tags((string) $podcast->get('attributes.formatted_summary')),
+            'summary' => $this->summarizeDescription($this->getString($podcast, 'attributes.description')),
+            'description' => strip_tags($this->getString($podcast, 'attributes.formatted_summary')),
         ];
 
         Storage::disk('content')->put($this->path($podcast), $this->toYaml($data));
@@ -93,10 +94,12 @@ class FetchPodcastsFromTransistorCommand extends Command
      */
     protected function downloadTranscript(Fluent $podcast): void
     {
-        $transcript = Http::get($podcast->get('attributes.transcript_url').'.txt');
+        $transcriptUrl = $this->getString($podcast, 'attributes.transcript_url');
+        $transcript = Http::get($transcriptUrl.'.txt');
 
         if ($transcript->failed()) {
-            $this->error("Failed to download transcript for podcast: {$podcast->get('attributes.title')}");
+            $title = $this->getString($podcast, 'attributes.title');
+            $this->error("Failed to download transcript for podcast: {$title}");
 
             return;
         }
@@ -109,7 +112,9 @@ class FetchPodcastsFromTransistorCommand extends Command
      */
     protected function path(Fluent $podcast): string
     {
-        return "speaking/{$podcast->get('attributes.slug')}.md";
+        $slug = $this->getString($podcast, 'attributes.slug');
+
+        return "speaking/{$slug}.md";
     }
 
     /**
@@ -117,7 +122,19 @@ class FetchPodcastsFromTransistorCommand extends Command
      */
     protected function transcriptPath(Fluent $podcast): string
     {
-        return "speaking/transcripts/{$podcast->get('attributes.slug')}.txt";
+        $slug = $this->getString($podcast, 'attributes.slug');
+
+        return "speaking/transcripts/{$slug}.txt";
+    }
+
+    /**
+     * @param  Fluent<string, mixed>  $fluent
+     */
+    protected function getString(Fluent $fluent, string $key): string
+    {
+        $value = $fluent->get($key);
+
+        return is_string($value) ? $value : '';
     }
 
     protected function embedUrl(string $url): string
@@ -143,6 +160,6 @@ class FetchPodcastsFromTransistorCommand extends Command
             ->replaceMatches('/\{\{.*?\}\}/', '') // Removes Transistor.fm template tags. eg. {{people}}
             ->trim()
             ->explode('. ')
-            ->first();
+            ->first() ?? '';
     }
 }

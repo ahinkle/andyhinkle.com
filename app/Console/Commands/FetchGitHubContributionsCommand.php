@@ -39,7 +39,13 @@ class FetchGitHubContributionsCommand extends Command
      */
     protected function fetchGitHubPublicPullRequests(): array
     {
-        $data = Http::withToken(config('services.github.token'))
+        $token = config('services.github.token');
+
+        if (! is_string($token)) {
+            return [];
+        }
+
+        $response = Http::withToken($token)
             ->throw()
             ->post('https://api.github.com/graphql', [
                 'query' => $this->graphqlPullRequestQuery(),
@@ -48,7 +54,33 @@ class FetchGitHubContributionsCommand extends Command
                 ],
             ]);
 
-        return $data->json()['data']['user']['pullRequests']['nodes'];
+        $data = $response->json();
+
+        if (! is_array($data)) {
+            return [];
+        }
+
+        $dataLevel = $data['data'] ?? null;
+
+        if (! is_array($dataLevel)) {
+            return [];
+        }
+
+        $user = $dataLevel['user'] ?? null;
+
+        if (! is_array($user)) {
+            return [];
+        }
+
+        $pullRequests = $user['pullRequests'] ?? null;
+
+        if (! is_array($pullRequests)) {
+            return [];
+        }
+
+        $nodes = $pullRequests['nodes'] ?? null;
+
+        return is_array($nodes) ? $nodes : [];
     }
 
     protected function graphqlPullRequestQuery(): string
