@@ -4,6 +4,11 @@ includes:
 parameters:
 
     paths:
-        - app/
+        - app
+        - bootstrap/app.php
+        - config
+        - database
+        - public
+        - routes
 
     level: max
