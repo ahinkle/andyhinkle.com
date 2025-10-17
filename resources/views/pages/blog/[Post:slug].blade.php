@@ -34,5 +34,17 @@
             class="prose prose-lg dark:prose-invert mx-auto px-4 text-white/85 [&_pre]:my-4 [&_pre]:overflow-x-auto [&_pre]:rounded-sm [&_pre]:bg-gray-800 [&_pre]:p-0">
             {!! $htmlContent !!}
         </div>
+
+        <div class="mt-8 px-4 text-right">
+            <a href="https://github.com/ahinkle/andyhinkle.com/blob/main/resources/content/blog/{{ $post->slug }}.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 font-sans text-sm text-white/50 transition-colors hover:text-white/75">
+                <span>Suggest an edit</span>
+                <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+            </a>
+        </div>
     </div>
 </x-app>
