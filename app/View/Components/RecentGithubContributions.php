@@ -9,6 +9,19 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\View\Component;
 
+/**
+ * @phpstan-type ContributionShape array{
+ *     title: string,
+ *     url: string,
+ *     merged_at: Carbon,
+ *     body: string,
+ *     additions: int,
+ *     deletions: int,
+ *     repository: string,
+ *     owner: string,
+ *     avatar_url: string
+ * }
+ */
 class RecentGithubContributions extends Component
 {
     /**
@@ -24,17 +37,7 @@ class RecentGithubContributions extends Component
     /**
      * Get the formatted contributions.
      *
-     * @return Collection<int, array{
-     *     title: string,
-     *     url: string,
-     *     merged_at: Carbon,
-     *     body: string,
-     *     additions: int,
-     *     deletions: int,
-     *     repository: string,
-     *     owner: string,
-     *     avatar_url: string
-     * }>
+     * @return Collection<int, ContributionShape>
      */
     protected function getContributions(): Collection
     {
@@ -51,17 +54,7 @@ class RecentGithubContributions extends Component
      * Format contributions.
      *
      * @param  array<mixed>  $contributions
-     * @return Collection<int, array{
-     *     title: string,
-     *     url: string,
-     *     merged_at: Carbon,
-     *     body: string,
-     *     additions: int,
-     *     deletions: int,
-     *     repository: string,
-     *     owner: string,
-     *     avatar_url: string
-     * }>
+     * @return Collection<int, ContributionShape>
      */
     protected function formatContributions(array $contributions): Collection
     {
@@ -70,17 +63,7 @@ class RecentGithubContributions extends Component
     }
 
     /**
-     * @return array{
-     *     title: string,
-     *     url: string,
-     *     merged_at: Carbon,
-     *     body: string,
-     *     additions: int,
-     *     deletions: int,
-     *     repository: string,
-     *     owner: string,
-     *     avatar_url: string
-     * }
+     * @return ContributionShape
      */
     private function formatContribution(mixed $contribution): array
     {
@@ -106,17 +89,7 @@ class RecentGithubContributions extends Component
     }
 
     /**
-     * @return array{
-     *     title: string,
-     *     url: string,
-     *     merged_at: Carbon,
-     *     body: string,
-     *     additions: int,
-     *     deletions: int,
-     *     repository: string,
-     *     owner: string,
-     *     avatar_url: string
-     * }
+     * @return ContributionShape
      */
     private function emptyContribution(): array
     {
