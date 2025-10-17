@@ -49,9 +49,6 @@ class FetchGitHubContributionsCommand extends Command
             ->throw()
             ->post('https://api.github.com/graphql', [
                 'query' => $this->graphqlPullRequestQuery(),
-                'variables' => [
-                    'username' => 'ahinkle',
-                ],
             ]);
 
         $data = $response->json();
@@ -66,30 +63,29 @@ class FetchGitHubContributionsCommand extends Command
             return [];
         }
 
-        $user = $dataLevel['user'] ?? null;
+        $search = $dataLevel['search'] ?? null;
 
-        if (! is_array($user)) {
+        if (! is_array($search)) {
             return [];
         }
 
-        $pullRequests = $user['pullRequests'] ?? null;
+        $nodes = $search['nodes'] ?? null;
 
-        if (! is_array($pullRequests)) {
+        if (! is_array($nodes)) {
             return [];
         }
 
-        $nodes = $pullRequests['nodes'] ?? null;
-
-        return is_array($nodes) ? $nodes : [];
+        // Filter out null entries that sometimes appear in search results
+        return array_values(array_filter($nodes, fn ($node) => $node !== null));
     }
 
     protected function graphqlPullRequestQuery(): string
     {
         return <<<'GRAPHQL'
-        query($username: String!) {
-          user(login: $username) {
-            pullRequests(first: 10, states: [MERGED], orderBy: {field: CREATED_AT, direction: DESC}) {
-              nodes {
+        query {
+          search(query: "is:pr is:merged author:ahinkle -repo:ahinkle/andyhinkle.com", type: ISSUE, first: 10) {
+            nodes {
+              ... on PullRequest {
                 title
                 url
                 mergedAt
