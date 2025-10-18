@@ -3,6 +3,8 @@
 namespace App\Console\Commands\Images;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\Drivers\Imagick\Driver as ImagickDriver;
 use Intervention\Image\ImageManager;
@@ -12,14 +14,8 @@ use function Laravel\Prompts\text;
 
 class GenerateOgImageCommand extends Command
 {
-    /**
-     * @var string
-     */
     protected $signature = 'og:image';
 
-    /**
-     * @var string
-     */
     protected $description = 'Generate an OG image with custom text overlay';
 
     public function handle(): int
@@ -54,113 +50,77 @@ class GenerateOgImageCommand extends Command
 
     protected function generateImage(string $name, string $title): void
     {
-        // Ensure output directory exists
         $outputDir = public_path('images/share/og');
+
         if (! is_dir($outputDir)) {
             mkdir($outputDir, 0755, true);
         }
 
-        // Create image manager with best available driver
-        $manager = new ImageManager($this->getDriver());
+        $manager = new ImageManager($this->driver());
+        $image = $manager->read(resource_path('img/og-template.png'));
 
-        // Load template
-        $templatePath = resource_path('img/og-template.png');
-        $image = $manager->read($templatePath);
-
-        // Get image dimensions for positioning calculations
         $width = $image->width();
-        $height = $image->height();
+        $lines = $this->wrapText($title, (int) ($width * 0.50));
 
-        // Calculate text positioning (postcard style - left side)
-        $x = 90; // Fixed left margin
-
-        // Calculate max width (don't go past halfway to avoid photo)
-        $maxWidth = (int) ($width * 0.50); // Leave right side for the photo
-
-        // Get system font path
-        $fontPath = $this->getFontPath();
-
-        // Process text - handle manual line breaks and word wrap
-        $lines = $this->wrapText($title, $maxWidth);
-
-        // Adjust Y position based on line count
-        // 2 lines: move down for better centering
-        // 3+ lines: keep higher for balance
-        $y = count($lines) === 2 ? 175 : 125;
-
-        // Add text to image
         $image->text(
-            implode("\n", $lines),
-            $x,
-            $y,
-            function (FontFactory $font) use ($fontPath): void {
-                $font->file($fontPath);
-                $font->size(72);
-                $font->color('#ffffff');
-                $font->align('left');
-                $font->valign('top');
-                $font->lineHeight(1.5);
-            }
+            $lines->implode("\n"),
+            90,
+            $lines->count() === 2 ? 175 : 125,
+            fn (FontFactory $font) => $font
+                ->file(resource_path('fonts/Poppins-Regular.ttf'))
+                ->size(72)
+                ->color('#ffffff')
+                ->align('left')
+                ->valign('top')
+                ->lineHeight(1.5)
         );
 
-        // Save the image
-        $outputPath = "{$outputDir}/{$name}.png";
-        $image->save($outputPath);
+        $image->save("{$outputDir}/{$name}.png");
     }
 
-    protected function getDriver(): GdDriver|ImagickDriver
+    protected function driver(): GdDriver|ImagickDriver
     {
-        // Prefer Imagick for better quality if available
         if (extension_loaded('imagick')) {
-            $this->info('Using Imagick driver for image processing');
+            $this->info('Using Imagick driver');
 
             return new ImagickDriver;
         }
 
-        $this->info('Using GD driver for image processing');
+        $this->info('Using GD driver');
 
         return new GdDriver;
     }
 
-    protected function getFontPath(): string
+    /**
+     * @return Collection<int, string>
+     */
+    protected function wrapText(string $text, int $maxWidth): Collection
     {
-        return resource_path('fonts/Poppins-Regular.ttf');
+        return Str::of($text)
+            ->explode('\n')
+            ->flatMap(fn ($line) => $this->wrapLine($line, $maxWidth));
     }
 
     /**
-     * @return array<int, string>
+     * @return Collection<int, string>
      */
-    protected function wrapText(string $text, int $maxWidth): array
+    protected function wrapLine(string $line, int $maxWidth): Collection
     {
-        // First, handle manual line breaks
-        $manualLines = explode('\n', $text);
-        $wrappedLines = [];
+        /** @var Collection<int, string> */
+        return Str::of($line)
+            ->explode(' ')
+            ->reduce(function (Collection $wrapped, string $word) use ($maxWidth) {
+                /** @var string $currentLine */
+                $currentLine = $wrapped->last() ?? '';
+                $testLine = $currentLine === '' ? $word : "{$currentLine} {$word}";
 
-        // Process each manual line for auto-wrapping
-        foreach ($manualLines as $line) {
-            $words = explode(' ', $line);
-            $currentLine = '';
-
-            foreach ($words as $word) {
-                $testLine = $currentLine === '' ? $word : $currentLine.' '.$word;
-
-                // Estimate width (rough calculation)
-                // Each character is approximately 32-35 pixels at size 72
-                $estimatedWidth = strlen($testLine) * 33;
-
-                if ($estimatedWidth > $maxWidth && $currentLine !== '') {
-                    $wrappedLines[] = $currentLine;
-                    $currentLine = $word;
-                } else {
-                    $currentLine = $testLine;
+                if (strlen($testLine) * 33 > $maxWidth && $currentLine !== '') {
+                    return $wrapped->push($word);
                 }
-            }
 
-            if ($currentLine !== '') {
-                $wrappedLines[] = $currentLine;
-            }
-        }
-
-        return $wrappedLines;
+                return $wrapped->put($wrapped->count() - 1, $testLine);
+            }, collect(['']))
+            ->filter()
+            ->values();
     }
 }
