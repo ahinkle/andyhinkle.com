@@ -51,6 +51,9 @@ jobs:
             - name: Fetch podcasts
               run: php artisan transistor:fetch-podcasts
 
+            - name: Generate Open Graph images
+              run: php artisan og:image
+
             - name: Check for changes
               id: git-check
               run: |
