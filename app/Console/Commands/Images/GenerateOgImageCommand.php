@@ -72,17 +72,21 @@ class GenerateOgImageCommand extends Command
         $height = $image->height();
 
         // Calculate text positioning (postcard style - left side)
-        $x = 120; // Fixed left margin
-        $y = 150; // Higher up on the image
+        $x = 90; // Fixed left margin
 
         // Calculate max width (don't go past halfway to avoid photo)
-        $maxWidth = (int) ($width * 0.58); // Leave right side for the photo
+        $maxWidth = (int) ($width * 0.50); // Leave right side for the photo
 
         // Get system font path
         $fontPath = $this->getFontPath();
 
         // Process text - handle manual line breaks and word wrap
         $lines = $this->wrapText($title, $maxWidth);
+
+        // Adjust Y position based on line count
+        // 2 lines: move down for better centering
+        // 3+ lines: keep higher for balance
+        $y = count($lines) === 2 ? 175 : 125;
 
         // Add text to image
         $image->text(
@@ -95,6 +99,7 @@ class GenerateOgImageCommand extends Command
                 $font->color('#ffffff');
                 $font->align('left');
                 $font->valign('top');
+                $font->lineHeight(1.5);
             }
         );
 
@@ -119,21 +124,7 @@ class GenerateOgImageCommand extends Command
 
     protected function getFontPath(): string
     {
-        // Try macOS system fonts
-        $fonts = [
-            '/System/Library/Fonts/SFNSDisplay.ttf', // SF Pro Display
-            '/System/Library/Fonts/SFNS.ttf', // SF Pro
-            '/System/Library/Fonts/Helvetica.ttc', // Helvetica
-            '/System/Library/Fonts/Supplemental/Arial.ttf', // Arial
-        ];
-
-        foreach ($fonts as $font) {
-            if (file_exists($font)) {
-                return $font;
-            }
-        }
-
-        throw new \RuntimeException('No suitable font found on system');
+        return resource_path('fonts/Poppins-Regular.ttf');
     }
 
     /**
