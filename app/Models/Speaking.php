@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Scopes\LatestPublishedOrderScope;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Attributes\ScopedBy;
 use Illuminate\Database\Eloquent\Builder;
@@ -15,6 +16,25 @@ use Sushi\Sushi;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 
+/**
+ * @property string $type
+ * @property string|null $transistor_id
+ * @property string $title
+ * @property string|null $show_name
+ * @property string|null $embed_url
+ * @property string|null $video_url
+ * @property Carbon|null $published_at
+ * @property int|null $duration
+ * @property string $summary
+ * @property string $description
+ * @property string $slug
+ * @property string|null $transcript
+ * @property string|null $video_thumbnail
+ * @property string|null $video_embed_url
+ * @property string $duration_mmss
+ * @property string $type_label
+ * @property string|null $context_name
+ */
 #[ScopedBy(LatestPublishedOrderScope::class)]
 class Speaking extends Model
 {
