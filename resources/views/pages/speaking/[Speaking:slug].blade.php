@@ -1,9 +1,3 @@
-@php
-    use function Laravel\Folio\name;
-
-    name('speaking.show');
-@endphp
-
 <x-app>
     <x-slot name="seo">
         <title>{{ $speaking->title }} | {{ $speaking->show_title }}</title>
