@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands\Images;
 
+use Exception;
 use App\Models\Post;
 use App\Models\Speaking;
 use Illuminate\Console\Command;
@@ -55,8 +56,8 @@ class GenerateOgImageCommand extends Command
             $this->info("OG image created successfully at: public/images/share/og/{$name}.png");
 
             return Command::SUCCESS;
-        } catch (\Exception $e) {
-            $this->error('Failed to generate image: '.$e->getMessage());
+        } catch (Exception $exception) {
+            $this->error('Failed to generate image: '.$exception->getMessage());
 
             return Command::FAILURE;
         }
@@ -114,7 +115,7 @@ class GenerateOgImageCommand extends Command
                 $this->generateImage($post->slug, $post->title, 'blog');
                 $this->info("  Generated blog/{$post->slug}.png");
                 $generated++;
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 $this->error("  Failed to generate blog/{$post->slug}.png: ".$e->getMessage());
             }
         }
@@ -145,7 +146,7 @@ class GenerateOgImageCommand extends Command
                 $this->generateImage($item->slug, $item->title, 'speaking');
                 $this->info("  Generated speaking/{$item->slug}.png");
                 $generated++;
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 $this->error("  Failed to generate speaking/{$item->slug}.png: ".$e->getMessage());
             }
         }
