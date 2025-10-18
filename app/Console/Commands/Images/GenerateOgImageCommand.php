@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands\Images;
 
-use Exception;
 use App\Models\Post;
 use App\Models\Speaking;
+use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
