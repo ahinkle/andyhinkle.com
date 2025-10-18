@@ -6,6 +6,7 @@
         "php": "^8.4",
         "ahinkle/auto-resolvable-blade-components": "^3.0",
         "calebporzio/sushi": "^2.5",
+        "intervention/image": "^3.11",
         "laravel/folio": "^1.1",
         "laravel/framework": "^12.7",
         "laravel/nightwatch": "^1.7",
