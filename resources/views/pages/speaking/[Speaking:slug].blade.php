@@ -1,9 +1,22 @@
+@php
+    use function Laravel\Folio\name;
+
+    name('speaking.show');
+@endphp
+
 <x-app>
     <x-slot name="seo">
         <title>{{ $speaking->title }} | {{ $speaking->show_title }}</title>
         <meta name="description" content="{{ $speaking->summary }}">
+        <meta property="og:type" content="article">
         <meta property="og:title" content="{{ $speaking->title }}">
         <meta property="og:description" content="{{ $speaking->summary }}">
+        <meta property="og:url" content="{{ url()->current() }}">
+        <meta property="og:image" content="{{ asset("images/share/og/speaking/{$speaking->slug}.png") }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ $speaking->title }}">
+        <meta name="twitter:description" content="{{ $speaking->summary }}">
+        <meta name="twitter:image" content="{{ asset("images/share/og/speaking/{$speaking->slug}.png") }}">
     </x-slot>
 
     <p class="py-2 text-center font-sans text-sm text-white/75">{{ $speaking->published_at->format('F j, Y') }}</p>

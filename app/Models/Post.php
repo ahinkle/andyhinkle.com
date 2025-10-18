@@ -12,6 +12,14 @@ use Sushi\Sushi;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 
+/**
+ * @property string $title
+ * @property string $description
+ * @property Carbon|null $published_at
+ * @property string $slug
+ * @property string $content
+ * @property string $formatted_date
+ */
 #[ScopedBy(LatestPublishedOrderScope::class)]
 class Post extends Model
 {

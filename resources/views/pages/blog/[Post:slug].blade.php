@@ -24,6 +24,15 @@
     <x-slot name="seo">
         <title>{{ $post->title }}</title>
         <meta name="description" content="{{ $post->description }}">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="{{ $post->title }}">
+        <meta property="og:description" content="{{ $post->description }}">
+        <meta property="og:url" content="{{ url()->current() }}">
+        <meta property="og:image" content="{{ asset("images/share/og/blog/{$post->slug}.png") }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ $post->title }}">
+        <meta name="twitter:description" content="{{ $post->description }}">
+        <meta name="twitter:image" content="{{ asset("images/share/og/blog/{$post->slug}.png") }}">
     </x-slot>
 
     <p class="py-2 text-center font-sans text-sm text-white/75">{{ $post->formatted_date }}</p>
