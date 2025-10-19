@@ -331,17 +331,23 @@ php artisan fetch:github-contributions
 
 You now have a dynamic section on your website showcasing your latest public contributions. It updates daily, uses efficient caching, and only fetches the data you need from GitHub.
 
-Some ideas to extend this:
+Is this the "best" way to implement this feature? Probably not. There are certainly more sophisticated approaches you could take:
 
-- Add filtering UI to show contributions by organization
-- Display contribution statistics (total PRs merged, lines of code)
-- Create a dedicated "Open Source" page with more detailed contribution history
-- Add charts showing contribution trends over time
+- **Use a dedicated package** like Spatie's GitHub package for more robust API interactions
+- **Store contributions in a database table** for more complex querying and filtering
+- **Create a GitHub service class** to encapsulate all API logic and make it more testable
+- **Implement webhooks** instead of scheduled commands to get real-time updates
+- **Add retry logic and better error handling** for API failures
+
+But here's the thing: this is a personal website. The beauty of this implementation is its simplicity. It's easy to understand, maintain, and debug. There are no dependencies beyond Laravel's HTTP client, no database migrations to manage, and the entire feature lives in just two files.
+
+For a personal site that updates once a day and displays a handful of contributions, this approach is perfect. It's maintainable, it works reliably, and I can understand exactly what it's doing six months from now when I inevitably need to make a small change.
 
 The best part? Your visitors can see what you're actually building, not just what you claim to be building. That's powerful social proof for any developer's portfolio.
 
 ## Resources
 
+- [My Personal Website Source Code](https://github.com/ahinkle/andyhinkle.com)
 - [GitHub GraphQL API Documentation](https://docs.github.com/en/graphql)
 - [GitHub Search Syntax](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests)
 - [Laravel HTTP Client](https://laravel.com/docs/http-client)
