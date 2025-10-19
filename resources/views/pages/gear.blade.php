@@ -39,16 +39,31 @@
                             Gateron Red Switches</div>
                     </li>
                     <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Bose
-                            QuietComfort 35 II Headphones</h3>
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Apple
+                            AirPods Pro (2nd Generation)</h3>
                         <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">Noise
-                            Canceling, Black</div>
+                            Canceling, Compact</div>
                     </li>
                     <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Sudotack
-                            ST-800 Microphone</h3>
-                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">24-bit,
-                            192kHz, Cardioid</div>
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Shure
+                            MV7X Microphone</h3>
+                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">
+                            USB/XLR, Cardioid
+                        </div>
+                    </li>
+                    <li class="group relative flex flex-col items-start">
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Scarlett
+                            Solo (3rd Gen) Audio Interface</h3>
+                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">
+                            USB, 24-bit/192kHz
+                        </div>
+                    </li>
+                    <li class="group relative flex flex-col items-start">
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">OWC
+                            Thunderbolt Dock</h3>
+                        <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">
+                            USB-C, 40Gb/s, 14 Ports
+                        </div>
                     </li>
                     <li class="group relative flex flex-col items-start">
                         <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Canon
@@ -68,9 +83,13 @@
             <div class="md:col-span-3">
                 <ul role="list" class="space-y-10">
                     <li class="group relative flex flex-col items-start">
-                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Visual
-                            Studio Code</h3>
+                        <h3 class="text-base font-semibold tracking-tight text-gray-800 dark:text-gray-100">Code Editor
+                        </h3>
                         <div>
+                            <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">
+                                Editor: Visual Studio Code <a href="https://code.visualstudio.com/" target="_blank"
+                                    rel="noopener noreferrer" class="text-xs underline dark:text-blue-500">(link)</a>
+                            </div>
                             <div class="relative z-10 mt-2 w-full text-sm text-gray-600 dark:text-gray-400">
                                 Font: MonoLisa <a href="https://www.monolisa.dev/" target="_blank"
                                     rel="noopener noreferrer" class="text-xs underline dark:text-blue-500">(link)</a>
