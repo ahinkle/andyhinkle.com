@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="dark">
+<body class="dark antialiased">
     @env('local')
         <x-dev.dev-toolbar />
     @endenv
