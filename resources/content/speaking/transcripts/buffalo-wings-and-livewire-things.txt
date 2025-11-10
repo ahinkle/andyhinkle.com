@@ -1,0 +1,980 @@
+Andy Hinkle (00:00)
+Bam bam bam boo.
+
+Dalton McCleery (00:03)
+You should start with that.
+
+Andy Hinkle (00:13)
+Hey everybody, welcome to another episode of the Midwest artisan. I'm your host, Andy Hinkle.
+
+Dalton McCleery (00:21)
+cohost Dalton McCleary.
+
+Andy Hinkle (00:23)
+Don't know how's it going,
+
+Dalton McCleery (00:24)
+I'm wonderful Andy, wonderful. How are you?
+
+Andy Hinkle (00:28)
+I'm good, man. I actually had to listen to our last show intro before we chopped on the call just sort of like, how do we do this thing again? Because it's been too long. I was like, what do we say? I I went to Buffalo, wire live. It was a good time.
+
+Dalton McCleery (00:34)
+you
+
+Been awhile. Been awhile.
+
+That's Nice, nice.
+
+Andy Hinkle (00:43)
+If you, uh, if you watch the show on YouTube, you can see my office is different now. Um, I did a little office revamp, so talk about that. we're hoping to talk, yeah, today we're going to talk about some MCP tools that we use um, PHP Stan And so I had some fun with that recently. Uh, and you've been using the chat GPT Atlas browser. And so I want to hear about that, but.
+
+Dalton McCleery (01:06)
+Half.
+
+Yeah, yeah.
+
+Andy Hinkle (01:08)
+And
+
+then hopefully we'll see about possibly wrapping with cursor 2.0. And so, yeah, it'll be a good show.
+
+Dalton McCleery (01:16)
+Stay tuned.
+
+Andy Hinkle (01:17)
+So, ⁓ yeah, I redid most of my office. The only thing I actually almost did as well is paint. And so I actually, it was almost a remodel. It got really close, but ⁓ yeah, it's just a brand new desk, So I've been having all sorts of back issues and...
+
+Dalton McCleery (01:26)
+Ha ha.
+
+Andy Hinkle (01:34)
+so for people who've never met me in person, pretty tall guy, six foot seven. And so, ⁓ likely I do have back issues just from leaning over with kids and you know, whatever life it, life brings you for being tall. So yeah, I just, I, I, you know, I go to the chiropractor, ⁓ all the time, but still just not enough. And she's been telling me like, should really get a standing desk if you know, for, if you're sitting for the whole day, which I, which I do try to code all day.
+
+Dalton McCleery (01:47)
+Yeah, non-67 people.
+
+Andy Hinkle (02:02)
+So I did that, finally did that, which is going great because I'm sitting right now. So, but I promise you, I do stand a lot. do use it. ⁓ so I got a standing desk and, ⁓ not too much to. Yeah. Yeah. That it's nothing real fancy. Honestly, it was, ⁓ it was a good old Amazon day special. looking, it's called. ⁓
+
+Dalton McCleery (02:05)
+Nice.
+
+Nice. What brand did you get?
+
+⁓ Jazzy Jeff Bezos.
+
+Flexi Spot, I've heard of it.
+
+Andy Hinkle (02:27)
+Flexi spot is the name of it. so yeah,
+
+they, it was kind of like a budget standing desk. It wasn't a ton, but it was more or less like I had a problem like trying to pick one and the ones that I was debating were like thousands of dollars. like, look, I'm just gonna start with a standing desk and make sure it's a good fit. And then I'm just gonna kind of let the pain drive the back pain drive the.
+
+drive the initiative of like what, which ones I should migrate to. My goal was to have no cables, ⁓ like insight. That was my other thing is like with my old, my mold set up, I had cables everywhere. When I'd get in the morning, I had plugged in like three cables into my computer, three or four just on the USB-C. Like this is getting ridiculous. I also had a power cable, like, you know, side of the thing. So I wanted no cables like visible on my desk.
+
+Dalton McCleery (03:05)
+Nice.
+
+Andy Hinkle (03:19)
+And so, and I was able to accomplish that. And so I got a, ⁓ I got a monitor, like a mount. got this, you, yeah, this new microphone now, which you can see though with the boom, but I got a monitor mount. I got this thing it's called an OWC Thunderbolt dock and it's actually all under my desk. And so I have one cable that I plug into my laptop and everything turns on. And so then when I'm done, I just unplug the cable, which has a little strap in the back. ⁓
+
+just with the momentum of how it's hanging underneath, it just goes back. And so it's nicely tucked behind. don't even see it when it's unplugged. So no cables in sight. Absolutely loving it. Standing, sitting, ⁓ it's joy. so ⁓ when I was in, you know, went to wire live in Buffalo, was just telling my wife, like, I'm back. Actually, I'm happy to get back on the saddle and get my new office again, because I haven't been able to use a lot. So it's been really good and been really enjoying it.
+
+Dalton McCleery (04:14)
+I'm gonna need some pics or something. I'm gonna need to see what this is. it's like after, yeah, after we wrap up, I'm gonna want some pictures. Because I noticed that you've swapped where you are, like the doorway into your office, you always sat facing the door and now you're facing away from the door.
+
+Andy Hinkle (04:18)
+Yeah, I'll have to send it to you. ⁓ yeah.
+
+Mm-hmm.
+
+Yeah, I thought about that kind of lighting situation. So I am still working on lighting and stuff like that, but, because the way the window is in here, it'll, it just kind of washes out everything. So I moved it slightly, which doesn't give me a great backdrop. You just see my house in the back. So if we're, if kids are running around, you might, you know, on a, on a call or something, people might see that, but it's fine. Um, but.
+
+Dalton McCleery (04:47)
+Yeah.
+
+You're human.
+
+Andy Hinkle (04:55)
+Yeah, so you see the doors now instead of just a wall, which is fine. ⁓ But instead of it being washed out by the sunlight coming into the room on calls and stuff like that. And it gives me also an opportunity. It's like my desk is just in the center of the room. So it makes it really open. There's nothing on the floor. It's just my desk right in the center. Besides the guitar and the little filing cabinet. But it makes it so nice and clean and just...
+
+I don't know, gives me lot of room for thought. I just hate things being really cluttered. it just, ⁓ yeah, for it being a small room in here, it's a pretty small office. It ⁓ makes it feel really spacious now. And so I like it.
+
+Dalton McCleery (05:35)
+Yeah, very nice. Do not forget to send me them pics. I want to see them.
+
+Andy Hinkle (05:39)
+Yeah,
+
+yeah, for sure. ⁓ I had a casualty during all this. It was, yeah. So I was selling my old desk. my gosh, it was probably 200 pounds. You remember it. It's this huge wooden desk. It's like heavy wood.
+
+Dalton McCleery (05:45)
+Okay, okay.
+
+That big thing. Huge.
+
+Andy Hinkle (06:00)
+And so I just put it up on like, you know, Facebook marketplace. I almost put it for free. just like, just come get it. Cause it's that heavy. Just take it like, please. But it was, it's in pretty good shape. So I put it on Facebook marketplace and I had a woman that was interested. I was just starting her own business. Yada, yada. So I had, was setting up assembling my, my monitor stand, um, my mount for it. And it comes with like two clamps. And so, uh, there's one clamp on the top, on the top.
+
+come up on bottom, come together on the desk, know, so to clamp your monitor. And because this monitor is probably 40 pounds, it's very heavy. It's 49 inch Odyssey G9. So, ⁓ and so it's pretty heavy. Yeah, yeah, yeah, pretty wide. the clamps themselves pretty heavy. I thought they, when I pulled them out of the box, that they are two separate clamps. Or no, when I first pulled them out, I it was just one and I thought the other one was still in the box. And there are two in my hand. And I put my phone on the ground.
+
+Dalton McCleery (06:35)
+Mm-hmm. Why?
+
+Andy Hinkle (06:54)
+anticipating that woman to call like she was going to like, you know, I put it on the car because I didn't want to have it on desk in case, you know, it if one of the parts hit it or if like it slid off or whatever the case is, because I was still assembling the desk, put on the floor, should have had in my pocket. Right. So I brought out the box and there's two clamps on there. One slipped, hit the desk, bounced and hit my phone directly on the floor. And this is the I got the iPhone 17 Pro Max, the orange one.
+
+I just had it for like me, this is probably three weeks now. It's brand new. Completely cracked the screen. It was just like equivalent to dropping a hammer on your phone. So I could only see just the top of the phone, nothing else. And it was done. So I could still like do like, Siri. Oh, I don't want to say that word. Sorry folks. So Hey S word, uh, Hey S word call my wife. Right. And that still worked. So I was like, okay, the phone actually will, it does still work.
+
+Dalton McCleery (07:26)
+Yeah.
+
+Andy Hinkle (07:51)
+You just couldn't use it. um, it, so anyway, I took it. This was, like toward the end of the week and I was leaving for Buffalo on Monday. So I took it to Apple store and Apple told me, um, that they don't have the parts to fix it right now. Like they have to send it in for repair. Um, I don't have Apple care because I was, if I did have Apple care, they could, oh, here's a new phone. Here you go. Yeah. So that was a lesson learned. Get Apple care. And so I just like, I just put a case on it. You'll be all right.
+
+Dalton McCleery (08:09)
+What?
+
+it yeah who buys AppleCare ⁓
+
+Ugh.
+
+Andy Hinkle (08:22)
+So, yeah, I was like, I might actually be going to Buffalo without a phone. And so I went and tried to find an old phone, which I traded in on my old phone previously. Went and tried to find one. I was like, it was just ridiculous. I spent like 400 and some bucks and just having to deal with returning it and like, oh, I don't need any more, like doing a pawn shop or something. And we're going to buy an Apple store and getting a brand new iPhone for, I don't know what it is now, like $1,400 or something.
+
+And using it for a bit and then giving it back and returning. just, I just didn't want to deal with that. I was like, what would it be like if I just went to Buffalo without a phone? Just, I have my Mac book, which gives me eye message. I can, I can talk to people I need to, which has telegram has everyone I need. I was like the only, the trickiest part will be getting from the airport, ⁓ to the hotel and like transportation. So I was like, you know what? I'm do it. It's fine. It like, well, it'll work out. And maybe like if it.
+
+Maybe since I'm not getting, I'm not getting this new phone or whatever. I'm not going to go get a temporary phone. Apple will call me before I leave on the trip. No, they didn't call. they didn't. like going to Buffalo without a phone. So, ⁓ and it was actually kind of freeing in some ways when I would wake up in the morning, it would be like, well, might as well get up and get my day rolling. I don't have a phone to like check my notifications. I just get up and go and get to get to work, you know? So, ⁓ it was good.
+
+So, but in the process of looking for a new phone, I found my old Nintendo DS. And so inside, yeah, you know where this is going. Inside is Pokemon Black 2, which I didn't realize, when I, I haven't had, I haven't played this game since I, since it was released and I bought it. was, I was like in high school or middle school when I bought it or something. And so I haven't played it since it was released and, um,
+
+Dalton McCleery (09:56)
+⁓ okay, okay.
+
+Andy Hinkle (10:16)
+I didn't realize it's one of the best Pokemon games of all time. And so it's really good. Are you a Pokemon guy?
+
+Dalton McCleery (10:22)
+No, I was a Yu-Gi-Oh guy. I was a Yu-Gi-Oh guy.
+
+Andy Hinkle (10:24)
+Oh, yeah, okay. Okay.
+
+Okay. But anyway, it was like, hey, this gives me something to do if I'm not on my laptop, I can just be playing Nintendo DS feel like a kid or whatever. So that's what I did, man. It was a lot of fun. I really went old school here just like, you know, got to the got to the airport. I printed off the boarding pass. I didn't have a phone. So I had to figure out how to do type in the confirmation do all that. Yeah, boarded the
+
+Dalton McCleery (10:34)
+you
+
+Yeah.
+
+Andy Hinkle (10:49)
+board of flight, people thought it was great that I was playing DS on the plane, the way. They thought, what are you playing? They're so interested. Yeah. So it was cool. yeah, the most interesting thing is when you land everyone just like, even my, even my first instinct is the moment you land, you turn off airplane mode and you figure out, okay, where's my connection? Um, is anyone texted me? Just the whole thing. It's just like this thing of like, as soon as we land, that's where my brain went. And I wish from a pocket, I'm like, oh yeah, I don't have a phone. It's it's just human habit.
+
+Dalton McCleery (11:08)
+Yeah.
+
+Yeah.
+
+Andy Hinkle (11:17)
+So literally everyone, I looked around me, everyone's on their phone, except for me, you I'm over here playing Pokemon like, you know, like a kid. Yeah. Yeah. So, ⁓ it was a good time. ⁓ get to the connection. had a connection from Detroit. So, ⁓ trying to find the connection to add, I had to look at the old, like the board, the old school way, looking at the board, finding like, Buffalo. And then, it's at Gates. and so, and then actually trying instead of like looking at, it's at Gate, know,
+
+Dalton McCleery (11:22)
+me on your little ds
+
+Andy Hinkle (11:44)
+just a quick reference. So you forget how much you take it for granted, but it was, it was kind of freeing kind of different too. It was fun.
+
+Dalton McCleery (11:52)
+going real old school. Yeah.
+
+Andy Hinkle (11:54)
+Get to Buffalo ⁓ and here's the most, his part where was most nervous about. Worst case, I'll find some shady taxi driver and just whatever, right? But I get there and I found out you can book an Uber on your laptop, which I didn't know you could do that. But I thought you had to have some type of tracking where it knows where you are, GPS. But no, you can just go on your, on.
+
+like m.uber.com book and booking an Uber. And so I did it. I like stuck my head off the door and on my laptop just hit submit. was just looking for this car and memorize the license plate number when they came out just to make sure, you know, it's, but it all ended up working out, got to the hotel, the hotel in the conference. We're all in the same place. So was really nice. And so as soon as you got, I got there, I saw some people like, you know, met at Laricon. Yeah, it was really nice having that all in one place.
+
+Dalton McCleery (12:38)
+Excellent. Like that.
+
+Yeah.
+
+Andy Hinkle (12:45)
+Hotel was beautiful. Buffalo was absolutely amazing. I really liked Buffalo besides the weather. That's a wonderful place. So, I mean, the weather wasn't bad. Yeah. But you know how they get that lake effect snow and all that, couldn't live there, it was it. Buffalo was such a great city. and they had their food, the Buffalo, I mean, Buffalo wings. originated there, right? ⁓ we had, ⁓ they catered some wings, ⁓ yeah, at the
+
+Dalton McCleery (12:55)
+cold. bet.
+
+Andy Hinkle (13:13)
+conference and they were delicious. yeah, food was really good.
+
+Dalton McCleery (13:16)
+Excellent.
+
+Excellent.
+
+Andy Hinkle (13:18)
+Um, they had a party on night one, like it was kind of a pre-party. So it was like, Hey, everyone's getting in town. It's all good together. And we all, bunch of us thought it was actually at the conference and turns out it was like at a restaurant. Like I'm like a couple of miles away. I was like, I have no phone. No, I have to memorize the directions. It was pretty much just go down the street for a bit. But, um, so I get to the lobby and
+
+I'm like, should I even go? Like, I don't want to get down there or get lost or, you know, or whatever. It was cause it's getting kind of late at night. I get to lobby and Dan Heron opened the elevator, opened Dan Heron's there. I'm like, hey Dan. So he just got in from, ⁓ like Heathrow from London.
+
+Dalton McCleery (13:57)
+Yeah, that's right. is from London. I forgot about that.
+
+Andy Hinkle (13:57)
+no.
+
+Yeah, he lives, ⁓ think it's like an hour outside there or something like that. But, ⁓ yeah, he just, he, he said he just got in and I told him, you know, my little dilemma and I asked him if he's going, was like, yeah. And he, they offer it. And then Ryan Chandler came down. ⁓ Ryan Chandler works at Laravel now he's like, yeah, just grab a ride with us. So that was really nice of an offer ride. Cause, I like, I might have to book another Uber with my laptop again and try to figure it all out. So end up working out and went to this party and, ⁓
+
+Which I'm so thankful I went because I was almost in that situation where I didn't go but as soon as I walked in I saw J-Mac like I could barely made it up the stairs people were Coming to talk to me and it was like right away right away You find people to talk to it was just so nice to feel like you're just meeting the boys again or whatever So J-Macs adjacent to query Day of Hicking Just a bunch of the level little crew that came up and said hi Josh Siri came up. Yeah
+
+Dalton McCleery (14:57)
+voice.
+
+Andy Hinkle (15:00)
+Uh, Shane, he's doing, um, Shane from native PHP is doing all sorts of crazy stuff over there. Oh, you know, with that project. So yeah, it was, it was really cool. Oh, and then Caleb just like, uh, you know, have all these, there's like a sea of people and Caleb came, you know, just, They're just so nice, you know, just being able to, to reach out and, just catch up and whatnot. So it was a really good time. And, um, during that, when I was.
+
+talking about, you know, told, told some people how my phone was broken, whatever Dave Hicking told me how I needed to like you should, what I should have done is went to the Apple store and, and got a temporary phone from Apple and this returned it into the trip. said, and people are getting hard time. Like that's why Apple's prices are going up and stuff like that. So it was a, it was a good time.
+
+all the updates with live wire are unbelievable, dude. It's live where live wire is just coming in a mature state where it's like really exciting. Now, have you seen all the updates with, with live wire lately?
+
+Dalton McCleery (15:54)
+I remember seeing what he talked about on laracon I've seen the island, I can't remember the other thing that he said that came with the island, but was like you could ⁓ individually pull stuff out. I don't know. But I remember seeing his laracon talk about it. Is there new stuff to that?
+
+Andy Hinkle (16:16)
+There
+
+it's just a bit more mature like it's more thought out. ⁓ He said ahead of time that everything changed like since laracon but not a ton really changed. Thialand Concepts still there. He kind of went into details of how he would build stuff with LiveWire. He built a Kanban board. Is that how say that Kanban? Kanban? I don't know. Yeah. But he built a board, you know, where you drag and drop items like a Trello board or something like that.
+
+And he, uh, he had these new directives. was something similar to like a wire drag or something like that. And you could, because before live wire, if you recall, like it was all server-sided. So when you would click and drag to like a box and let go, the server would make a request, but as soon as you let go, it would go back to the original place. And then once it came, once live wire came back and said 200, and then it finally went back to where you dropped it. It would just, it wasn't a great UI. And he has some new stuff to kind of fix that. Um, there's a.
+
+Dalton McCleery (17:02)
+Mm-hmm.
+
+Andy Hinkle (17:13)
+There's some things like that are improved with like wire ignore ⁓ that make it really easy. Have you seen the lightning bolt thing? It's getting a, it's starting to grow on me a little bit.
+
+Dalton McCleery (17:22)
+⁓
+
+it's the yeah where you can you can name your files with a lightning bolt. Yeah. Yeah, I remember seeing that.
+
+Andy Hinkle (17:27)
+Light bulb in front of it. Yeah. And then,
+
+then it's like your component. So you have a component file in LiveWire. Then you have like a class file. Then you had your blade. Then you have your JavaScript in your test all in the same folder, but the, and the folder directory is called the component name with the lightening bolt in front of it. So, ⁓ it's kind of growing on me. did a hack day. We did a hack tan day two where I got to play with it and, ⁓ it's
+
+It takes some time to get used to cloud code. Absolutely hates it, but it just, it just needs some more time to get familiar with it. But anytime I would ask cloud code to do something, it would just like, it would see that component and then completely re rewrite it into like the old way of writing like light wire components. So, then I'll be like, then I have to tell it like, no, this is, ⁓ like this is written in version four, link the docs. And then I would say like, ⁓ like check this out. this.
+
+Dalton McCleery (18:00)
+Of course, of course.
+
+Come on, Claude.
+
+Andy Hinkle (18:25)
+this other components written in a similar way, you know, it ended up working out, but the, uh, the talks themselves, wire live were excellent. one of my things that blew blew my mind was, uh, Daniel Colburn. So decole, he built this, he built this. Yeah.
+
+Dalton McCleery (18:39)
+Obviously, he's always got good ones.
+
+Andy Hinkle (18:43)
+He built this LiveWire component, it was like an invoice generator. And it was one LiveWire component and it would generate, you could see the HTML, like when you loaded the page, so it would be like a route colon colon LiveWire invoice and then an ID. then, the LiveWire, so it's like a LiveWire, the whole route is the LiveWire component. And then it would generate an invoice for the given ID. He did this thing where he added a trait.
+
+And then ⁓ when he booted up like ⁓ something like Postman or like you're like viewing it like an API response, if you added the headers of like accept ⁓ JSON and then hit it at that same exact endpoint, it would return just the data as JSON. So it same route, same component. You can view it in HTML, but then you do accept JSON and it returns the data.
+
+Dalton McCleery (19:32)
+Okay, we like that.
+
+Andy Hinkle (19:38)
+Then this is where it blew my mind. Then he put .pdf at the end of the file, at the end of the route. it just, when he hit enter, it bloated the PDF, like generated a PDF on the fly. Same route, same component. Yeah, it blew our minds. So that was, yeah.
+
+Dalton McCleery (19:50)
+no way no
+
+Yeah, did he say
+
+how he was doing that? Because that's pretty rad.
+
+Andy Hinkle (20:02)
+It was just like a trait. Yeah,
+
+it did. It was just, it was a trait and, ⁓ inside the tray, it just listened for the type of, of, of requests that was coming in. Like, Hey, is this a, ⁓ is this expecting Jason response? we're just going to return the data and not return the live wire HTML. ⁓ and it's, it's a PDF. we're going to generate one here. So it was just, but it was simple as like adding a trait. And that was it. I'm sure the tray obviously has some of the complexities and stuff like that.
+
+because like I'm not making this into a package. If you want it, you can steal it. You know, so, uh, but it was just like, just the things that you can do with live wire, uh, this with stuff like that. We have some things that, uh, that we, we'd love to just possibly just click and do a click something and it turns into a PDF or something. Usually we have to write a custom component just for that, but, um, just, uh, yeah. And so, um,
+
+Dalton McCleery (20:48)
+Yeah. Yeah, or some exporter class. Yeah.
+
+Andy Hinkle (20:55)
+LiveR4 looks really good. Got to play with it on day two. Day two is a hack day. So day one, they did this thing where they have airhorns. Is somebody, is some, you remember going to laracon, some folks would run over or whatnot. They had to get back on track. So they had airhorns and ⁓ if somebody got like two minutes with them from getting time, they would play an airhorn. And I think they only had to bring it out like once, but it was really cool to see like, you know, just.
+
+Dalton McCleery (21:18)
+You
+
+Clever.
+
+Andy Hinkle (21:24)
+Right. It's a simple way, simple tactic to keeping people on time. So day two would be in hack and hang. It was just like, Hey, whatever you want to hack on, if you have an idea. So I wanted to play with the islands. I wanted to play with liveware four. So I did air horns as a service. Air horns as a service is, ⁓ an application where.
+
+⁓ A computer will sit in the back It'll be just deployed in the back of the room. And so you've been like going coming to Laracon over the years it gets kind of noisy in the back you talk to you talk to the the sponsors you get talked to other people, you know, and so People tend to over the years they say hey, it's too noisy in the back We try to prevent the noise in the back or whatever. They sometimes they even give announcements like hey guys, let's try to keep it quiet it
+
+quiet in the back, it's getting a little bit loud, whatever, right? So now with Airhorns as a service, which by the way, I'll leave it to you to figure out the acronym, but.
+
+Yeah, so yeah, give you a moment there, but, everyone's as a service. What you can do is you can put a single computer in the back and I built this on live wire. You put a single computer in the back and it, and and it reads the DBS, ⁓ in the room. like the decimals go like how loud it is in the back and that I want to play with reverb too and web sockets. So that is broadcast on across your application. So
+
+If it's getting too loud on that machine, that's close in the back. can pull up on your phone and every attendee gets a hundred dollars and their kind of thing. And they can deploy air horns. They can deploy a pepper spray. Um, they can deploy, uh, uh, helicopter evacuations or just a little ring of bells. And so I downloaded all these noises like these MP3s. so, um, but not only when you deploy the sound, like not only is it deployed on the computer in the back, it's played on every single person's
+
+Dalton McCleery (23:19)
+That's
+
+funny. ⁓
+
+Andy Hinkle (23:19)
+device at the same time. So I got to do with that. had some issues getting it properly
+
+hosted up on Forge, but it ended up being a really good time on the hack and hang. When it got to the hack and hang day was so fun. I sat at the table and I looked to my left and Ian Lansman sitting on the table over there. I looked to my right, Josh series. We have all these little tables and Josh series over here. I just been able to hang out with, uh, with the boys, you know, and yeah, just being able to hang out and, and have a good time. And so.
+
+Dalton McCleery (23:41)
+Rubbing them elbows. Yeah.
+
+Andy Hinkle (23:46)
+It was so much fun. We got to meet Caleb's wife and ⁓ we talked about theme parks and she's really into Disney theme parks like I am as well. So we talked a bit and got to meet his kids. They're so sweet. ⁓ River and Knox. So it just felt like family and we're good friends, know? So was good, man. So yeah, was a great time.
+
+Dalton McCleery (24:07)
+Aww. Aww. I'm glad you had a good time. I'm glad you ended up going.
+
+I'm glad you ended up going. I know that you were talking about maybe not going and you were like, oh, should I go? I was like, you probably should.
+
+Andy Hinkle (24:16)
+yeah, I-
+
+You had a lot.
+
+Yeah, because we have a lot of personal stuff going on right now but just, lot of stuff has been going on in our family. So it was just like, should I go and between you and my wife, like, yeah, you should absolutely should do it. And then Jake, boss Jake said like, you should absolutely go too. He really wanted to go, but he had a conflicting conference. yeah, but it was a great time. Loved it. Can't wait for next year. So I got to hang out with,
+
+Dalton McCleery (24:45)
+Confirmed?
+
+Andy Hinkle (24:47)
+Well, yeah, it's it's first one we don't know. But I got to hang out Doug Sisk for a while. Doug was there. And so, yeah, it was a lot of fun hanging out with him. He if he told Caleb, if we want to do another one next year that we should have it in Orlando. So he's from Orlando. I'd be like, I'd be down for that right in Disney's backyard. It'd be good. We could all bring our kids and wives. It would be great. Send send a wise outing.
+
+Dalton McCleery (24:54)
+⁓ nice. Good.
+
+Hey hey!
+
+Andy Hinkle (25:13)
+a wire live wise outing to Disney while all the guys get together, you know, so there we go.
+
+Dalton McCleery (25:13)
+Yeah.
+
+Yeah, Yeah,
+
+sponsored by Doug Sisk's app.
+
+Andy Hinkle (25:22)
+But yeah,
+
+that'd be good. So yeah, love to have you come out, visit, come out and check it out next year if it comes around again.
+
+Hopefully you'll be around next year, we'll see. So if not, we'll all see each other again at laracon wherever that is next year. Probably Philly. Everyone's talking about Philly next year.
+
+Dalton McCleery (25:40)
+At Lerikon, yeah, he should. Hey, hey,
+
+Philly's close to us. I like Philly. Philly's a short flight for me. I like that. Hey, Otwell,
+
+Andy Hinkle (25:48)
+There you go.
+
+Yeah, good deal.
+
+Dalton McCleery (25:55)
+I always call him Otwell around the house because my wife's name's Taylor. So it's real weird when I start talking about Taylor and she's like, what are you talking about? I'm like, ⁓ the other Taylor, you know, the other Taylor in my life. I'm with my wife, Taylor, in my personal life. And in my work life, I'm with Taylor Otwell in his Laravel framework. But Philly would be awesome because that's like an hour flight for me. And I don't have to.
+
+Andy Hinkle (26:00)
+yeah.
+
+Dalton McCleery (26:17)
+do anything longer than an hour flight, because I hate that.
+
+Andy Hinkle (26:20)
+Yeah. Chris Morrell, boss Chris is a way I can go for, but, he really wants it in, Philly. He's from Philly and then do Cole is lives in Philly now. So we'll see.
+
+Been using, yeah, talked about MCPs and ⁓ we've been talking a lot like which ones we should use in development. So ⁓ yeah, I've been using ⁓ like Larival Boost, but ⁓ yeah, you put this one on here, I think. So yeah, I'm curious what you think about all the different MCPs.
+
+Dalton McCleery (26:39)
+Yeah, yeah.
+
+Obviously.
+
+Yeah, I've famously real relate into this this Claude code game. I'm like on month two or whatever. So like, bear with me. I don't have a lot, but I've noticed that a lot of people are coming out with really good MCPs and I like to use them. Unfortunately, the last time we talked was a while ago. I was using conductor a lot. The problem with conductors, they don't support like project level MCPs. It's only like
+
+global Claude MCPs. And the problem with that is that Boost is project specific, right? I can't run Boost if I'm working on two projects, three projects at once. So I've been using Claude code in my IDE now. And with that, I've been experimenting with MCPs. And so I put this on here because I'm curious to what you use, but the things that I put on here that I use are Boost, obviously. Like if you're using LiveLine, you're not using Boost, what are you doing? ⁓
+
+My boss, boss Jeff, sent me Chrome. There's a Chrome dev tools one that you can have Claude open up a Chrome instance and navigate around the browser, do things, check the console logs, click around, take screenshots, whatever. I've been using that a lot. I actually had a filament four upgrade for another site that was so many pages that I was like, hey, Claude, just open up Chrome MCP and click through all the pages and write a report on which ones throw errors.
+
+Andy Hinkle (28:07)
+Does a.
+
+Hmm,
+
+interesting. Does Boost include that? Because I thought they include dev tools. Have you tried? OK.
+
+Dalton McCleery (28:18)
+And I didn't have to do that.
+
+the might, but this one like
+
+literally opens up Chrome on my computer and I could see it clicking around and stuff and stuff like that. So that one was super handy to do. Exactly, exactly, exactly. So I'm like hey, ⁓ know, Claude, use the local seeders that I have. You could see a username and a password in there. Log into my app, click around on all the pages and let me know it's broken. And it's like sure thing. Pops it open, goes down all the sidebars, clicks on all the stuff.
+
+Andy Hinkle (28:27)
+⁓
+
+Wow, it's like dusk on steroids.
+
+Dalton McCleery (28:50)
+Hey, here's your report. All right, cool. Fix all those things in that report for me. Right. That one's pretty sweet. I like that one a lot. Um, yeah, for real. That's like literally like dusk, but Claude code. Um, we use Postgres. So like, uh, we have like a database MCP that could query the database check tables, whatnot. It's like, if I'm saying, um, Hey, I need to update some database tables, permissions or whatever for testing. Can you do that?
+
+Andy Hinkle (28:58)
+Make no mistakes, fix it.
+
+Love that.
+
+Dalton McCleery (29:19)
+It'll just like write a query and run the query for me. Hey, done. I didn't have to open up, you know, data grip or table plus or whatever. can just do it for me. I use that one a lot too.
+
+Andy Hinkle (29:28)
+Nice.
+
+Do you use that for debugging? Okay. Yeah.
+
+Dalton McCleery (29:33)
+Yes.
+
+Yes, I do. Like, like, uh, for that filament for upgrade, was like, Hey, this page isn't loading. It's saying the, you know, a materialized view isn't ready or isn't, isn't done. So Claude was like, I can just refresh that materialized view for you. You want me to do that? And I'm like, yeah, do that. So it'll, it'll, it'll just run that query for me. So, all right, here, here it is. The data got refreshed 13 rows here. The 13 rows. Cool.
+
+Open up Chrome and make sure that those 13 rows are in that table on that page and filament And it does that and it's like cool done done and done. That's awesome. I didn't do any of that. That's wicked cool
+
+Andy Hinkle (30:12)
+Yeah, that's really nice.
+
+Dalton McCleery (30:14)
+Yeah. This.
+
+Andy Hinkle (30:16)
+Yeah, I've been, I've
+
+been trying to, sorry to catch off. I just was going to mention, I've been trying to figure out like good levels up for production without giving it too much production level access for like, Hey, I have this user. Here's the user record. Um, like, can you run down this? Can you try to figure this out? And then her turns around and, sorry, the boost MCP will turn around and say, let me query that for you. I'm like, no, no, this isn't production. It's not my local. Don't try that. So yeah.
+
+Dalton McCleery (30:25)
+Yeah.
+
+Yeah, it's not here.
+
+Andy Hinkle (30:44)
+So yeah, that's cool. I'll take a look at that.
+
+Dalton McCleery (30:48)
+Yeah. Yeah. The, the other one that I have that I use a lot is one that my coworker Josh sent me. was called sequential thinking. Have you heard of this one? This one's good. This one's really good. This one is essentially having the AI have a, it's almost like having a conversation with itself. Like if you have a problem and you ask it, Hey, can you sequentially think about this? It will like literally ask itself questions in, in a loop and it'll tell you like, I'm going to think.
+
+Andy Hinkle (30:58)
+No.
+
+Dalton McCleery (31:17)
+eight times, eight, I'm going to do eight rounds of thinking of this problem. And what it'll do is it'll, whatever question it has, it'll basically ask itself and it will go do more research. It'll come back with, with its changes saying, Hey, this is what I found out about that question. Let me ask another question based on that research. And it'll essentially chain its thoughts together. And then, so when I'm planning, you know, I love to play in the Claude code. I'm like, Hey, think sequentially about this. And it will, it's, drastically cuts down my like planning.
+
+Andy Hinkle (31:35)
+Hmm.
+
+Dalton McCleery (31:47)
+amount of back and forth like, you know, what about these questions? Claude can just essentially answer them himself with, you know, with boost or with the database, or I'll say, Hey, use the Chrome, pull up, you know, filament docs, Laravel docs, whatever context seven, pull up those docs, check it. That way you don't have to ask me what's the right way to do this. Right. So like those, those four are the ones that I use a lot and I use them a lot in tandem, like, cause it just, it just makes Claude a whole lot more.
+
+Andy Hinkle (32:12)
+to check that out.
+
+Dalton McCleery (32:17)
+smarter and less reliant on me to like Nudge it along I can I can give it one big push at the beginning and it'll come back a lot faster or not Not lot faster. It does take more time, but it'll come back with a lot better results the first the first time
+
+Andy Hinkle (32:32)
+Sequential thinking. That's good. Yeah.
+
+Dalton McCleery (32:34)
+Sequential thinking. It makes me spell sequential
+
+really well. Like that's hard for me to spell as it is, but like I've got it down to a T. And that's why I moved off of Conductor because I can't, I can do the database, you know, in the Chrome and the sequential thinking on Conductor, but I can't do the boost like on a project level. ⁓ But those are the four that I use a lot. And I definitely recommend at least the sequential thinking. You would probably love that Chrome DevTools one.
+
+It's awesome. Those are my four.
+
+Andy Hinkle (33:04)
+Yeah. Yeah.
+
+I to see what it I'm looking at the article now. I have to see what it offers more than the boost. I keep things on my side. I keep things really simple. I just boost in a cloud code and I just, I'm, really, ⁓ thoughtful of like, I've read through the anthropic documentation on how to construct prompts. ⁓ like when I give it context or when I.
+
+give it like a, like a database record or something like that. I'll, I'll put it in like, I'll wrap it in code. So I'll like right arrow SQL close, close tag and then paste and then close that SQL. So that way it's, it doesn't get confused on context. And so, I'm just, I really, I don't have any agents. I don't know. I just, I keep it really simple. ⁓ I just kind of let, if I know if something gets completely wrong or whatever, I just give it a retry and it usually gets it. Yeah. but then again, ⁓
+
+I read these things online of people like really struggling with it. I just don't know if they're doing too much with some of it or if it's or maybe they have just a bigger code base or what the case might be. But so I just kind of let the pain drive it. But if you have something like Postgres or something, I could definitely see that more and more. But I don't know. It's just getting better and better. It's just like I just kind of let the I'm just on the gravy train of or on the cloud code train of. ⁓
+
+Dalton McCleery (34:24)
+It is.
+
+You're in the vanilla.
+
+Andy Hinkle (34:30)
+Yeah,
+
+it's been good. I really have no very little complaints. It's been, uh, I wrote that entire, I vibe coded that entire app of the, the Aerohorn service. There's besides the live wire components. didn't write anything else. I, um, uh, so like, for example, I didn't write, no, there's no test. I just blew it there. I was like, it's going to work or it's not going to work. I had like four hours right. This thing.
+
+Dalton McCleery (34:46)
+tests.
+
+Andy Hinkle (34:55)
+⁓ and then, for, like for attendees, for example, I pretty much wrote that whole thing. I just need it as like, just need some way, for people to write in their name and it saves the session. And then it just persists across the entire, you know, using it as a session. then, so that way I, that's how I gave that a hundred dollars to each person. So it just like created an attendee record and it just created and went across the application. But I didn't want to use us off. I just want to make this really hacky. The author, the person authenticated is going to be the.
+
+Dalton McCleery (35:21)
+Right.
+
+Andy Hinkle (35:22)
+the dashboard,
+
+the admin person, like that's going to be the laptop in the back or something. So yeah, I've, I've got to the whole thing using Claude code. I'm on the pro pro plan as we've talked about last show, we got our subscription figured out internally. So it's all, we're not using teams. We're just all like on our separate individuals, but it's, working out. It's going well. Absolutely love Claude code. and yeah, I need to check out some more of these MCPs. I hear about them all the time. And so
+
+Dalton McCleery (35:49)
+For sure, for sure.
+
+Andy Hinkle (35:50)
+Do you have you used any of other ones like
+
+Dalton McCleery (35:51)
+At least...
+
+Andy Hinkle (35:53)
+context seven and.
+
+Dalton McCleery (35:55)
+I have before and like my my coworker Josh she's big into the into these these things like Context 7 is cool. It's like, you know AI version of documentation. You could tell it to you know, look at filament on context 7 like film at 4 versus 3 The problem is that it just like reads a lot of junk like you tell it Hey use context 7 and look up the filament docs. It's gonna use a lot of its context just reading unnecessary
+
+Andy Hinkle (36:12)
+Mm-hmm.
+
+Dalton McCleery (36:24)
+parts of the docs. So context 7 is essentially just that. ⁓ Serena is one that other people have told me about. It's essentially just like, it's just like, I don't even know how to describe it. Let me pull it up so I can, I can get this right. ⁓ turning fully featured agents that work directly in your code base. it's like, it's like a little middleman essentially between your
+
+Andy Hinkle (36:27)
+Yeah.
+
+Dalton McCleery (36:54)
+IDE and your LLM.
+
+Andy Hinkle (36:56)
+Okay. Gotcha.
+
+Dalton McCleery (36:57)
+But I haven't set this
+
+up because you have to set it up like locally with Docker and it was just, was a, it was a pain for me to set all that stuff up. These other MCPs you could just like, yeah, yeah. I just, don't, I don't want to go off on a big tangent on Docker, but I just, I'm not a big fan of it. I don't think I've ever been a big fan. Um, my boss, Jeff, he sent me, um, I like conductor a lot. He was the one who sent me conductor. He sent me this other one called Sculptor.
+
+Andy Hinkle (37:02)
+Nah.
+
+You lost me. You lost me at Docker.
+
+Dalton McCleery (37:26)
+And it's essentially what conductor is, but it's, ⁓ it's in Docker. So all of your workspaces are just a new Docker image spun up. do all your, all your stuff, all your agents run on that, on that thing. So that way, you know, it keeps it all off. And if you archive it or merge it in whatever, whatever, I installed that to try it and I installed Docker and it was using like 600 % of my CPU. Like just the bare bones Docker installation. I uninstalled it. So I don't.
+
+I don't use Docker and so I probably won't ever use Serena, but I know that he loves Serena.
+
+Andy Hinkle (38:01)
+Hmm. Yeah. Serena Williams. Not Williams, right?
+
+Dalton McCleery (38:02)
+That one's pretty cool. ⁓
+
+Yeah, not Williams, not Williams. But like, those are the ones that I know about. I didn't know if there were any more or like custom ones, because like with that Larval MCP coming out, you could write your own now. Like I think I mentioned the last time that I was writing one for one of our internal applications. So you could essentially write your own MCP to help you push along your own code base, you know?
+
+Andy Hinkle (38:08)
+Exhited.
+
+Mm-hmm.
+
+Ooh, I want to, if you end up, yeah.
+
+If you end up doing that, let me know. Cause I've also been toying with that. So we have 20 different apps. so Claude code gets so fixated on just your app. Right. But these apps are constantly talking to each other. So I am thinking about creating an MCP that has knowledge of the, all of our apps. so they say, ⁓ okay. We have this API is actually the repository of this app. And here's the directory over here. Let's go investigate over there. Cause it'll make like an API call to this other app, but sometimes
+
+Dalton McCleery (38:47)
+Mm-hmm.
+
+Andy Hinkle (39:00)
+the exception, it's calling over there, but the exception's happening on that side. And so I have to go plug another air and I have to bring in the old context. And so I've been trying to like think of something, an MCP way of bringing those all together. So if you end up doing like doing that, like somewhat that I'll be very curious.
+
+Dalton McCleery (39:18)
+I will hit you up after this.
+
+Andy Hinkle (39:21)
+Okay, yeah, sounds good. Sweet man.
+
+Dalton McCleery (39:24)
+I will hit you up
+
+after this. ⁓ so yeah, like I've been, I've been experimenting a lot more with MCPs and I, I really think that, ⁓ they, they, they definitely helped me. Like I've gotten better at writing prompts. Like I can, can, I could push things along easier. This one just saves me a lot more time in my planning stages. Like if, if the AI can just think for itself, go out, search the docs. Okay. It might have another question based on the doc search. It can just ask itself that question and go back out to the docs again.
+
+Andy Hinkle (39:29)
+Okay.
+
+Dalton McCleery (39:53)
+All right, that's like sequential thinking. That's really good. So if anything else, at least download that one. That one's wicked useful
+
+Andy Hinkle (40:01)
+Sounds good man, yeah. You've been using, ⁓ have you been using the cursor update, cursor two?
+
+Dalton McCleery (40:02)
+You should.
+
+Okay. So yes and no. Yes. In the, in the spot that I really wanted to try to get an IDE like Conductor, like I wanted that middleman between Conductor and PHP Storm. Cause I really like Conductor's, ⁓ it's layout and its workflow, but like, I can't get away from PHP Storm cause that's just been my jam for a decade and I'm so good at it I know where everything is. So Conductor, ⁓
+
+Cursor 2.0 kind of looks like the middleman that I'm looking for. And you can run multiple agents in parallel with each other. So like if you give it a prompt, you could run, you know, sonnet 4, sonnet 4.5.
+
+Andy Hinkle (40:41)
+Hmm.
+
+Dalton McCleery (40:53)
+chat gbt5 and chat gbt5 mini give them all the same prompts and have all four of them run at the same time in parallel and then you essentially just pick the best output from each one and just sort of like hodgepodge them together in this one like unified view i'm like that's that's rad i would love that
+
+Andy Hinkle (41:09)
+Mm-hmm. That's
+
+really sick. Yeah. How what's composer one? I see that they're calling it composer one. Is that their own thing?
+
+We're on composer two. We're ahead of... ⁓
+
+Dalton McCleery (41:21)
+Yeah, come on guys. Come on guys. See, I've
+
+been trying to use it more in the past few days than PHP storm just to like when I'm using Claude code, I try to use it there. But if I'm like, I know that I just need to edit this filament widget real quick. I'm going to open up PHP storm and just do it myself. There's no point having an AI do three or four lines that I can do. I don't need it.
+
+Andy Hinkle (41:29)
+How's, yeah.
+
+How does billing work on, on the cursor too? if I, okay, if I set up a prompt, I'm like, all right, want to, composer one to do this. Like what's, when am I being billed for or is it monthly or what?
+
+Dalton McCleery (41:59)
+I no idea. I have no idea. I'm on the free plan for Cursor 2. don't know how can, I don't know how. I don't know how it works. I don't know if I'm gonna get like some bill for like 0.005 cents from the last like day that I've used it. I don't know. I will have to let you know. Cause I'm gonna try to use it a little bit more like I said daily.
+
+Andy Hinkle (42:01)
+It just works. ⁓
+
+pricing.
+
+Dalton McCleery (42:26)
+It's just, yeah, I don't know. And I refuse to pay for it unless I know that it's good. Because it keeps telling me, upgrade to the pro plan, 20 bucks a month. I'm like, no, just show me what you can do first before you get my money. I'm not spending 20 bucks on something I don't know is going to make my workflow better. Unless you could prove it to me that it makes better.
+
+Andy Hinkle (42:43)
+Do
+
+you see cloud codes handing out trials right now? cloud code for anthropoclod yeah for people ⁓ that are leaving they're doing this thing of like they're sending marketing emails but I think the
+
+Dalton McCleery (42:48)
+No? For what?
+
+Andy Hinkle (43:01)
+It's like a token that or like a special code you can use, but anyone can use it. So it's been making surrounds the internet, like get a free, get a free month of cloud code. It's like the, the pro max too. think it's like the $200 plan. So yeah.
+
+Dalton McCleery (43:07)
+Hehehehe
+
+Oh, oh, pro max. Hang on.
+
+Hang on one second. We need to we need to pause real quick. Alright, I'm going to open that tab for later. I'm going open that tab for later. I'd love to play with the max stuff.
+
+Andy Hinkle (43:18)
+It's up there. Yeah.
+
+Yeah. So it's been making its rounds, but have you been using ⁓ the chat GPT browser with all this?
+
+Dalton McCleery (43:32)
+Yes, I've been trying to like just upgrade my I mean AI isn't damn near everything right you can't get away from it. It's unfortunate But I've been using the dia browser before and that's sort of just like a it's sort of like the the chat gbt browser but light The chat gbt browsers well just normal browsing stuff But it's got like it's got chat gbt in it so I can I can ask it to summarize a web page even though I I don't
+
+Andy Hinkle (43:49)
+What do you do on there? Like, yeah. Okay.
+
+Dalton McCleery (44:00)
+ever use it for that feature, right? But you can...
+
+Andy Hinkle (44:04)
+What would you use it for? Yeah, because that's been like, I don't even know what I'd use AI browser for.
+
+Dalton McCleery (44:05)
+You
+
+Like I did some some research of like different vacation stuff. I think that's what I used it the most for I'm like I had some tabs open it's like which one of these is you know, the cheapest if I Flew out from where I'm at, know, like what's what's the flights look like or some stuff like that ⁓ Otherwise I don't
+
+Andy Hinkle (44:26)
+Okay.
+
+Dalton McCleery (44:32)
+I don't really use any of the other features for it. The one thing I hate, I hate, hate, is DevTools is a pop out window. It is not, it's not in my browser.
+
+Andy Hinkle (44:41)
+⁓ man, they'll fix that.
+
+Yeah.
+
+Dalton McCleery (44:43)
+But it's like the chat GBT part is where that that's gonna be like that little button in the top right pops it out to the side and that's where DevTools normally is. So they can't put it there. So they give it a pop out window and it's separate. So if I click on the browser that I'm interacting with that little pop up window goes behind it and I can't see the damn console anymore. Almost made me switch. Almost made me switch back. I'm gonna.
+
+Andy Hinkle (45:06)
+Hmm, that's frustrating, yeah. So if
+
+I'm using the chat GPT browser, if I open it up and I type in, I don't know, hotels near me, would that give me a chat GPT response or would that be like Google search?
+
+Dalton McCleery (45:22)
+No, that will give you chat GBT response first.
+
+Andy Hinkle (45:24)
+no,
+
+yeah, for, okay, yeah. I think, yeah. Okay.
+
+Dalton McCleery (45:27)
+first unless you type in a full URL like if you type in google.com
+
+it'll take you there but if you ask it a question like you know Laravel and you copy paste an error message there it's gonna go to chat gbt first
+
+Andy Hinkle (45:40)
+Taco Bell hours.
+
+Dalton McCleery (45:42)
+And it knows like, like obviously it's got access
+
+to my internet. So it knows like where my, where I am. So it's like, yeah. Taco bell hours in Evansville, Indiana, open 24 hours or whatever. And there's one, you know, downtown you can get to. It's kind of gimmicky right now, but I like, I just wanted to try it. Cause I've been trying this deal. One of the deals pretty good.
+
+Andy Hinkle (45:54)
+Yeah.
+
+Yeah. Yeah, that's, I don't know,
+
+man. I feel like an old man thinking like I back in my day we had Google, you know, so I asked Jeeves, know, Yahoo search. Yeah.
+
+Dalton McCleery (46:09)
+Yeah, back in my day, I read the web pages.
+
+Now I don't have to anymore, I guess. I don't know. ⁓ That's where it's going, unfortunately, but...
+
+Andy Hinkle (46:20)
+Yeah. Yeah. I'm curious where that's going to go in the future. I mean, I get it. mean, there'll just be a time and a place where you just type, you just
+
+Say your thought or type your thought it just gives you the answer, you know, instead of having to do your own independent but sometimes they out your own independent searches nice it's like best best tool for this and hit enter and then you can usually my trick for that is best tool for whatever and then type in Reddit on the end. see what people like. yeah, I recommend this. And then Internet's it's that's not going to be around anymore because everything is going to be all,
+
+Dalton McCleery (46:45)
+Mm. Mm-hmm. Mm-hmm.
+
+Andy Hinkle (46:51)
+chat GPT or AI driven. I worry about that with like stack overflow. Cause when somebody figures something out, they like, here's the answer. And they post in stack overflow. Well, then AI has been reading that and they've been scanning it for years. Right. And that's going to like, we've seen the, the traffic for, ⁓ for stack overflow. It's, it's taken a nose dive. So, ⁓ now all it's going to have is documentation, not actual real world business.
+
+practices. And so I kind of worry like, is, is AI just going to be training on ⁓ other AI eventually? And it's just never going to be actual authentic human input, you know? So yeah.
+
+Dalton McCleery (47:26)
+Yeah, yeah, it's just gonna get sloppy. You know, it's gonna read its
+
+own slop back and forth, back and forth, back and forth. And whenever you search, like, what's Taco Bell's hours? And it's gonna tell you, the McDonald's on First Street closed on November 1st. And you're like, what the hell are you talking about?
+
+Andy Hinkle (47:39)
+Ha ha.
+
+Yeah,
+
+well, I was doing some stuff with my phone not too long ago because I was talking to Claude actually and because I explained to Claude, I'm like, hey Claude, my phone broke. Can I plug in a...
+
+a USB-C to display port cable through my monitor. Would that work? And because I had to go fetch it all out, like, is this worth my time typing cloud? And it's like, the iPhone 17 hasn't been released yet. I'm like, come on. Yeah, it was like three weeks ago, but I get it. I understand because you haven't been trained to know that yet. So it's like, actually know it has, and I referenced it. And then it's like, theoretically it should work. And turns out it actually did work. And so you can plug a USB into display port.
+
+Dalton McCleery (48:14)
+What are you talking about?
+
+Andy Hinkle (48:28)
+monitor so you can see your phone on your computer monitor which if your phone ever breaks or you can't see your screen sometimes that might be useful so ⁓ but anyway yeah it was a but cloud code it kind of trips up on stuff like that you know just like kind of knowing in the now versus
+
+data that I was training on now, GROK over on Twitter, that is the complete opposite. It knows like things happened five minutes ago. so GROK is where I go for like live news. I'll be like, I'll read something like, Hey, what's going on with this? And so, and it's really good about that. But yeah, it's interesting where I'll go with the AI browsers.
+
+Dalton McCleery (49:06)
+Yeah, it's gonna be a whole thing, right? I don't know, I don't wanna be doom and gloom, but it's weird. I know I guess I'm contributing to it, because I'm using that browser. I might uninstall it, because I hate that the DevTools is not in a panel, and I need that. I need that in my soul, before I yeet my computer out of the window.
+
+Andy Hinkle (49:12)
+Yeah.
+
+Yeah.
+
+Dalton McCleery (49:26)
+it. It's alright, guess. guess not liked it. you know what I mean. Anyway, let's... enough of this AI doom and gloom. Let's... yeah.
+
+Andy Hinkle (49:27)
+Yeah, that's it, man.
+
+Last thing.
+
+we'll talk about PHP stand. So I recently I did a ton of work on my personal site not too long ago. I have it's been a lot of fun. So I converted before I had my blog. So in angle dot com, my personal site, I had blog posts and my like speaking posts. It was just all in like
+
+Dalton McCleery (49:39)
+Yeah, buddy.
+
+Andy Hinkle (49:55)
+⁓ a like a blade file all of them like I could just name it it was in folio so I could just name it whatever blade PHP just write whatever in there so that I cleaned those up I made them all markdown that's makes it so much easier so I can when I write a blog post is right markdown
+
+And so I just created a, like a markdown file, in like resources, blog, and then just right click, create new file. And then I save it and it's instantly up on the side. have to do anything else. It makes it really nice. Right? So I all this work with sushi, with built by the wonderful Caleb Porzio
+
+Dalton McCleery (50:25)
+Shout
+
+out again.
+
+Andy Hinkle (50:25)
+And so,
+
+⁓ yeah. And so the way it works is it just loads all those markdown files, makes them into models. And then there was a hydrated through, ⁓ with, ⁓ the model route binding. so it works out really well. And, ⁓ and so I installed like PHP stand just to kind of play around with like, what, what things ⁓ did I miss or like, you know, just identify errors. And, ⁓ then I just kept, started at five and just kept going.
+
+It was just kind of a game. was just like, uh, cause there's my personal site. I'm like, I wonder if I could take it to max. And so I just did it and ended up working out. So, um, my personal site, I have PHP stance set on max. So I didn't lose my mind. I didn't lose my mind. There's some weird stuff like you, uh, if you have an array list, um, because of generics and how they work in PHP, you have to deliberately tell it what's inside an array. So it'd like,
+
+Dalton McCleery (51:05)
+God... God...
+
+Andy Hinkle (51:17)
+It'll be like param array and then you do a little arrow and then like the first the thing is a key then the second one it's a collection so you have to do all that and so one day we'll get generics where we can type in it actually on the on the actual response in the end, but anyway, do you guys use I want to ask you do you guys use PHP Stan?
+
+Dalton McCleery (51:25)
+Yeah. Yeah.
+
+Kind of. I do. Yes. No, not in CI, not in CI, not in CI. I use it locally. Like if I did a big feature, you know, because I've already got it, I've already got the code base in a good spot that I like it. If I write some big feature, like a new big dashboard, then I'll run, you know, I'll run analysis on it every now and then along with Pint, just to make sure that like.
+
+Andy Hinkle (51:39)
+Okay, do you have it in your CI? Okay, like, okay, okay. All right.
+
+Dalton McCleery (52:04)
+I'm not writing garbage and then it's just going to keep building up this big pile of garbage that I have to go back through and go through all of it. So if I write a new thing or Claude writes a new thing, hey, PHP analysis, analyze. That's the word analyze. Yeah. Analyze.
+
+Andy Hinkle (52:18)
+Yeah, you know, yeah, depends on if you're in the EU or not. Yeah, just by how you
+
+Dalton McCleery (52:23)
+I don't have it set on, I definitely don't have it set on max.
+
+Andy Hinkle (52:27)
+I
+
+started at five, it was just a game. like, okay, bumped it six. Oh, there's no issues. Seven. Oh, there's one thing. Eight. I was like, oh, there's a lot here. I was like, but let's see how bad it is.
+
+Dalton McCleery (52:37)
+Yeah,
+
+no, I'm on five.
+
+Andy Hinkle (52:41)
+I think nine is the max, I don't remember, but say eight or nine I think.
+
+Dalton McCleery (52:41)
+I'm only on five.
+
+kind of like I definitely don't use it religiously like I use pence. I use pence religiously and pence is in my CI. I've got a pence check like if it does not pass pence, the build does not go any further. doesn't even come. Yep.
+
+Andy Hinkle (52:55)
+Mm-hmm.
+
+Do you hard fail? Okay, so
+
+my CI is it just runs pint and then recommits. It's like automatic changes, which can get annoying sometimes if you're making repetitive changes, like you push something in and it's like, well, you need to push your stuff first or pull your stuff first, then push it back. And so it's a mess, right?
+
+Dalton McCleery (53:09)
+no.
+
+Yeah,
+
+I don't, I don't want to mess with that. I'll run pint myself. If I push it up and it fails, I'm like, forgot to run pin. I probably should put that in that land, like a pre commit hook or something, but I'm just, I'm, could just have Claude do that. I
+
+Andy Hinkle (53:26)
+Yeah.
+
+Yeah, I'm, I'm still over precommit
+
+hooks because it's like, it's like sometimes it's, ⁓ you know, files can change or whatever. It's like, you don't know what's actually, I want to know when I commit something and I'm sending it, what's going out. So even if it's pin or something like that, I just want to make
+
+Dalton McCleery (53:45)
+Yeah, that's true.
+
+really for me.
+
+Andy Hinkle (53:47)
+I've been trying to,
+
+⁓ yeah. Nuno came out and you know, Maduro came out with like strict layer of violence when all my inspiration came from is just, ⁓ like I saw that and I'm like, how, how far can I take, just like start off my personal site. And then we use like the baseline stuff a lot. And I feel like, I feel like it can be abused sometimes it's like, if, ⁓ so the baseline, are you familiar with that? So the, the, the PHP storm baseline is if your stuff fails and you're like, yeah.
+
+I know about this problem. It's fine. You can either write like an at sign, a PHP. ⁓
+
+Stan ignore something like that, like PHP, Stan dash ignore on the line or ignore next line. You can do that or you can do like, can run analyzing in and do dash dash generate baseline and it gives you a baseline file. And then, ⁓ which is like dot baseline. then just like pretty much at anything after that will just always pass. So, ⁓ I feel like it's been, I feel like there there's been times where I'm like, this
+
+Dalton McCleery (54:25)
+⁓ yeah, yeah, Yeah, yeah.
+
+Okay.
+
+Andy Hinkle (54:48)
+I would just a PHP Stan thing and would just run baseline. It's so easy lean on that But then if you actually look deeper, it's actually more of a type like actual a type issue And then a bug is reproduced. So I feel like it's so abused a bit more than it should be So because I was able to get I mean given a small project, but I was able to have like no no ignores no baseline issues and then ⁓ I know you know with this stuff ⁓ He's been able to produce that but you might lose your mind sometimes because you have
+
+to in order to get there in like your models, you have to put all of the type hints at the top of the file. Like here's all of my attributes that can be annoying.
+
+Dalton McCleery (55:26)
+I only do that for models, because my IDE is quite weird with models, but I'll only do that for models. OK, yeah, yeah.
+
+Andy Hinkle (55:32)
+It's only models for mine, yeah, but
+
+it's only models. the first time I did that I was like, man, there's a bunch of noise up there. end up working out. All right, man, well, I think that's all I got, unless you have anything else. It's been a ton of fun.
+
+Dalton McCleery (55:40)
+Yeah.
+
+Yikes.
+
+Yeah, ⁓ I was really excited to hear about this wire live thing. I'm glad that you did end up going. You survived.
+
+Andy Hinkle (55:54)
+I survived without a phone. Oh, I got a new phone.
+
+They called Monday morning. When I, they called Monday morning, like the day that, the conference, yeah, when I left, hey, your phone's ready. So, so was like, oh great. Yeah, so I just picked it up. Yeah. So played a lot of Pokemon and had a lot of fun. So, why are you alive?
+
+Dalton McCleery (56:00)
+When you left.
+
+Ship it to Buffalo. I'll be in Buffalo.
+
+Yeah, shout out.
+
+Shout out WireLive and Caleb. Sounds like a very successful one. You should definitely do it again and do it closer so that ⁓ my ⁓ fear of heights and flying doesn't prohibit me from going. Yeah, it kind of is.
+
+Andy Hinkle (56:30)
+fear of heights Buffalo is a far drive Yeah, I almost offered it,
+
+but that was me and Buffalo is such a far drive. Yeah, so
+
+Dalton McCleery (56:39)
+Yeah, all the way,
+
+no. You're one of my best friends. I don't know if we could survive in a car for like 12 hours straight.
+
+Andy Hinkle (56:47)
+It's a long, it'd be, that'd be a lot of, ⁓ yeah, we could, we'll figure it out, but I mean, Buffalo is, but I'm sure we'll figure something out for Lericon, it'd be good. Philly, that's what we're hoping for.
+
+Dalton McCleery (56:53)
+We could probably.
+
+Yeah yeah. Philly. Daddy Otwell if you're listening. Philly is what we're hoping
+
+for. You know what? Indy would be awesome. I could drive to Indy in two hours.
+
+Andy Hinkle (57:08)
+Indie would be a dream. Yeah.
+
+Dalton McCleery (57:10)
+or
+
+Chicago, do Chicago again. That's only like an hour flight for me. All right, but anyway. Yes sir. All right, if you've made it this far, you clearly like this podcast and we really like you. Thank you for sticking all the way through here. We'll be back next time for another piping hot episode of the Midwest Artisan. I'm Dalton, that's been Andy. We'll see you next time. Peace.
+
+Andy Hinkle (57:14)
+Yeah. Sweet. Close this out.
