@@ -7,7 +7,7 @@
                         <div class="w-px bg-gray-500"></div>
                     @endif
                 </div>
-                <img src="{{ $contribution['avatar_url'] }}" alt=""
+                <img src="{{ $contribution['avatar_url'] }}" alt="" loading="lazy"
                     class="relative mt-3 h-6 w-6 flex-none rounded-full bg-gray-50 transition-transform duration-150 hover:scale-105">
                 <div class="w-full pt-3">
                     <div class="flex justify-between">
