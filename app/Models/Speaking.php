@@ -62,15 +62,6 @@ class Speaking extends Model
         $query->where('type', 'speaking');
     }
 
-    /** @param Builder<static> $query */
-    #[Scope]
-    protected function byType(Builder $query, ?string $type = null): void
-    {
-        if ($type && $type !== 'all') {
-            $query->where('type', $type);
-        }
-    }
-
     /** @return array<int, array<string, mixed>> */
     public function getRows(): array
     {
