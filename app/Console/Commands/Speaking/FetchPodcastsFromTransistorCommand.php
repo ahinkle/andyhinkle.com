@@ -9,20 +9,12 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Fluent;
 use Illuminate\Support\Str;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Yaml\Yaml;
 
+#[AsCommand(name: 'transistor:fetch-podcasts', description: 'Fetch new podcasts from Transistor.fm and save them in storage.')]
 class FetchPodcastsFromTransistorCommand extends Command
 {
-    /**
-     * @var string
-     */
-    protected $signature = 'transistor:fetch-podcasts';
-
-    /**
-     * @var string
-     */
-    protected $description = 'Fetch new podcasts from Transistor.fm and save them in storage.';
-
     public function handle(): void
     {
         $this->fetchPodcasts()
