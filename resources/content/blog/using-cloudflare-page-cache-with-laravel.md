@@ -4,6 +4,8 @@ description: "How to use Cloudflare page cache with Laravel to cache pages to im
 published_at: "2024-07-21"
 ---
 
+> **Update (December 2025):** The approach below has a limitation - Laravel's default session middleware adds `Set-Cookie` headers which cause Cloudflare to bypass caching. For a complete solution, see [JMac's article on separating your Cloudflare page cache](https://laravel-news.com/separate-your-cloudflare-page-cache-with-a-middleware-group) which explains how to use a stateless middleware group.
+
 Cloudflare is a popular CDN that can cache your website's assets and pages to improve performance and reduce server load. In Laravel applications, you can use Cloudflare's page cache feature to cache entire pages and serve them directly from Cloudflare's edge servers.
 
 We are going to assume that you have already registered and set up your domain with Cloudflare. If you haven't, you can follow the instructions on Cloudflare's website to set up your domain.

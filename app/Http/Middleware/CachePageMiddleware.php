@@ -5,7 +5,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class CachePageMiddleware
@@ -16,9 +15,7 @@ class CachePageMiddleware
         $response = $next($request);
 
         if ($this->shouldCacheResponse($request, $response)) {
-            $response->headers->add([
-                'Cache-Control' => 'max-age=1800, public',
-            ]);
+            $response->headers->set('Cache-Control', 'max-age=1800, public');
         }
 
         return $response;
@@ -27,7 +24,6 @@ class CachePageMiddleware
     public function shouldCacheResponse(Request $request, Response $response): bool
     {
         return App::isProduction() &&
-               ! Auth::check() &&
                $request->isMethod('GET') &&
                $response->isSuccessful();
     }
