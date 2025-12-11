@@ -7,6 +7,8 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Attributes\ScopedBy;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Sushi\Sushi;
 use Symfony\Component\Finder\Finder;
@@ -21,7 +23,7 @@ use Symfony\Component\Finder\SplFileInfo;
  * @property string $formatted_date
  */
 #[ScopedBy(LatestPublishedOrderScope::class)]
-class Post extends Model
+class Post extends Model implements Sitemapable
 {
     use Sushi;
 
@@ -93,5 +95,16 @@ class Post extends Model
                 return '';
             }
         );
+    }
+
+    public function toSitemapTag(): Url
+    {
+        $url = Url::create("/blog/{$this->slug}");
+
+        if ($this->published_at) {
+            $url->setLastModificationDate($this->published_at);
+        }
+
+        return $url;
     }
 }

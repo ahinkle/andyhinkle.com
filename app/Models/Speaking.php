@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Sushi\Sushi;
 use Symfony\Component\Finder\Finder;
@@ -36,7 +38,7 @@ use Symfony\Component\Finder\SplFileInfo;
  * @property string|null $context_name
  */
 #[ScopedBy(LatestPublishedOrderScope::class)]
-class Speaking extends Model
+class Speaking extends Model implements Sitemapable
 {
     use Sushi;
 
@@ -221,5 +223,16 @@ class Speaking extends Model
         }
 
         return null;
+    }
+
+    public function toSitemapTag(): Url
+    {
+        $url = Url::create("/speaking/{$this->slug}");
+
+        if ($this->published_at) {
+            $url->setLastModificationDate($this->published_at);
+        }
+
+        return $url;
     }
 }
