@@ -282,7 +282,7 @@ The default settings (5 404s in 120 seconds) work well for most sites, but you s
 - **Failed authentication attempts** - Repeated login failures from the same IP
 - **Rate limit violations** - IPs that consistently hit your rate limits
 
-Here are some other adjustments to consider:
+Here are some other adjustments to consider:e
 
 - **High-traffic sites**: Consider raising the threshold to 10+ to avoid false positives
 - **First or fail endpoints**: You might want to exclude certain paths from 404 tracking, especially if they are soft-deleted or frequently changing
