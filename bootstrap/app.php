@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\BanMaliciousIpMiddleware;
 use App\Http\Middleware\CachePageMiddleware;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -30,6 +31,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->append([
             RenderTorchlight::class,
             CachePageMiddleware::class,
+            BanMaliciousIpMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
