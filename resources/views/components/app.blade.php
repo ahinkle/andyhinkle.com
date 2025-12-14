@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <x-layout.seo-meta>
@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="dark antialiased">
+<body class="antialiased">
     @env('local')
         <x-dev.dev-toolbar />
     @endenv
