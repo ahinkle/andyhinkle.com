@@ -7,6 +7,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\Response;
 
 class BanMaliciousIpMiddleware
@@ -41,16 +42,16 @@ class BanMaliciousIpMiddleware
 
     private function isWordPressProbe(Request $request): bool
     {
-        return str_contains($request->path(), 'wp-admin')
-            || str_contains($request->path(), 'wp-login')
-            || str_contains($request->path(), 'wp-includes')
-            || str_contains($request->path(), 'xmlrpc.php');
+        return collect(['wp-admin', 'wp-login', 'wp-includes'])
+            ->contains(fn (string $probe) => str_contains($request->path(), $probe));
     }
 
     private function trackNotFound(Request $request): void
     {
         $ip = (string) $request->ip();
         $key = "ip_404_count:{$ip}";
+
+        Log::info("[404] {$ip} {$request->path()}");
 
         $count = Cache::increment($key);
 

@@ -36,15 +36,6 @@ it('dispatches ban job for wp-includes requests in production', function (): voi
     Queue::assertPushed(BanIpOnCloudflare::class);
 });
 
-it('dispatches ban job for xmlrpc requests in production', function (): void {
-    app()->detectEnvironment(fn () => 'production');
-
-    $this->get('/xmlrpc.php')
-        ->assertForbidden();
-
-    Queue::assertPushed(BanIpOnCloudflare::class);
-});
-
 it('tracks 404 errors and bans after threshold in production', function (): void {
     app()->detectEnvironment(fn () => 'production');
 
