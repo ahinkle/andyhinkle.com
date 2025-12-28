@@ -9,14 +9,9 @@ use Rector\Config\RectorConfig;
 use Rector\Set\ValueObject\SetList;
 use Rector\TypeDeclaration\Rector\ClassMethod\ReturnTypeFromStrictNewArrayRector;
 use Rector\ValueObject\PhpVersion;
-use RectorLaravel\Rector\Class_\AddExtendsAnnotationToModelFactoriesRector;
-use RectorLaravel\Rector\Class_\ModelCastsPropertyToCastsMethodRector;
 use RectorLaravel\Rector\ClassMethod\AddGenericReturnTypeToRelationsRector;
 use RectorLaravel\Rector\MethodCall\EloquentWhereRelationTypeHintingParameterRector;
 use RectorLaravel\Rector\MethodCall\EloquentWhereTypeHintClosureParameterRector;
-use RectorLaravel\Rector\MethodCall\ValidationRuleArrayStringValueToArrayRector;
-use RectorLaravel\Rector\MethodCall\WhereToWhereLikeRector;
-use RectorLaravel\Rector\PropertyFetch\ReplaceFakerInstanceWithHelperRector;
 use RectorLaravel\Set\LaravelLevelSetList;
 
 return RectorConfig::configure()
@@ -31,7 +26,7 @@ return RectorConfig::configure()
     ])
     ->withSets([
         SetList::EARLY_RETURN,
-        LaravelLevelSetList::UP_TO_LARAVEL_110,
+        LaravelLevelSetList::UP_TO_LARAVEL_120,
     ])
     ->withRules([
         RemoveUselessAliasInUseStatementRector::class,
@@ -39,16 +34,11 @@ return RectorConfig::configure()
         CatchExceptionNameMatchingTypeRector::class,
         ReturnTypeFromStrictNewArrayRector::class,
         AddGenericReturnTypeToRelationsRector::class,
-        AddExtendsAnnotationToModelFactoriesRector::class,
         EloquentWhereRelationTypeHintingParameterRector::class,
         EloquentWhereTypeHintClosureParameterRector::class,
-        ModelCastsPropertyToCastsMethodRector::class,
-        ReplaceFakerInstanceWithHelperRector::class,
-        ValidationRuleArrayStringValueToArrayRector::class,
-        WhereToWhereLikeRector::class,
     ])
     ->withImportNames()
-    ->withPhpVersion(PhpVersion::PHP_83)
+    ->withPhpVersion(PhpVersion::PHP_84)
     ->withPhpSets()
     ->withTypeCoverageLevel(0)
     ->withDeadCodeLevel(0)
