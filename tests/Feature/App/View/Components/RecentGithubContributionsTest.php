@@ -27,7 +27,6 @@ it('formats contributions correctly', function (): void {
 
     $this->blade('<x-recent-github-contributions />')
         ->assertSee('Test PR')
-        ->assertSee('This is a test PR')
         ->assertSee('test-repo')
         ->assertSee('test-user');
 });

@@ -5,7 +5,7 @@ use function Pest\Laravel\get;
 it('loads home', function (): void {
     get('/')
         ->assertOk()
-        ->assertSee('About');
+        ->assertSee('Andy Hinkle');
 });
 
 it('loads gear', function (): void {
