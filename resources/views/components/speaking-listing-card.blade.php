@@ -1,7 +1,7 @@
 <a href="{{ url("speaking/{$item->slug}") }}"
     class="group relative block overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-white/20">
     @if ($item->video_thumbnail)
-        <div class="aspect-video overflow-hidden">
+        <div class="relative aspect-video overflow-hidden">
             <img src="{{ $item->video_thumbnail }}" alt="{{ $item->title }}"
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 flex items-center justify-center bg-black/20">
@@ -26,7 +26,7 @@
                 {{ $item->published_at->format('M j, Y') }}
             </time>
             @if ($item->duration)
-                <span>{{ $item->duration_mmss }}</span>
+                <span>{{ floor($item->duration / 60) }} min</span>
             @endif
         </div>
     </div>
