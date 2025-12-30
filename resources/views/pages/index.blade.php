@@ -7,17 +7,17 @@
 
     <section class="py-8 md:py-16">
         <div class="max-w-2xl">
-            <p class="text-sm font-medium tracking-widest text-gray-400 uppercase">Software Developer</p>
-            <h1 class="mt-4 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+            <p class="animate-fade-in text-sm font-medium tracking-widest text-gray-500 uppercase">Software Developer</p>
+            <h1 class="animate-fade-in-delay-1 mt-4 text-4xl font-semibold tracking-[-0.02em] text-white md:text-5xl">
                 Andy Hinkle
             </h1>
-            <p class="mt-6 text-lg leading-relaxed text-gray-300">
+            <p class="animate-fade-in-delay-2 mt-6 text-lg leading-relaxed text-gray-400">
                 Laravel developer and co-host of <a href="https://themidwestartisanpodcast.com/"
-                    class="text-white underline decoration-gray-500 underline-offset-4 transition-colors hover:decoration-white"
+                    class="text-gray-200 underline decoration-gray-600 underline-offset-4 transition-colors hover:text-white hover:decoration-gray-400"
                     target="_blank" rel="noopener noreferrer">The Midwest Artisan</a> podcast. I enjoy solving problems and writing clean, expressive code.
             </p>
 
-            <div class="mt-8 flex flex-wrap gap-3">
+            <div class="animate-fade-in-delay-3 mt-8 flex flex-wrap gap-3">
                 <a href="https://github.com/ahinkle" target="_blank" rel="noopener noreferrer"
                     class="group inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm text-gray-300 ring-1 ring-white/10 transition-all hover:bg-white/10 hover:text-white hover:ring-white/20">
                     <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
@@ -54,9 +54,9 @@
         </div>
     </section>
 
-    <section class="border-t border-white/10 py-16">
+    <section class="animate-fade-in-delay-4 border-t border-white/10 py-16">
         <div class="flex items-baseline justify-between">
-            <h2 class="text-sm font-medium tracking-widest text-gray-400 uppercase">Writing</h2>
+            <h2 class="text-xs font-medium tracking-widest text-gray-500 uppercase">Writing</h2>
             <a href="/blog"
                 class="text-sm text-gray-500 transition-colors hover:text-white">View all</a>
         </div>
@@ -74,7 +74,7 @@
 
     <section class="border-t border-white/10 py-16">
         <div class="flex items-baseline justify-between">
-            <h2 class="text-sm font-medium tracking-widest text-gray-400 uppercase">Speaking & Podcasts</h2>
+            <h2 class="text-xs font-medium tracking-widest text-gray-500 uppercase">Speaking & Podcasts</h2>
             <a href="/speaking"
                 class="text-sm text-gray-500 transition-colors hover:text-white">View all</a>
         </div>
@@ -113,7 +113,7 @@
 
     <section class="border-t border-white/10 py-16">
         <div class="flex items-center gap-3">
-            <h2 class="text-sm font-medium tracking-widest text-gray-400 uppercase">Open Source</h2>
+            <h2 class="text-xs font-medium tracking-widest text-gray-500 uppercase">Open Source</h2>
             <a href="https://github.com/ahinkle" target="_blank" rel="noopener noreferrer"
                 class="text-gray-500 transition-colors hover:text-white" aria-label="View GitHub">
                 <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">

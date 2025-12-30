@@ -23,15 +23,15 @@
         </div>
     </div>
 
-    <footer class="border-t border-white/5 bg-gray-950">
-        <div class="mx-auto max-w-3xl px-6 py-8 lg:px-8">
-            <p class="text-center text-sm text-gray-600">
+    <footer class="border-t border-white/5">
+        <div class="mx-auto max-w-3xl px-6 py-12 lg:px-8">
+            <p class="text-center text-xs tracking-wide text-gray-600">
                 &copy; {{ date('Y') }} Andy Hinkle
             </p>
             @if (Str::contains(Request::url(), 'blog'))
-                <p class="mt-2 text-center text-xs text-gray-700">
+                <p class="mt-3 text-center text-xs text-gray-700">
                     Syntax highlighting by <a href="https://torchlight.dev/" target="_blank" rel="noopener"
-                        class="text-gray-500 hover:text-gray-400">Torchlight</a>
+                        class="text-gray-600 transition-colors hover:text-gray-400">Torchlight</a>
                 </p>
             @endif
         </div>
