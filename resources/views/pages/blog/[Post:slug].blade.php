@@ -43,7 +43,7 @@
         </header>
 
         <div
-            class="prose prose-lg prose-invert max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-gray-300 prose-a:underline prose-a:decoration-gray-600 prose-a:underline-offset-2 hover:prose-a:decoration-gray-400 prose-code:text-gray-300 prose-pre:bg-gray-900 prose-pre:p-0 [&_pre]:overflow-x-auto [&_pre]:rounded-lg">
+            class="prose prose-lg prose-invert prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-gray-300 prose-a:underline prose-a:decoration-gray-600 prose-a:underline-offset-2 hover:prose-a:decoration-gray-400 prose-code:text-gray-300 prose-pre:bg-gray-900 prose-pre:p-0 max-w-none [&_pre]:overflow-x-auto [&_pre]:rounded-lg">
             {!! $htmlContent !!}
         </div>
 

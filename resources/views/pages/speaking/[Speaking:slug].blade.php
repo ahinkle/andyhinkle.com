@@ -47,7 +47,7 @@
         @endif
 
         @if ($speaking->description)
-            <div class="prose prose-lg prose-invert max-w-none prose-p:text-gray-300">
+            <div class="prose prose-lg prose-invert prose-p:text-gray-300 max-w-none">
                 {!! $speaking->description !!}
             </div>
         @endif

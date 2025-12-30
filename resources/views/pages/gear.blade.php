@@ -1,8 +1,7 @@
 <x-app>
     <x-slot name="seo">
         <title>Gear | Andy Hinkle</title>
-        <meta name="description"
-            content="The tools and software I use daily for software development.">
+        <meta name="description" content="The tools and software I use daily for software development.">
     </x-slot>
 
     <section class="py-8 md:py-12">
@@ -12,11 +11,12 @@
 
     <section class="border-t border-white/10 py-12">
         <div class="grid gap-12 lg:grid-cols-4 lg:gap-8">
-            <h2 class="text-sm font-medium tracking-widest text-gray-400 uppercase">Hardware</h2>
+            <h2 class="text-sm font-medium uppercase tracking-widest text-gray-400">Hardware</h2>
             <div class="space-y-8 lg:col-span-3">
                 <div>
                     <h3 class="font-medium text-white">14" MacBook M4 Pro, 48GB RAM</h3>
-                    <p class="mt-1 text-sm text-gray-400">Space Black, 1TB SSD. Downsized from the 16" since I travel frequently.</p>
+                    <p class="mt-1 text-sm text-gray-400">Space Black, 1TB SSD. Downsized from the 16" since I travel
+                        frequently.</p>
                 </div>
                 <div>
                     <h3 class="font-medium text-white">49" Samsung Odyssey G9</h3>
@@ -56,19 +56,28 @@
 
     <section class="border-t border-white/10 py-12">
         <div class="grid gap-12 lg:grid-cols-4 lg:gap-8">
-            <h2 class="text-sm font-medium tracking-widest text-gray-400 uppercase">Development</h2>
+            <h2 class="text-sm font-medium uppercase tracking-widest text-gray-400">Development</h2>
             <div class="space-y-8 lg:col-span-3">
                 <div>
                     <h3 class="font-medium text-white">Visual Studio Code</h3>
                     <div class="mt-2 space-y-1 text-sm text-gray-400">
-                        <p>Font: <a href="https://www.monolisa.dev/" target="_blank" rel="noopener noreferrer" class="text-gray-300 underline decoration-gray-600 underline-offset-2 hover:decoration-gray-400">MonoLisa</a></p>
-                        <p>Theme: <a href="https://marketplace.visualstudio.com/items?itemName=this-fifo.natty" target="_blank" rel="noopener noreferrer" class="text-gray-300 underline decoration-gray-600 underline-offset-2 hover:decoration-gray-400">Natty</a></p>
-                        <p><a href="https://gist.github.com/ahinkle/d99742b14dab934300e7120887420bbd" target="_blank" rel="noopener noreferrer" class="text-gray-300 underline decoration-gray-600 underline-offset-2 hover:decoration-gray-400">settings.json</a></p>
+                        <p>Font: <a href="https://www.monolisa.dev/" target="_blank" rel="noopener noreferrer"
+                                class="text-gray-300 underline decoration-gray-600 underline-offset-2 hover:decoration-gray-400">MonoLisa</a>
+                        </p>
+                        <p>Theme: <a href="https://marketplace.visualstudio.com/items?itemName=this-fifo.natty"
+                                target="_blank" rel="noopener noreferrer"
+                                class="text-gray-300 underline decoration-gray-600 underline-offset-2 hover:decoration-gray-400">Natty</a>
+                        </p>
+                        <p><a href="https://gist.github.com/ahinkle/d99742b14dab934300e7120887420bbd" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-gray-300 underline decoration-gray-600 underline-offset-2 hover:decoration-gray-400">settings.json</a>
+                        </p>
                     </div>
                 </div>
                 <div>
                     <h3 class="font-medium text-white">
-                        <a href="https://tableplus.com/" target="_blank" rel="noopener noreferrer" class="underline decoration-gray-600 underline-offset-2 hover:decoration-gray-400">TablePlus</a>
+                        <a href="https://tableplus.com/" target="_blank" rel="noopener noreferrer"
+                            class="underline decoration-gray-600 underline-offset-2 hover:decoration-gray-400">TablePlus</a>
                     </h3>
                     <p class="mt-1 text-sm text-gray-400">Database management for MySQL, PostgreSQL, Redis</p>
                 </div>
@@ -86,7 +95,7 @@
 
     <section class="border-t border-white/10 py-12">
         <div class="grid gap-12 lg:grid-cols-4 lg:gap-8">
-            <h2 class="text-sm font-medium tracking-widest text-gray-400 uppercase">AI</h2>
+            <h2 class="text-sm font-medium uppercase tracking-widest text-gray-400">AI</h2>
             <div class="space-y-8 lg:col-span-3">
                 <div>
                     <h3 class="font-medium text-white">Claude Code</h3>
