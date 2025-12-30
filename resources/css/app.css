@@ -13,6 +13,30 @@ span.line-number {
     margin-right: 1rem;
 }
 
+/* Torchlight code blocks */
+pre,
+.torchlight {
+    background-color: rgb(17 24 39) !important;
+    border-radius: 0.75rem;
+}
+
+pre code {
+    display: block;
+    overflow-x: auto;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+.torchlight .line {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.torchlight .line-number {
+    margin-right: 1rem;
+    color: rgb(75 85 99);
+}
+
 .torchlight.has-focus-lines .line:not(.line-focus) {
     transition:
         filter 0.35s,
@@ -24,6 +48,17 @@ span.line-number {
 .torchlight.has-focus-lines:hover .line:not(.line-focus) {
     filter: blur(0px);
     opacity: 1;
+}
+
+/* Prose code block overrides */
+.prose pre {
+    background-color: rgb(17 24 39) !important;
+    padding: 0 !important;
+}
+
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
+    content: none;
 }
 
 /* greek */

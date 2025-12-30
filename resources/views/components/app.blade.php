@@ -9,24 +9,32 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased">
     @env('local')
         <x-dev.dev-toolbar />
     @endenv
 
-    <div class="h-full bg-gray-100 p-0 md:p-5 dark:bg-gray-900">
-        <div class="max-w-(--breakpoint-lg) relative mx-auto bg-white p-4 pb-10 md:rounded-lg dark:bg-gray-800">
+    <div class="min-h-screen">
+        <div class="mx-auto max-w-3xl px-6 py-12 lg:px-8 lg:py-20">
             <x-layout.header />
-            {{ $slot }}
+            <main>
+                {{ $slot }}
+            </main>
         </div>
     </div>
 
-    <footer class="pb-5 pt-5 text-center text-xs text-gray-800 dark:bg-gray-900 dark:text-gray-400">
-        <p>&copy; {{ date('Y') }} andyhinkle.com, All rights reserved.</p>
-        @if (Str::contains(Request::url(), 'blog'))
-            <p class="pb-2 pt-4">Code highlighting provided by <a href="https://torchlight.dev/" target="_blank"
-                    rel="noopener" class="underline">Torchlight</a>.</p>
-        @endif
+    <footer class="border-t border-white/5 bg-gray-950">
+        <div class="mx-auto max-w-3xl px-6 py-8 lg:px-8">
+            <p class="text-center text-sm text-gray-600">
+                &copy; {{ date('Y') }} Andy Hinkle
+            </p>
+            @if (Str::contains(Request::url(), 'blog'))
+                <p class="mt-2 text-center text-xs text-gray-700">
+                    Syntax highlighting by <a href="https://torchlight.dev/" target="_blank" rel="noopener"
+                        class="text-gray-500 hover:text-gray-400">Torchlight</a>
+                </p>
+            @endif
+        </div>
     </footer>
 </body>
 

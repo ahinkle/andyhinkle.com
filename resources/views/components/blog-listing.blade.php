@@ -1,42 +1,22 @@
-<div class="mx-auto max-w-4xl space-y-6">
+<div class="divide-y divide-white/5">
     @foreach ($posts as $post)
-        <article
-            class="group relative rounded-xl border border-white/[0.05] bg-white/[0.02] p-8 backdrop-blur-sm transition-all duration-300 hover:border-white/10 hover:bg-white/[0.04]">
-            <!-- Date -->
-            <div class="mb-4 flex items-center gap-2 text-slate-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4"
-                    aria-hidden="true">
-                    <path d="M8 2v4"></path>
-                    <path d="M16 2v4"></path>
-                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
-                    <path d="M3 10h18"></path>
-                </svg>
-                <time class="text-sm">{{ $post->formatted_date }}</time>
-            </div>
-
-            <!-- Title -->
-            <h2 class="mb-4 text-slate-100 transition-colors duration-300 group-hover:text-white">
-                <a href="{{ url('/blog/' . $post->slug) }}">
+        <article class="group py-8 first:pt-0">
+            <a href="{{ url('/blog/' . $post->slug) }}" class="block">
+                <time class="text-sm text-gray-500">{{ $post->formatted_date }}</time>
+                <h2 class="mt-2 text-xl font-medium text-white transition-colors group-hover:text-gray-300">
                     {{ $post->title }}
-                </a>
-            </h2>
-
-            <!-- Description -->
-            <p class="mb-6 leading-relaxed text-slate-400">
-                {{ $post->description }}
-            </p>
-
-            <!-- Read More Link -->
-            <a href="{{ url('/blog/' . $post->slug) }}"
-                class="inline-flex items-center gap-2 text-slate-500 transition-colors duration-200 hover:text-slate-300">
-                <span>Read article</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="size-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                </svg>
+                </h2>
+                <p class="mt-3 leading-relaxed text-gray-400">
+                    {{ $post->description }}
+                </p>
+                <span
+                    class="mt-4 inline-flex items-center gap-1 text-sm text-gray-500 transition-colors group-hover:text-white">
+                    Read article
+                    <svg class="size-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </span>
             </a>
         </article>
     @endforeach

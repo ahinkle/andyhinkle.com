@@ -4,16 +4,10 @@
         <meta name="description" content="A collection of talks and presentations by Andy Hinkle.">
     </x-slot>
 
-    <div class="mx-auto max-w-5xl px-4 pb-4">
-        <div class="mb-8">
-            <h1 class="text-2xl font-bold text-white sm:text-3xl">
-                Speaking
-            </h1>
-            <p class="mt-2 text-white/75">
-                Conversations about Laravel, web development, and building better software.
-            </p>
-        </div>
+    <section class="py-8 md:py-12">
+        <h1 class="text-3xl font-bold tracking-tight text-white md:text-4xl">Speaking</h1>
+        <p class="mt-4 text-lg text-gray-400">Podcasts and conversations about Laravel, web development, and the craft of building software.</p>
+    </section>
 
-        <x-speaking-listing />
-    </div>
+    <x-speaking-listing />
 </x-app>

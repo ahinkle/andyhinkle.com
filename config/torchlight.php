@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'theme' => env('TORCHLIGHT_THEME', 'dark-404'),
+    'theme' => env('TORCHLIGHT_THEME', 'iceberg-dark'),
 ];
