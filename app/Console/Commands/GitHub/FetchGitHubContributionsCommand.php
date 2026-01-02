@@ -4,15 +4,13 @@ namespace App\Console\Commands\GitHub;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'fetch:github-contributions', description: 'Fetch recent GitHub contributions and stores them in cache')]
 class FetchGitHubContributionsCommand extends Command
 {
-    /**
-     * Execute the console command.
-     */
     public function handle(): int
     {
         $this->info('Fetching GitHub Contributions...');
@@ -31,41 +29,15 @@ class FetchGitHubContributionsCommand extends Command
      */
     protected function fetchGitHubPublicPullRequests(): array
     {
-        $token = config('services.github.token');
+        $token = Config::string('services.github.token');
 
-        if (! is_string($token)) {
-            return [];
-        }
-
-        $response = Http::withToken($token)
+        /** @var array<mixed> $nodes */
+        $nodes = Http::withToken($token)
             ->throw()
             ->post('https://api.github.com/graphql', [
                 'query' => $this->graphqlPullRequestQuery(),
-            ]);
-
-        $data = $response->json();
-
-        if (! is_array($data)) {
-            return [];
-        }
-
-        $dataLevel = $data['data'] ?? null;
-
-        if (! is_array($dataLevel)) {
-            return [];
-        }
-
-        $search = $dataLevel['search'] ?? null;
-
-        if (! is_array($search)) {
-            return [];
-        }
-
-        $nodes = $search['nodes'] ?? null;
-
-        if (! is_array($nodes)) {
-            return [];
-        }
+            ])
+            ->json('data.search.nodes', []);
 
         // Filter out null entries that sometimes appear in search results
         return array_values(array_filter($nodes, fn ($node) => $node !== null));
