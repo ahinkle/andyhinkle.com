@@ -67,15 +67,11 @@ class Speaking extends Model implements Sitemapable
     /** @return array<int, array<string, mixed>> */
     public function getRows(): array
     {
-        /** @var Collection<int, array<string, mixed>> $collection */
-        $collection = collect(iterator_to_array($this->files()))
-            ->map(fn (SplFileInfo $file): array => $this->parseFile($file))
-            ->values();
-
-        $collectionWithTranscripts = $this->transcriptPath($collection);
-
         /** @var array<int, array<string, mixed>> */
-        return $collectionWithTranscripts
+        return collect(iterator_to_array($this->files()))
+            ->map(fn (SplFileInfo $file): array => $this->parseFile($file))
+            ->values()
+            ->pipe(fn (Collection $items): Collection => $this->transcriptPath($items))
             ->sortBy('published_at')
             ->values()
             ->toArray();
@@ -140,26 +136,20 @@ class Speaking extends Model implements Sitemapable
     /** @return Attribute<string|null, never> */
     protected function videoThumbnail(): Attribute
     {
-        /** @var Attribute<string|null, never> */
-        return new Attribute(
-            get: function (): ?string {
-                $id = $this->youtubeId();
-
-                return $id ? "https://img.youtube.com/vi/{$id}/mqdefault.jpg" : null;
-            }
+        return Attribute::make(
+            get: fn (): ?string => ($id = $this->youtubeId())
+                ? "https://img.youtube.com/vi/{$id}/mqdefault.jpg"
+                : null,
         );
     }
 
     /** @return Attribute<string|null, never> */
     protected function videoEmbedUrl(): Attribute
     {
-        /** @var Attribute<string|null, never> */
-        return new Attribute(
-            get: function (): ?string {
-                $id = $this->youtubeId();
-
-                return $id ? "https://www.youtube.com/embed/{$id}" : null;
-            }
+        return Attribute::make(
+            get: fn (): ?string => ($id = $this->youtubeId())
+                ? "https://www.youtube.com/embed/{$id}"
+                : null,
         );
     }
 
@@ -167,12 +157,7 @@ class Speaking extends Model implements Sitemapable
     protected function durationMmss(): Attribute
     {
         return Attribute::make(
-            get: function (): string {
-                $duration = $this->getAttribute('duration');
-                $durationInt = is_int($duration) ? $duration : 0;
-
-                return $this->formatDuration($durationInt);
-            }
+            get: fn (): string => $this->formatDuration((int) ($this->duration ?? 0)),
         );
     }
 
@@ -193,11 +178,15 @@ class Speaking extends Model implements Sitemapable
     {
         return Attribute::make(
             get: function (): ?string {
-                $showName = $this->getAttribute('show_name');
+                $showName = $this->show_name;
                 $eventName = $this->getAttribute('event_name');
 
-                return is_string($showName) ? $showName : (is_string($eventName) ? $eventName : null);
-            }
+                return match (true) {
+                    is_string($showName) => $showName,
+                    is_string($eventName) => $eventName,
+                    default => null,
+                };
+            },
         );
     }
 
@@ -227,12 +216,10 @@ class Speaking extends Model implements Sitemapable
 
     public function toSitemapTag(): Url
     {
-        $url = Url::create("/speaking/{$this->slug}");
-
-        if ($this->published_at) {
-            $url->setLastModificationDate($this->published_at);
-        }
-
-        return $url;
+        return tap(Url::create("/speaking/{$this->slug}"), function (Url $url): void {
+            if ($this->published_at) {
+                $url->setLastModificationDate($this->published_at);
+            }
+        });
     }
 }
