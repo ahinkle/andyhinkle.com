@@ -68,22 +68,21 @@ class GenerateOgImageCommand extends Command
         $type = $this->option('type') ?? 'all';
         $force = (bool) $this->option('force');
 
-        $generated = 0;
-        $skipped = 0;
+        $this->info('Using '.($this->driver() instanceof ImagickDriver ? 'Imagick' : 'GD').' driver');
 
-        if (in_array($type, ['blog', 'all'])) {
-            $this->info('Processing blog posts...');
-            [$blogGenerated, $blogSkipped] = $this->generateBlogImages($force);
-            $generated += $blogGenerated;
-            $skipped += $blogSkipped;
-        }
+        $types = collect([
+            'blog' => fn () => $this->generateImagesFor('blog', Post::all(), $force),
+            'speaking' => fn () => $this->generateImagesFor('speaking', Speaking::all(), $force),
+        ]);
 
-        if (in_array($type, ['speaking', 'all'])) {
-            $this->info('Processing speaking pages...');
-            [$speakingGenerated, $speakingSkipped] = $this->generateSpeakingImages($force);
-            $generated += $speakingGenerated;
-            $skipped += $speakingSkipped;
-        }
+        [$generated, $skipped] = $types
+            ->when($type !== 'all', fn ($c) => $c->only($type))
+            ->map(function ($generator, $name) {
+                $this->info("Processing {$name}...");
+
+                return $generator();
+            })
+            ->reduce(fn ($carry, $counts) => [$carry[0] + $counts[0], $carry[1] + $counts[1]], [0, 0]);
 
         $this->newLine();
         $this->info("Generated: {$generated} image(s)");
@@ -93,61 +92,30 @@ class GenerateOgImageCommand extends Command
     }
 
     /**
+     * @param  iterable<int, Post|Speaking>  $items
      * @return array{int, int}
      */
-    protected function generateBlogImages(bool $force = false): array
+    protected function generateImagesFor(string $type, iterable $items, bool $force): array
     {
-        $posts = Post::all();
         $generated = 0;
         $skipped = 0;
 
-        foreach ($posts as $post) {
-            $path = public_path("images/share/og/blog/{$post->slug}.png");
+        foreach ($items as $item) {
+            $path = public_path("images/share/og/{$type}/{$item->slug}.png");
 
             if (! $force && file_exists($path)) {
-                $this->comment("  Skipping blog/{$post->slug}.png (already exists)");
+                $this->comment("  Skipping {$type}/{$item->slug}.png (already exists)");
                 $skipped++;
 
                 continue;
             }
 
             try {
-                $this->generateImage($post->slug, $post->title, 'blog');
-                $this->info("  Generated blog/{$post->slug}.png");
+                $this->generateImage($item->slug, $item->title, $type);
+                $this->info("  Generated {$type}/{$item->slug}.png");
                 $generated++;
             } catch (Exception $e) {
-                $this->error("  Failed to generate blog/{$post->slug}.png: ".$e->getMessage());
-            }
-        }
-
-        return [$generated, $skipped];
-    }
-
-    /**
-     * @return array{int, int}
-     */
-    protected function generateSpeakingImages(bool $force = false): array
-    {
-        $speaking = Speaking::all();
-        $generated = 0;
-        $skipped = 0;
-
-        foreach ($speaking as $item) {
-            $path = public_path("images/share/og/speaking/{$item->slug}.png");
-
-            if (! $force && file_exists($path)) {
-                $this->comment("  Skipping speaking/{$item->slug}.png (already exists)");
-                $skipped++;
-
-                continue;
-            }
-
-            try {
-                $this->generateImage($item->slug, $item->title, 'speaking');
-                $this->info("  Generated speaking/{$item->slug}.png");
-                $generated++;
-            } catch (Exception $e) {
-                $this->error("  Failed to generate speaking/{$item->slug}.png: ".$e->getMessage());
+                $this->error("  Failed to generate {$type}/{$item->slug}.png: ".$e->getMessage());
             }
         }
 
@@ -188,15 +156,9 @@ class GenerateOgImageCommand extends Command
 
     protected function driver(): GdDriver|ImagickDriver
     {
-        if (extension_loaded('imagick')) {
-            $this->info('Using Imagick driver');
-
-            return new ImagickDriver;
-        }
-
-        $this->info('Using GD driver');
-
-        return new GdDriver;
+        return extension_loaded('imagick')
+            ? new ImagickDriver
+            : new GdDriver;
     }
 
     /**
