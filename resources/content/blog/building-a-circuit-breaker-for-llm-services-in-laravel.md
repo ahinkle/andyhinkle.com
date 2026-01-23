@@ -1,7 +1,7 @@
 ---
 title: "Building a Circuit Breaker for LLM Services in Laravel"
 description: "Stop your Laravel queues from overwhelming when LLM services go down. Implement the circuit breaker pattern for automatic recovery and adaptive worker scaling."
-published_at: "2025-01-21"
+published_at: "2026-01-21"
 ---
 
 If you're integrating LLM services like OpenAI, Anthropic, or vLLM into your Laravel application, you've probably experienced the frustration of service outages. Your queue fills up with failed jobs, your workers keep hammering a dead service, and your application grinds to a halt.
