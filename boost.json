@@ -1,14 +1,8 @@
 {
-    "agents": [
-        "claude_code"
-    ],
+    "agents": ["claude_code"],
     "guidelines": true,
     "herd_mcp": true,
     "mcp": true,
     "sail": false,
-    "skills": [
-        "folio-routing",
-        "pest-testing",
-        "tailwindcss-development"
-    ]
+    "skills": ["folio-routing", "pest-testing", "tailwindcss-development"]
 }
