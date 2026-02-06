@@ -20,8 +20,8 @@ it('formats contributions correctly', function (): void {
         ],
     ];
 
-    Cache::shouldReceive('get')
-        ->with('github_contributions', [])
+    Cache::shouldReceive('array')
+        ->with('github_contributions', null)
         ->once()
         ->andReturn($mockContributions);
 
