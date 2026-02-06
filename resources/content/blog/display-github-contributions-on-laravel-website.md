@@ -196,12 +196,8 @@ class RecentGithubContributions extends Component
 
     protected function getContributions(): Collection
     {
-        $contributions = Cache::get('github_contributions', []);
-
-        if (! is_array($contributions)) {
-            $contributions = [];
-        }
-
+        $contributions = Cache::array('github_contributions', []);
+        
         return $this->formatContributions($contributions);
     }
 
