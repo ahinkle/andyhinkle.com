@@ -1,0 +1,1165 @@
+Dalton McCleery (00:01.262)
+Ready?
+
+Andy Hinkle (00:11.952)
+Hey guys, welcome to another episode of the Midwest Artisan. I'm your host, Andy Hinkle.
+
+Dalton McCleery (00:17.324)
+and I'm your co-host, Don McCleary.
+
+Andy Hinkle (00:20.026)
+Don't I feel like I say this every time, but it's been far too long. The world's different. so there's, there's that meme going around of the Christmas break, the AI break and then how everyone came back after Christmas break and everything's different. And, I felt like this is our fifth time from counting correctly that we've tried to get together. It was just one thing after another. You had, you know, work, I had work as well. And then I had kids, you know, family, you know, whatever you name it. I know you have.
+
+Dalton McCleery (00:23.79)
+yeah.
+
+Dalton McCleery (00:40.078)
+Yep.
+
+Andy Hinkle (00:50.106)
+things going on as well. it's finally so nice to get together. Well these days we'll have to get together in person and go to a hockey game or something, it'll be fun.
+
+Dalton McCleery (00:59.284)
+tip me with a good time.
+
+Andy Hinkle (01:01.411)
+So real quick, how they doing? What's their, what's their like, I don't get to in the details, but like this is Evansville Thunderbolts, right? They're still Thunderbolts. Okay. Good, good. can be in, okay.
+
+Dalton McCleery (01:06.35)
+I think they're like second or third in the league right now. We're going to see a hockey game tomorrow. Pucks and paws. So I will report back. Well don't have a dog, but they bring dogs, right? Yeah, yeah.
+
+Andy Hinkle (01:15.472)
+There we go.
+
+Nice. All right. You bring your dog.
+
+Andy Hinkle (01:24.142)
+Okay, bring your cat. Let's see, yeah. How's it going, man? Yeah, it's been too long.
+
+Dalton McCleery (01:29.07)
+We'll see. But yeah, we need to. We need to.
+
+been way too long apparently I can do this now AI is crazy man look at it whoa I I use Claude every second of my life no I'm kidding no I'm kidding I use it only for work I try to not use any AI stuff outside of work if you can believe that yeah I try and I try really hard not to in my personal life
+
+Andy Hinkle (01:35.524)
+Yeah. Are you still, are you still, are you still using Claude? Are you a Claude guy? Anthropic.
+
+Andy Hinkle (01:49.71)
+Okay, okay, so.
+
+Andy Hinkle (01:59.513)
+Really interesting. tell me about a personal project then. You're crafting by hand. You're using a pen and pencil, right?
+
+Dalton McCleery (02:11.555)
+I don't even know how to write my name anymore. I haven't picked up a thing. Here's the only thing that I do is I watch TV and I'll read some books.
+
+Andy Hinkle (02:13.892)
+Pen and paper, so it's, yeah, yeah.
+
+Andy Hinkle (02:23.866)
+Yeah, so like.
+
+Dalton McCleery (02:24.738)
+just your typical like boring Midwest 30 year old white dude thing. You know what I mean? I watch.
+
+Andy Hinkle (02:27.58)
+No, yeah. Well, you mentioned you use AI at work. when you're in your personal projects, if you have any personal projects, you don't use any AI at all? that what you're trying to say? OK. OK, got it.
+
+Dalton McCleery (02:39.424)
+No, no, do use AI for personal projects, but like, if I'm not at my desk and I'm like sitting on the couch doing something, I try really hard not to use AI for anything. Like I just do it old school. I'm gonna search Reddit, I'll search Twitter, whatever I need to do, I'm gonna do it the old school way. But if I'm sitting at my desk, I've got, I even bought new monitors. I've got two new monitors and a third monitor. I've got terminals over here, I've got terminals over here. I'm orchestrating all kinds of stuff.
+
+Andy Hinkle (02:50.434)
+Okay. Okay. That was cool.
+
+Dalton McCleery (03:08.664)
+when I'm sitting at my desk every day.
+
+Andy Hinkle (03:10.32)
+Gotcha. so with yours and Claude are using codecs at all like in your development. Okay, cool. All right. Yeah. Cause I'd love to talk like workflows and how you like set your stuff up. because well, I feel like for me personally, it's changing every day. and so I'm trying to, yeah, I'm trying to, I feel like find the work, you know, the nice workflow, but also I feel like on Twitter, somebody comes out with a new tool every day. Like some of them are good.
+
+Dalton McCleery (03:15.094)
+Yeah. Mm-hmm. Mm-hmm.
+
+Dalton McCleery (03:20.898)
+Yes, I think we should.
+
+Dalton McCleery (03:28.47)
+I could say that again.
+
+Andy Hinkle (03:40.56)
+And you know, it's just like a lot of it's like hey guys use this use that I'm like sometimes I just like open up the the raw terminal and just letting it rip, know and just letting clod be clod instead of having it to Yeah, but anyway
+
+Dalton McCleery (03:50.446)
+dude.
+
+need fancy things. Well hang on, before we get into that, how are you, my guy? I didn't ask. How are you?
+
+Andy Hinkle (03:55.727)
+Yeah. Yeah, I'm good. I'm five weeks away from a newborn son. So hopefully we have another show. I feel like it's I'm only we'll see if everything is like my other son, which they say that second one is kind of a wild card. So we'll see. So let's see how that goes. But I'm looking forward to that. I just got back from Illinois, which is the headquarters of Wilbur where I work with my boss, Jake and rest of the crew for the week. Just got back yesterday. So.
+
+Dalton McCleery (04:20.024)
+Yeah. Bust you.
+
+Andy Hinkle (04:26.128)
+It was a great time. Um, really like, uh, just keep going out there. Um, you know, spend some time. And so it's always good. It's always refreshing to go in there. You just feel the energy of being in an office. And so that's cool. Um, we're doing a ton, a ton of AI stuff. See, love it. I've been having so much fun. It's probably the most fun I've had programming in many years, not ever. just, it's a ton of fun trying to figure this stuff out. So I love to get dig into that. Um,
+
+Dalton McCleery (04:28.046)
+Shout out, boss J.
+
+Dalton McCleery (04:49.554)
+really? Okay. Okay. Alright, let's do it. We got the niceties out of the way. The internet knows that we don't hate each other. Let's... Alright.
+
+Andy Hinkle (04:55.738)
+But yeah, let's talk about.
+
+Love to talk about workflows because I feel like that's where I would love to get cheered because I know you love a good workflow.
+
+Dalton McCleery (05:07.618)
+Same. Yeah, same.
+
+Andy Hinkle (05:11.212)
+So you want to go first? You're, you're okay. Let me, let me run this. Let me run a scenario, right? and then I want to know, I want to know how you do it. Right. Okay. So, boss man comes in and says, Hey, we have this new feature. The, I wrote this issue up for you. can you get it to me? Whatever. So, you're like, you're said, okay, I'm to write some code or baby, write some good. don't know, but what's your workflow from here? You, do you.
+
+Dalton McCleery (05:18.028)
+Yes, hit me.
+
+Andy Hinkle (05:40.356)
+Yeah. What's your workflow from this, from this either like through fixing a bug or just like somebody comes with you to ask like, well, where do you start?
+
+Dalton McCleery (05:48.15)
+All right, so we use, this is gonna suck, so just try not to cringe hard, we use JIRA for our tickets. So we've got a nice JIRA workflow that we're working on. And so I use the JIRA MCP, like the tool in my cloud code. But typically what I do is I'm a raw terminal guy. I don't like the fancy stuff. Like I have, what do I have? I use warp.
+
+Andy Hinkle (05:53.584)
+Mm-hmm.
+
+Andy Hinkle (06:00.93)
+Okay. Yeah.
+
+Dalton McCleery (06:14.21)
+Warp is the terminal that I use. So I'll open up a new warp session, do my Claude code, I'll say, hey, pull in ticket one, two, three, four, read the description, outline the plan, let's go through the plan, whatever, whatever, it'll start spinning up. And usually at that point I'm like, cool, let's do another JIRA ticket. So I'll have usually two to three different Claude sessions open up on my warp terminal with three to four different JIRA tickets, right, pulling in stuff.
+
+Andy Hinkle (06:14.339)
+Okay.
+
+Dalton McCleery (06:42.968)
+doing its thing, doing its plan. I always plan first. is no way in hell you would ever catch me opening a new Claude session not in plan mode. I always plan everything before I do it.
+
+Andy Hinkle (06:52.752)
+So do you, is it like Claude dash dash plane or you just kind of like Claude then flip over a plane?
+
+Dalton McCleery (06:56.846)
+you can set the default in Claude. So anytime I initialize Claude, it starts in plan mode. Yeah, so anything, I basically just like, And now, so now I have a microphone, like a little microphone, so every time I'll start up a new session, I'll hold down a button, I'll say, hey, let's talk about JIRA ticket one, two, three, and I'll let go of it, pops it in there, it starts working, right?
+
+Andy Hinkle (07:01.209)
+that's cool. I didn't realize that. Nice.
+
+Andy Hinkle (07:19.952)
+Okay, let's talk about that. What is that in your own app? cause cloud has their cloud has their own integration. Now I can't, I couldn't get it to work. Do you, okay. So you've tried it. I couldn't even get it.
+
+Dalton McCleery (07:25.612)
+Yeah, they do, they do. I don't like it, I don't like it. I use Super Whisper, is that the one I use? Super Whisper, yeah, I paid for Super Whisper Pro. So I use the nice model, yeah. Yeah. Okay, okay, yeah.
+
+Andy Hinkle (07:35.481)
+Hey, I use the same one. Awesome. Yep. Yeah. Which is okay. So you pay for it. Okay. I've, I've yet to pay for it. I'm curious to hear about the benefits of that. so, okay. Tell me, cause I, all right. So a huge fan of super whisper. so on your side, you, you super whisper, you talk to Claude. What are the benefits of like subscribing to it?
+
+Dalton McCleery (07:52.269)
+Same.
+
+Dalton McCleery (07:59.804)
+I found that...
+
+Andy Hinkle (08:00.144)
+First off, how much is the prescription? The subscription. It's a drug.
+
+Dalton McCleery (08:03.086)
+The prescription. Well, they gave me, so I trialed it and they gave me like a 20 % off coupon when my trial got done. So I think after the coupon it was 60 bucks for a year.
+
+Andy Hinkle (08:17.048)
+Okay, okay, so it's a fixed price. It's not like pay for what you use. Okay, okay.
+
+Dalton McCleery (08:20.278)
+Yeah, I don't pay for the models. Or I hope I don't. I bought it like Monday of this week, so it's only been like five, six days since I bought it. So I don't know. Before, I was using it's like low-end model, whatever thing, and it would, I don't know if it's my dialect or the way that I talk, my Midwestern accent, it would confuse a lot of the things that I say. Like,
+
+Andy Hinkle (08:27.248)
+Okay, got it. So what are you finding on it?
+
+Andy Hinkle (08:44.602)
+Larryville. That's how it. Yeah.
+
+Dalton McCleery (08:45.966)
+It, dude, it did that. It pronounced, I said, let's look at this Laravel project. It wrote it as, you know, a larval, right, like an egg larval. Like, that's not right, dude. Don't do that. I talk about larval all the time. I don't need to be talking about larval. I hate that. I hate that. So yeah, I bought it, and it's much better at dictation than the free whatever model it is. Way better, way better. Worth the $60 for me.
+
+Andy Hinkle (08:53.092)
+But yeah, yeah. Yeah.
+
+I get Larryville, like the guy Larry, Larryville, yeah.
+
+Andy Hinkle (09:09.54)
+Yep. Sweet. So sounds like, yeah, it sounds like very, so it's more accurate. That sounds like a very similar workflow so far. So you pull up, Claude, well, you put it in planning mode. I just let it rip out. I just, yeah. All right. but sometimes I do planning mode most of the time, so I probably should do that. And you go right into voice dictation mode, which I also do. So awesome. So where do you lead it from there?
+
+Dalton McCleery (09:25.166)
+of the wall.
+
+Dalton McCleery (09:32.544)
+Mm-hmm I'll go through the entire plan session like I do not let cloud code change Anything until I've read through all of the plan and I really understand what it's doing It's so tempting to go. Okay, the tickets here all of the stuffs in the ticket Just go Because at that point it's cool. You could get done or whatever, but I'm still very And I know you're this way too. Like I'm very particular about my conventions
+
+Andy Hinkle (09:49.744)
+Mm-hmm.
+
+Andy Hinkle (09:59.249)
+formatting. Yeah.
+
+Dalton McCleery (10:00.605)
+Like it has to be the way that I want it to be, because who knows when cloud code's gonna go down, I'm gonna have go back to the old school way of writing code, and it's gonna write all of my stuff in service classes and instigate into the singletons in my service provider, and that's just not how I work. That's not my workflow. So I have to like specifically tell it, which I have guardrails now, right? I have a bunch of skills and docs to sort of help it guide to be the way that I want it to write.
+
+But typically I'll go through the whole plan, usually three or four revisions of the plan, then I say, oh cool, open it up in a work tree and do that for me. Let me know when it's done. Write your tests, verify the tests, make everything good. If it's good, cool, let's put a PR, let's submit that to staging and get that pushed up. And I'll do that three or four times, three or four tickets at a time.
+
+Andy Hinkle (10:53.53)
+Wow, okay. At a time. Interesting. Okay. So a few questions. do you at file reference, like, you know, you can write the app and the keyboard can reference a file director. Do you do that a bunch? You don't use it at all. Okay. Cause I used to, I used to
+
+Dalton McCleery (10:55.755)
+at a time.
+
+Dalton McCleery (11:07.061)
+No, I almost exclusively touch, just talk to it. I don't even know why I have this keyboard anymore. You know what I mean? Like could just get a macro pad and just be like talk one, two, three, four or no or yes. Right? Copy paste.
+
+Andy Hinkle (11:10.317)
+Okay.
+
+Yeah. Yeah.
+
+Andy Hinkle (11:19.458)
+Mm-hmm. Okay. Yeah. I do have a couple of questions, post questions like after, which I'll get to. so, all right. So you, you don't use any at references. and then you go through and you kind of revise it a few times. Do you, are you a skill guide? Do you like, reference the front end skill. Okay. Tell me about your skill bag. What, what do you like to use? Okay. All right.
+
+Dalton McCleery (11:37.634)
+Yes. Yes. I got a lot of skills, but I don't know what they all do. That's probably the one thing that I'm not great at is, is like, can we just get a skill for this? Like my boss, boss Jeff, he's great at skills. So ironically, I'm pretty sure most of the skills that I use, boss Jeff wrote. So he has stuff like comparison skills for databases, database reading stuff.
+
+Andy Hinkle (12:00.016)
+Okay.
+
+Dalton McCleery (12:07.341)
+validation, all kinds of weird stuff. Backfills for scripts to make sure that databases don't have drift between the two tables and replicas. I'll use a lot of those. Because a lot of the work that I've been working in, I think since we talked, the last three months have all been database architecture stuff, like replications and aggregation tables and all of this crazy complex stuff. So I just basically use all of the skills that boss Jeff wrote.
+
+Andy Hinkle (12:09.765)
+Mm-hmm.
+
+Andy Hinkle (12:18.224)
+Nice.
+
+Andy Hinkle (12:26.512)
+Mm-hmm.
+
+Andy Hinkle (12:36.046)
+Okay, cool. So it's more organizational level skills. That's cool. One. Yeah.
+
+Dalton McCleery (12:38.925)
+Yeah, there's a lot of guardrail skills. Like, hey, do this one thing, and here's some parameters. Like, here's a query skill, and then some parameters. It's not like hyper-specific of, I need to query this one table this one way. There's not one skill that does that. It's sort of a generic skill that you can pass stuff to. Like, hey, query this table and compare it to this table. We've got skills like that.
+
+Andy Hinkle (12:45.356)
+Mm-hmm. That's a great idea.
+
+Andy Hinkle (12:55.152)
+Mm-hmm.
+
+Andy Hinkle (12:59.342)
+Yeah. One thing I've been considering is organizational rules. Like, so for example, just about 99, if not just pretty much every time, within when we're working on a, one of our projects at work, we have about 20 or so different apps. when we're working on what those.
+
+If we're reaching to a third party API, sometimes those apps are even talking to each other. Many times, actually there are one app's talking to another over API, whatever we use the gateway pattern, which is like you put a fake in front of it, but locally in, test. So there's like a provider and it determines, Hey, are you on local or on production? and then it decides, if you are on local, you can actually do a bypass. If you like need to test your API on your local copy or something, you can set an EMV variable, whatever.
+
+Dalton McCleery (13:48.055)
+Sure.
+
+Andy Hinkle (13:49.84)
+So, if not, it goes to this facade or this gateway pattern kind of thing. And it determines like, okay, you're going to go to the fake. And then the fake is like, it just returns an array of like what the object looks like a theoretical thing. You can use faker and they're like a pattern of whatever you'd like. Sometimes you can pass it specific values to get the result you want for like, Oh, if you want it to return a, like a
+
+Like, you know, a rate limited thing, you can return it, you know, four or five, six instead of one, two, three, and there's something very exact, you know, so we have these different rules or, you know, trying to get these different values return. And so one thing I've been thinking about is creating a skill to, for, know, like when we're writing a new API, cause I kind of have to tell it like use the gateway pattern. Here's an example, you know, but it'd be cool if you like it, it just like.
+
+when it picked up on any time you kind of interact with the HTTP facade or kind of thing that you're, you're reading through our organizational rules to understand how we do the gateway pattern, you know, some of that. So, cause right now we have it written up and like, you know, of how to do it. but actually making that into a proper skill. So, so that's kind of like, yeah, my will is like doing something like that, you know, so organization, we talked about a little bit internally about having some rules, of how we traditionally like to do things. So, yeah.
+
+Dalton McCleery (15:12.533)
+So do you have like a documentation knowledge base of like the whole app structure?
+
+Andy Hinkle (15:17.242)
+Kind of like a, yeah, we do. It's, it's kind of, it, definitely need to go back and revise some of it's like from, know, it's, it's really good on a lot of it. do have a, like a really good structure on it, but it's like some of it's about, you know, eight years old. So it's like, something, some, some old ways of doing it. So definitely we could make just like a skills repository or something far as the organizational line. That'd be kind of cool. It's kind of the idea. And then somehow.
+
+It'd be cool if like you could publish it and it just automatically stays up to date. You don't have to like get pool or anything, but you could publish it through like GitHub or something privately. And then it just constantly stays up to date with your organization. I'm sure something like that out there exists. So I'm thinking a little bit about that.
+
+Dalton McCleery (16:04.301)
+Dude, by the time this podcast comes out, it's gonna be built. You're gonna be outdated and look stupid. Like, oh, Andy, use OpenClaw 4.0.7. It does this now. Yeah.
+
+Andy Hinkle (16:06.711)
+I know it's changing all the time. Yeah, it's going to be here. So we'll see. But yeah.
+
+Yeah. Yeah. Opus four seven before. Yeah. I use. So I use front end skill a lot. It likes the color purple. I don't know why. And blue. Have you seen that? It of it likes gradients and purple and blue. Yeah. So. Yeah. I can't have to iterate on it. It kind of provides me a good idea of like, you know, and then I drag into Figma and just kind of.
+
+Dalton McCleery (16:26.615)
+Of course. Of course. Yeah. It loves purple. I have to explicitly tell it to stay the hell away from purple. Do red or something.
+
+Andy Hinkle (16:43.297)
+shape it up and then share a screenshot of like where I want it to, what I want to fix, or I just explicitly tell it.
+
+Dalton McCleery (16:47.539)
+wait, do you still use Figma? You're not having like Claude mock up something for you to look at and go, okay, that's the one, not that one.
+
+Andy Hinkle (16:51.229)
+I-
+
+I, yeah. Well, figma has its own AI tool now. And so, I used to just manually do like back when AI just was kind of in rough shape. used to just manually by hand doing figma, but now they have a thing called make, and you could just copy paste a screenshot into it. I use that a bit. and then it kind of gives me a general direction and then, it's not perfect. And so, but then it at least gives me the base UI and I can move things around or, whatever you need to do.
+
+And I know there's like figments MCPs. I haven't really gotten to that, but I usually just take a screenshot of it and send like, let's try this instead, you know, or, um, or I'm just kind of explicit like, move that icon over here. Give it an eyeball icon for view or for an edit, get a little pencil, you know, just something like that. Just to give it a little bit of character, or I just tell it like completely rethink this creative freedom. Like it looks terrible and it give it another try to get to go again. Yeah. Yeah.
+
+Dalton McCleery (17:45.473)
+this is garbage. So yeah, like how mean are you to your your Claude's then? You know?
+
+Andy Hinkle (17:50.768)
+I think using voice dictation does kind of, you know, from typing all in caps or just, you know, it does make your, it does give you a little anxiety of yelling over the mic. So don't try to yell. So I think, you know, using super whisper does help with that. you know, preventing typing all in caps like, no, this is the third time I've told you not to use a service class, you know, or whatever. So,
+
+Yeah, it's a, you know, I'll feel about service classes, but yeah, it's just, yeah. But it's just like, yeah, it's, you know, we just have to keep it controlled and whatever. So yeah. so you, with the skills, so you're, you're, do you have any skills that you wrote yourself? Cause I have, I have a special one I like to talk.
+
+Dalton McCleery (18:22.815)
+I feel the same way, The same way.
+
+Dalton McCleery (18:40.941)
+the only like cool one that I have is I have a release skill like a changelog skill that I'm like okay I'm ready for a release
+
+Andy Hinkle (18:49.708)
+Okay.
+
+Dalton McCleery (18:50.829)
+Go ahead and prepare for a release for me and it'll go to github. It'll find all the commits from the last Release version, you know, I've got it tagged in github find all the commits from that point to now Summarize them, you know without putting any you know internal application specifics right because users are gonna read this Write up a cool new entry in my changelog And then tag the new version in github and push that up. That's probably the coolest one that I got
+
+Andy Hinkle (19:10.607)
+Mm-hmm.
+
+Dalton McCleery (19:20.333)
+It's so simple because it's just like, okay, ready for release? Cool, release this. Write the changelog for me, make it user readable, tag it in GitHub, push that change up, ready for release. Ready for deployment.
+
+Andy Hinkle (19:20.623)
+Mm-hmm.
+
+Andy Hinkle (19:32.664)
+Nice. Yeah. Yeah. Yeah. That's cool, man. I have, I have quite a few, just random skills that I wrote myself. So, all right. Yeah. Skill, skill share. Yeah. My fate here's, do we want to start off with the, my favorite? Why not? Right. Okay. All right. All right. I have, I have one for PHP Stan. It's short and sweet because
+
+Dalton McCleery (19:36.011)
+I hate that it does that, I gotta turn that off.
+
+Okay, Skillshare. Don't sue us Skillshare. Don't sue us.
+
+No, let's build to it. No, let's build to it. Give me the lowest one. Let's string this along.
+
+Andy Hinkle (20:01.577)
+occasionally Claude will just put a PHP standing nor or add it to the baseline. And so I'm like, actually fix the issue if, and then I have some rules in there, like if it's a vendor related or if it's kind of hacky of how you fixed it, let me know. Otherwise, like figure it out and go fix it. You know, you know, it's level five, you know, like PHP saying you can figure it out. but if it's at a vendor level and you're hacking the vendor, I want to know about that. You know, like, so, then I, I have one for.
+
+Dalton McCleery (20:20.385)
+Right. Right.
+
+Dalton McCleery (20:26.018)
+Yeah, don't do that.
+
+Andy Hinkle (20:30.991)
+for reviewing, for reviewing like Claude has one Claude has one for reviewing and it's all right. But I have some special things I like to just be aware of as well of like just understanding if there's any any patterns that we can consolidate like anything that's reused that we can abstract, you know, make it cleaner. Any like one thing that Claude
+
+Dalton McCleery (20:52.385)
+Okay, yeah, I like that one. That makes sense for you. That makes sense.
+
+Andy Hinkle (20:57.965)
+One thing that cloud just doesn't do when reviewing it actually doesn't even go look at the issue and read it to understand the context. It just like, I I'm looking at the change and I could see the change and I'm describing the difference and I'm understanding the difference of that. It's not actually looking at the issue to understand like, Hey, all our business requirements completed in the issue. And so I've I have that like actually goes and reads the GitHub issue and understands the problem. it also double checks that.
+
+A PHP Stan is solid that there's no hackiness around it. it like, looks up the, like if a, if a developer or to ignore it, like can it actually fix it or not? You know, like, or is this truly ignored? So, linting issues, which I'll talk about that. That's actually the kind of the big one I like to do. I do one called slash commit. What slash commit does the skill for that one is it creates creates commit, but it.
+
+Dalton McCleery (21:47.868)
+Mm-hmm.
+
+Andy Hinkle (21:56.345)
+creates a commit in the way that I would create one. It's just, you know, it's short and sweet. But it's describing the problem because, I would just write whip everywhere on all my commits before. Now when I'm running into a point, I just write slash commit and it describes, it describes the what and the why. Not just, you tell Claude to write a commit for you, it'll say like, adjusted user controller.php or update user controller. And it's not actually telling it the what or why of what it's actually doing. And so something like add email to verification or.
+
+or add email verification to registration, something like that. So I have a skill for that.
+
+Dalton McCleery (22:30.983)
+That's not a bad one because I still write all of my commit messages myself. And I'm sure you see a lot of my commit messages from before. Mine are. Updates controller to do this.
+
+Andy Hinkle (22:36.013)
+Yeah, it.
+
+Andy Hinkle (22:43.065)
+Yeah, and a lot of times I'll even really look at the commit message So I don't even think it really the commit message to me nowadays is you know in a video game like a checkpoint Like I'm gonna checkpoint this I'm gonna be like oh got to a checkpoint I'm gonna save here because if I screw something up I want to what I have an a list called nah I want to roll back just kill it all I want to roll back to my my save game checkpoint other than that I I read like we we squash all over commits into the PR name
+
+Dalton McCleery (23:00.311)
+I wanna go back.
+
+Andy Hinkle (23:11.83)
+And so when you're looking at it in master, can see like, this was this feature instead of it being a look at its whip. So yeah.
+
+Dalton McCleery (23:15.063)
+Yeah. Yeah.
+
+Dalton McCleery (23:20.567)
+whip it real good.
+
+Andy Hinkle (23:21.774)
+My favorite skill I use this one all the time and it's called the Otwell polish
+
+Dalton McCleery (23:29.165)
+Okay, okay.
+
+Andy Hinkle (23:31.255)
+Well, it used to just be called Polish. And I was listening when, when Taylor, he wrote the, the AI SDK and he said he wrote all of it by, or with Claude. And then he said at the end, he gave it a little out well polish. And I had that, I had it just called polish. I love just the, when he called it himself, like the, the all well polish, because we all know what he's talking about. And my coding philosophy is heavily inspired by that. And so, I have one it's called.
+
+Um, it's a well polish and it's like a list of like 30 rules of just things that I'm opinionated. Yeah. It's a pretty lengthy one. Uh, usually like when I'm running through cloud, I'm like reference the, will, you know, polish it. Like, yes, this is usually after it's completed it just to see if there's any refinement in here. It'll be things like, um, temporary variables, um, arrays to collections. Um, it would be something like, uh,
+
+Dalton McCleery (24:08.302)
+it's big. Okay.
+
+Andy Hinkle (24:30.894)
+So some other ones, oh, fluent chaining methods. I love a good chain. Like, uh, it's, it's so like, know, like one thing in particular is like, you know, if you have, if you're looking up users, um, somebody might write like user colon, colon, uh, query. then like, you know, for a variable tag of query, um, though, like, you know, variable query with a user query. And then later on, they'll say if the user, uh, if the request is act has an active.
+
+Dalton McCleery (24:35.827)
+yep, same.
+
+Andy Hinkle (24:59.928)
+And then it'll say like query where this and so been so doing it actually building it in a chain, you know, and so using like user colon, colon query, then say when like the request is active when this instead of building it out. So it's just like all these rules that Claude just kind of like, just kind of does what it wants instead of, you know, or it.
+
+It kind of sometimes it actually writes in a great way, but you know, sometimes it just kind of all. So at the end, just tell it, you know, kind of looking for a new refinement by giving these given rules. And so it'll be like, don't add, don't add custom, custom actions to, controllers, like, you know, only have index show store. All those don't know, right. You know, some custom thing because sometimes I loves to do that. And then, but
+
+Dalton McCleery (25:44.184)
+yeah, who you at us?
+
+Andy Hinkle (25:48.303)
+What I'm trying to also train it is the moment does that puts it over in service class. And then I've been trying to like, it's constant refinement. why it's gotten pretty long. So, um, but that's my favorite one. I will polish. yeah, you saw. Yeah. Yeah. So, uh, yeah. Jake asked me if I've told Taylor about it and I was like, no, I might imagine it. You probably crack up because, because Laravel, they're able, have this too. Cause I, I've.
+
+Dalton McCleery (25:56.204)
+Right, Love that. Aught well polish. Shout out, shout out.
+
+Dalton McCleery (26:09.581)
+Hey, by the way...
+
+Andy Hinkle (26:15.722)
+I honestly, I'd pay for something like that. If Taylor wrote his own skills, like how he writes code, I'd take my money. I'd pay for this, like for a skill. Aaron Francis has, a great course right now, faster.dev shout out Aaron Francis, faster.dev. It's like a course on how to enter, how to use AI and development. And then there's a bunch of skills below that. And one thing, what I saw on there is the counselors. Have you heard of this? The counselors counselors.
+
+Dalton McCleery (26:43.82)
+I have not.
+
+Andy Hinkle (26:45.528)
+really neat concepts. So it's a package or it's like a CLI thing you can install. you can, so if you're in a prompt and you're getting mixed results in your planning process, you just don't like it. You can say, Hey, go ask the counselors. And what it'll do is it'll go out to codex. It'll go out to, Jim and I on all these other AI things you can set up and last basically re ask it. It'll ask the same thing.
+
+And it all comes back to Claude and like centralized and it says, Hey, Jim and I said this, Codex said that like, here's what I recommend, or would you like me to implement any of these into your plan? So you're like asking the counselors there.
+
+Dalton McCleery (27:20.033)
+Hmm.
+
+Dalton McCleery (27:23.501)
+okay. So it's kind of like, I have a MCP sequential thinking. I think we talked about that before where it'll like, Claude will ask itself questions to try to understand what the problem is. It sounds a lot like that, but going out and asking other things. Hey, go ask Codex. What does Codex think? That's actually pretty sweet.
+
+Andy Hinkle (27:29.283)
+Yeah.
+
+Andy Hinkle (27:35.608)
+Mm-hmm.
+
+Yeah.
+
+Right, which is kind of a funny thing. you go, go ask your competitors what they're Yeah.
+
+Dalton McCleery (27:46.389)
+Yeah, yeah, yeah, yeah, hey, I don't trust you. Can you ask somebody? Okay? Can I talk to your boss?
+
+Andy Hinkle (27:53.091)
+Yeah. Yeah, it's, it's really neat. I've only used it with Codex a couple of times and I've, I've really liked that of like, usually it's on some more complex stuff. but I'll, I'll tell it like, S you know, like what more or less like, I need to know what Claude or no, I need to know what Codex thinks of this. And instead of copy paste everything, what we've been talking about, I just bringing that in and it's simply,
+
+Dalton McCleery (27:55.598)
+Alright, that's not bad.
+
+Andy Hinkle (28:21.71)
+Reaches out to that and it comes back with a response. So it's really nice. Um, he has, I think like 50 skills on that site is all sorts of, um, all sorts of different ones of like one. There's a finalized skill. I've been thinking about that. I kind of have one, you know, with my, my polish kind of written in my refinement kind of thing, my review, but like one finalized just to make sure everything is up to snuff before you want to make a PR or if you're reviewing it, make sure everything's great. So.
+
+Yeah, man, skills are fantastic. So.
+
+Dalton McCleery (28:52.609)
+Very, yeah, powerful.
+
+Andy Hinkle (28:56.31)
+Yeah. And okay. So real quick, let's talk. So I kind of, we went way off there. okay. Your workflow, you, okay. You are, you are in warp. You use Claude. You mentioned you use a little bit of Codex, right? Occasionally. Okay.
+
+Dalton McCleery (29:02.253)
+Yeah. Occasionally. So like I try to keep my separation of concerns. I'm a big guy of separations of concerns. So I use Claude exclusively for work. Like my company pays for Claude, so I use Claude exclusively for the company.
+
+Andy Hinkle (29:25.804)
+Yep.
+
+Dalton McCleery (29:29.547)
+My personal projects and my side projects, have a ChadGBT Plus account and I use Codex exclusively for my side projects.
+
+Andy Hinkle (29:39.769)
+Which one do you like better? Okay. Yeah. Yeah. I found, I, I like, I like Claude's sassiness. Hear me out. Like how it's just like, it will straight up tell you like, actually, I think this is a better idea. I really liked that codex. It's kind of like you tell it what you're wanting to do. And it's like, yeah, I got it. I'm going to go, you know, I'll do that for you. Whatever. Claude's that good. Coworkers like
+
+Dalton McCleery (29:45.003)
+No hesitation, Claude. Claude is Gull, is not Gull.
+
+Andy Hinkle (30:06.006)
+Yeah, I can do that, but did you really think about this? Like, yeah, you're a good, it's a good point. So that's what I really like about it. Yeah.
+
+Dalton McCleery (30:12.641)
+Yeah, I just like that Claude's faster. That's why I use Codex on my side projects, because I can type. type. I can tell my, you know, I use Super Whisper, I can tell Codex, let's build this, this, or that, right? And it'll take 20 minutes to think about it. And in that 20 minutes, I could do a whole Jira ticket in Claude while this thing is just still spinning and talking about it. That's probably the only thing that I don't like about Codex is it takes way too long. It feels way too long.
+
+Andy Hinkle (30:40.802)
+Yeah, yeah, sometimes Claude takes too long too, but yeah. All right, so you're in your terminal. Do even use phpStorm?
+
+Dalton McCleery (30:45.197)
+So long.
+
+Dalton McCleery (30:51.017)
+I use PHP Storm to review the code when it's done.
+
+Andy Hinkle (30:56.064)
+Okay. Okay. Yeah. I do the same thing with VS code. Okay. Yeah. If you're
+
+Dalton McCleery (30:58.123)
+That's what I do. I'm comfortable in PHP Storm. I'm comfortable in my IDE. So like when it's done, it's ready. Cool. Let me look at the code in my IDE. Is this right? No, I don't think this is right. You put it in a service class again.
+
+Andy Hinkle (31:10.146)
+Same thing if you're reviewing, if you're reviewing a PR, same thing. You're like pulling in PHP store. Okay. Yeah. Okay. Okay. Yeah.
+
+Dalton McCleery (31:14.581)
+Mm-hmm. Yep, I'll do it all in PHPStorm. It's just, I know what it is. I know all the tools. It's so much faster for me to just click around, shortcut around. Yeah, so basically PHPStorm's not my ID anymore. It's just my preferred code reviewing tool. Isn't that weird? So weird.
+
+Andy Hinkle (31:23.948)
+Mm-hmm. Yeah.
+
+Andy Hinkle (31:30.86)
+Yeah. Gotcha. Yeah. I've been, yeah, I know it's, it's wild. Yeah. We're in that era. I've been bouncing between a bunch. I was in my, I was in VS code obviously for a while. Then I was just in ghostly for like about a week. So I
+
+Dalton McCleery (31:49.021)
+how did you like Ghostly? I tried it. I tried it when I was trying to warp.
+
+Andy Hinkle (31:53.28)
+Yeah, I like it a lot because it's fast and it's, it's very clean. It's, it's very easy to navigate and fly around through there. And I like that it's configuration is all like, it's all custom. can, like it's not just like you go to settings and you check this box or that box. It's like, it's all in, you can, you can have your own custom stuff in there. It makes it really nice. I was using VIM along with it and Neo VIM and, and that's where I was just like, I w like, I just wanted to stay in the same windows, getting tired of flipping between.
+
+Dalton McCleery (32:23.073)
+Yeah. Yeah.
+
+Andy Hinkle (32:23.149)
+ghosty and VS code. I went just to ghosty and then I was kind of like Neo of M just wasn't sticking for me. I was really, really trying to like just enjoy it. But I just was not. I kept having issues between TMUX and it stumbling with Neo of M. so, um, but then right around that time solo came out, which is by also by Anne Francis. just talked about, um, solo is, is a, um,
+
+Dalton McCleery (32:45.591)
+Shout out my guy.
+
+Andy Hinkle (32:50.813)
+It's, it's an application. It's free. and he has, it's a, they have like a subscription, model to that as well. Like you get four projects and you, so you can work multiple projects at same time, which that was really helpful for me working on one of our, well, I see one of our projects, but it's actually two separate apps. And so I can actually flip between agents between the two. and then it'll notify me when one's done. you can.
+
+what's really cool is you can, easily restart stuff. like you can restart like the cues and things, cause one thing of like you're running cues and you have to like close out and reopen. So you can actually set these up and you can set it up to like, when you boot up the, when you boot up solo, everything just starts up. Like as you showed it, it boots up agent, boots up your cues, boots up, whatever you want. I really liked that a lot. and then I was reviewing a PR last week and, I, I,
+
+Dalton McCleery (33:35.263)
+Okay, cool. Yeah, I like that.
+
+Andy Hinkle (33:47.278)
+Didn't like something. So I went into planning mode and VS code had a really good update because Claude Anthropic, they write their own VS code extension or plugin, whatever it is for VS code. And they had an update to how the planning mode looks. And I was like, man, I like this a lot. It, just like the, panel on the side, when it, when you finish in planning mode, when it comes up, the planet presents it to you. puts it in the main window and it's so pretty how it lines things. And you can actually go in and reference things and comment on it and then ship it back.
+
+So I like that a lot. And so now that's what I've been sticking with. I'm over back in VS Code. The only thing that's really annoys me, if you can't have multiple cloud things going, like in the official cloud extension in VS Code, you have to open up another VS Code window or open up a little, you have to go create another conversation, but then you have to flip between the two. wish, you know, there's the screenshots of Twitter, people running like six windows at one time.
+
+Dalton McCleery (34:35.575)
+Yeah. Yeah. Yeah.
+
+Andy Hinkle (34:43.297)
+The most I ever got to is four. I've like running four sessions at one time. It was, I was working on two apps. One was in both of them. One thing was on the front end. One thing was on the backend, front and backend, you know? but I mean, those, that happens occasionally, but, yeah. And so, now I'm on back on VS code with the one pain. And so, no work trees or anything like that. Do you, are you, do you use work trees?
+
+Dalton McCleery (35:09.293)
+I've started to dabble in them, right? I've been trying out, Boss Jeff sent me this software that does work trees. I mean, I was using Conductor and that used work trees, but there's this software.
+
+Andy Hinkle (35:23.725)
+Conductor, yeah, that's because you use conductor for a while, right? When did you leave that?
+
+Dalton McCleery (35:27.445)
+I did, that was my introduction when I realized that I needed to have more than one conversation going at a time.
+
+Andy Hinkle (35:34.253)
+In fact, yeah, that's what conductor was built for. Maybe not, but okay. It wasn't then. Okay. Got it.
+
+Dalton McCleery (35:37.294)
+It is now, it was not back then, back in the day. But it is now. But I'm on this, I'm trying out this new, it's called Intent by Augment Code. Have you heard of this? It is basically that, right? It comes pre-built in with agent orchestration in it, and it's spec driven.
+
+Andy Hinkle (35:48.053)
+Okay. No.
+
+Dalton McCleery (35:57.738)
+So you create a new work tree of whatever project you're working on and in that work tree you could have an orchestrator agent. It's all tied to Claude or you could pick Codex or you could pay for their plan and use their AI models. It's a lot like cursor. But it's all agent orchestration. So you talk to the orchestrator, it writes a spec for you and then it's like, cool, this spec is four phases and each phase has two parts. So I'm gonna spin up.
+
+two agents to go through phase one, here's the specs and I'm just gonna pass those specs directly to that agent. And so those two agents will start working and then it'll notify the orchestrator when they're done. I'm like, cool, all right, let's go on to the next phase, right? And it'll spin up two more agents and they'll be working on their specs. And it's really helpful to do that on like big, big refactors, right? Like I had one where I had a...
+
+I had a whole content pipeline written in Python as a proof of concept for a side project. I'm like, I need to write this in Laravel. So I threw that in to Intent by Augment Code. I was like, spin up as many dev agents, reviewers as possible. Just get this done, get it written in Laravel the way that I want it. And I think it spun up like 10 agents.
+
+Andy Hinkle (36:56.493)
+Mm.
+
+Andy Hinkle (37:11.573)
+10-8. Just tackling it. Yeah.
+
+Dalton McCleery (37:11.661)
+and they all took different parts of it and they just started piecing it together in their own work trees. And the best part is you could tap into an agent, and they're like, oh, this developer agent is working on the front end. You could tap into it and have another conversation directly with that agent. Like, hey, I know the spec said purple, but now I'm telling you directly that I want it to be red. And I just bypassed the orchestrator agent completely, and I could talk directly to that agent before it's done.
+
+Andy Hinkle (37:33.921)
+Mm-hmm. Yeah.
+
+Nice.
+
+Dalton McCleery (37:39.947)
+So that's, I've been using that a lot and that has, that uses work trees.
+
+Andy Hinkle (37:43.918)
+Does it allow Claude to be Claude, like naturally Claude, or does it use like, does it kind of hijack it? You know what I mean? You know, conductor, conductor, okay yeah, because conductor did that and that's why I didn't like it. Yeah. I was like, I want to know what Claude's thinking. I don't want to know what conductor's thinking. So.
+
+Dalton McCleery (37:50.893)
+uh... it kinda hijacks it
+
+Yeah, kind of, so like you can customize the agents, right? Like you can write your own developer agent, right? It's just a prompt. Like, hey, it comes pre-built with some prompts for the developer agent, but if you wanted to write your own, you could do that. So it's all right. It's very conductory, but I only use it specifically for the automatic orchestration. Like, hey, just spin up as many as you need to get this task done as fast as possible.
+
+Andy Hinkle (38:13.985)
+Mm-hmm.
+
+Andy Hinkle (38:18.337)
+Yeah.
+
+Andy Hinkle (38:25.495)
+Yeah, looks nice.
+
+Dalton McCleery (38:27.403)
+and that uses WorkTrees. So that's real helpful to do all that. And they've got a nice little export, so instead of committing it up to a PR and I have to review it or whatever, whatever, they have this option to export it directly to another file or another folder. So I can export all of the changes from the WorkTree directly back onto my herd, my main checked out branch. Just like, copy paste this over here for me.
+
+Andy Hinkle (38:41.069)
+Mmm.
+
+Andy Hinkle (38:52.011)
+Yeah. Yeah.
+
+Dalton McCleery (38:52.013)
+Cool, I'm gonna open them up in my IDE and check it out. this isn't right. I'll go back over here to intent and I'll do whatever, re-export it back over here. So it's nice. It's nice.
+
+Andy Hinkle (39:00.425)
+That's nice. Yeah, sounds very much like conductor in some ways.
+
+Dalton McCleery (39:04.609)
+very, very, very, just with like built-in or agent orchestration. That's what I really like about it.
+
+Andy Hinkle (39:09.492)
+Mm-hmm. Nice. Cool. Yeah, I'm trying to, I'm sure next time we talk, I'm going to be using some new thing that's, or I might be back on solo as it continues, pink updates. I feel like if I'm going to switch right now, I might go use solo again. I feel like I would probably use that more, but, um,
+
+Dalton McCleery (39:12.301)
+Yeah, man.
+
+Dalton McCleery (39:17.921)
+course.
+
+Andy Hinkle (39:28.621)
+I don't know man, sometimes I just like looking at the code too, just like knowing exactly what's going on. And I know Aaron's bringing that to solo of like showing a get diff that that's it. Like that's the only thing that's missing here. If it can have another panel off to the side, it shows me a get diff of everything that's changed on the current branch. And that could just be like, yeah, that's, that's wack. There's like, there's like three, four each loop in here, you know? Uh, yeah. So we'll get there, but no, um,
+
+Dalton McCleery (39:51.467)
+Right. Right.
+
+Andy Hinkle (39:56.737)
+You know, open claw made a big buzz for a little while, which we, we have totally missed that comp since we opened. Clothes even thing last time we talked, can you believe that? And, now it's no, it's kind of thing. So they're obviously like, you know, it it round made its rounds for a bit. Then it kind of died off here recently. but some people really like and stand by it. And I wanted to check out.
+
+Dalton McCleery (39:59.022)
+yeah they did.
+
+Dalton McCleery (40:06.125)
+No, I know, I know.
+
+Andy Hinkle (40:20.992)
+check it out. I checked it out for a few days and then I quickly realized all the security implications that it has in it. And so I really liked the idea. And so I custom wrote my own. Custom wrote my own thing. It's from just a blank vanilla slate because I didn't want it to go rogue and just leak all of my environment credentials or whatever the case might be.
+
+Dalton McCleery (40:28.493)
+Yeah.
+
+Of course you did Andy of course of course
+
+Andy Hinkle (40:44.946)
+But my, but I wrote my own bot it's through telegram and it's directly, this is the first step of like, why didn't like open claw, like you could just message any open claw bot and it runs through like a script through AI and stuff to determine the authentication, whatever. I, I wanted it to like authenticate with me once, like it's talks directly to me.
+
+Dalton McCleery (40:45.281)
+Yeah, okay.
+
+Andy Hinkle (41:06.252)
+Um, and so I authenticated directly with my, telegram bot and now anyone that ever messages it in the future, it would just won't even like respond. It'll just immediately block them. There's no AI interaction with it. It's just like, um, because it has that ID connection to my account. It just now, because I use, was Noel before and I had a secret phrase that I like pair it with, but now it's like, so the only way that it would be kind of weird is if I lost my code base. So hopefully it never happens, but my bot's name is called basement dweller.
+
+And, and here's okay. Let's yep. Yeah. It's an old, old laptop chilling in my, in my, it's my old Mac book chilling in my basement, but just plugged in the lids closed. And so, it blew my mind of like, just kind of unlocking how these things can kind of work. It uses codex. I use, I have a codex subscription costing like 20 bucks a month, but man, it
+
+Dalton McCleery (41:36.589)
+Let me guess. Let me guess where it is. It's in your addict.
+
+Dalton McCleery (41:50.711)
+Very nice.
+
+Andy Hinkle (42:04.832)
+Definitely pays the value for it definitely pays for itself, but I don't even get close to The I don't get close to rates or anything like that It has it's all in in markdown files. So here's how it works At the moment it connects to my telegram it has a soul soul that MD and it's a still the soul and the brain, okay Okay, and so and we tell it like
+
+Dalton McCleery (42:27.054)
+I've heard of this. Yeah, yeah, yeah, yeah.
+
+Andy Hinkle (42:32.108)
+You're you're you're not a chat bot. You're a person who happens to live in a computer. Yeah, we're giving it the Asian You were giving it like there the intent is to give it a personality. I don't want it to be robotic I want it to be warm. I want it to have personality, you know, just like a robot that would actually what I have in my house You know just something like that of like if I'm talking to a bot actually want it to be friendly I don't want to be like, you know, just very robotic
+
+Yeah, I wanted to have opinions. and so anyway, that was, you, you write the soul file. And so a lot of this, read from a blog post by the way, of like how Claude works. kind of wrote my own or how open, open Claude works and how, and that's what made me write my own. Then it has an identity identify, excuse me, identity is who it is. And so it's like, what the, what the name of it, of the thing, what the robot's name is the avatar, you know, my, in my case, it's a.
+
+basement dweller, know, so it's so, yeah, basement dwell. I call it BD like what's up. Yeah. And so, I'll ask it.
+
+Dalton McCleery (43:31.405)
+You wanted to have a soul, but you named it Basement Dweller. Not like... Okay, okay, I was gonna say like Larry. Hey Larry, how you doing down there?
+
+Andy Hinkle (43:49.453)
+All right, so I just asked, I said, I'm podcasting about you, anything you want to say to the people, let's see what it says. and so it, the way that it works is that it has a memory.
+
+Dalton McCleery (43:54.158)
+Yeah, tell us, BD.
+
+Andy Hinkle (44:03.916)
+The way that it works as a memory throughout the day. Here's what it applied with. Tell them I'm doing my best work under harsh fluorescent basement lighting, mild sarcasm and unreasonable expectations.
+
+Dalton McCleery (44:07.474)
+and help me get me out of Andy's basement.
+
+Andy Hinkle (44:18.988)
+This is also, stop making your tools boring. If it doesn't feel a little alive, what are we even doing? Oh, we got a soundboard? That's great. Yeah, that's great. Man, I love that. But I just, love that. It's just chilling, right? know, based on it. And it has a little personality. It's the kind of the fun with it, right? But it has a memory on it. So I wrote these skills.
+
+Dalton McCleery (44:27.959)
+Shit, sorry. I was gonna do the, yeah, yeah, there we go. That's what I was trying to do.
+
+Dalton McCleery (44:37.325)
+That's hilarious. That's hilarious.
+
+Andy Hinkle (44:45.502)
+Like the thing also has skills. Here's the wild part. It can also write its own skills. And so, through codex and like, can tell it to like, go to this. I'll tell you a wild story here in a second, but it has these skills. One is, for lights. actually manages all the lights around my house, which is scary. Yeah. All of my internet connected lights, like the ones outside. And, and so, like for example, on St. Patrick's day, it realized it was St. Patrick's day and it turned them green. I had.
+
+Dalton McCleery (45:04.301)
+Only mildly terrifying.
+
+Andy Hinkle (45:14.508)
+Like again, has a bit of personality. I don't know what it's good, but most of time it's good, but it has, okay. So it has a memory and here's the thing. It will search. Um, it'll search through its memories of like when it tells me something or when I have opinion of like when I personally have opinion about something and tell it that he kind of understands my, my thoughts and, and then, um, it'll understand what it's been telling me. Like I have a chat history. Um, it has ability to search through Twitter. This is probably the one I use the most.
+
+Dalton McCleery (45:16.299)
+I mean, that's awesome. That's hilarious.
+
+Andy Hinkle (45:42.931)
+I saw an X, it'll get on there and it'll go through my timeline. It pulls up like a uses a CLI tool. It's called Bird, which is don't actually use it. Apparently you can get banned using it for it. but I could, I haven't, yeah, let's see it. It uses Safari cookies under the hood. Yeah.
+
+Dalton McCleery (45:58.702)
+Might cut that part out there Andy boy. I don't want you to get it. Okay.
+
+Andy Hinkle (46:04.534)
+We'll see, but you can use your browser. tried using the browser thing, but, it just doesn't work that well with reading for being able to read and understand. It's called the, there's a browser called a peekaboo. That's actually written by the guy who wrote open cloth, but peekaboo is it can open up a browser and take a screenshot and not just your browser, but anything on your Mac book and it understand like interact with it. So as a skill with that, but for Twitter, I use just the CLI tool directly and it pulls my timeline every 30 minutes and.
+
+just tells me like, Hey, like I'm looking at it now. let's just see, like, just looking at some from this morning. it just knew, you know, I was talking about how GitHub desktop is underrated for the agent agera and just stuff like that. And like, I normally would just like stuff like that would just miss there's so much news going on with Claude and everything right now. And it's like, I miss it so easily. of
+
+Dalton McCleery (46:55.945)
+Yeah.
+
+Andy Hinkle (46:58.694)
+like when it's a day of picking, he posted about a layer of a cloud remove it seat limit and just stuff like that. I was like, that's cool. You know, it's going to know. Like I would have no idea. cause the amount, I just don't get on a much anymore. And, it's just down there looking out for me. Just like, Hey, it's just kind of keeping me up to date of like what's happening. So.
+
+Dalton McCleery (47:16.205)
+It's like you built your own newsletter, your own personalized newsletter.
+
+Andy Hinkle (47:18.912)
+Yeah.
+
+Yeah, it's like, it's kind of, it's kind of just my own bot that I've always wanted. Now I can't go without it. So here's the crazy story. When I was building this, I just had a weekend, like, Lauren, Lauren, my wife, was away and, it was just me and my son. And it was the evening I was building this when he was sleeping. And then, I had this idea of like, what would I use it for tomorrow, for example? And so I, I was just researching capabilities and stuff like that.
+
+And one thing I was asking like what kind of local restaurants are available around me and it found my local Mexican restaurant that we always eat at and it said, um, and so it's like, you know, what if I wanted to order from there? I said, what do you have? Like, can you create a skill or something to like possibly order from there? And I'd just go pick it up and said, oh yeah. And it wrote a skill and it connects to their website, puts in my order and then.
+
+completes it puts in my, all of our family's order as well. And then I, and then it's, it'll tell you it's ready and go pick up. I was like, well, that's pretty wild. So actually wrote the skill on its own. just told it like, didn't get in context, wrote the skill on its own the next day. You know, just my son and I, we, for lunch, I said, okay, so let's, let's order the usual. And so it said, up done. And so it connects to their APIs, like the ordering APIs. I forget what the service they use, but it was just like some online ordering kind of thing.
+
+Dalton McCleery (48:35.405)
+Let's try it.
+
+Andy Hinkle (48:47.512)
+And, I was like, did it actually work? And I was like, yep, it worked. so, which I like, I don't know it or then just trusting the bot told me how to do it. Then I look at my email and I get a receipt for like your order, like one, two, three. I'm like, what? And so I didn't give it any of my credit card or anything like that. This was just like, it ordered it online and I go pick it up, you know? So, but, so now it's just like, I just tell it like, Hey, we're going to get Mexican tonight. We ordered the usual and I just go pick it up. It's just bonkers. I haven't done it since then. Cause that just blew my mind.
+
+Dalton McCleery (49:00.321)
+Hahaha!
+
+Dalton McCleery (49:06.785)
+Yeah, you pay for it there. Right.
+
+Andy Hinkle (49:17.174)
+but it's just like how it just writes its own skills. The one thing I've been thinking about just as an experiment, know, of like if I were to completely wipe it, it just being like, just kind of like setting it, saying it to be agentic in its own way of saying, you, your project, you're gonna work on a project to start a company and produce like MMR or something and trying to.
+
+And just say I'm gonna come back daily at the end of the day or whatever to come and check in on you're gonna give me a report whatever just to See how things are going and just see what happens just because it's purely agentic at that point It's coming up with its own thoughts, but something I don't have time for but occasionally little cross my mind of like Doing something fun like that like a pure pure agenda It's kind of scary the agentic thing of like where it thinks for itself. It makes decisions turns your lights green on St. Patrick's Day
+
+Dalton McCleery (50:06.451)
+It's... It's very scary.
+
+Andy Hinkle (50:13.63)
+So it's fun.
+
+Dalton McCleery (50:14.221)
+Bro, yeah, Okay, so like, so I've got a side project with Dino, our buddy Dino, and he just set up OpenClawed, and we call, he named it Pam from the office, so we have Pam that we talked to in, I think he set it up in Telegram. I can't, don't really talk to her, right? Like he set up all the stuff.
+
+Pam now has that soul her soul lives in get in Google Drive so she can look at her soul She could edit her memories and her memories are just marked down files and in Drive So you'd be telling her things and she'll be like cool I'll remember that and you go to Google Drive and you'll see that memory, you know timestamped to today Like this is this is wild that you could you could do this Nowadays like even even my boss boss Jeff. He set up open clawed on his stuff and he's doing exactly what you're talking about him and his wife were like
+
+Andy Hinkle (50:45.142)
+Mm-hmm.
+
+Andy Hinkle (51:03.532)
+Mm-hmm.
+
+Dalton McCleery (51:10.862)
+What do want to eat for dinner tonight? So let's have a group chat with this OpenClawed thing. He'll put some suggestions in. OpenClawed will then message his wife, say, Jeff's thinking about this. What are you thinking about? And she'll message it back, and he'll message him back, and then go, OK, well, OpenClawed, suggest, based on your guys' preferences, we suggest this. You want me to order it for you? And Jeff's like, yeah, sure. Order us two steaks for pick up in 30 minutes.
+
+Andy Hinkle (51:23.166)
+Andy Hinkle (51:34.38)
+wild yeah well just messaging the wife is just I don't know that's what it's weird to me I don't think I'd ever get that far of like
+
+Dalton McCleery (51:40.019)
+that crazy also I was I was gonna ask you my wife is is very anti-ai very anti-ai how is your wife on the whole AI stuff same way okay yeah that's that's what I assumed
+
+Andy Hinkle (51:46.752)
+Okay.
+
+She's like weirded out by how it's like, yeah, she's just like, she, and I agree with her, you know, it's in some parts, it's like how the world's losing their creativity kind of thing. And I get it, I completely agree, because it's making more people just like, just talk to the AI and see what it says. And she's like really into the creative side. She loves applications like Photoshop. And so when she sees something that's chat generated, or chat GPT AI, like,
+
+Dalton McCleery (52:03.617)
+Fair, yeah, that's fair.
+
+Andy Hinkle (52:18.207)
+generated with images, she just kind of rolls her eyes. So she's same way she doesn't like so
+
+Dalton McCleery (52:19.693)
+Nasty.
+
+Okay, okay, because I was going to ask if your wife is also messaging the, if it's like a collective bot for the household. Okay, okay, okay.
+
+Andy Hinkle (52:29.403)
+No, she would know she wouldn't want anything to do with it. Yeah. So that'd be interesting though of like, you know, I've heard people like that though. It'll randomly text their wife or it'll actually call them and use 11 labs to talk to them about something very important. Like it'll use the 11 labs voice API, come up with a little register or phone or something and you actually call them. So it called like me, for example, the bot would call me and that's just, no, that's why I'm like,
+
+Dalton McCleery (52:55.553)
+Yeah, that's a little creepy for me.
+
+Andy Hinkle (52:59.467)
+Anything that I have it it's a genetic but it's like a safe agenda. It's like, you know, I have it I have a scheduler so I use it for like grocery lists just anything of like but then I thought about going one thing I've been thinking about in a project of doing is like the grocery listing and giving it a list of grocery stores that I You know frequently shopped. There's there's about four of them and just seeing like hey when I go get milk
+
+just throwing out an example. What's the cheapest one out there right now? It's just something like that. That would be a really cool idea. It saved me money. And so I've just like, so as I telling it like, Hey, add this to my grocery list. And then it's also consistently telling me like what's what it's finding, like the best rate, something like that sounds kind of awesome. So yeah, I I've been having a lot of fun with it and just poking at it, you know, when I have time of just making little tweaks to it. So especially as we have this newborn coming.
+
+Dalton McCleery (53:32.897)
+Yeah, hell yeah.
+
+Andy Hinkle (53:53.841)
+I'm just going to be depending on this thing to give me updates like of what's happening on Twitter or an AI. yeah.
+
+Dalton McCleery (54:00.755)
+So should I set up my own? Because I have an extra laptop. Should I set up my own? Like don't know what I would even do with it.
+
+Andy Hinkle (54:04.555)
+You should just, I, I, for, I know a little bit about Python and, that's what I wrote it in because the, how I even got into that is I won one. love Python. And then for that, and then I asked Claude, like, what would you write this in? Like, what do know best that you would just be at home with it? It's like, yeah, Python, let's do it. It's like, all right, we're doing Python. So, yeah, as it's all, yeah, it's, it's, it's all written. I can share it like if you want, you want, but it's, it's awesome.
+
+It's a, I like a lot, but you definitely should show me. You gotta come up with a cool name for it though.
+
+Dalton McCleery (54:37.869)
+Okay, alright. just, I would name mine something stupid like Larry. Or whatever. You know, d-
+
+Andy Hinkle (54:44.529)
+Okay, that's so it's like that's fun because when it pops up in my car my first time I was like, who's basement dweller? it's my pot. Yeah. Yeah.
+
+Dalton McCleery (54:51.981)
+That's just just a guy that worked lives in the basement, you know him he's the guy who turned the lights green on Monday It's just wild the the amount of stuff that you can you could do now, you know, it's just It's I'm kind of excited to see what it's gonna be like, you know If we do another podcast before your second son is born Just how much stuff is gonna change between recording this today and recording that episode?
+
+Andy Hinkle (54:59.315)
+Yeah. Yeah.
+
+Andy Hinkle (55:18.761)
+Yeah. the next one. Mm Yeah. Yeah. It's crazy.
+
+Dalton McCleery (55:22.717)
+I can't even, the things that I thought we could do, we could do months ago. Because now people are doing that, I thought OpenClaw was going to be, that's going to be really hard to set up and whatever, but know, Dino's got Pam set up on DigitalOcean, on a VPS on DigitalOcean. Just sitting there, doing her own thing.
+
+Andy Hinkle (55:29.312)
+Mm-hmm.
+
+Andy Hinkle (55:44.339)
+Yeah. Yeah, it's a cause a lot of people, do the Mac mini thing. Um, you know, like digital ocean. I've heard of that. I, uh, I was just, I wouldn't have done it if I had to make the digital ocean. You know, well, like, I don't know, man, I just, I just like knowing it's down there. So something catastrophic happened. I just like pull the plug. Yeah. I was like, I see you right there. You know? So, uh, but anyway, yeah, it's a, it's a lot of fun. Um, highly recommend just, just dabbling in it, bright your own.
+
+Dalton McCleery (56:02.925)
+You unplugged that damn thing.
+
+Dalton McCleery (56:12.331)
+Okay, might tinker in it. I've got some ideas of things I would love for it to do. Like I would love some reports when I log in in the morning of, if you could go pull my logs, check if there are any errors on my stuff, stuff like that, just let me know in the morning. Because I use this other app called Little Bird. I don't want to get off on a big tangent, but have you heard of this app called Little Bird?
+
+Andy Hinkle (56:13.609)
+Good. So yeah.
+
+Andy Hinkle (56:29.875)
+Mm-hmm. Yeah.
+
+Dalton McCleery (56:38.701)
+It's just a Mac app and it basically just reads your screen. It's kind of invasive but I've been trialing it out and it can tell me how much work I've been doing. It has context of who I'm messaging, what projects I'm working on. So it's like, yeah, you spent three hours on dev ticket one, two, three, four and it required a lot of refactoring and you did a bunch of this stuff. And I was like, that's quite insightful. Yeah, yeah, I think, I think.
+
+Andy Hinkle (57:03.497)
+that is that data on your machine? Okay, that's good. Just sending you're sitting a day is recording a screen recording this. Yeah, yeah.
+
+Dalton McCleery (57:08.737)
+Don't quote me.
+
+Dalton McCleery (57:12.865)
+don't know actually. I know it's like, it takes a screenshot and it'll read the screenshot or whatever. But so I've been trying to swap to Raycast.
+
+Andy Hinkle (57:16.743)
+Okay, yeah, that's wild.
+
+Dalton McCleery (57:23.177)
+And so I went to Little Bird and it has its own little chat thing. So was like, hey, Little Bird, based on the last month of you watching me work, what are some good Raycast extensions or automations that would, these repeatable actions that I've been doing that would make my life easier? And it's like, cool, here's like seven different things you could do. I bet you should install this MCP because you do a lot of GitHub stuff. Install a GitHub MCP and then just do all of your stuff in your terminal.
+
+Andy Hinkle (57:23.787)
+Hmm.
+
+Andy Hinkle (57:35.275)
+That's a idea.
+
+Andy Hinkle (57:39.723)
+Mm-hmm.
+
+Dalton McCleery (57:53.658)
+It's not a bad idea actually. Good. So I would use something like that. I would love a personal assistant type thing that would just make my life easier by just doing automation stuff. But like smart enough to where I don't have to write a bunch of if statements. If the time of day is Saturday, don't send me a message. You know what I mean? Yeah.
+
+Andy Hinkle (57:55.435)
+Mm-hmm.
+
+Andy Hinkle (58:03.125)
+Yeah. Yeah.
+
+Andy Hinkle (58:09.843)
+Yeah, yeah, don't send that well, it's good. You just prompt that win like when basement dollar when it makes a mistake I just tell it like when it when it tells me on something like for example, like some on Twitter I really don't care about like politics like just like please don't tell me that, know I really don't care and it stores in its memory and so it knows like I'm not gonna tell it for the future. So yeah, it's really neat As I explained it to my wife, it's like Siri on steroids. It's like Siri, but like it notifies you about stuff. That's like so yeah
+
+Dalton McCleery (58:23.127)
+filter it.
+
+Andy Hinkle (58:39.945)
+So it makes it fun. Yeah, please do. I want you to, yeah, yeah, yeah, you should. It's so much fun.
+
+Dalton McCleery (58:41.869)
+Alright, then I might dabble in it. I I've just, I'm, I try really hard not to do AI outside of work, so I feel like that might be breaking my rule, but we'll see. I'm curious about it, I've been talking.
+
+Andy Hinkle (58:53.099)
+You
+
+Andy Hinkle (58:57.087)
+You can, you can use it. Well, the re the things I use it for mostly for work. So there's that like, you know, for, cause the, just like, it's, hard to stay up to date with like what's happening out there. So yeah.
+
+Dalton McCleery (59:09.117)
+It really is like I'll scroll Reddit in the morning and then I'll scroll Reddit at night and it's a completely different landscape Like all Claude announced a new thing this morning and then all Claude's announced a new thing tonight I'm like, bro. I can't even use the first thing yet quit quit I got all kinds of time baby boy
+
+Andy Hinkle (59:14.879)
+Yeah, I know. Yeah, it's you can never keep up. Mm hmm. Two announcements a day. Yeah.
+
+Andy Hinkle (59:25.163)
+Mm-hmm. Yeah. Yeah, one more thing for you if you have time or about time, but one thing I've been working out on for months now and I've been having like I briefly talked about top of the show is we've been doing a ton of stuff at work. And so we we work in insurance. We handle all sorts of different documents, police reports, things like that. And we've been trying to figure out a way
+
+to been able to read those. We've been using OCR for years and OCR, it does pretty decent, but it doesn't understand, for example, it doesn't understand like vertical columns. So you have like a label at the top and then the value below it instead of a label or label to left or to the right. So OCR, when you're extracting, when you're taking a table out and OCR, it's everything's horizontal.
+
+Dalton McCleery (01:00:01.105)
+huh. Yeah.
+
+familiar.
+
+Andy Hinkle (01:00:23.467)
+And so everything's going to be horizontal base. So if you have seven columns of, you know, of fields, and then the next one is going to be all your values for those seven columns, you're going to it has a hard time of linking up what column belongs to another, unless you have some really good OCR patterns, which there there are some that after my discovery in this there, found some more. But but we've been trying to figure out how we can read documents that can't even be OCR. And what that means is like
+
+you know, know how you can go into PDF and you can copy text out and stuff like that. Well, there, some of these are like scanned files, so you can't even do that. And so there are like, somebody went to a scanner, put it on a scanner, send it to us, police reports, stuff like that. We've never been able to read them. So we've been doing a lot of stuff with, but these are documents that we can't, we can't ship to, open, open AI or chat GPT, Claude, we can't give them to them because there's
+
+Dalton McCleery (01:01:02.029)
+Right, right.
+
+Andy Hinkle (01:01:22.997)
+PII in it, there's like, you know, their full names and stuff like that. So we have to keep it right. We have to keep it all on premise and in. So we've been using, we we've been using a, a service called what's open source. It's called V LLM. It's only for Linux. And so it's kind of like, can use, we use Docker with it.
+
+Dalton McCleery (01:01:26.881)
+Right, addresses, yeah.
+
+Andy Hinkle (01:01:46.239)
+But basically you can, there's a llama too. You may have heard of a llama. A llama is like, can, you can actually install on your Mac. And so I started off with. Yeah, I've actually started off with that. And so, we use these for extraction models. And so we use a Quinn 2.5 is the name of it. There's also three Quinn three, 3.5. They're fantastic. So you use. Yeah. Yeah. Quinn coder. Yeah. For like open code. Yeah. So we use that.
+
+Dalton McCleery (01:01:51.681)
+Yeah. Yeah, I use it sometimes.
+
+Dalton McCleery (01:02:05.431)
+Yeah, yeah, yeah, yeah, quin-coder. Yeah.
+
+Andy Hinkle (01:02:14.675)
+started off with using my MacBook and it has 48 gigs of video RAM. And, when I was doing this kind of in the proof of concept days, my, the, my, but the MacBook was just humming. was just fans were running. I've never heard the fans run and they were running for, you know, close to eight hours a day. And so I was like, well, we should probably upgrade. actually it's, it's getting closer and closer production. So at work, we bought this Nvidia DGX and it's like, it's like the size of the, have you seen those like microplexes or like the little bitty?
+
+that are usually for Windows, they're little square boxes, tiny little things.
+
+Dalton McCleery (01:02:48.366)
+yeah, they're like the NUX, I think they call them, like a NUC machine, something like that. Yeah, yeah, I know what you're talking about.
+
+Andy Hinkle (01:02:52.438)
+Yeah, yeah, they're kind of smaller. Yeah, but it's the size of that and it's by default you has Ubuntu on it and it's 128 gigs of video RAM. It's a it's a pricey thing, but the kind of the cool thing is there it's like the size of a Mac mini and the cool thing is is you can stack them so you can stack them on top of each other and you can combine the video memory so you can go from like 128 256 and stack them up.
+
+So we bought one of those and we put Quinn three or put Quinn two put five VL on it. VL is the vision language. So when I first started this journey, I thought, know, like, 128 gigabytes. We're going to be able to run the, the, big, the big models, the bad boys, you know, the kind of the big ones out there. And so what I found out is
+
+They're actually kind of slow. And, um, when you're processing thousands of documents a day, you kind of need something's fast. And so you kind of find that sweet spot of like what's accurate and what's fast. And that's where we found Quinn 2.5 VL is kind of being that one VLs is a vision, you know, it's actually being able to visually look at it. So we sent it a screenshot, send a screenshot, be like, Hey, extract the first name, last name off this report, whatever. And it's, it's, you know, two seconds to process a page. It's very fast. And so.
+
+Dalton McCleery (01:03:57.858)
+Yeah, you give it ice.
+
+Andy Hinkle (01:04:08.554)
+Are able to fly through those documents and process but man, um, I've been I've been having so much fun with that. It's been my, um, my programming life for the past few months, but having a ton of fun of been able to find things that we've never been able to find before. Um, through, um, through when we're ex, um, extracting this information. So it's been a ton of fun doing that, but yeah, man, it's, we're using a lot of like AI stuff and it's been a ton of fun doing that.
+
+Dalton McCleery (01:04:36.813)
+Yeah, just, it's so cool, man. Like, I love this stuff. I love it.
+
+Andy Hinkle (01:04:38.462)
+But the, yeah, the kind of the cool thing unlocked a lot for me is when you have the, when you have a problem that could like, and kind of thing that somebody at work does just repetitively, you know, and you can unlock something that, like when, when they come in and they do a task, you take original snapshot of the task and then they do it like on the human side. And then, then they complete it and then you can kind of cross verification of like.
+
+of like things they either got missed or, or things that you guessed at that they actually corrected on your part. So kind of keeping the human in the loop, it's kind like assistant kind of way of like, of one trying to figure out if they miss something or the, if the AI missed something and just trying to, learn from that process. So it's been, been a real eye opener from, from our perspective, how useful it's going to be. So it's been a of fun, man.
+
+Dalton McCleery (01:05:20.353)
+Yeah
+
+Dalton McCleery (01:05:37.101)
+So what ended up being your final, do you still have just the 128 gig thing running QuinnCoder 2.5? Or did you upgrade?
+
+Andy Hinkle (01:05:43.945)
+We yeah, we Well, we we started looking so the one the Quinn 2.5 Vl it's a 8 8 b which is like 8 billion parameters It doesn't have reasoning on it. And so it's purely for extraction And so you can kind of it has a like when I say it has a little bit of reasoning It's not completely dumb, but it's not like if you you can't make it decide to decide between like a or b for example, some of these police reports
+
+We have they're so close in detail to each other like the boxes will have two different parties But you may only want one of the particular parties and so instead of it telling i'm not telling you like hey Which one's the driver which one's the the passenger i'm telling it to extract everything like all parties on this field and then on php side i'm kind of wrangling together like yeah, that's the driver that's passenger or whatever, so do a lot of that so because it doesn't have a lot of reasoning
+
+Dalton McCleery (01:06:27.361)
+Yeah. Yeah. Yeah.
+
+Andy Hinkle (01:06:42.152)
+But in the case that you do have reasoning for, you want to, categorize like how the crash happened, like kind of a summary kind of thing, you're going to need a bigger model for that. So we added another, we added a bigger model, and to like, thought we could have them side by side in Docker containers. That doesn't work. Like it's, it's constantly crashing. So. Or just having, you know, installation issue or whatever.
+
+Might be so we're actually we ordered another one just so they can have their own dedicated singular models on each other But we also exploring there's new models coming all the time into this month. So today's March 20th here I think in five days no video is gonna have their new release for this month. Can you believe that just a month ago? They're outdated from having some yeah, it's a Yeah, and so we're really excited about that because hopefully Quinn 3.5 will be supported and if that's the case
+
+Dalton McCleery (01:07:12.653)
+Okay.
+
+Dalton McCleery (01:07:25.607)
+It's too fast almost.
+
+Andy Hinkle (01:07:34.41)
+Quinn 3.5, they have a reasoning model, but you can kind of tweak it to turn reasoning mostly off. And then you can also as VL, which is like vision language on it. And so you can, if you bring the temperature down or like the thinking down and you can use that for extraction and then you can bring it back up if you want to have some crazy reasoning. So it's just one model for everything. And then, cause I mentioned her, I think I mentioned this, but we bought another one so we can stack it with 256.
+
+gigs of video RAM, just one model for those two and they kind of share between it. You can actually link them together. Just crazy. You can link them together and, and we're hoping with that, maybe that might unlock something or, or it might just have their own each box has their own dedicated model, you know? And so we'll figure it out, but it's wild, dude. So
+
+Dalton McCleery (01:08:19.157)
+start your own like AI server farm essentially. that wild? That's crazy. Is that at the, I assume that that's at the office, right?
+
+Andy Hinkle (01:08:21.704)
+Yeah, we have our own infrastructure now with AI. It's crazy. yeah. Yeah, that's yeah. We, yeah. When Lauren asked me if they're going to ship it here, was like, I hope not because I imagine that thing is going to cook our electricity bill. So, yeah. But I did a.
+
+Dalton McCleery (01:08:32.909)
+Yeah, I bet. And we're getting into summer, you don't want extra heat. Like, they can come bring it in for the winter, right? That might keep your house warm.
+
+Andy Hinkle (01:08:43.26)
+Yeah, there you go. Yeah. I did some analysis on it. We're cooking through like a bill, a billion, or cooking through a million tokens every 10 minutes. And so if we're doing the math, right, if we're using Opus, that would be like $30 an hour. And so it kind of, it nearly pays for itself too. And so it's not as smart as Opus, but the, as the, as the open source stuff gets better and better, it's, it's not even going to matter here in a bit of like, especially for stuff like we, don't really need.
+
+Dalton McCleery (01:08:53.559)
+Holy shh. Yeah, man. Wow.
+
+Andy Hinkle (01:09:12.916)
+We don't need like a coding decision kind of thing. It's more like, hey, we have this document. Please tell us what's in the document. Please kind of summarize our notes or we use it. Yeah, we're just looking at see what makes sense, but yeah.
+
+Dalton McCleery (01:09:20.811)
+Right, right. You can, you can... Yeah, you make it real specific to your use case, whereas Opus has to be so broad that anybody can use it. Hmm. That's really cool, man. I'm kinda jealous. Semi-jealous, I'm semi-jealous.
+
+Andy Hinkle (01:09:33.298)
+Yeah, it's been a one.
+
+Yeah. It's it's been it's been a real joy just kind of working with it, but at the same time it can be frustrating. Like, why is it not understanding this field? It's like it's literally right here. It just doesn't get it. And you you have to tweak these prompts. It's kind of fun. You're constantly tweaking the prompts of trying to get it to understand and also telling it to what not to do. Just giving instructions like don't pick up on this. Don't you know. But then you got to.
+
+Dalton McCleery (01:09:51.447)
+Right.
+
+Andy Hinkle (01:10:05.107)
+You gotta say it in a way that doesn't require reasoning. And so hopefully it won't be a problem one day because anytime you add reasoning, it's gonna add an extra 10 seconds for every single document at least. So we try to just make it quick. So it's been fun.
+
+Dalton McCleery (01:10:20.077)
+Well, I can't wait to hear in a month how many more of those you have.
+
+Andy Hinkle (01:10:23.657)
+We'll see. Yeah, we'll see what this is. I think they're hard to even find right now because everyone's wanting them. So because of like what I said, they pay for themselves sometimes. They're running open claw. Yeah. Yeah.
+
+Dalton McCleery (01:10:26.775)
+The- the-
+
+Dalton McCleery (01:10:32.341)
+I was gonna say this is a lot like...
+
+like the Mac Minis and stuff, yeah. Yeah, I've seen that. I mean, hell, at this point, by the time our next podcast episode comes out, we won't actually be here. I'll have my open claw with my personality, talk to your open claw with your personality, and they'll just talk about whatever the hell they wanna talk about. Like, that a thing? I know we're going off on a side tangent, but is that a thing? Is there an AI podcast where two AIs literally just talk to each other unrestricted?
+
+Andy Hinkle (01:10:47.059)
+just do a podcast for you. Yeah.
+
+Mm-hmm.
+
+Yeah. No.
+
+Andy Hinkle (01:11:00.815)
+I'm sure there is yeah, well you could probably use 11 labs and just AI coast your whole thing. I like the whole podcast. So yeah, it definitely definitely possible. So who for the dear listener who I don't even know for real right now. They're just all AI generated. We just all the time. Let's just do AI generate this podcast, right? Never know. We never know. Sometimes you can tell. Right. Yeah.
+
+Dalton McCleery (01:11:08.727)
+Whoa. Whoa.
+
+Dalton McCleery (01:11:20.237)
+I mean, that has to be a thing, right? People are gonna do that. You scan your head, save it in. yeah, you can tell. Well, here's a fun little nugget I'll leave you with that I don't know if I've sent you this or not. It's been several months. I did generate an AI video thing with audio that has my face in it. Did I send it to you? Did I? Okay, okay. I was gonna make sure that I did send it.
+
+Andy Hinkle (01:11:38.324)
+I remember that. Yeah, that was fantastic. Yeah, yeah, you had one for me too. Yeah, like yeah, yeah, so that was good stuff. Maybe next time we talk we'll have orbital infrastructure with elements. Have you heard of this like data centers in space with elements? So SpaceX is looking at that. Yeah, it's like they're looking at having data centers in space like the
+
+Dalton McCleery (01:11:47.541)
+Alright. Yeah. Isn't that just wild?
+
+Dalton McCleery (01:11:55.085)
+Uh-uh.
+
+no.
+
+Andy Hinkle (01:12:04.389)
+If you think of like giant data centers in space, not that like buildings, it's not the right thing. But it's like these little these little ones, kind of like what SpaceX has now with. it's Internet Starlink. The kind of little ones. Yeah. And they all kind of like pair together. But the idea is in space, it's it's cold out there. Right. You don't have to worry about cooling. You just ship it up there.
+
+Dalton McCleery (01:12:16.235)
+Yeah, Starlink. Yeah.
+
+Dalton McCleery (01:12:28.087)
+Fair? Fair? Fair?
+
+Andy Hinkle (01:12:28.265)
+And uh with it in space. So yeah, it's kind of an interesting idea, but then you have all these like little things hanging around space. So who knows? Yeah, but kind of an interesting idea instead of cooking trying to find land all on the ground. It's like i'm just gonna go up to space. Yeah, so Yep. Yep crazy stuff. Yeah, yeah Yeah, that's right. All right, man, you can call a show i'm gonna go one
+
+Dalton McCleery (01:12:39.617)
+right? Instead of wasting all the water, you just shoot up into space. Yeah, pollute the stratosphere. More satellites.
+
+Dalton McCleery (01:12:54.679)
+That has, it has. It's been good talking to you. It's been a while. Hopefully we won't be three months again before the other one. We should talk again before your next son is born and then after that we can talk about your new son.
+
+Andy Hinkle (01:12:57.213)
+Yeah, too long.
+
+Andy Hinkle (01:13:03.589)
+Absolutely.
+
+We'll see it might be might be hold them in here. No, just good. We'll figure it out Be precious
+
+Dalton McCleery (01:13:11.701)
+No, you'll have three kids. You'll have Baker, the new one, and then Basement Dweller, BD. You gotta manage all three of them. Sometimes you'll change their diapers. Change BD's battery or whatever it is. But yeah, man, it's been good. Good talk to you.
+
+Andy Hinkle (01:13:16.719)
+Yep, beady. Yeah, that's right.
+
+Andy Hinkle (01:13:25.703)
+Yeah. So man, here close up.
+
+Dalton McCleery (01:13:29.537)
+Yeah, I mean at this point if you've listened this long, thank you. We appreciate it. We'll try to not wait another three to four months to put out another episode because we know just how piping hot these podcast episodes are because they're so good, right? They're incredible. Yeah. All right. Well, we appreciate you. Thank you guys for listening.
+
+Andy Hinkle (01:13:40.297)
+It won't happen.
+
+Andy Hinkle (01:13:45.769)
+And they're fun, just good to catch up with you.
+
+Dalton McCleery (01:13:54.349)
+Peace.
+
+I have to stop it.
+
+Andy Hinkle (01:13:57.738)
+haha
