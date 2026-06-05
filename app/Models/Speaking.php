@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Override;
 use App\Models\Scopes\LatestPublishedOrderScope;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Attributes\Scope;
@@ -42,6 +43,7 @@ class Speaking extends Model implements Sitemapable
 {
     use Sushi;
 
+    #[Override]
     protected function casts(): array
     {
         return [
