@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use Override;
 use App\Models\Scopes\LatestPublishedOrderScope;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Attributes\ScopedBy;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
+use Override;
 use Spatie\Sitemap\Contracts\Sitemapable;
 use Spatie\Sitemap\Tags\Url;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
