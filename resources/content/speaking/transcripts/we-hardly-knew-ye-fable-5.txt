@@ -1,0 +1,1152 @@
+Andy Hinkle (00:09)
+Hey everybody, welcome to another episode of The Midwest Artisan or the Midwest Artificial Intelligence Podcast.
+
+Dalton McCleery (00:17)
+Ho ho ho ho ho.
+
+Andy Hinkle (00:19)
+I'm Andy Hinkle.
+
+Dalton McCleery (00:21)
+And I'm also Andy Hinkle, the artificial intelligence version. No, I'm Dalton.
+
+Andy Hinkle (00:28)
+How's it going, Don?
+
+Dalton McCleery (00:29)
+It's good, my guy. It's really good. How are you?
+
+Andy Hinkle (00:32)
+I'm good. I am Family Plus Plus. So ⁓ variable Family Plus Plus. We added another one. So he is ⁓ Yeah. Well just we have I have two boys now and so that I just have two kids. And so he's doing great. He's eight weeks old, doing awesome. So we took a little hiatus here. So thanks for everybody for holding patience. Also thanks for all the kind warm messages. And so I got a few DMs for people saying, Hey, have you had your baby yet? And or just people wondering
+
+Dalton McCleery (00:35)
+Mm. yeah?
+
+Added another one.
+
+Awww.
+
+Andy Hinkle (01:02)
+Where have we been? So thanks for all the wonderful messages. So how are you doing?
+
+Dalton McCleery (01:07)
+I'm good. I'm good. I want to shout out job boss Jake, because he sent me a message about you having a kid well, I already knew you were having a kid. But he sent me a message of like, Hey, ⁓ we're doing this like wall thing for Andy. We figured you might want to do that. I'm like, ⁓ hell yeah, boss Jake, thanks. So shout out boss Jake for thinking of me for for doing that little message.
+
+Andy Hinkle (01:19)
+Yeah, it was so kind.
+
+Yeah. Yeah, that's awesome. Yeah. Thank you for that.
+
+Er appreciate the yeah, those on that really blew blew us away. My wife and I have like just so ⁓ how generous everyone was. And so I we got like a palette of diapers that came in one day. It was just so thankful of just everyone who was able to contribute. So it's it was truly amazing. So sweet. Yeah. ⁓ I feel like each time we talked, last time we was right over
+
+We were talking about Christmas break, how everything changed. I feel like things change things are just changing again. Probably the next time we talk, things are gonna change once more. So
+
+Dalton McCleery (01:57)
+Yeah, ca can we get a can we get a hand check? Can I
+
+see your can I see your hands? Can you put in front of your face so that I know it's actually you and not are we?
+
+Andy Hinkle (02:03)
+Yeah, is this are we are we real? Yeah.
+
+Yeah. Who knows? Yeah, but love to love to dig in. we're gonna obviously get into some AI stuff. ⁓ yeah Fable five, they took it away. Probably by the time they listen to this may have brought it back, hopefully. So I'm jealous of the future listener that you're able to use it right now. But yeah, hopefully they bring it back. We'll talk about Laracon coming up here soon, Boston.
+
+Dalton McCleery (02:10)
+Just tune in to find out.
+
+Mm,
+
+mm-hmm.
+
+Andy Hinkle (02:30)
+⁓
+
+AI skills, what kind of skills you like to use. And so yeah, let's dig into it.
+
+Dalton McCleery (02:33)
+Love me some skills.
+
+Spicy.
+
+Andy Hinkle (02:37)
+You wanna kick us off?
+
+Dalton McCleery (02:40)
+Yeah, so like with the recent rise of AI, and I say recent as in the last year, but like the recent like month of craziness that's happened, I feel like I haven't written any
+
+Laravel code by hand. You know what I mean? And it's just so weird how that, you know, before, like six months ago, you were pair programming with AI. You're like, you would write a little bit, send it off to the AI, they would re write it a little bit, come back to you, you'd write it a little bit, you know, it's like, ⁓ we're we're f we're friends, we're pair programming, and now it's just like I don't write any code whatsoever. I'm just like a glorified manager, code reviewer. And
+
+Andy Hinkle (02:56)
+Yeah.
+
+It was a
+
+I would be
+
+careful with the quotes of friends because it was constantly getting things wrong because that's what we're fixing. We're fixing things that got it wrong. ⁓ go off and do kind of like it would just do kind of the boil boil plate, right? Is that what you're meaning? Like yeah. And then you would come in and r yeah.
+
+Dalton McCleery (03:22)
+Yeah.
+
+Right, right. Right. And we're like, hey,
+
+you know, I'm looking at building this feature, I've sort of got the service class done. Or I don't use service classes. I've already got the model done. I've made the migration. I'm happy with the database schema. Let's ⁓ you know, can you s dub me out a skeleton of a filament resource and then I'll come in here and I'll fill in my table stuff. And now it's just like hey, I can you just build me a filament resource for this model? Cool, it looks looks good, ship it. And that's just that's
+
+Andy Hinkle (03:48)
+Exactly.
+
+Dalton McCleery (04:01)
+That just seems how it is nowadays. I'm I'm curious if you see it the same way that I'm seeing it, of like, I'm not writing anything anymore.
+
+Andy Hinkle (04:03)
+Yeah.
+
+Yeah, yeah. I ⁓ we'll talk about like kind of workflows here in a bit, but I actually don't use a code editor at all. And so no code edit editing at all. this happened about two weeks ago. I was kind of using kind of a bit of both, but then I started using the cloud code more the app more and you can actually do a lot more than the C L I ⁓ like just running it in terminal. And so, for example, like ⁓ inside this is just the Claude Code desktop app.
+
+Dalton McCleery (04:19)
+What?
+
+Andy Hinkle (04:39)
+you can have the the diff. You can see the code in there. So it's not like I'm not looking at the code or light like the lines of code changed. ⁓ it has it has built in browser previewing, which I know you can use like slash Chrome and all that, but it has one built in as well. And you could use that. it has like a a launch.json file. So when the the moment you start you launch something from there, it immediately launches like a ⁓ composer run dev or something. So I have all that. And so I don't re really use a
+
+Dalton McCleery (04:43)
+Mm-hmm. Yeah, yeah.
+
+Mm-hmm. Yeah.
+
+Right, right.
+
+Andy Hinkle (05:06)
+I don't have a need for it anymore. I'm not writing code. And in fact, like when I'm looking at the diff, I see like a config or something I don't like. Instead of me changing it, I you can actually click a like you can ano you can comment on it. And so you can that line of code and I just say, Hey, change this, whatever. Like I just use I just use talk to the AI directly, talk to the prompt directly to Claude. And so and it fixes it. ⁓ now I I haven't wrote actually just hand wrote a piece of code in like, you know, probably a couple of weeks now.
+
+That was done on purpose 'cause a couple weeks ago I was like, what is it like? Can I still write a model? Like you know, artisan migrate model slash you know? Yeah, do you remember? Yeah, do you remember those days? Fill it out, fill out the factory, you fill out, you know, the whole thing, put guarded as an empty array. You know, so yeah. But it's different and and now it's just like you talk to it and then it's kinda sad because you some parts are enjoyable of doing that. And actually
+
+Dalton McCleery (05:39)
+Do I still got it?
+
+Andy Hinkle (06:03)
+I wrote a model by hand a couple of weeks ago. It was actually pretty enjoyable to do that. But I mean, it took me a lot longer than I could have just had a AI do it. But you feeling the same way? Just do you still have an do you still have an ID editor? Do you are you writing code or you just what's what's your like, you know, I thought we don't have to get into it too much into workflows, but like, you know, with evolving, are we are you writing code? Are you doing a bit of both?
+
+Dalton McCleery (06:09)
+Yep. Yep.
+
+Yeah.
+
+No, it's
+
+I'm not writing any code. But I do I do still have PHP Storm because I for some reason I'm not a I I'm a big fan of ⁓ Claude Desktop. I've I've switched from the CLI to desktop recently. So I'm a big fan of its workflow. You know, they added all the splits so I can have multiple you know, work trees running and whatnot. ⁓ I love work trees. So like yeah, I I do a lot of my work just in Claude Desktop, but I I'm kind of
+
+Andy Hinkle (06:35)
+Yep. Okay, so we're on the same way, yeah.
+
+Work trees, we gotta talk about work trees. Okay. Yeah.
+
+Dalton McCleery (06:56)
+The opposite in that I'm not a big fan of its diff viewer. I'm still old school that I like to pull it up ⁓ in PHP Storm, because PHP Storm now has a work tree plugin. So I can pull up the work tree that I want. I can, you know, explore it as if it was my file. I'm like, okay, you're you modified a model. Let me look at that model. Okay, yeah, that looks right. That looks right. this config is whack. And I'll go back to Claude Desktop and like, hey, this config's whack. Fix this. And then I'll
+
+Andy Hinkle (07:07)
+Mm-hmm.
+
+Dalton McCleery (07:25)
+go back to my PHP Storm. So I'd basically just do PHP Storm for reviews. That's it. That's all I use it for. So like it's a bit too beefy for that. So I even looked at using like, you know, Zed or ⁓ sublime text, you know, like just something that's that's I mean, that's all I'm gonna use it for is is code reviews. Right. Like I want to get in here, I wanna I want to poke around and go, okay, this looks good. And then I usually try to commit it.
+
+Andy Hinkle (07:41)
+Mm-hmm.
+
+Okay, Taylor at well.
+
+Dalton McCleery (07:55)
+If from there I'm like, okay, this looks good, I'm gonna ship this up. Or this doesn't look good, I'm gonna go back to Claude Desktop, tell it to fix it, I'll re-review it, and then I will commit it up. Something like that. That's sort of like But yeah, I haven't like actually gone in there and go, you screwed this up. Let me just let me fix that real quick. No, I'm just like I'll I've got I got this little microphone on. I use super whisper. So I'll just go over there. So little lapel.
+
+Andy Hinkle (08:05)
+Okay. Yeah.
+
+Yeah, see that. So for the audio listeners, he's wearing a microphone, a wireless microphone on his shirt.
+
+What's the battery like on that guy? Is it pretty good? Yeah. Is the battery pretty good on that guy? And what's it called?
+
+Dalton McCleery (08:24)
+My apologies if I if I just keep whacking it and you're hearing me. It this is Yeah, yeah. So I've got
+
+two I have Amazon is Amazon. It's like thirty dollars and it's so good that I was in a meeting with my boss and I was like, hey, this is this is what I've been using now instead of typing. you I use super whisperer, I press one button on my keyboard, I talk out my thoughts, I press one button, it pastes it in and goes.
+
+Andy Hinkle (08:35)
+So Amazon wireless microphone, Bluetooth, okay. Okay.
+
+Dalton McCleery (08:52)
+He goes, what you what microphone are you using? I'm like, I just this little lapel thing. ⁓ and he's like, cool, send it to me. So while we were in the meeting, I watched him share his screen and he bought it on Amazon. This this same mic, 'cause it was so good. I'm like, This is this is just like this is what it is. I don't type anymore. I I just talk to my computer all the time.
+
+Andy Hinkle (09:06)
+Yeah.
+
+So you have you have a actual microphone. Is it just ⁓ like, you know, was it something you I'm just curious your workflow? Are you walking around your house talking to this thing? Are you okay yeah. Yeah, so you ha yeah for audio listeners, he's holding his actual physical mic in his hand, completely unplugged. So is it because you just didn't want to have it constantly in front of your face all the time or what was it? Was that it? Okay.
+
+Dalton McCleery (09:29)
+Yeah, not plugged in. Unplugged.
+
+Yeah. Yeah.
+
+Pretty much. Well and you know, I I have the whole XLR mixer stuff, so it's like extra stuff plugged into my into my Mac. And so now I just replace that all of that mixer stuff with the one USB, you know, host for this thing. It's just like this big and it plugs in and that's it. It just it's Bluetooth automatically. I pull this off, it's got a little charging pad, connects automatically, and then yeah, I'll just press like a button. If it's a complex feature, I'll press a button and I'll walk around my apartment.
+
+Andy Hinkle (09:48)
+Mm.
+
+That's awesome. Yeah.
+
+Dalton McCleery (10:03)
+And be like, you know,
+
+I I'm thinking that we probably should do something like this and we need to make sure that we have regression tests for that. I want to use my agent QA skill at the end of this chain, you know, and then I'll come back, I'll sit down, I'll press my button, and I'll watch it go. It's crazy.
+
+Andy Hinkle (10:17)
+I love that. Yeah. you can just
+
+walk around your sometimes it's the best thinking, just walking around your house or around your ⁓ yeah, around your place and trying to figure out where you want to go. Yeah.
+
+Dalton McCleery (10:24)
+Yeah, just like Yeah,
+
+just like I don't wanna be I don't wanna be sitting here staring at Claw Desktop trying to figure out what I wanna do. I'll go like look out the window or something and that's just like enough to clear my brain of what what do I really need to tell this thing here to get it on the right track without rambling for an hour.
+
+Andy Hinkle (10:35)
+Yeah.
+
+Yeah, no kidding. Yeah, 'cause ⁓ the other thing is like when you're using the audio stuff, you can't if you're staring at the prompt and it's like sometimes they'll paste out exactly what you're saying. It'll throw your thought process off. Or if you're just staring at the code or whatever, it just it doesn't line up properly. So always have to like have a different w window open or just something else to you know, just to that's not as distracting. But yeah, that's a that's a really cool workflow. Love the idea of being able to walk around. So I I have I'm still
+
+Dalton McCleery (11:08)
+It's crazy. Yeah. I love
+
+it.
+
+Andy Hinkle (11:11)
+Rocking
+
+this the cable microphone XLR into the box. But ⁓ but I mean the this this arm I have, it's kind of hidden, so it's not always in a way I can just swipe it over to the side if it's you know annoying and but but it was yeah, it's it's a pretty decent workflow. ⁓ just being able to talk to I also talk to ⁓ Claude a lot. ⁓ by I used to use Super Whisper, now I use the built in one. I think it's command D and you just yeah.
+
+Dalton McCleery (11:37)
+⁓ yeah, the I was gonna ask
+
+you if you used like WhisperFlow or Super Whisper if you just use Clauds. I use Clauds when I'm on my phone, but if I'm on my computer I use Super Whisper. It's just so much easier.
+
+Andy Hinkle (11:43)
+Yeah. Yeah. Super Yeah. I use
+
+I use Super Whisper a lot for actually I'm replying to my coworkers too. ⁓ and so that way it it's you know normally if it's something long, you know. If obviously you like to you just throw it back in the keyboard, but if it's something short, but something of a bit longer response, I'll use it. It's much better at ⁓ like programming terms or just stuff that is tricky 'cause they has that they have the autocorrect. ⁓
+
+Dalton McCleery (12:10)
+Yeah.
+
+Andy Hinkle (12:10)
+Yeah yeah, like l
+
+Larry or said it. ⁓ Lar yeah. ⁓ Laryville, yeah. Laravelle ⁓ is constantly changed to Larryville and so ⁓ and through some of them and so you have to correct when it says Laryville, you have to change it to Laravelle. And so yeah, use the voice thing a lot. I feel like that's not used enough. well when I was in Bloomington, so at ⁓ Bloomington, Illinois, Wilber HQ, you know, it's like when you're in a
+
+Dalton McCleery (12:15)
+Larry. Yeah, Larryville. Mm-hmm.
+
+Mm-hmm.
+
+Andy Hinkle (12:39)
+office space, it's really awkward to use like audio. So this is definitely for like the remote employee. It's it's so awkward when you're in office and like, no, you actually got this wrong. You know, just people th think you're crazy, especially people who don't who aren't developers and, you know, around you. So yeah.
+
+Dalton McCleery (12:43)
+Do yes, yes.
+
+Yeah, it's it's really hard because like sometimes when my wife gets home and I'm still like I'm hammering out something, I'm like, listen, I yeah, and we w the our apartment's small, like this is we have two rooms and this is one of So I'm sitting here talking shop to my computer. There's literally nobody here. I'm not in a meeting, and I'm just talking and talking and talking and talking. And she goes, What are you what are you talking about? I'm like, I'm just I'm just trying to build this feature as appropriate as I can.
+
+Andy Hinkle (13:03)
+Yeah.
+
+Yeah.
+
+What do you do?
+
+Dalton McCleery (13:24)
+But I have to get all of these thoughts out and I I realize you're just sitting there on the couch watching T V and what I'm saying over here just sounds like absolute nonsense. It's crazy.
+
+Andy Hinkle (13:33)
+You're starting to sound
+
+like a an LLM yourself. Yeah. Yeah. And you have you also have to word things in a way that it'll understand. Yeah. So, yeah.
+
+Dalton McCleery (13:36)
+Yeah, yeah. It's weird. It's really weird.
+
+Yeah, I have to use specific terms for it to like,
+
+hey, I'm talking about this thing. Can we can we can we get real specific about this thing so you understand what I'm talking about?
+
+Andy Hinkle (13:54)
+Mm. Yep. Yeah, for sure. Yeah. And my wife does the same thing. She's on, you know, leave right now. And so yeah, it's you know and she's just a room over and she'll hear me talking. She was like, Are we going to meeting? 'cause I was like, I thought you were just recording a video talking to yourself. Or you know, it just it just 'cause it sounds so odd, you know. So for sure. Yeah. But that's ⁓ yeah, I I yeah, going back to like writing code, ⁓ people ask me ⁓ usually at different social functions where people are not developers, they're asking, is AI, you know
+
+⁓ taking up 'cause we he they hear a lot of the software it's taken over. So yeah, it's actually been super it's been taken over but in a in like in actually a way that's not annoying. You know, so 'cause they ⁓ where we live in southern Indiana Indiana, there's a lot of like ⁓ industrial or like ⁓ a lot of people make f like furniture and stuff like that at the factories and they're just getting they said they're just shoving ⁓ AI down their throats and they they're tired of it and so they're sick of it.
+
+Dalton McCleery (14:28)
+Yeah.
+
+Andy Hinkle (14:53)
+So when I mention I like work with AI, I'll you know, most most of my day like, that must be exhausting. I was like, Yeah, it's actually pretty helpful, you know? So 'cause they 'cause it's not yeah. Yeah.
+
+Dalton McCleery (15:00)
+It's kind of f fun. It's it's kinda bad how fun it is. Like I get
+
+I get it sounds weird, but it is kinda fun.
+
+Andy Hinkle (15:08)
+Yeah, and I think
+
+it's not ready for it's not ready for, you know, a lot of those in yeah, 'cause you every commercial feel like it's AI this or AI that, but just not ready enough. And so I don't want to get too down like the rabbit hole of how important AI is, but it it's so interesting to me. Like what we're talking about with like lines of code, it's just like thinking about year ago to now. ⁓ we don't I don't write anything. It's just all through prompts. So yeah.
+
+Dalton McCleery (15:31)
+No man, like
+
+I could get the most clickety clackety keyboard and I would hit it maybe forty five times a week. Like the this this microphone was forty dollars and it's way worth any any more of like the trackpad, right? A keyboard, a mouse, like who needs these things anymore? It's crazy.
+
+Andy Hinkle (15:37)
+Mm. Yeah. Yeah, exactly. Yeah.
+
+Yeah. Yeah. Yeah. For sure.
+
+So ⁓ I got a couple of people wanting to become developers that actually come from that same space that they've been making furniture for 10 years. They're tired. And you know, they're actually been like, I've been looking into like doing some programming on the side. And I honestly don't know what to tell them. My brother is actually one of these people as well. He's been wanting to get into you know, into programming. I told him like, hey.
+
+Dalton McCleery (16:03)
+Yeah.
+
+Andy Hinkle (16:17)
+Like go solve a problem at your work that it's annoying to you. You spend that's you spend lots of hours doing the same thing week after week. And so ⁓ for me, because that's what I did at Holiday World, you know, my previous, my first ⁓ before I started my first web depth job, they're doing all their scheduling by hand. I just is like, this has to be better. And so there's gotta be some way. And so I just started teaching myself programming. And so I was like, if you find something like that, and then I told them like just read the Laterville documentation. But then I kind of got thinking like anyone reading that just off the streets is just not gonna get it, you know.
+
+Dalton McCleery (16:44)
+No,
+
+no. Not not today.
+
+Andy Hinkle (16:47)
+So there they have
+
+that pathway. I forget what it's called, but like, you know, that learner's pathway. But I don't know, man. It's so hard because then for them just to get a job, it's so hard. It like for me, I I got hired just you know, just from ⁓ some of the work I did and I showed them like some of the the scheduling app, you know, software I created, whatever, like, okay, this guy actually knows what he's talking about. ⁓ but it's it was purely by luck. And for a junior these days, I have no clue. So
+
+Like do you see a pathway for juniors like w what what does that look like right now? And do you have any recommendations?
+
+Dalton McCleery (17:23)
+It's it's crazy 'cause I there there is a ⁓ a mutual friend that I I met through one of my friends ⁓ that we we we play video games kind of frequently now. ⁓ and he he he basically came to me with the same thing that people were coming to you with. He's like, Hey man, I I I wanna do what you what you do. How how? How? How do I do that? So I I spent a couple, you know, weeks talking with him every week, you know, on Monday and just like, let's go through some basics.
+
+Right? Let's get herd set up on your computer. Let's get Laravel installed. Let's walk around what this stuff is. Right. And then basically I just gave him like a, you know, a a take-home test that you would get on an interview. Right? Like, hey, can you build me a PTO management software where I me as the employee can submit PTO and you as the admin can either approve it or deny it. Right? Can you just build that by hand? Build it by hand and let's let's do a code review when you're done, right?
+
+Andy Hinkle (18:17)
+Man, that's a great idea.
+
+Dalton McCleery (18:23)
+So he did that. I'm like, this is pretty good. I think now the next step for you is to basically do this with a real client. Right? Like you use me as a fake client, like, hey, I'm coming to you as I need this project for my PTO. Here's all the things that I want. Can you build this for me? And then go through ⁓ you know, a meeting of explaining to me what you did and why you did it, and then me as the client can approve it. Like, cool, you you passed that test essentially, so I'm
+
+Andy Hinkle (18:31)
+Mm.
+
+Dalton McCleery (18:52)
+Literally what I told him is like I would spend twenty dollars, get a Claude ⁓ Pro subscription with Claude Code, and just like s apply to easy jobs on Upwork. Just like easy jobs. Like help me help me maintain a website feature. Right. Not like long term stuff, just like quick, easy contracts, right? Get you a hundred bucks and then use that hundred dollars to then buy the upgraded claude.
+
+Andy Hinkle (19:06)
+Mm-hmm.
+
+Yeah.
+
+Dalton McCleery (19:22)
+thing
+
+and just keep doing that, like rinse and repeat. So the last I talked to him, he actually had done that a couple of times. So he had gotten a couple jobs off of Upwork and used Claude to help him build those things. Right. And I'm like, that's what you need to do. In my opinion is you just you have to basically build up your your knowledge base of this is how to work with people and AI as your, you know, your sort of intern programmer, you know?
+
+Andy Hinkle (19:48)
+Man. Yeah.
+
+Yeah. There's a there
+
+Dalton McCleery (19:52)
+That's that's how I started
+
+or that's how I st that's how he started. Sorry, that's how he started.
+
+Andy Hinkle (19:56)
+Yeah.
+
+That's a that's a there's a lot to unpack with that. There's a just a lot of good information because like ⁓ you you mentioned like you you would review the code because there's so much vibe coded slop and so you can say like, this is why you can look at the code yourself and if like you're if you're the one reviewing and say this is not great, here's what I would do instead. Even to the nitpicky stuff, you can really do that. I love that. And ⁓ and then when you're
+
+Dalton McCleery (20:18)
+Mm-hmm.
+
+Andy Hinkle (20:23)
+doing this freelance stuff, you can see what you like and what you don't like. Those small contracts, like you said, if you don't like yeah, you can see like you don't like doing this kind of work, you know, for this type of, you know, this area or something like that. You can easily f find those. ⁓ or the things that you actually do enjoy. And so, ⁓ bef y before you find like a good full time job. So yeah, that's it's really smart 'cause my brother's asking me and I'm like, dude, yeah, just try to solve the problem up but I might put up to like
+
+Dalton McCleery (20:26)
+Mm-hmm. Mm-hmm. So you're not tied. You're not tied to
+
+Try it.
+
+Andy Hinkle (20:51)
+You know, the PTO thing is a great example. I'm gonna have to have do that. So yeah. Yeah.
+
+Dalton McCleery (20:51)
+Just do a do a project. Like it's easy. People understand what PTO is. And I I did miss an important part of this story. I'm I apologize. So if I let me let me back up just a little bit. I told him to build this by hand, right? I'm like, hey, here's here's you know a spec. Build the PTO. I submit, you review, whatever. Build it by hand. And then we reviewed it. I'm like, okay, cool. ⁓ that worked out well. So me as the client, I'm gonna pay you for the job. Well done. So I bought him
+
+Andy Hinkle (21:05)
+Okay.
+
+Dalton McCleery (21:18)
+a month of the twenty dollar pro plan and I was like, cool. Do the exact same spec with Claude.
+
+Andy Hinkle (21:26)
+Okay. So one by hand, then by Claude. Okay. Yeah.
+
+Dalton McCleery (21:28)
+Start from scratch, do the same thing with Claude.
+
+Cool. Now I think you're ready. Now use the Claude subscription that I just got you. You have three weeks left. Go apply to some upwork jobs and use that to like help, right? So yeah, just like a little i it sounds cliche to just do like, ⁓ just do a little project. But if you can if if they can understand the project you're presenting and the only thing they have to work out is the technical stuff, that to me is better than saying, hey,
+
+Andy Hinkle (21:40)
+It's a great idea.
+
+Dalton McCleery (21:56)
+Build whatever you want to build, because then they're just gonna get lost in the weeds of, I could build, I could build anything. What do what should I do? And they're like, they're up here. And like, actually, can you just build like a PTO thing where I submit it and you approve it? And that's it. That's the only thing. And lock those in by roles, right? Here's Spotty. Introduce Spotty. Right? Use your roles. They can only do this, they can only do that. And they only do one thing, and they only do one thing.
+
+Andy Hinkle (21:59)
+Yeah. What do I build?
+
+Mm. Yeah. Yeah. Yeah.
+
+That's and then there's so much too you could do there too, like email notifications to teach you know, learn about that or just anything. Yeah, yeah. So that's awesome. Yeah.
+
+Dalton McCleery (22:30)
+yeah, sky's the limit, bro. Can you go over your
+
+limit? Does the employee have a limit? Can they request more than their limit? Does their limit reset every month? Do they have an allotment of like can they ask for forty hours when they only have twenty, but they're gonna have forty by the time the they're taking it, you know? It it could go it could go big, you know what I mean? But it could start small of like I submit, you approve or deny. I get an email when you're done.
+
+Andy Hinkle (22:36)
+Mm, yeah. Yeah.
+
+Mm, lots of cond this is a great interview thing to do. Yeah. Yeah. Yep.
+
+Mm-hmm. Yeah.
+
+Dalton McCleery (22:58)
+That's that's
+
+how I started him and ⁓ I haven't talked to him to see if he's he's gotten a new job, but it's not a developer job. He's a he's an IT guy, so I'm he got a new IT job. So I don't think he's gotten and I don't think he's in the software roadmap just yet, as like developer. But
+
+Andy Hinkle (23:07)
+Okay.
+
+Getting close. Yeah. Yeah.
+
+That's a great idea though. I have to tell the those guys though if you of course I have to carve out the time to do it, but I I can manage that. So yeah. I'll learn you. Yeah. Which we do. Yeah. ⁓ That's actually good. ⁓ learning becoming a developer live. Yeah, that's good. Yeah. He would hate that. Yeah.
+
+Dalton McCleery (23:22)
+Yeah. Get get your just get your brother on on here. Invite him as a guest and we'll we'll do a l we'll do like a live ⁓ yeah, yeah. Live. Hey, how much how much experience do you have? Zero? Okay, we're gonna
+
+build the PTO management app in an hour by hand. And then we're gonna build it again in ten minutes with Claude.
+
+Andy Hinkle (23:39)
+Yeah. Mm. Yeah. Could be a good YouTube series.
+
+Yep. That'd be good.
+
+Dalton McCleery (23:47)
+So what well what what are your thoughts then? What would you tell somebody ⁓ that would
+
+Andy Hinkle (23:50)
+That
+
+that's what you did is a lot better than what I tell my that's that's pretty much what I've been telling everybody. They're asking how did you you what do you recommend? I just say YouTube. That's it. I was like just pretty much solve your o pick a problem like that is like I mentioned earlier, pick a problem that that yeah has been a problem for you at work, doing so you something you consistently do each week that takes you hours upon hours to do and try to figure out how to automate that. And I said use l YouTube to figure out how to learn how to get there. And so then
+
+Dalton McCleery (24:00)
+Ha ha ha.
+
+Andy Hinkle (24:17)
+Nobody ever takes that advice. Like, yeah, it's a good idea. And then I don't hear from anything. And I'll c ask him a couple months. Like, yeah, I just haven't had the time. Like, okay, yeah, whatever. But I think actually giving actually being like, hey, look, I'll sit down with you. Let's do the work together. Yeah, I love that. Because it keeps it makes me not feel bad as a person because then I like you want to help them because they you can see how miserable they are at their job. Or, you know, like they want out. And ⁓ and so you want to help them, but at the same time you're like, Well
+
+Dalton McCleery (24:25)
+Bro, watching you two is easy.
+
+Yeah, yeah.
+
+Andy Hinkle (24:46)
+You kind of you know, want them to kind of do the work to actually get there, you know, if that if that makes sense. But you but I think just by this is kind of a tag team effort to get them where they want to be. So I like that. Yeah. Sweet too.
+
+Dalton McCleery (24:57)
+Yeah, I
+
+like I used that ⁓ that carrot on a stick, like hey, if you build it by hand and it's good, I will buy your first subscription thing as as sort of your like reward for thanks, man. It's I've done it one time. Once once. I twenty bucks.
+
+Andy Hinkle (25:02)
+I'll help you. Yeah, that's a great idea. Good guy, Dalton. Yeah.
+
+Twenty bucks, you know, it's just like, you know, I
+
+just twenty bucks cloud code subscription might change their life. So, you know, yeah.
+
+Dalton McCleery (25:18)
+Yeah, like
+
+literally, hey, this is this is how I use it. I know that it's like when you're thinking of, ⁓ I need to get into AI development. Where do I even start? Like, here's Claude, start here. It's the low tier, you know, you're gonna have some wicked rate limits, but you're not gonna be building big big stuff. Right? You're just building a little PTO thing. You're not gonna run your limits. It's gonna be easy.
+
+Andy Hinkle (25:37)
+Yeah. Then once
+
+you do, you're you're gonna realize you're excited about web dev and you're pretty serious about it. So
+
+Dalton McCleery (25:41)
+Yeah. And you're
+
+like, ⁓ I could I could start running if I could get into work trees and now I can build the whole admin side of the PTO app at the same time that I'm building the employee side of the PTO app. I love that stuff, man.
+
+Andy Hinkle (25:52)
+Mm-hmm. Yeah.
+
+So speaking of like excitement and just as with Laricon coming up, are you ⁓ Boston, ⁓ are are you going? Are are you are are you are are do you see a pathway there this year?
+
+Dalton McCleery (25:59)
+yeah. Yeah.
+
+No. I'm not. And I'll t I'll tell you why, but I'll tell you why in a minute.
+
+Andy Hinkle (26:09)
+No, okay, that's fine. But ⁓ okay.
+
+Okay, sounds good. But ⁓ Laricon, the I was listening to Caleb's podcast. He was talking about how like, you know, are people actually even excited about new live wire stuff? ⁓ you know, like a this new feature that they dropped or new method that makes code cleanup easier. ⁓
+
+Dalton McCleery (26:27)
+Kind of. Yeah, I kind of am.
+
+Andy Hinkle (26:35)
+I I'm just thinking for Laravel, you know, with AI and everything like that these days, are people actually really excited about like some new off package or some new thing, you know, like it's you know what I mean? It's it's harder to get excited because you could just like ⁓ like I don't get too off in the weeds, but look, we're looking at like ⁓ doing status pages at work, you know, instead of like looking all these different status page companies
+
+basically, you know, when a service goes down we create an incident or something like that and we're posting like, you know, the GitHub status board be an example, something relevant, like sim similar to that. And so we'll we're like, why don't we just code it ourselves? You know just and 'cause it'll take just one or two prompts and then you'll probably get majority of the way there. But that's one kind of th saying that yeah.
+
+Dalton McCleery (27:15)
+Yeah, I've got ex I've got extra tokens. Let me just let me fire it away. It's the end of my
+
+reset. I've got twenty percent left. Ultra code this bad boy for me.
+
+Andy Hinkle (27:21)
+Yeah.
+
+Yeah. Yeah. But it's like that. But for Laricon are people like truly excited about code and I wonder that as we go forward, you know, the years I I think there will be bits and parts. I feel like like there's something like there's new PES five coming out. I'm like, okay. Like, you know, I I love Pest, don't get me wrong. But it's just like what else what are we missing? You know? So it's just like stuff like that. Like, is it
+
+Are we still i in the age of excited about code, you know? Like code changes. I feel like it's still yes, but will that change next year? So
+
+Dalton McCleery (27:53)
+Yeah.
+
+I think it's gonna change in like six months.
+
+Andy Hinkle (28:00)
+Okay. Well, good thing lyricons next month. Really you think so you you really do think it's gonna change like how we're we're not gonna get excited about an unguard a attribute PHP attribute anymore 'cause it's like, what does it matter? I'm not I'm not looking at it anymore anyway, you know? It just it works.
+
+Dalton McCleery (28:04)
+Yeah.
+
+Yeah, I hate to be
+
+I hate to think about it that way, but yeah.
+
+Andy Hinkle (28:22)
+Yeah, 'cause I'm I'm like I'm I look at a code in a piece of way like it must look pretty, it must read like a book, it must make sense. Does it make sense for somebody reading it the first time? I have all these questions that go through my head. Are those gonna s is that gonna stop happening? And like, hey, I click the page, I click the thing and it works. You know, like you kinda wanna know the you you wanna look under the hood a little bit, make sure it's not doing some weird stuff, but yeah.
+
+Dalton McCleery (28:23)
+Think so.
+
+Yeah, yeah, 'cause I'm gonna be the one maintaining all of this in the
+
+future. You could ta you know, the way that they did Fable Five, you could just blow up Claude and now I'm stuck with half my app was built by me and half my app was built by me, you know, and and that now I have to untangle this mess. So I yeah, I still wanna understand what's happening and I wanna put it in a logical sense that if they did blow up Claude, I could I could look at it and I could do what it was doing, it would just take me four times as long.
+
+Andy Hinkle (28:55)
+Yeah. Yeah. Yeah.
+
+Yeah. Yeah, it's it's tricky too. Like I I'm really curious that's one thing I'm gonna be paying attention to more at Laricon ex this year. I'm like, Am I actually excited about this because I'm excited? Or you know, is it that I'm not excited about this because AI could just do it for me? Just something like so there's there's a lot of great talks coming in this year and ⁓ of course, you know, ⁓ the you you just anytime you go to Laric ⁓ Laricon you see the
+
+you know, Taylor Otwell with his you know iconic ta talks or you know, I mentioned Pest Five, but Nuno is it has just so much energy, like it's just infectious and like you just want to, you're excited to go back home and start coding. So that's a good part of it too. You just you you take a lot away of just the energy going back home and excitement too. So there's a lot of ⁓ you know, there's a lot of benefits out of programming conferences other than just okay, code updates here, but you know what I mean.
+
+Dalton McCleery (30:04)
+Yeah, I well and I think so let me let me update my statement is I I think that people would still be excited to go to those things and just be around those people, right? But it's like you're in a room with a bunch of Laravel developers, you've been Laravel developers for years, and you're like, Hey, we we've been shipping some cool stuff like
+
+new cloud updates or whatever, that would get me excited. Like being in the room, but not necessarily like ⁓
+
+Andy Hinkle (30:26)
+Yeah. True. And that's how they've been advertising
+
+LarCon this year is like cloud updates, like Lairville Cloud, you know, which i it's exciting to hear like their updates and how like they they are successful at that, but like we we we don't use Larva Cloud, you know, but we it doesn't mean that they're not there's not a world where we shouldn't. It just right now we we just don't have a we we it's ⁓ it just
+
+Dalton McCleery (30:37)
+Y yeah.
+
+Andy Hinkle (30:53)
+It's an issue that, you know, we if something's not broken, you know, we're not really necessarily fixing it. We have on prem servers and stuff like that. So it's just stuff like that, you know. It's like, well, do we do that? You know, like it's cool to know about it 'cause if we ever decide to change it up. So anyway.
+
+Dalton McCleery (31:10)
+Yeah, unfortunate. In some instances.
+
+Andy Hinkle (31:13)
+Yeah. So I'm I really
+
+I'm excited about Larry Combat. Something that I'm definitely gonna be paying attention to. So ⁓ but I'm excited to hear all the updates and yeah. Yeah, the live stream. Yep. Be in Boston. I have not been downtown Boston before, so that'll be exciting. I've been to Boston like, you know, just through the airport and whatever, whatnot, but it's gonna be it it'll be cool, ⁓ to see downtown Boston and do all the stuff with the with the team. So where the entire team's going and it'll be great.
+
+Dalton McCleery (31:18)
+Yeah, I'm I'm gonna watch it for sure. I'm gonna watch it. Because why why wouldn't I?
+
+Yeah, same.
+
+All good.
+
+Good. Good.
+
+Andy Hinkle (31:43)
+Yeah. So
+
+we mentioned workflows at yeah and how we like to do things. What what ⁓ so we use we said we said we both use Cloud Desktop now, just exclusively. ⁓ where do we want to dig into like some of that? Like more of the okay. let's talk about work trees. You gonna do that? So okay, because I
+
+Dalton McCleery (31:47)
+Hoo hoo hoo hoo hoo
+
+Mm-hmm. Mm-hmm.
+
+Okay, I love work trees.
+
+Andy Hinkle (32:11)
+W work trick work trees are great or they're just they they just take way too much time for me to set up properly or to like if they do, it just like they they just don't work out. ⁓ and so work trees for me have been like I I feel like I have to create a skill called like work tree or something at this point because every time I set one up on if ⁓ it sets one I set one up, it forgets to like copy my EMV over or copy my composer vendor file ⁓ after install those. And so
+
+I think if I did a skill like work tree skill, which did that, maybe even created a database and seeded or something. So what what's your workflow like? Do you do you just have a magic buttons workflow? Do you have like a skill or what what what does it do where you don't have to constantly be like, Hey, you gotta run a composer install, that's why you're getting these PHP errors. Okay. He's raising his air valve. Yeah, let's do it. Let's hear it.
+
+Dalton McCleery (32:59)
+You ready for this? You ready for this?
+
+Yeah, so we've been working on ⁓ like a shared plugin workflow here at MyWork, where every Jira ticket is a work tree, you know, one one feature, one work tree, one one scope. So we have this ⁓ essentially Jira pipeline that will say, Hey, here's the ticket number, spin up a work tree, Composer install,
+
+Andy Hinkle (33:12)
+my gosh.
+
+Dalton McCleery (33:29)
+Create a new environment file, ⁓ create a temporary database for this work tree, create a new herd link, create spin up a Docker instance for another data. We use two databases. So spin up a Docker instance on my machine for a new database and point all of those new things to this environment file and get that set up for me to work, right? And then from there it's just pull the Jira ticket, understand it.
+
+Andy Hinkle (33:40)
+my gosh.
+
+Dalton McCleery (33:57)
+I work through all the developer, whatever, whatever, whatever. So that's like that's the initialized part. So all of our work trees are completely isolated, their own databases, their own environment files, their own mail trap, all that stuff.
+
+Andy Hinkle (34:04)
+Okay, so
+
+That's that's amazing. So
+
+okay. You open up a Jiro ticket, which we use GitHub Issues. So say I'm in GitHub issues, right? Or like what'd be what would be similar. So you you pull up an a jiro ticket and then you like you copy it and then write some command like into like Claude or something like hey, ⁓ GitHub or like work tree setup or okay, and you paste the link.
+
+Dalton McCleery (34:15)
+Lucky.
+
+Yeah. Yeah. Yeah.
+
+We've got ⁓ so there's a couple so we're we're trying out, you know, there's there's four of us on on our team and we just recently started to try to merge them all together. So we've got a couple ways to do it. The way that I built was I've got a keyword that I type in, you know, in my description of a skill, which we'll get to skills in a minute, of like, hey, ⁓ it's literally just work on and then I pass it a Jira ticket number. Like dev one two three.
+
+And it just knows to spin up all of that stuff. And then in our combined workflow, it's literally just like slash ticket, the ticket number, and it it runs that whole setup process, you know, pulls in the geo ticket, starts reading it, understanding what the, you know, the UAT testing and all that stuff that it's supposed to do, right? Prep all of that stuff for me, get a plan together. You know, I always I always start mining plan mode that hasn't ever changed. I'm a plan mode first, you know, I'll plan for an hour. So that way
+
+Andy Hinkle (35:22)
+Mm-hmm.
+
+Wow.
+
+Dalton McCleery (35:27)
+it can work for fifteen minutes instead of me going, That's not right, change this. That's not right. Change this. I I'll I'll plan it all and then when I'm happy with it then I'll say, Okay, work. Go ahead and I'll take you on auto mode or whatever and work.
+
+Andy Hinkle (35:42)
+Okay, yeah. That
+
+That I love that. There's I gotta to do some of the work trees then because I feel like I'm constantly being like, No, we gotta compose or install. But I've been thinking about creating a it sounds like what you do, but like a work tree skill or an in so or a ⁓ hey sometimes we have I mean most of the time we try to do a g GitHub issue, but sometimes it's like, Hey, I noticed this p this thing is not look right off the side or something, so I'll I'll just create like in this case I'll be working on a branch and I see some side issue that's not relevant to the branch, you know what mean? And so I would love to in that case to create a
+
+a work tree. So that's that'll be awesome. The ⁓
+
+Dalton McCleery (36:17)
+Yeah, I
+
+I highly recommend it. Just just for the fact that it's so isolated that you could work on you know, I can work on two Jira tickets at once, essentially. I plan one all the way through and then when it's ready to go, I'll fire that bad boy off and I'll open up the next one and I'll plan it all the way through while this one's working. And theoretically, you know, if I time it right, I get done planning this one and I fire it off. This one's ready for me to review it. So I'll I'll go over here and I'll review this one and I'll you know, I can jump back and forth that way. So I'm like always working on something. I mean
+
+Andy Hinkle (36:25)
+Yeah. It's awesome. Yeah.
+
+In the other one.
+
+Nice.
+
+Mm-hmm. So yeah, yeah.
+
+Dalton McCleery (36:47)
+either reviewing it or am I planning the next one, you know?
+
+Andy Hinkle (36:50)
+Yeah, my my workflow is a bit more like not as clean as that. It's more like, hey, look at the commits, compare the difference. I'm also working on a similar feature on a different thing. So don't commit those on this yeah. So it that yeah, I need to do do work more work trees. So ⁓ and you you had mentioned like you do a lot of planning. I actually do I used to do a lot of planning. I don't know any I don't do any anymore. It's usually like direct
+
+Dalton McCleery (37:15)
+you YOLO it?
+
+Andy Hinkle (37:17)
+Well yeah, but here's what I do differently is like anytime it makes a mistake, I learned this from Claude in their documentation. But ⁓ so they actually have pretty good documentation on how like how they do their own work and they and people on Twitter talk about it too. One thing that they do is anytime it makes a mistake, ⁓ either write it into the mistake into the Cloud MD file.
+
+Or s write it into a skill. And so, I I have all sorts of skill I I use a lot of skills which I like to dig into, but ⁓ I'm I'm constantly like ⁓ I'm constantly like, Hey, ⁓ you know, be able like replicate this in a form that, you know, resets it to its original state, you know, And but if it makes a mistake on getting there, it's like, update the skill to get there or whatever. ⁓
+
+Dalton McCleery (37:44)
+yeah, I love me some skills.
+
+Andy Hinkle (38:01)
+Or when I'm writing commits or something, I have the slash commit skill and ⁓ just the way that I personally write commits, you know, and so ⁓ versus, you know, whatever way it decides But what I think that just anything that it where it makes a mistake on when I'm trying to give it a task, I'm constantly like writing a skill or updating the Claude MD file to set some rules in place that usually business rules or just personal preference rules.
+
+I have one called the Otwell Polish, which I talked about at some point in show. It's it's a very big skill. I've been thinking about just publishing it 'cause it bids very, very long 'cause it I'm constantly adding stuff to it. ⁓ but I got the I got the idea of when Taylor was he said he was working on a package one time, then I was like I had Claude do it and then I I put the old Otwell polish on top of it. I like Otwell Polish like that. So ⁓ 'cause a lot of it is just that kind of the s the clean Laravel style and how it's
+
+Dalton McCleery (38:29)
+Yeah, I I I remember. Yeah.
+
+Andy Hinkle (38:55)
+how it's ⁓ authored, you know, all the how he writes the the framework and stuff like that. It's a lot of that were, you know, a raise to collections kind of thing or just little stuff ⁓ just to to make it cleaner. ⁓ and so I have that. I I use that quite a bit. ⁓ I have a slash review skill, which I also add a lot to. And so we're getting to kind of the skill stuff now. But yeah. But the the skill what what I was trying to say here is like in my workflow of I'm constantly updating
+
+Dalton McCleery (39:05)
+Right. Yeah.
+
+Andy Hinkle (39:24)
+these skills into like when I don't like something and I prefer something in a way, like the review skill when I'm looking at another like when I'm looking at some reviewing p some PR and I prefer things in a different way that ⁓ that it didn't catch in its slash review that I would have that I caught manually just by looking over it myself. And so ⁓ yeah I'm updating that. And so that will like do a PR review and then it'll provide me like, we're all the
+
+requirements in the issue filled kind of thing, you know. ⁓ not only that, but is it a breaking change and stuff like that. So I I'm writing a lot skills, writing a lot. I need to do more of them. I'm from constantly feel like I I need to write this to a skill and I never get around to it. So
+
+Dalton McCleery (40:05)
+Yeah. Yeah, I
+
+I I feel the same way. I'm like, why I 'cause it's the same thing of like I hate writing the same thing twice. Like if I have to write it myself twice, I hate that. I would always abstract it, you know, in a trait or or something else when I was writing code. Why wouldn't I do the same for Claude Code? So yeah, I got a I got tons of skills. But I like my sk I don't like to write slash
+
+Andy Hinkle (40:13)
+Mm-hmm.
+
+Yeah. What kind of skills do you have?
+
+Dalton McCleery (40:30)
+command. Like I just like to 'cause I use whisper flow so it's it's hard for me to go slash ticket dev one two three 'cause it will literally write slash the word. Right? So I always use just use natural language of like Yeah, yeah, it's got a little ⁓ top hat. And so I always just use mine in like natural language like
+
+Andy Hinkle (40:36)
+Yeah.
+
+Yeah. Yeah. Yeah. So then it does it cue a guitar? Yeah.
+
+Dalton McCleery (40:52)
+The one that I'm the most proud of that I built recently for the the app that I was showing you earlier ⁓ I wrote a skill called agent QA. 'Cause that's the the thing that I'm working on is very front end heavy. ⁓ and so I basically just want it to run through
+
+Andy Hinkle (40:58)
+Uh-huh, yeah.
+
+Dalton McCleery (41:11)
+Vercel's agent browser, like the CLI headless browser thing. Just like spin up the herd, you know, the herd work tree, because it's got a herd link to it. Spin up the work tree. Seed the database however it needs to be for the ticket. And then just go ahead and just visually, hey, are are these things in the right spot? Are they readable? Yes? Cool. Then I'm ready to QA it. If they're not and stuff's like morphed or you can't see it this the data's not seeded right, then you're already in this loop of
+
+Okay, fix it. What's not right about it? Is is the data seeded wrong? Seed the data correctly. Is this piece not showing up? Why is that? ⁓ well, it's because the config is set to false in the environment file of the work tree. You need to flip that on to true or something like that. Right? So my favorite one is I'll literally just say agent QA. That's my keyword. And it will launch that whole thing for me, seed the database, spin up for cells, agent browser, do all of that stuff, and then give me a report.
+
+Andy Hinkle (42:01)
+Mm, yeah.
+
+Dalton McCleery (42:09)
+afterwards and it will also give me in that report all the things that it couldn't QA that it needs me to QA. Like hey I couldn't QA WebSocket connections. So you as the human in the loop need to be the one to do that. And it will give me the report of like I need you to test this part of this ticket because I couldn't do it. Like I can't test the real-time interactions. I'm like cool. Thanks Agent Browser. And then my other favorite one is I've completed QA.
+
+Andy Hinkle (42:16)
+Okay.
+
+Mm-hmm.
+
+Dalton McCleery (42:35)
+Which is does the opposite of the setup. So it'll tear down the Postgres database, it'll tear down the Docker container, create a PR, s ⁓ set a comment in the Jira ticket with all of the findings and all of the data and the decisions that was made in the plan, and then set the Jira ticket status for me automatically. I'm like agent QA, my QA, I've completed QA, done. Right? Those are those like the two big skills that I use every single time.
+
+Andy Hinkle (43:01)
+Nice. Love that. ⁓
+
+do you s slash goal at all? man. Okay. 'Cause that's one thing I forgot to mention. I I do use kinda you mentioned you you like to work on a work tree and kinda walk away and do a different work tree kind of thing. ⁓ I do that with goals of like I usually will ⁓ a lot of mine are usually something around AI and so like I am trying to get a specific result five times in a row but
+
+Dalton McCleery (43:05)
+I love skills. No, I don't. But I've heard all I've heard a lot about. I've heard a lot about it.
+
+Yeah, yeah.
+
+Andy Hinkle (43:30)
+AI is just you can get mixed results depending on how you run it. And so it'll be like, Hey, we're trying to pull this phone number from this report, ⁓ tweak the prompt as you need to. And I do some a skill called no cheating because there was this one time that it deliberately wrote the answers to my database and said goal complete. ⁓ and so it says we accomplished the goal. And so yeah, ⁓
+
+Dalton McCleery (43:53)
+Done. Hey Andy, we did it.
+
+Job done.
+
+Andy Hinkle (43:56)
+Yeah, was like, Yeah, I did.
+
+And so I was like, I was looking at it, I like, Wow, this is exactly like how did how did it land one hundred percent ⁓ accuracy? And I looked at it, I was like, I actually cheated, just deliberately wrote the answers and it said, Yeah. So and so I wrote no cheat and there's a skill called no cheating, you know, like don't deliberately what that means is like don't deliberately tell in the in the prompt that 'cause we're we're actually coding prompts. The like a these are like larval AI, you know, something around a similar package to where you're
+
+Dalton McCleery (44:06)
+Come on, Claude.
+
+Andy Hinkle (44:25)
+coding blade files and prompts and you're sending those to an LLM. So we're trying to produce a result back. And ⁓ so ⁓ I use goal to like slash goal like try, you know, look at this PDF. Try to ⁓ try to to figure out the right ⁓ the right prompt and and then ⁓ get it five times in a row and so it'll run like a a debug command to try to rerun the same prompt, try to get five times in a row, then report back that I was successful and like what change to get there.
+
+So then I look at it just to kind of make sure it's not kind of isolated around this this specific document because you know we handle thousands of different types of documents. And if it if it looks good, feels good, then I'll ship it. So but I use slash goal a lot so that it's kinda like the you hit it and I can go work on something else for a bit. So it's more like it's more like something if it does have my main attention, I might do a goal on it. ⁓ I I've done like we did a Laravel upgrade. Laravel thirteen was a beast of an upgrade if you are ⁓ if you have filament because
+
+It's super tricky because filament you want to bring in, you know, some of the later versions. We're on filament three, live wire, ⁓ like which neat we're on live wire three. So we had to upgrade we had to upgrade, ⁓ update filament four to we had to do live wire upgrade and filament upgrade. Then ⁓ and then finally we're able to do go up to filament five, and then we're able to go up to level thirteen. But in filament five, ⁓ they they changed a bunch of stuff with attributes, which are the which
+
+Crasher validation, which I'll love to get into here a bit. ⁓ but the the other we upgraded we upgraded Telwin, which Telwin had some deprecations on start some things, and we had to like ⁓ we had to fix it. So what I did is I did a slash goal. Take a look at this page. Like we could see that, you know, when this box is filled in, it's not going to the full width as it needs to. Like ⁓ using your browser as cross-validation, you know, here here's the goal. And so I then I it was it was pretty something small, you know, it was probably just a width fix.
+
+Dalton McCleery (45:56)
+Boilers.
+
+Andy Hinkle (46:21)
+But then it actually just fixes and loads the page itself and it'll it'll verify that's correct. And so it's slash goal is really cool just by you can just do the old just cause it it won't stop until it's until the goal is complete or unless it's like completely just wrecked or it doesn't know how to it's funny when a goal gets stuck in a loop because it it can't escape itself, so it'll just constantly repeat itself. Nope, it this API is down. Nope, this API is still down. So but
+
+or whatever because it it won't ⁓ it it won't exit until the goal has been complete. So use that a lot.
+
+Dalton McCleery (46:53)
+Hm. Isn't
+
+that how like isn't that how like some people like I see a lot of posts of ⁓ whoops ⁓ our our bot got stuck in a loop and it charged you know anthropic you know a hundred thousand dollars a month in overages.
+
+Andy Hinkle (47:05)
+Probably. Yeah.
+
+I know like Aaron Francis is a big loop fan. He'll go on a loop one he that he had a codex. Codex and both Claude have this, by the way. so if you're a Codex ⁓ guy, there is slash ghoul in there. But he had one running for like twenty six hours, maybe even longer than that. Just trying to Yeah, I've seen people one of my favorite was from Wes Boss. He
+
+Dalton McCleery (47:20)
+Woof woof.
+
+Andy Hinkle (47:26)
+had a he was trying to figure out how to control his lights in his office. Like he had a like a you know like one of those overhead Bluetooth ⁓ you know ⁓ not Bluetooth necessarily but maybe like ⁓ local IP yeah s like a smart light kind of thing and he wanted to be able to power that through CLI and so he set up his webcam and where it was facing the light and so and he set a goal with his webcam on and it was kinda the
+
+Dalton McCleery (47:38)
+Yeah, like a just like a smart.
+
+Andy Hinkle (47:54)
+⁓ Claude was looking at his webcam to see if it turned on its light until it could figure out some methods to actually figure out how to turn it turn on the light. So yeah, if like ⁓ using you know Claude as a goal to figure out some CLI tool that you want to build for your you know your home office or whatever. So yeah, it was pretty neat. ⁓ so I I like slash goal a lot.
+
+Dalton McCleery (47:57)
+⁓ that's kind of cool.
+
+Okay, well I might have to use that then. I'm just always afraid of hitting my limits so quick with getting stuck in a loop. Really?
+
+Andy Hinkle (48:21)
+U usage. Yeah. I've run it overnight a few times. ⁓
+
+yeah, yeah. And so of of course it would be it would be like a well it would be it would be in a way that well if I hit the five hour limit, it's so it's like so whatever, you know. Like yeah. But it would be like in a way on a it's usually like, my my thing resets tomorrow. I'm gonna go have it chew on this for a little bit and see what it thinks. So see if it can figure it out. And most of the time it doesn't. It it just kind of f snowballs and so
+
+Dalton McCleery (48:29)
+That just scares me, bro. That just scares me.
+
+yeah, I okay.
+
+Andy Hinkle (48:50)
+It says it'll get there, but if you start looking at the the way it did it, it's n it's not very great and so but ⁓ but I mean some something like I can see myself doing that a lot more with with stuff like the West Boss, like, hey look at my light, try to fix that. You know, just something like that. I could definitely yeah, think about, yeah, some skills like that. So but then yeah.
+
+Dalton McCleery (49:07)
+That's cr that's crazy intuitive though. Like, hey,
+
+here's my light, here's my webcam, fix it, I'm gonna go to sleep. It is it is really smart.
+
+Andy Hinkle (49:13)
+Yeah. Yeah, it's really smart. Yeah. But then as we ⁓
+
+I can see it well, if Fable Five doesn't eat up all the 'cause it's a high usage, you know it was like double the usage when I was using it. But ⁓ did you did you ever use Fable Five? Did you get around to it?
+
+Dalton McCleery (49:26)
+Bro, I got to use it one time. Like I heard the hype for it, it came out, I'm like, I've got the perfect task for this, right? That big app that I was working on. Okay, cool. I need to, you know, r I basically need to merge a quite a few of these large chunks into one chunk. So I was like, hey, Fable Five, ⁓ you know, work on Jira ticket one, two, three, and I set it to the the Fable Five model.
+
+Andy Hinkle (49:29)
+Okay.
+
+Yeah.
+
+Dalton McCleery (49:52)
+And I just like watched it work. I was like, damn, this thing's fast. Or the or I was like, damn, this thing's slow. It was so slow. But it was good. It basically one-shotted that ticket. And that was the only time I got to work on or use it. Was that one ticket? It one-shotted it, but it was wicked slow. Wicked slow. I'm like, yeah, I've got like three other tickets in the backlog that I could throw this bad boy on it. I can't wait to do that. I wake up the next morning, ⁓ actually we're gonna pull Fable Five.
+
+Andy Hinkle (49:57)
+Yeah, it is slow.
+
+And you're you're probably excited like, I gotta use it again and then yeah.
+
+Yeah. Yeah.
+
+Dalton McCleery (50:21)
+well. I guess Opus, you know, high effort's gonna be my my main some more. Unfortunate. It's unfortunate.
+
+Andy Hinkle (50:27)
+Mhm. Yeah, that that made
+
+me really sad that I think it was a Thursday. Is it Thursday or Friday night? But it was I was like I was ready to like, you know, party it up for basically Friday night and run Fable Five on a bunch of things I thought of that were ⁓ have been always tricky in the past. I I like Fable Five a lot because it it it's it's quiet. It's like it it's slow, but like it's c it's quiet. It's like s I mean
+
+Dalton McCleery (50:40)
+Yeah.
+
+Yeah, very slow.
+
+Andy Hinkle (50:56)
+I'm getting really tired of Opus just telling me a book. I'm I you know how many times I write TLDR? I should probably put that in a skill at this point, but simple. Cause I'm just like, yeah, it it's it's so wordy. It's like I'm gonna begin first. I'm going to take a look at all the files and make sure everything's ready to go. Then I'll begin creating this plan and then I'm gonna verify that the plan's correct. you know, before I continue. And just like, dude, just start the work. Just don't tell me you're going to do something after I just told you. Like, just tell me what I need to know, and then it's
+
+Dalton McCleery (51:02)
+That's a perfect skill.
+
+Yeah, yeah, we we get you, man.
+
+Andy Hinkle (51:25)
+It's constantly like commenting. Fable Five, it's it's so quiet. And it'll just be like, like, is it running? And I'll like click the 'cause it'll be like a minimized actions thing. You click it and it's just doo doo doo doo doo doo you can see like, it's it's actually been reading a lot, it's been editing. And then it'll say just a short little summary of what it did. I was like, this is fantastic and it's slow, like you mentioned, but it's it's so good. of course it uses at the time it used double the usage. And so my my plan was like
+
+Dalton McCleery (51:50)
+Yeah, it was crazy.
+
+Andy Hinkle (51:54)
+⁓ to kind of use it until like i they gave us like the twenty third I think and so I was like, ⁓ I I'm just gonna hit all these hard problems while I have 'cause I I have a few kind of lined up here. And then ⁓ I was we're going through that and they shut it down. So but it sounds like they're it's gonna be coming back any day now. So we'll see. I I don't know if they we have to we might have to might have to sign over, you know, like how they do Bitcoin and these days you gotta verify with your identity or something that you're a US citizen. I don't know if you're gonna have to do that. I hope not.
+
+Dalton McCleery (51:59)
+Yeah.
+
+Maybe maybe.
+
+⁓
+
+Andy Hinkle (52:24)
+But we'll see. But ⁓ just because, you know, all the politic the political stuff ⁓ components that go into it. But the ⁓ as far as like how good it was, man, it was it was truly incredible. And so I'm excited. It it solved so at work there was an issue where the ⁓ I you know, I work on ⁓ an app now it's you kinda uses AI internally and it took forty five minutes to process something. ⁓ you know, it you
+
+Anywhere from like thirty to forty five minutes. And I set it like I was trying to figure out with Opus and everything for this is like for six weeks. It'd be like when I had free time I would look at this, but like six weeks long I was trying to figure this out, like how can we get this faster?
+
+Dalton McCleery (53:03)
+Damn.
+
+Andy Hinkle (53:07)
+⁓ it's cause you didn't wanna the the problem I had is I could make it faster, but then accuracy would break. It would have hallucinations where it wouldn't get something correct. And so what ⁓ like what my goal was to is to get it down to like 20 minutes. That'd be great. I would be ecstatic if it was 10 minutes or less. And so ⁓ with then I started going with Fable Five and it it was like cause I was explaining it is we had an an Agenic approach, which means just one conversation and went through everything with all these skills.
+
+And then the before that version, we had a different version, which didn't use a lot of reasoning. It was very direct. ⁓ it was a lot of one off prompts. And Fable ⁓ came up with like you're thinking all this wrong. Like, what if you kind of met in the in the middle ⁓ and just split everything like you do sub agents, you split everything off into their individual steps because we have multiple steps, some steps require other steps. And so I was like, if you split those off, branch them off into sub agents.
+
+And then you have the other parts that don't require any context of the other steps, you know, because they're all separate steps. If they don't need other context of the other stuff, like they don't need to know about everything else. Just keep it centralized. And so ⁓ it thought about that. It it wrote it in like an hour, maybe a couple hours. And it took it from forty five minutes to it we're averaging about about three to six minutes right now. And so, which blew my mind. And so it it runs through in about, you know,
+
+Dalton McCleery (54:18)
+Right. Right.
+
+⁓ okay, that's pretty good. That's pretty good.
+
+Andy Hinkle (54:35)
+It's it's really fast. And so and that's with reasoning and all that. And so because it we don't have these dependency layers and we're not flooding the context of these ⁓ we're just launching sub agents. I mean it's really fast. And so that blew my mind. I was like, man, ⁓ and I was like, what else can we do with this? But ⁓ then of course they shut it off and so but until and I started back in Opus, which Opus actually has the work that Fable did, so it can kind of continue from that, which has been helpful, but
+
+Dalton McCleery (55:03)
+All right.
+
+Andy Hinkle (55:04)
+I already have like I have definitely two things lined up that I'm excited for Fable to work on. I'm like I when it comes back out I'm gonna have it 'cause ⁓ because ⁓ cla or Opus has been struggling and so on some of these tasks. And so I'm excited to have ⁓ like Fable work on one is like one is like a table, like on a PDF, it's a table that ⁓ it doesn't have separators in it and it d for whatever reason, ⁓ the
+
+Dalton McCleery (55:21)
+Yeah.
+
+Andy Hinkle (55:30)
+like one of our L LMs, it doesn't understand like the the label at top and then the value below and the this like without separators. And so I'm hoping Fable can help me figure that out. But it's been super tricky.
+
+Dalton McCleery (55:43)
+Yeah, I've only got to use it one time and I really want to use it. Like I've got like you, I've got several other things like lined up that I'm like, ⁓ this is this is perfect Fable Five territory here. But I'm just gonna have to set Opus on, you know, extra and just pray, right? Pray that it either A gets it right at some point in the day, or B doesn't chew through all of my five hour limits. No, I normally keep it on high.
+
+Andy Hinkle (55:59)
+Yeah, yeah.
+
+Mm-hmm. Do you usually have an on extra?
+
+Hi, okay, I'm on extra all the time. Opus extra. I've never done max. I've definitely never done ultra code because I've heard that spawns. What okay. Sell me Sell me on ultra code. Am I missing something? Okay.
+
+Dalton McCleery (56:16)
+really? I might have to bump mine then.
+
+You've never done ultra code?
+
+No, you're not you're not missing anything. It's
+
+just it's it's kind of crazy. I only I've so I've only used Fable five once and I've only used Ultra Code once. And that that app no, no, no, no, no. Yeah, yeah. I would I would have there would have been quite quite a bill, ⁓ at the end of the day. ⁓ no, I used I used Ultra Code once and that was for that app that I was showing you. ⁓
+
+Andy Hinkle (56:36)
+Was it together? Okay. I was gonna say you blew through your quota in five minutes.
+
+Dalton McCleery (56:52)
+You know, it the it's quite a large app with a lot of things going on with it. And so I was on a call with my boss and my boss's boss and we were like, How how in the world do we actually go through all of this stuff? Right? And my boss was like, Yeah, just throw Ultra Code on it And I was like, I've never used it before And he goes, Yeah, who cares? Right. He's like, ⁓ we could spend, you know, hours of the three of us talking about it, you know, for thousands of dollars of our time.
+
+Andy Hinkle (57:14)
+Yeah.
+
+Dalton McCleery (57:21)
+Sit here in this meeting and go through it one at a time, or we could spend a couple hundred dollars for you to use Ultra Code. It's like, all right, cool, I'll try it. So I used Ultra Code one time to basically audit that entire code base of an entire application. And I think it spawned like 78 or 77 sub-agents, something like that, to read everything and audit it. And it ran for like two hours. And it, but the summary it gave me was incredible.
+
+Andy Hinkle (57:28)
+Mm-hmm.
+
+My gosh.
+
+Dalton McCleery (57:49)
+Right, I got like six or seven gear tickets out of that summary of things to fix that like it was just like minute stuff of like cache race conditions. Like, hey, you've got a API that pulls an an endpoint every thirty seconds, but the cache is set for every fifteen seconds, so like that doesn't make sense, right? And like, in my brain it's like, yeah, I'm hitting an endpoint and it's cached, we're good here. But like ultra code's like actually you're just kinda like doing the same work and your cache isn't doing anything.
+
+Andy Hinkle (57:58)
+Mm-hmm.
+
+That's awesome. Yeah.
+
+Dalton McCleery (58:19)
+I'm like, ⁓ damn. I didn't think ⁓ Cool. All right, make me a Jira ticket and then spawn off a work tree and work on that Jiro ticket for me. Thanks. See, I got to use it I got to use one time and it was pretty cool, but it
+
+Andy Hinkle (58:21)
+Yeah.
+
+True. Yeah. That's good. I th
+
+Okay, I'm gonna
+
+make it a goal this weekend. I'm gonna try Ultra Code because my I'm pretty light on my usage this week because I don't have I don't have Fable anymore. So ⁓ actually I hit my weekly. I hit my weekly on op on Fable. It got really close. ⁓ but then they reset it, so ⁓ then I so I got my weekly back. So yeah, because once they they pulled Fable, then they reset the weekly so I was able to get it back. So ⁓
+
+Dalton McCleery (58:42)
+Hey, Andy slash goal, use ultra code.
+
+Well just
+
+Just just
+
+do be aware of of your usages though. Like, ⁓ we have extra usages turned on and my ultra code ran for like I said an hour or two and it's it blew through my five hour limit and it started going into into the the extra limits and I think my boss said I had like a hundred dollars or or s something like that of extra usage limits on top of my five hour because of that one ultra code session. It was crazy.
+
+Andy Hinkle (59:03)
+I'll give that a shot. So yeah. Yeah. Okay.
+
+Yeah. In an hour or two? That's great. the extra. Yeah.
+
+Yeah, nice.
+
+Jeez. Yeah.
+
+Dalton McCleery (59:30)
+But it worked, like it found bugs that I there I would have to dig into it manually to like figure out, you know?
+
+Andy Hinkle (59:33)
+Mm.
+
+Mm-hmm.
+
+Yeah, for sure. It's awesome. ⁓ do you remember th our this was one of our first show topics when we f started the podcast. Logging all validation errors. Do you remember that? I feel like
+
+Dalton McCleery (59:49)
+yeah. That was you came up with that idea
+
+at Laracon like three years ago, two years ago. Yeah, yeah, yeah, yeah. Before Night Watch. Yep.
+
+Andy Hinkle (59:55)
+This was before is it Pulse? Laravel Pulse before that. And then before n Nightwatch.
+
+we had this idea of like logging all validation errors so we can know where user problems lie, you know, whatever. But ⁓ you know, the it's kind of been
+
+It's kinda like I haven't really thought about too much, mostly because Nightwatch does it, ⁓ somewhat. I'll like talk about that. But it's so ⁓ a little bit of backstory is we upgraded to Filament Five. Filament five has
+
+a bit more strict strictness on the casting and so all of our tests were passing everything and then it went to the users and of course they hit save on some form that it's probably one of the form w that we don't test unfortunately like we don't manually go and make sure it's okay. you know that we just kinda it's more they they test one of the forms and they got like a validation error look like a looked in to see like if Nightwatch could catch it.
+
+And ⁓ the way that Nightwatch works is that you can set a like there's a there's a request threshold that you can do and we do like 30%, I believe. And and so which means that we only we're only capturing 30% of the request. And so I reached out to their support. I'm like, is there a way that we can capture thirty percent of the requests ⁓ the you know, naturally, because we don't want to track everything, it would blow through our Nightwatch quota.
+
+And but I wanna know about every non ⁓
+
+200 level error. Like I that that just but it's not an option on on Nightwatch. It's either you have it just it it's just how much requests you want to monitor, how much what's the percentage you can do 30%, right? But I want to know about every single 500, which you can do that because that's an exception, right? But I want to know about every 400 level too, you know, like not not just that 30%. I want to know all of them. And so there's not really a configuration for that. So they told me, you can do a middleware nut and do all that. So was looking at that.
+
+Dalton McCleery (1:01:36)
+Right, right, right.
+
+Andy Hinkle (1:01:54)
+And ⁓ started doing that, but the way that Filament 5, well, this is just live wire. when you get a 422 in LiveWire, when you do the validate, this at least through Filament anyway, ⁓ when you do that request, it does not fire 422, it fires a 200. So if you look in the live wire tab, of course, because it's like, yeah, because it's live wire update, you know? And so on the ⁓
+
+Dalton McCleery (1:02:13)
+What?
+
+⁓ I ha that's
+
+the one thing I do hate. I hate seeing that in the logs all the time. Or like in in in debug bar, live wire update. Sorry, Caleb. I it I love live wire, but that annoys the hell out of me.
+
+Andy Hinkle (1:02:23)
+Live wire update. Yeah. Yeah.
+
+And so Filament they ⁓ you know they're they're just said here like you can do the validation through them and we use filament forms on that. So there's still okay, so to bring it back up to speed, so somebody, you know, they they're wrote in, say, Hey, I can't fill out this one error this form, we're getting this error now. It was because we had they have some more strict casting in Filament five, but they were doing a one versus a boo like tr bullying of ⁓ true or false, you know. And so they just have strict casting on there of ⁓ d
+
+⁓ doing that. So we're we're able to quickly identify the, you know, or solve the issue, but it was one of those like we didn't know about the issue. And so ⁓ I was trying to figure out if there is a better way to ⁓ do validation on that or to capture it. But ⁓ because right now we have on our middleware to capture any time it's a true four twenty two, but
+
+We I I can't think of a way, like I couldn't figure out a way to this is also something for Fable Five. couldn't figure out a way for it to capture live wire level like validation errors. ⁓ I was trying to catch the the exception, that wasn't working, you know, like the validation exception, whatever that is. So it wasn't working, but I don't know, man. I didn't know if you've thought about that or but so you probably don't deal with 422s a whole lot, yeah. But
+
+Dalton McCleery (1:03:43)
+No. That's way over my head.
+
+Andy Hinkle (1:03:49)
+Yeah, because this is something that's probably more community driven. Like how how do people track their validation errors? They just let go. Like that I wanna I wanna be able to track all validation errors and see them on some dashboard and be like, when somebody puts in their yeah, somebody updates our profile, you know, like we're getting hundreds of four twenty-twos. What's the error? first name, it has to be greater than
+
+Dalton McCleery (1:04:00)
+Mm-hmm. This is this is where stuff's fallen off.
+
+Andy Hinkle (1:04:13)
+th three characters, maybe their name is Sue. I don't know. You know? So it it's just like stuff like that. Yeah, it's like
+
+Dalton McCleery (1:04:17)
+Right. Or yeah, people putting dashes in their in their phone number and you don't want to write some
+
+JavaScript thing to remove those before submit or whatever.
+
+Andy Hinkle (1:04:26)
+Yeah. now Nightwatch will tell you what
+
+that that happened in the the form that it happened on, but then you have to log out the errors and of course you don't want to log like people's passwords, so we check flash like we check the whole flashing thing, you know, like if the key is password, we don't include that, you know, but we we just make it s asterisks or just or redact it or something like that. But it's been really tricky 'cause I I just wanna know I've ⁓ this feels like on multiple apps for multiple companies that I've worked for, I've been wanting to track validation errors, just not a clean road that
+
+Dalton McCleery (1:05:01)
+Yeah, I mean years. I I'm pretty sure it's been three years, right? It was the Larkan Nashville, I think, is w we were sitting there on like day two and you're like, This would be a great idea. I'm like, bro, yeah, that would be a killer idea. But that that's been a while. I think you should. Get whenever Fable Five comes out, that's what you should throw at it. Build me a package to do that.
+
+Andy Hinkle (1:05:09)
+Yeah.
+
+Maybe we could hack it, yeah.
+
+Yeah. Yeah, because then
+
+Yeah, I I mean if I can send these
+
+you know, I don't yeah, 'cause if I can just put this into a log, that'd be fine, because then I can ⁓ then I we we can use
+
+Well like paper trail. We can set up some filters and paper trail to see trends and stuff. ⁓ Or to it like I don't know to a database because then you know, we obviously people can exploit it and hit f you know, whatever. But 'cause I understand why we don't track them because people can exploit, you know, four or fours and just refresh the page or you know, or hit some validation error and have, you know, millions of records. But it it's cool to see where users are having issues without them coming and telling you 'cause it's not an exception. Not five hundred, so
+
+Dalton McCleery (1:05:52)
+Right. Right.
+
+Andy Hinkle (1:06:04)
+I'll have to see what five of five says and so
+
+Dalton McCleery (1:06:05)
+Crazy. Yeah. Fable Fable 5.
+
+Fable 5 on Ultra Code. Build me a package to to track everything.
+
+Andy Hinkle (1:06:10)
+But curiosity. Yeah.
+
+For I mean for Dalton and and then for other you for other I was gonna say for other users users out there, people that listen to the show. Yeah, like think of your applications right now. Users that have that hit the four twenty two, like do you know about them? Like do you know that your profile page is throwing a bunch of four twenty two or your registration page is throwing four twenty two so a bunch of people and you're losing money? That's just where my mind goes. You know, like like how many people are are this happening? They just click X because they can't s update something and we have no clue about.
+
+Dalton McCleery (1:06:18)
+Yeah, yeah. All your users.
+
+Andy Hinkle (1:06:43)
+it w unless somebody tells us about it. So
+
+Dalton McCleery (1:06:45)
+Yeah, I would. Like
+
+if I can't sign up after like two attempts, nah hell with this. I'm leaving. Not worth my time. You didn't think about this? As a software developer, I'm like, you didn't think about this? What else did you not think about?
+
+Andy Hinkle (1:06:50)
+Yeah. Yeah.
+
+Yeah.
+
+Yeah, for sure. Yeah, it's been tricky. All right, man. I think ⁓ we're at we're at time. Well over time, so it's good. It's been really good to catch up. We'll have to do it again for sure. ⁓ it should definitely be shorter than it was last time now that we're able to we're we are out of the ⁓ the three AM wake up calls of from crying down the
+
+Dalton McCleery (1:07:05)
+Yeah, yeah. Likewise. Yes.
+
+The woof. Woof.
+
+Andy Hinkle (1:07:21)
+down the hallway to go feed a little one. So yeah. But we're out of those days. So we're it's c we're coming out. So it'll be good. All right, man, you wanna close us out?
+
+Dalton McCleery (1:07:28)
+Yeah. Yeah. That's good.
+
+Yes, sir. To everybody else who's been listening, thank you so much for staying tuned for the whole podcast. We appreciate ya. And we'll see you next time when whenever that is. Yeah. Bye.
+
+Andy Hinkle (1:07:43)
+We'll see you guys. Peace.
