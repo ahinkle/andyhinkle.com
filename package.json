@@ -7,7 +7,7 @@
         "format": "prettier --write ."
     },
     "devDependencies": {
-        "@shufo/prettier-plugin-blade": "^1.14.1",
+        "@shufo/prettier-plugin-blade": "^1.16.2",
         "@tailwindcss/typography": "^0.5.14",
         "@types/alpinejs": "^3.13.11",
         "laravel-vite-plugin": "^3.1",
