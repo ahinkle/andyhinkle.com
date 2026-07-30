@@ -34,7 +34,7 @@ class BanIpOnCloudflare implements ShouldBeUnique, ShouldQueue
     public function middleware(): array
     {
         return [
-            (new WithoutOverlapping('cloudflare-ip-ban'))
+            new WithoutOverlapping('cloudflare-ip-ban')
                 ->releaseAfter(10)
                 ->expireAfter(60),
         ];
