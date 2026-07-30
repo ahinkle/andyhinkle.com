@@ -2,28 +2,53 @@
 
 namespace App\Jobs;
 
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Queue\Middleware\WithoutOverlapping;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
-class BanIpOnCloudflare implements ShouldQueue
+class BanIpOnCloudflare implements ShouldBeUnique, ShouldQueue
 {
     use Queueable;
+
+    public int $tries = 5;
+
+    public int $uniqueFor = 3600;
 
     public function __construct(
         public string $ip,
         public string $reason,
     ) {}
 
+    public function uniqueId(): string
+    {
+        return $this->ip;
+    }
+
+    /**
+     * @return array<int, WithoutOverlapping>
+     */
+    public function middleware(): array
+    {
+        return [
+            (new WithoutOverlapping('cloudflare-ip-ban'))
+                ->releaseAfter(10)
+                ->expireAfter(60),
+        ];
+    }
+
     public function handle(): void
     {
         $expression = $this->fetchCurrentExpression();
 
-        $updatedExpression = $this->appendIp($expression);
+        if (str_contains($expression, $this->ipClause())) {
+            return;
+        }
 
-        $this->updateRule($updatedExpression);
+        $this->updateRule("{$expression} or {$this->ipClause()}");
 
         Log::info("Banned IP {$this->ip} on Cloudflare", [
             'ip' => $this->ip,
@@ -49,9 +74,9 @@ class BanIpOnCloudflare implements ShouldQueue
         return '(ip.src eq 0.0.0.0)';
     }
 
-    private function appendIp(string $expression): string
+    private function ipClause(): string
     {
-        return "{$expression} or (ip.src eq {$this->ip})";
+        return "(ip.src eq {$this->ip})";
     }
 
     private function updateRule(string $expression): void

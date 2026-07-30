@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
 beforeEach(function (): void {
+    Http::preventStrayRequests();
+
     config([
         'services.cloudflare.zone_id' => 'test-zone-id',
         'services.cloudflare.ruleset_id' => 'test-ruleset-id',
@@ -70,6 +72,55 @@ it('logs the ban', function (): void {
 
     $job = new BanIpOnCloudflare('5.6.7.8', 'WordPress probe detected');
     $job->handle();
+});
+
+it('skips the update when the ip is already in the rule expression', function (): void {
+    Http::fake([
+        'api.cloudflare.com/client/v4/zones/test-zone-id/rulesets/test-ruleset-id' => Http::response([
+            'result' => [
+                'rules' => [
+                    [
+                        'id' => 'test-rule-id',
+                        'expression' => '(ip.src eq 1.2.3.4) or (ip.src eq 5.6.7.8)',
+                    ],
+                ],
+            ],
+        ]),
+    ]);
+
+    $job = new BanIpOnCloudflare('5.6.7.8', 'Test ban');
+    $job->handle();
+
+    Http::assertSentCount(1);
+});
+
+it('still bans when the expression contains a similar but different ip', function (): void {
+    Http::fake([
+        'api.cloudflare.com/client/v4/zones/test-zone-id/rulesets/test-ruleset-id' => Http::response([
+            'result' => [
+                'rules' => [
+                    [
+                        'id' => 'test-rule-id',
+                        'expression' => '(ip.src eq 15.6.7.89)',
+                    ],
+                ],
+            ],
+        ]),
+        'api.cloudflare.com/client/v4/zones/test-zone-id/rulesets/test-ruleset-id/rules/test-rule-id' => Http::response([
+            'success' => true,
+        ]),
+    ]);
+
+    $job = new BanIpOnCloudflare('5.6.7.8', 'Test ban');
+    $job->handle();
+
+    Http::assertSent(function ($request): bool {
+        if ($request->method() === 'PATCH') {
+            return $request->data()['expression'] === '(ip.src eq 15.6.7.89) or (ip.src eq 5.6.7.8)';
+        }
+
+        return true;
+    });
 });
 
 it('handles empty ruleset by using default expression', function (): void {

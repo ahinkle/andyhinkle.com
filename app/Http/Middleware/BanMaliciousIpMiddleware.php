@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\RateLimiter;
 use Symfony\Component\HttpFoundation\Response;
 
 class BanMaliciousIpMiddleware
@@ -15,6 +16,8 @@ class BanMaliciousIpMiddleware
     private const int MAX_404_COUNT = 5;
 
     private const int WINDOW_SECONDS = 120;
+
+    private const int BAN_DEDUPE_SECONDS = 86400;
 
     /**
      * @param  Closure(Request): Response  $next
@@ -53,21 +56,21 @@ class BanMaliciousIpMiddleware
 
         Log::info("[404] {$ip} {$request->path()}");
 
-        $count = Cache::increment($key);
-
-        if ($count === 1) {
-            Cache::put($key, 1, self::WINDOW_SECONDS);
-        }
+        $count = RateLimiter::hit($key, self::WINDOW_SECONDS);
 
         if ($count >= self::MAX_404_COUNT) {
             $this->banIp($ip, "Exceeded 404 threshold ({$count} in ".self::WINDOW_SECONDS.' seconds)');
 
-            Cache::forget($key);
+            RateLimiter::clear($key);
         }
     }
 
     private function banIp(string $ip, string $reason): void
     {
+        if (! Cache::add("ip_banned:{$ip}", true, self::BAN_DEDUPE_SECONDS)) {
+            return;
+        }
+
         BanIpOnCloudflare::dispatch($ip, $reason);
     }
 }
