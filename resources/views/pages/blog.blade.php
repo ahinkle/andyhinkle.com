@@ -1,7 +1,7 @@
 <x-app>
     <x-slot name="seo">
         <title>Blog | Andy Hinkle</title>
-        <meta name="description" content="A collection of articles on web development, Laravel, and more.">
+        <meta name="description" content="A collection of articles on web development, Laravel, and more." />
     </x-slot>
 
     <section class="py-8 md:py-12">

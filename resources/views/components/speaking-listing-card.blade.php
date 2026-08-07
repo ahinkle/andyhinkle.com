@@ -1,12 +1,16 @@
-<a href="{{ url("speaking/{$item->slug}") }}"
-    class="group relative block overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-white/20">
+<a
+    href="{{ url("speaking/{$item->slug}") }}"
+    class="group relative block overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-white/20"
+>
     @if ($item->video_thumbnail)
         <div class="relative aspect-video overflow-hidden">
-            <img src="{{ $item->video_thumbnail }}" alt="{{ $item->title }}"
-                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <img
+                src="{{ $item->video_thumbnail }}"
+                alt="{{ $item->title }}"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
             <div class="absolute inset-0 flex items-center justify-center bg-black/20">
-                <div
-                    class="flex size-12 items-center justify-center rounded-full bg-white/90 text-gray-900 transition-transform group-hover:scale-110">
+                <div class="flex size-12 items-center justify-center rounded-full bg-white/90 text-gray-900 transition-transform group-hover:scale-110">
                     <svg class="ml-0.5 size-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
                     </svg>
