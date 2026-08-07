@@ -22,6 +22,11 @@ jobs:
                   tools: composer:v2
                   coverage: xdebug
 
+            - name: Use Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '22'
+
             - name: Cache Vendor
               id: cache-vendor
               uses: actions/cache@v3
@@ -33,7 +38,18 @@ jobs:
               if: steps.cache-vendor.outputs.cache-hit != 'true'
               run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
+            - name: Cache NPM dependencies
+              id: cache-npm
+              uses: actions/cache@v3
+              with:
+                  path: node_modules
+                  key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
+
+            - name: Install NPM Dependencies
+              if: steps.cache-npm.outputs.cache-hit != 'true'
+              run: npm ci
+
             - name: Run Laravel Pint
-              run: vendor/bin/pint
+              run: vendor/bin/pint --blade
 
             - uses: stefanzweifel/git-auto-commit-action@v5
