@@ -14,6 +14,8 @@ This is Andy Hinkle's personal website (andyhinkle.com) built with Laravel 12 an
 - **Database**: SQLite database for simple data storage (primarily for GitHub contributions cache)
 - **Styling**: TailwindCSS 4.x with Alpine.js for interactivity
 - **Caching**: 30-minute page cache in production via `CachePageMiddleware`, component-level caching for listings
+- **SEO / Head Management**: `laravel/head` renders all `<head>` metadata via the `@head` directive in the app layout. Site-wide defaults and error-page metadata live in `AppServiceProvider`; pages set runtime metadata (`Head::title()`, `Head::schema()`, etc.) in their Folio `@php` blocks. JSON-LD structured data (Person, WebSite, BlogPosting, PodcastEpisode) is emitted per page.
+- **LLM Discovery**: `/llms.txt` (content index) and `/llms-full.txt` (full blog content) are served by `LlmsTxtController` (routes in `routes/web.php`) following https://llmstxt.org for AI search engines.
 
 ## Environment Variables
 

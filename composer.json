@@ -8,6 +8,7 @@
         "intervention/image": "^3.11",
         "laravel/folio": "^1.1",
         "laravel/framework": "^13.0",
+        "laravel/head": "^0.2.1",
         "laravel/nightwatch": "^1.7",
         "laravel/tinker": "^3.0",
         "spatie/laravel-sitemap": "^7.3",

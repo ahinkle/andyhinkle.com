@@ -1,12 +1,23 @@
-<x-app>
-    <x-slot name="seo">
-        <title>Andy Hinkle | Software Developer</title>
-        <meta
-            name="description"
-            content="Andy Hinkle is a software developer from Santa Claus, Indiana with over 10 years of experience specializing in Laravel, PHP, and JavaScript."
-        />
-    </x-slot>
+@php
+    use Laravel\Head\Facades\Head;
+    use Laravel\Head\Facades\Schema;
 
+    Head::schema(
+        Schema::person()
+            ->name('Andy Hinkle')
+            ->url(url('/'))
+            ->jobTitle('Software Developer')
+            ->sameAs([
+                'https://github.com/ahinkle',
+                'https://bsky.app/profile/andyhinkle.com',
+                'https://x.com/andyhnk',
+                'https://www.linkedin.com/in/athinkle',
+                'https://themidwestartisanpodcast.com/',
+            ]),
+    );
+@endphp
+
+<x-app>
     <section class="py-8 md:py-16">
         <div class="max-w-2xl">
             <p class="animate-fade-in text-sm font-medium tracking-widest text-gray-500 uppercase">

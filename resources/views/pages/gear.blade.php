@@ -1,9 +1,10 @@
-<x-app>
-    <x-slot name="seo">
-        <title>Gear | Andy Hinkle</title>
-        <meta name="description" content="The tools and software I use daily for software development." />
-    </x-slot>
+@php
+    use Laravel\Head\Facades\Head;
 
+    Head::title('Gear')->description('The tools and software I use daily for software development.');
+@endphp
+
+<x-app>
     <section class="py-8 md:py-12">
         <h1 class="text-3xl font-bold tracking-tight text-white md:text-4xl">Gear</h1>
         <p class="mt-4 text-lg text-gray-400">The tools and setup I use to build software every day.</p>

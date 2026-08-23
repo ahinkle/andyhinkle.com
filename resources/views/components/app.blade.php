@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en" class="dark">
 <head>
-    <x-layout.seo-meta> {{ $seo }} </x-layout.seo-meta>
+    <meta charset="utf-8" />
+
+    @head
 
     <script>
         !(function (t, e) {

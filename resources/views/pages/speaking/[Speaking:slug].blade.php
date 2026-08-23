@@ -1,18 +1,45 @@
-<x-app>
-    <x-slot name="seo">
-        <title>{{ $speaking->title }} | {{ $speaking->show_title }}</title>
-        <meta name="description" content="{{ $speaking->summary }}" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="{{ $speaking->title }}" />
-        <meta property="og:description" content="{{ $speaking->summary }}" />
-        <meta property="og:url" content="{{ url()->current() }}" />
-        <meta property="og:image" content="{{ asset("images/share/og/speaking/{$speaking->slug}.png") }}" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="{{ $speaking->title }}" />
-        <meta name="twitter:description" content="{{ $speaking->summary }}" />
-        <meta name="twitter:image" content="{{ asset("images/share/og/speaking/{$speaking->slug}.png") }}" />
-    </x-slot>
+@php
+    use Laravel\Head\Enums\ImageType;
+    use Laravel\Head\Enums\OgType;
+    use Laravel\Head\Enums\TwitterCard;
+    use Laravel\Head\Facades\Head;
+    use Laravel\Head\Facades\Schema;
 
+    $ogImage = asset("images/share/og/speaking/{$speaking->slug}.png");
+
+    Head::title($speaking->title)
+        ->description($speaking->summary)
+        ->og(type: OgType::Article, url: url()->current())
+        ->ogImage($ogImage, alt: $speaking->title, width: 1177, height: 645, type: ImageType::Png)
+        ->twitter(card: TwitterCard::SummaryWithLargeImage);
+
+    if ($speaking->type === 'podcast') {
+        $episode = Schema::podcastEpisode()
+            ->name($speaking->title)
+            ->url(url()->current())
+            ->image($ogImage);
+
+        if ($speaking->summary !== '') {
+            $episode->description($speaking->summary);
+        }
+
+        if ($speaking->published_at) {
+            $episode->datePublished($speaking->published_at);
+        }
+
+        if ($speaking->duration) {
+            $episode->timeRequired(sprintf('PT%dM%dS', intdiv($speaking->duration, 60), $speaking->duration % 60));
+        }
+
+        if ($speaking->show_name) {
+            $episode->partOfSeries(Schema::podcastSeries()->name($speaking->show_name));
+        }
+
+        Head::schema($episode);
+    }
+@endphp
+
+<x-app>
     <article class="py-8 md:py-12">
         <header class="mb-10">
             <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">

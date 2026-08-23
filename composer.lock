@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "07062a67eb9c3b0f397500a9284fe7da",
+    "content-hash": "367d2f19f2437c50d1ac39540fb4ac46",
     "packages": [
         {
             "name": "brick/math",
@@ -1554,6 +1554,77 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2026-08-04T15:54:59+00:00"
+        },
+        {
+            "name": "laravel/head",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/head.git",
+                "reference": "52ba7e6235fc6269ce89724e1d6bbc2e53f8f838"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/head/zipball/52ba7e6235fc6269ce89724e1d6bbc2e53f8f838",
+                "reference": "52ba7e6235fc6269ce89724e1d6bbc2e53f8f838",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^13.17.0",
+                "illuminate/routing": "^13.17.0",
+                "illuminate/support": "^13.17.0",
+                "illuminate/view": "^13.17.0",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "inertiajs/inertia-laravel": "^3.1",
+                "laravel/pint": "^1.28.0",
+                "livewire/livewire": "^4.3",
+                "orchestra/testbench": "^11.0",
+                "pestphp/pest": "^4.0",
+                "phpstan/phpstan": "^2.0",
+                "rector/rector": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Head": "Laravel\\Head\\Facades\\Head"
+                    },
+                    "providers": [
+                        "Laravel\\Head\\HeadServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Head\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "First-party head management for Laravel applications",
+            "homepage": "https://github.com/laravel/head",
+            "keywords": [
+                "head",
+                "laravel",
+                "metadata",
+                "seo",
+                "tags"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/head/issues",
+                "source": "https://github.com/laravel/head"
+            },
+            "time": "2026-08-17T21:01:33+00:00"
         },
         {
             "name": "laravel/nightwatch",
@@ -10993,5 +11064,5 @@
         "php": "^8.4"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
