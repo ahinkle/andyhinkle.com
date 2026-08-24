@@ -1,4 +1,4 @@
-{{-- prettier-ignore-start --}}@include('llms.preamble')
+@include('llms.preamble')
 
 ## Blog
 
@@ -18,4 +18,4 @@
 - [The Midwest Artisan](https://themidwestartisanpodcast.com/): Podcast co-hosted by Andy Hinkle
 - [Bluesky](https://bsky.app/profile/andyhinkle.com): Bluesky profile
 - [X / Twitter](https://x.com/andyhnk): X profile
-- [LinkedIn](https://www.linkedin.com/in/athinkle): LinkedIn profile{{-- prettier-ignore-end --}}
+- [LinkedIn](https://www.linkedin.com/in/athinkle): LinkedIn profile

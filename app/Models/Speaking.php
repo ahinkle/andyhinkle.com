@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Scopes\LatestPublishedOrderScope;
+use App\SpeakingType;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Attributes\ScopedBy;
@@ -20,7 +21,7 @@ use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 
 /**
- * @property string $type
+ * @property SpeakingType $type
  * @property string|null $transistor_id
  * @property string $title
  * @property string|null $show_name
@@ -47,6 +48,7 @@ class Speaking extends Model implements Sitemapable
     protected function casts(): array
     {
         return [
+            'type' => SpeakingType::class,
             'published_at' => 'datetime',
             'duration' => 'integer',
         ];
@@ -56,14 +58,14 @@ class Speaking extends Model implements Sitemapable
     #[Scope]
     protected function podcasts(Builder $query): void
     {
-        $query->where('type', 'podcast');
+        $query->where('type', SpeakingType::Podcast);
     }
 
     /** @param Builder<static> $query */
     #[Scope]
     protected function speaking(Builder $query): void
     {
-        $query->where('type', 'speaking');
+        $query->where('type', SpeakingType::Speaking);
     }
 
     /** @return array<int, array<string, mixed>> */
@@ -94,7 +96,7 @@ class Speaking extends Model implements Sitemapable
 
         // Default values for all possible fields
         $defaults = [
-            'type' => 'podcast', // Default to podcast for backward compatibility
+            'type' => SpeakingType::Podcast->value, // Default to podcast for backward compatibility
             'transistor_id' => null,
             'title' => '',
             'show_name' => null,
@@ -163,15 +165,11 @@ class Speaking extends Model implements Sitemapable
         );
     }
 
-    /** @return Attribute<string|null, never> */
+    /** @return Attribute<string, never> */
     protected function typeLabel(): Attribute
     {
         return Attribute::make(
-            get: fn (): string => match ($this->getAttribute('type')) {
-                'podcast' => 'Podcast',
-                'speaking' => 'Speaking',
-                default => 'Speaking',
-            }
+            get: fn (): string => $this->type->label(),
         );
     }
 

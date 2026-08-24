@@ -1,9 +1,4 @@
 @php
-    use Laravel\Head\Enums\ImageType;
-    use Laravel\Head\Enums\OgType;
-    use Laravel\Head\Enums\TwitterCard;
-    use Laravel\Head\Facades\Head;
-    use Laravel\Head\Facades\Schema;
     use League\CommonMark\Environment\Environment;
     use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
     use League\CommonMark\MarkdownConverter;
@@ -12,32 +7,6 @@
     use function Laravel\Folio\name;
 
     name('blog.show');
-
-    $ogImage = asset("images/share/og/blog/{$post->slug}.png");
-
-    Head::title($post->title)
-        ->description($post->description)
-        ->og(type: OgType::Article, url: url()->current())
-        ->ogImage($ogImage, alt: $post->title, width: 1177, height: 645, type: ImageType::Png)
-        ->twitter(card: TwitterCard::SummaryWithLargeImage);
-
-    $blogPosting = Schema::blogPosting()
-        ->headline($post->title)
-        ->image($ogImage)
-        ->author(Schema::person()->name('Andy Hinkle')->url(url('/')))
-        ->set('url', url()->current())
-        ->set('mainEntityOfPage', url()->current());
-
-    if ($post->description !== '') {
-        $blogPosting->description($post->description);
-    }
-
-    if ($post->published_at) {
-        Head::meta('article:published_time', $post->published_at->toIso8601String());
-        $blogPosting->publishedAt($post->published_at);
-    }
-
-    Head::schema($blogPosting);
 
     $environment = new Environment([
         'html_input' => 'allow',
@@ -52,6 +21,8 @@
 @endphp
 
 <x-app>
+    <x-seo.blog-post :post="$post" />
+
     <article class="py-8 md:py-12">
         <header class="mb-12">
             <time class="text-sm text-gray-500">{{ $post->formatted_date }}</time>

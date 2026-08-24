@@ -40,7 +40,7 @@
                                     </svg>
                                     <time datetime="{{ $episode->published_at->format('Y-m-d') }}">{{ $episode->published_at->format('M j, Y') }}</time>
                                 </span>
-                                @if ($episode->duration && $episode->type === 'podcast')
+                                @if ($episode->duration && $episode->type === \App\SpeakingType::Podcast)
                                     <span class="flex items-center">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,4 @@
-{{-- prettier-ignore-start --}}@include('llms.preamble')
+@include('llms.preamble')
 
 @foreach ($posts as $post)
 ## {!! $post->title !!}
@@ -10,4 +10,4 @@ Published: {!! $post->published_at->toDateString() !!}
 
 {!! trim($post->content) !!}
 
-@endforeach{{-- prettier-ignore-end --}}
+@endforeach

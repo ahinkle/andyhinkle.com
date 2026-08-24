@@ -1,22 +1,3 @@
-@php
-    use Laravel\Head\Facades\Head;
-    use Laravel\Head\Facades\Schema;
-
-    Head::schema(
-        Schema::person()
-            ->name('Andy Hinkle')
-            ->url(url('/'))
-            ->jobTitle('Software Developer')
-            ->sameAs([
-                'https://github.com/ahinkle',
-                'https://bsky.app/profile/andyhinkle.com',
-                'https://x.com/andyhnk',
-                'https://www.linkedin.com/in/athinkle',
-                'https://themidwestartisanpodcast.com/',
-            ]),
-    );
-@endphp
-
 <x-app>
     <section class="py-8 md:py-16">
         <div class="max-w-2xl">

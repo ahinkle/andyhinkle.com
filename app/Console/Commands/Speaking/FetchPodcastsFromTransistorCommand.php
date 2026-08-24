@@ -3,6 +3,7 @@
 namespace App\Console\Commands\Speaking;
 
 use App\Models\Speaking;
+use App\SpeakingType;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
@@ -54,7 +55,7 @@ class FetchPodcastsFromTransistorCommand extends Command
         $this->info("Found new podcast: {$title}");
 
         $data = [
-            'type' => 'podcast',
+            'type' => SpeakingType::Podcast->value,
             'transistor_id' => $podcast->get('id'),
             'title' => $title,
             'show_name' => 'The Midwest Artisan Podcast',

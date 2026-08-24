@@ -42,7 +42,7 @@ it('renders article metadata on blog posts', function (): void {
 });
 
 it('renders podcast episode metadata on speaking pages', function (): void {
-    $episode = Speaking::query()->where('type', 'podcast')->firstOrFail();
+    $episode = Speaking::podcasts()->firstOrFail();
 
     get("/speaking/{$episode->slug}")
         ->assertOk()

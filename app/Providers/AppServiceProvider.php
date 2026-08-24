@@ -36,7 +36,18 @@ class AppServiceProvider extends ServiceProvider
                 ->preconnect('https://d.andyhinkle.com')
                 ->schema(Schema::webSite()
                     ->name('Andy Hinkle')
-                    ->url(url('/')));
+                    ->url(url('/')))
+                ->schema(Schema::person()
+                    ->name('Andy Hinkle')
+                    ->url(url('/'))
+                    ->set('jobTitle', 'Software Developer')
+                    ->set('sameAs', [
+                        'https://github.com/ahinkle',
+                        'https://bsky.app/profile/andyhinkle.com',
+                        'https://x.com/andyhnk',
+                        'https://www.linkedin.com/in/athinkle',
+                        'https://themidwestartisanpodcast.com/',
+                    ]));
         });
     }
 
