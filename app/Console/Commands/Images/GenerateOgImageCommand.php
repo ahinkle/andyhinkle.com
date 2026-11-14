@@ -66,6 +66,13 @@ class GenerateOgImageCommand extends Command
     protected function handleAutomatic(): int
     {
         $type = $this->option('type') ?? 'all';
+
+        if (! in_array($type, ['all', 'blog', 'speaking'], true)) {
+            $this->error('The --type option must be blog, speaking, or all.');
+
+            return Command::FAILURE;
+        }
+
         $force = (bool) $this->option('force');
 
         $this->info('Using '.($this->driver() instanceof ImagickDriver ? 'Imagick' : 'GD').' driver');
@@ -178,18 +185,10 @@ class GenerateOgImageCommand extends Command
     {
         /** @var Collection<int, string> */
         return Str::of($line)
+            ->ltrim()
             ->explode(' ')
-            ->reduce(function (Collection $wrapped, string $word) use ($maxWidth) {
-                /** @var string $currentLine */
-                $currentLine = $wrapped->last() ?? '';
-                $testLine = $currentLine === '' ? $word : "{$currentLine} {$word}";
-
-                if (strlen($testLine) * 33 > $maxWidth && $currentLine !== '') {
-                    return $wrapped->push($word);
-                }
-
-                return $wrapped->put($wrapped->count() - 1, $testLine);
-            }, collect(['']))
+            ->chunkWhile(fn (string $word, int $key, Collection $chunk) => strlen("{$chunk->implode(' ')} {$word}") * 33 <= $maxWidth)
+            ->map(fn (Collection $chunk) => $chunk->implode(' '))
             ->filter()
             ->values();
     }
